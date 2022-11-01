@@ -1,0 +1,13 @@
+
+- Biến
+  + KDL nguyên thủy
+  --> lưu trữ dữ liệu
+  --> đặc điểm: dử liệu đơn
+  --> lưu trữ: stack
+  + KDL đối tượng
+  --> lưu trữ dữ liệu: 
+  --> đặc điểm: dử liệu đơn: Integer, String, Long 
+   			    dữ liệu có nhiều thông tin: Item(id,name,price)
+  --> lưu trữ: heap
++ Truyền tham số qua hàm => pass by value at STACK
++ Toán tử = thì luôn hoạt động ở STACK
