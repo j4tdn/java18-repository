@@ -1,0 +1,13 @@
+-Biến
++ KDL nguyên thủy
+--> mục đích: lưu trữ dữ liệu
+--> đặc điểm: dữ liệu đơn
+--> lưu trữ: stack
++ KDL đối tượng:
+--> mục đích: lưu trữ dữ liệu
+--> đặc điểm: dữ liệu đơn: Integer, String, Long, Item (id)
+			: dữ liệu có nhiều thông tin: Item(id, name, price,...)
+--> lưu trữ: heap
+
++ Truyền tham số qua hàm ==> pass by value at STACK
++ Toán tử = thì luoonhoajt động ở STACK
