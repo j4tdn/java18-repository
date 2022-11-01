@@ -1,0 +1,11 @@
++Biến(stack)
+	+KDL nguyên thuỷ
+	-->mục đích: lưu trữ dữ liệu
+	-->đặc điểm: lưu dữ liệu đơn
+	-->lưu trữ: stack
+	
+	+KDL đối tượng
+	-->mục đích: lưu trữ dữ liệu
+	-->đặc điểm: dữ liệu đơn: Integer, String, Long
+				 dữ liệu có nhiều thông tin
+	-->lưu trữ: heap
