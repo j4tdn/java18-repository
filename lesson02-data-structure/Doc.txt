@@ -1,0 +1,31 @@
++ Cấu trúc dữ liệu 
+==> Lưu trữ dữ liệu của bài toán, ứng dụng
+
+Q1 : Lưu dữ liệu trong code
+
++ Biến : Tham chiếu đến ô nhớ trong ổ cứng ( nơi lưu trữ )
++ KDL : Ràng buộc các giá trị mà các biến được lưu trữ
+Vd : int age = 20; // Khai báo và khởi tạo
+
+KNT : 
+- Chỉ được phép sử dụng
+- Không thể tạo thêm
+- Thường bắt đầu bằng chữ cái viết thường
+
+KĐT: 
+- Sử dụng các kiểu dữ liệu đối tượng có sẵn của ngôn ngữ 
+--> Boolean, Character, Byte, Short, ..
+- Tạo thêm để sử dụng 
+--> Item ( id, name )
+- Giá trị đơn hoặc nhiều tt bên trong
+
++ Chức năng : 
+
+
++ Kết quả :
+
+
+*** static : khi sử dụng với 1 biến thì các đối tượng sinh ra đều mang chung 1 giá trị khi khởi tạo với từ khóa 
+	         static, có thể truy cập vào biến thông qua class mà không cần phải thông qua đối tượng, khi sử
+  	         dụng trong class không cần phải class. ( hiểu nôm na là biến trực thuộc sự quản lí của class chứ
+	         không nhất thiết phải thông qua đối tượng )

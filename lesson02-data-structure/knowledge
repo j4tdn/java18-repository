@@ -1,0 +1,18 @@
+// ===== Review =====  
+
+- Biến
+
+	+ KDL Nguyên thủy
+		--> mục đích : Lưu trữ dữ liệu
+		--> đặc điểm : Dữ liệu đơn
+		-->	lưu trữ  : Stack
+		
+	+ KDL Đối tượng
+		--> mục đích : Lưu trữ dữ liệu
+		--> đặc điểm : Dữ liệu đơn ( Integer, String, Long, ... )
+					   Dữ liệu có nhiều thông tin ( Item, Student, ... )
+		--> lưu trữ  : Heap
+		
+- Truyền tham số vào ham ==> pass by value at STACK
+
+- Toán tử "=" luôn hoạt động ở STACK
