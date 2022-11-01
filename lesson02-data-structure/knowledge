@@ -1,0 +1,13 @@
+*Biến
+	+KDL nguyên thuỷ :
+		->mục đích: lưu trữ dữ liệu
+		->đặc điểm: dữ liệu đơn
+		->lưu trữ : stack
+	+KDL dối tượng:
+		->Mục đích: Lưu trữ dữ liệu
+		->Đặc điểm: - Dữ liệu đơn: Interger, String, Long
+					- Dữ liệu có nhiều thông tin: Item(id,name,price)
+		->Lưu trữ : Heap , còn biên lưu trữ ở stack
+		
+	+Truyền tham số qua hàm ==> pass by value at stack
+	+Toán tử = luôn luôn hoạt động ở stack	
