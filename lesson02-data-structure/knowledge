@@ -1,0 +1,18 @@
+
+
+-  Biến ( luôn luôn lưu trữ ở STACK)
+	+ KDL nguyên thủy:
+	 -> mục đích: lưu trữ dữ liệu
+	 -> đặc điểm: dữ liệu đơn
+	 -> lưu trữ: stack
+	+ KDL đối tượng:
+	 -> mục đích: lưu trữ dữ liệu
+	 -> đặc điểm: dữ liệu đơn: Integer(value), String, Long, Item(id)
+	 			: dữ liệu có nhiều thông tin: Item(id,name, price)
+	 -> lưu trữ: heap
+	 
+
+
++ Truyền tham số qua hàm => pass by value at STACK
++  Toán tử = thì luôn hoạt động ở STACK
+
