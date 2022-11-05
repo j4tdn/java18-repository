@@ -1,0 +1,17 @@
+
+
+- Biến : 2 loại LUÔN LUÔN LƯU Ở STACK
+  + KDL nguyên thủy :
+        --> mục đích : lưu trữ dữ liệu
+        --> đặc điểm : dữ liệu đơn
+        --> lưu trữ  : STACK
+  +KDL đối tượng :
+        --> mục đích : lưu trữ dữ liệu
+        --> đặc điểm : có thể là dữ liệu đơn : Integer(value), String, Long(id) 
+                 hoặc dữ liệu có nhiều thông tin: Item(id, name, price
+        --> lưu trữ  : HEAP
+   
+
+- Tuyền tham số qua hàm ==> pas buu value at STACK
+- Toán tử bằng = luôn hoạt động ở STACK
+
