@@ -7,7 +7,7 @@
 *.settings
 
 # Ignore .gitignore in project
-*/.gitignore
+
 
 # Compiled class file
 */bin/
