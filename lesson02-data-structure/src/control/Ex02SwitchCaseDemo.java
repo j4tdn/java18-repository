@@ -19,7 +19,8 @@ public class Ex02SwitchCaseDemo {
 			desc = "Unknow Error";
 		}
 		
-		System.out.println("switch case desc ==> [" + desc);
+		System.out.println("switch case desc ==> ["
+				+ "" + desc);
 	}
 
 }

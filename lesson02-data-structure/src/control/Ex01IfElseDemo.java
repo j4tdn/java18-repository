@@ -28,7 +28,7 @@ public class Ex01IfElseDemo {
 		if (point >= 6.5f && point <= 7.9f) {
 			level = "PRETTY_GOOD";
 		}
-		else {
+		if (point >= 8f && point <= 10f) {
 			level = "GOOD";
 		}
 		System.out.println(level);
