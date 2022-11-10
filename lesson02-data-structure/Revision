@@ -1,0 +1,28 @@
+Class
+	+ Attribute (thuộc tính = biến toàn cục)
+	+ Method (phương thức = hàm)
+		. Biến cục bộ
+Kiểu dữ liệu của biến
+	+ Nguyên thủy: int, char, byte, double, float
+	+ Đối tượng:
+		. String, Integer, Double,...
+		. Item, Employee,...
+	+ HEAP/STACK
+	
+Toán tử
+	+ prefix/suffix
+	+ Operator = == && || !
+	+ Ternary operator ? :
+
+Nhập xuất - Random
+
+Cấu trúc điều kiện/điều khiển
+	+ if else, switch case
+	+ for, while, do_while
+	+ break, continue
+	
+Access modifier: public/private
+
+static
+
+return
