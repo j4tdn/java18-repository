@@ -1,0 +1,27 @@
+
+
+Class
+	+ attrubute ( thuộc tính = biến toàn cục )
+	+ method ( phương thức = hàm )
+	biến cục bộ
+	
+KDL của biến
+	+ nguyên thủy: int, char, byte, double
+	+ đối tượng:
+		+ String, Integer, Double
+		+ Item, Employee
+	+ heap/stack
+
+Toán tử
+	+ prefix/suffix
+	+ = == && || !
+	+ ? :
+	
+Nhập xuất - Random
+
+Cấu trúc điều kiện/khiển
+
+	+ if else, switch case
+	+ for, uhile, do while
+	+ break, continue
+	

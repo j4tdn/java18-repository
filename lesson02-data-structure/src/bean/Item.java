@@ -1,4 +1,5 @@
 package bean;
+
 // /* enter
 /*
  * Class: KDL đối tượng
@@ -17,24 +18,24 @@ public class Item {
 	public int id;
 	public String name;
 	public double salesPrice;
-	
-    // Hàm "khởi tạo" mặc định
+
+	// Hàm "khởi tạo" mặc định
 	// Khởi tạo một đối tượng cho class hiện tại
 	// Trả về kiểu dử liệu Item
-	
+
 	public Item() {
-		
+
 	}
-	
+
 	public Item(int id, String name, double salesPrice) {
 		this.id = id;
 		this.name = name;
 		this.salesPrice = salesPrice;
 	}
-	
+
 	@Override // ( định nghĩa lại từ cha )
 	// ctrl space -> select
-	
+
 	// i1.toString()
 	// i2.toString()
 	// i3.toString() => id=234
@@ -42,5 +43,6 @@ public class Item {
 	// this: biến đối tượng hiện tại đang gọi toString
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.id +", " + this.name + ", " + this.salesPrice;	}
+		return this.id + ", " + this.name + ", " + this.salesPrice;
+	}
 }

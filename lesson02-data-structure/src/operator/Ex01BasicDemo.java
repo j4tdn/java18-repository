@@ -12,7 +12,7 @@ public class Ex01BasicDemo {
 		y += 2;
 		System.out.println("x: " + x);
 		System.out.println("y:" + y);
-		
+
 		x = 1;
 		y = 2;
 		int z = 3;
@@ -21,8 +21,8 @@ public class Ex01BasicDemo {
 		// trong 1 vế --> đi từ trái sang phải
 		System.out.println("\n====\n");
 		System.out.println("KQ x= " + x);
-		System.out.println("KQ x= " + y);
-		System.out.println("KQ x= " + z);
+		System.out.println("KQ y= " + y);
+		System.out.println("KQ z= " + z);
 
 	}
 

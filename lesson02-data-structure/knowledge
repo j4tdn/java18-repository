@@ -1,12 +1,12 @@
 
-- Biến
+- Biến(stack)
   + KDL nguyên thủy
   --> lưu trữ dữ liệu
   --> đặc điểm: dử liệu đơn
   --> lưu trữ: stack
   + KDL đối tượng
   --> lưu trữ dữ liệu: 
-  --> đặc điểm: dử liệu đơn: Integer, String, Long 
+  --> đặc điểm: dử liệu đơn: Integer(value), String, Long, Item(id); 
    			    dữ liệu có nhiều thông tin: Item(id,name,price)
   --> lưu trữ: heap
 + Truyền tham số qua hàm => pass by value at STACK
