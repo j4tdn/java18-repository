@@ -1,0 +1,20 @@
+Class
+	+attribute(thuộc tính = biến toàn cục)
+	+method(phương thức = hàm)
+		.biến cục bộ
+KDL của biến
+	+Nguyên thủy:int char byte doule
+	+Đối tượng:
+		+Integer Double
+		+Item, Employee
+	+Heap/Stack
+Toán tử
+	+ prefix/suffix
+	+ = == && || !
+	+ ? :
+Nhập xuất - random
+Cấu trúc điều khiển/kiện
+	+if else,switch 1case
+	+for,do while,while
+	+break.continue
+	
