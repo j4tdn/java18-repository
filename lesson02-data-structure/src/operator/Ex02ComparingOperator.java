@@ -3,7 +3,6 @@ package operator;
 public class Ex02ComparingOperator {
 	public static void main(String[] args) {
 		// so sánh == <= >= != > <
-		
 		int a = 15;
 		int b = 22;
 		int c = 18;
@@ -33,6 +32,5 @@ public class Ex02ComparingOperator {
 		if (c % 2 != 0) {
 			System.out.println("c+1 ==> " + (c+1));
 		}
-		
 	}
 }

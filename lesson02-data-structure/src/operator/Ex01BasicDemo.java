@@ -1,7 +1,17 @@
 package operator;
 
+import java.util.Random;
+
 public class Ex01BasicDemo {
 	public static void main(String[] args) {
+		// 0.0 - 1.0 * 10
+		// (int)(Math.random()*10) // 5.6 --> 6
+		
+		// & | ^(XOR) !
+		
+		// 5 & 3 --> toBin(5(100)) & toBin(3(11))
+		// 100 & 11 --> bin --> toDecimal(bin)
+		
 		int x = 5;
 		
 		x -= 2 + 5;
