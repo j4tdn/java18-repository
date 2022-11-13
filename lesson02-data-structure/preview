@@ -1,0 +1,28 @@
+Class
+		+ attribute ( thuộc tính = biến toàn cục)
+		+ method( phương thức = hàm ) 
+			. biến cục bộ
+			
+KDL của tiến
+		+ nguyên thủy: int, char, byte, double, float
+		+ đối tượng
+				+ String; Integer, Double
+				+ Item, Employse
+		+ Heap/Stack
+
+Toán tử 
+		+ prefix/sufix
+		+ = == && || !
+		+ ? : 
+
+Nhập xuất - Random
+		+ if else, swtich case
+		+ for; while, do while
+		+ break, continute
+		
++ Access modifier: public/private
+
+
++ Static
+		
+		
