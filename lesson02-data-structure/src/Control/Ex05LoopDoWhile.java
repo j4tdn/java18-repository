@@ -48,11 +48,20 @@ public class Ex05LoopDoWhile {
 	private static boolean isInValidNumber(String text) {
 		return !isNumber(text);
 	}
-	private static boolean isNumber(String text) {
+	
+	// text : "123"		--> true
+	//		: "a12"		--> false
+	// 		: "123x789" --> false
+	// 123x789 ==> length(độ dài kí tự) = 7
+	//				index 				= [0,7)
+	private static boolean isNumber(String text){
+		
 		if (text.length() == 0) {
 			return false;
 		}
+		// duyệt từng phần tử trong chuỗi
 		for (int i = 0; i < text.length(); i++) {
+			// lấy giá trị tại chỉ số từ 0 là kí tự 1 -> sau đó tăng i lên
 			char letter = text.charAt(i);
 			if (letter < '0' || letter > '9') {
 				return false;
