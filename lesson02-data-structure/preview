@@ -1,0 +1,26 @@
+Class
+	+attribute(thuộc tính = biến toàn cục)
+	+methond(phương thức = hàm )
+		. biến cục bộ
+
+KDL của biến 
+	+ KDL nguyên thủy : int , char ,byte , double, float 
+	+ KDL đối tượng :
+		+ string ,Integer , Double
+		+ Item, Employee
+	+HEAP,Stack
+	
+Toán tử
+	+ prefix/suffix
+	+ = == && || !
+	+ ? :
+	
+	
+nhập xuất - random
+
+Cấu trúc điều kiện
++If , else / swith case
++for while , do while
++break ,continue
+
++ Access modifier : public/private
