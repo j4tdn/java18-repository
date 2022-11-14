@@ -1,0 +1,18 @@
+Các kiểu dữ liệu trong JAVA
+
++ KDL nguyên thuỷ --> int, float, double, char
+--> lưu trữ dữ single value
+
++ KDL đối tượng --> Integer, String, Item, Store
+ --> lưu trữ single/multiple values
+ 
+ 	. single: Integer, String, Double, Long..(class)
+ 	. multiple: Item, Store, Emplyee (custom class)
+ 	
+ 	==> custom class ??
+ 		==> KDL đối tượng
+ 		==> class, object --> Item x = new Item(1, "Item 1");
+ 		==> constructor. getter, setter, access modifier
+ 		==> static
+ 		
+ 		
