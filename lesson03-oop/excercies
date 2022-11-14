@@ -5,7 +5,7 @@
 	+origin: String
 	
 	==> tạo hàm khởi tạo đầy đủ tham  số
-	==> tạo phương thức getter, setter, tótring
+	==> tạo phương thức getter, setter, tostring
 	
 --> tạo class Ex02ItemApp
 	==> khởi tạo 2 đối tượng Item1, Item2 từ Item
