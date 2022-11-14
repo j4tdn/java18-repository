@@ -1,0 +1,13 @@
+1--> Tạo class tên là Item gồm các thuộc tính
+	+ id: int
+	+ name: String
+	+ salesPrice: double
+	+ origin: String
+	
+	==> Tạo hàm khởi tạo rỗng
+	==> Tạo hàm khởi tạo đầy đủ tham số
+	==> Tạo phương thức getter, setter, toString
+	
+--> Tạo class Ex02ItemApp
+	==> khỏi tạo 2 đối tượng item1, item2 từ Item với giá trị tùy ý
+	==> tính tổng tiền 2 mặt hàng đó và in ra 
