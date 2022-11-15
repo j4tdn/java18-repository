@@ -13,3 +13,8 @@ Các kiểu dữ liệu trong java
 		==> KDL đối tượng
 		==> class, object --> Item x = new Item(1, "Item 1");
 		
+				
+static
+	--> for attribute
+	--> method(not constructor)
+		
