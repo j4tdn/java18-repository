@@ -1,0 +1,2 @@
++	single: Integer, String, Double, Long ...(class)
++	multiple: Item, Store, Employ (customer class)
