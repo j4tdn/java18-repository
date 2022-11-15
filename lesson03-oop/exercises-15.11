@@ -1,0 +1,15 @@
+-->tạo class tên là Item
+	+id:int
+	+name:String
+	+salePrice:double
+	+origin:String
+	
+	
+	==>tạo hàm khởi tạo rỗng
+	==>tạo hàm khởi tạo đầy đủ tham số
+	==>tạo phương thức getter,setter,toString
+	
+-->Tạo class Ex02ItemApp
+	==>Khởi tạo 2 đối tuwojgn item 1,item2 từ Item
+		với giá trị tùy ý
+	==>Tính tổng tiền 2 mặt hàng đó và in ra
