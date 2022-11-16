@@ -1,0 +1,21 @@
+Các KDL trong JAVA
+
++ Kiểu nguyên thủy : int, double, char, float
+	--> Lưu trữ single value
+
++ Kiểu đối tượng : Integer, String, Item, Student
+	--> Lưu trữ single/multiple value
+	
+	. single : Integer, String, Double, Long, ... ( class )
+	. multiple : Item, Store, Employee ( custom class )
+	
+	==> custom class ??
+		==> KDL đối tượng
+		==> class, object --> Item x = new Item (1, "Item 1"); <-- đối tượng ( là giá trị của 1 biến thuộc KDL class nào đó )
+		
+
+static
+	--> for attribute
+	
+	--> method (except constructor)
+		
