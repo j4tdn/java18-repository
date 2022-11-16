@@ -3,7 +3,7 @@ package test;
 public class Function1 {
 	
 	// store data separately for each sub-system
-	static String DO_SOMTHING = "do something ";
+	private static String DO_SOMTHING = "do something ";
 	
 	// provide access modifier
 	static void function1_1() {

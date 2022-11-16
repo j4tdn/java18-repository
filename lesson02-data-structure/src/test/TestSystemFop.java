@@ -2,6 +2,7 @@ package test;
 
 public class TestSystemFop {
 	
+	// global data
 	static String DO_SOMTHING = "do something ";
 	
 	public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class TestSystemFop {
 	}
 	
 	static void function1() {
+		// dữ liệu giảng viên
 		System.out.println(DO_SOMTHING + "1");
 		function1_1();
 		function1_2();
