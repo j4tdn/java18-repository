@@ -35,8 +35,8 @@ public class Rectangle {
 	// getter --> get ( lấy 1/ toàn phần) giá trị của thuộc tính (private)
 	
 	//r1.width = 10
-	public void setWidth(int with) {
-		this.width = with;
+	public void setWidth(int width) {
+		this.width = width;
 	}
 	
 	//r1.width
