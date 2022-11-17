@@ -1,0 +1,39 @@
+Các kiểu dữ liệu trong JAVA
+
++ KDL nguyên thủy --> int, float, double, char
+				  --> lưu trữ single value
+				   
++ KDL đối tượng --> Integer, String, Item, Store
+				--> Lưu trữ single/multiple values
+				
+	. single: Integer, String, Double, Long,... (class)
+	. multiple: Item, Store, Employee,.. (custom class)
+	
+	MỤC TIÊU BÀI HỌC:
+	Custom class là gì?
+	KDL đối tượng
+	(Class là KDL đối tượng)
+	(đối tượng là một ô nhớ trên HEAP, một thể hiện của Class)
+	(đối tượng là một giá trị của biến của Class)
+	class, object --> Item x = new Item(1, "Item 1");
+	Constructor, getter, setter, access modifier
+	static 
+	
+	Nhược điểm của FOP:
+	+ Missing access modifier
+	+ Huge code in a file 
+	+ No separate layer of data 
+	
+	Class và object chỉ mang tính chất tương đối 
+	
+	bean: chứa class Item, Store,... 
+	
+	-----
+	
+static 
+	--> for attribute
+	
+	--> method (except constructor)
+	
+Nếu hàm chỉ phụ thuộc vào tham số truyền vào (ko phụ thuộc vào đối tượng đang gọi)
+==> dùng "static"
