@@ -13,6 +13,5 @@ public class Ex02ItemApp {
 		System.out.println("Item1 --> " + item1);
 		System.out.println("Item2 --> " + item2);
 		System.out.println("tổng giá tiền item1 + item2 --->" + (item1.getSalesPrice(3)+item2.getSalesPrice(3)) );
-		
 	}
 }
