@@ -11,5 +11,5 @@
 --> Tạo class Ex02ItemApp
 ==> Khởi tạo 2 đối tượng item1, item2 từ Item
 	với giá trị tùy ý
-==> Tính tổng tiền mặt 2 mặt hàng đó và in ra
+==> Tính tổng tiền 2 mặt hàng đó và in ra
 	

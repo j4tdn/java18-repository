@@ -13,7 +13,7 @@ public class Rectangle {
 	// non-static ==> object
 	// static 	 ==> class(objects)
 	private int width;
-	public int height;
+	private int height;
 	
 	// constructor -- dafault
 	// -> taọ ra(khởi tạo) đối tượng(giá trị) cho biến
