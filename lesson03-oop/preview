@@ -2,3 +2,7 @@
 Class,Object
 Contructer,getter,setter,access modifier
 static
+
+static 
+	--> for attribute
+	--> method(not contructor)
