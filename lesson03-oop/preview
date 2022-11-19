@@ -15,3 +15,13 @@ Các KDL trong JAVA
  	==> class, object --> Item x = new Item(1, "Item 1")
  	==> constructor, getter, setter, access modifier
  	==> static
+ 	
+ 	
+ 	FOP: missing access modifier
+ 			no separate layer of date
+ 		: huge code in a file
+ 		
+ 		
+ static
+ 	--> for attribute
+ 	--> method(not constructor)
