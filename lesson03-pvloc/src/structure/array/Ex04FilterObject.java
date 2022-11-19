@@ -6,28 +6,32 @@ import been.Item;
 
 public class Ex04FilterObject {
 	public static void main(String[] args) {
-    	 //Item itemA = new Item(123,"Item123",720);
-    	 //Item itemB = new Item(234,"Item234",260);
-    	 //Item itemC = new Item(345,"Item345",100);
+    	 Item itemA = new Item(123,"Item123",720);
+    	 Item itemB = new Item(234,"Item234",260);
+    	 Item itemC = new Item(345,"Item345",100);
     	 
-    	//Item[] items = {itemA,itemB,itemC};
+    	 Item[] items = {itemA, itemB, itemC };
+    	
     	//Item[] result = filter(items);
+    	Item[] result = filter(items);
+    	for (Item item: result) {
+    	System.out.println(item);
+    	}
     	
-    	//for (Item item: result) {
-    		//System.out.println(item);
-    	//}
-    	
-     //}
-	// Tìm những mặt hàng có giá trị lớn hơn 200
-	//private static Item[] filter(Item[] itmes) {
+     }
+	 //Tìm những mặt hàng có giá trị lớn hơn 200
+	private static Item[] filter(Item[] items) {
+		Item[] result = new Item[items.length];
 		//Item[] result = new Item[items.length];
-		//int count = 0;
+		int count = 0;
+		
+		for (Item item : items) {
 		//for (Item item: items) {
-			//if(item.price > 200) {
-				//result[count] = item;
-				//count++;
-			//}
-		//}
-		//return Arrays.copyOfRange(result,0, count);
+			if(item.getPrice() > 200) {
+				result[count] = item;
+				count++;
+			}
+		}
+		return Arrays.copyOfRange(result,0, count);
 	}
 }
