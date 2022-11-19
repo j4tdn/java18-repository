@@ -36,7 +36,7 @@ public class Item {
 	@Override //(định nghĩa lại từ cha)
 	// i1.toString()
 	// i2.toString()
-	// i3.toString() ==> id=234
+	// i3.toString() ==> id=  234
 	// i4.toString() ==> id=345
 	// id, name, salesPrice
 	// this: biến đối tượng hiện tại đang gọi toString
