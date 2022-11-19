@@ -1,2 +1,22 @@
 +	single: Integer, String, Double, Long ...(class)
 +	multiple: Item, Store, Employ (customer class)
+
+
+==> Custom class là ???
+	==>KDL đối tượng
+	==>class Object  
+	==> constructer, getter , setter, access modifier
+	==> static
+	
+	
+	POP: missing access modifier
+		. no separate layer of data
+	   : Huge code in a file
+	   
+	   
+***static
+	--> for attribute
+	
+	--> method( no contructor )
+	
+	
