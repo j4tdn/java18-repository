@@ -1,7 +1,5 @@
 package index;
 
-import java.util.Scanner;
-
 import Homework.Vehicle;
 
 public class Test {

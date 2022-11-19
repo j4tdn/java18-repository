@@ -1,10 +1,10 @@
 package Homework;
 
 public class Vehicle {
-	private String name;
-	private String model;
-	private int capacity;
-	private double price;
+	 String name;
+	 String model;
+	 int capacity;
+	 double price;
 
 	public Vehicle() {
 
@@ -62,7 +62,5 @@ public class Vehicle {
         return "-"+name + "-"+capacity + "-"+price + "-"+model;
 }
  
-    public void inThue(){
-        System.out.printf("%5d %-20s %5d %10.2f %10s %8.5f ",name,capacity,price,model,tinhThue());
-    }
+    
 }
