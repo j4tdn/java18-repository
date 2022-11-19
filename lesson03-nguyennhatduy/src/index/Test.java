@@ -5,7 +5,7 @@ import Homework.Vehicle;
 public class Test {
 	public static void main(String[] args) {
 		Vehicle v1 = new Vehicle("Duy", "Future Neo", 100, 35000000);
-		Vehicle v2 = new Vehicle("Cương", "ếch chiên bơ", 3000, 250000000);
+		Vehicle v2 = new Vehicle("Cương", "ếch chiên bơ", 90, 250000000);
 		Vehicle v3 = new Vehicle("acd", "Version", 1500, 1000000000);
 
 		System.out.printf("%-20s%-20s%-20s%-20s%s\n", "Ten chu xe", "Loai xe", "Dung tich", "Tri gia", "Thue phai nop");
