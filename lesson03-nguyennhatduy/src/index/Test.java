@@ -8,8 +8,10 @@ public class Test {
 		Vehicle v2 = new Vehicle("Cương", "ếch chiên bơ", 90, 250000000);
 		Vehicle v3 = new Vehicle("acd", "Version", 1500, 1000000000);
 
-		System.out.printf("%-20s%-20s%-20s%-20s%s\n", "Ten chu xe", "Loai xe", "Dung tich", "Tri gia", "Thue phai nop");
-		System.out.println("==============================================================================================");
+		System.out.printf("%-20s%-20s%-20s%-20s%s \n", "Ten chu xe", "Loai xe", "Dung tich", "Tri gia",
+				"Thue phai nop");
+		System.out.println(
+				"==============================================================================================");
 		show(v1);
 		show(v2);
 		show(v3);
@@ -31,7 +33,7 @@ public class Test {
 
 	private static void show(Vehicle v) {
 		// TODO Auto-generated method stub
-		System.out.printf("%-20s%-20s%-20s%-20s%s\n",v.getName(), v.getModel(), v.getCapacity(), v.getPrice(), tax(v));
+		System.out.printf("%-20s%-20s%-20s%-20s%s\n", v.getName(), v.getModel(), v.getCapacity(), v.getPrice(), tax(v));
 
 	}
 }
