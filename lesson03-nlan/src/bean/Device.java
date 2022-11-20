@@ -1,16 +1,16 @@
 package bean;
 
-public class device {
+public class Device {
 	private int id;
 	private String operatingSystem;
 	private String color;
 	private double price;
 	
-	public device() {
+	public Device() {
 		
 	}
 
-	public device(int id, String operatingSystem, String color, double price) {
+	public Device(int id, String operatingSystem, String color, double price) {
 		super();
 		this.id = id;
 		this.operatingSystem = operatingSystem;
