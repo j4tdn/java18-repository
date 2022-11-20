@@ -1,0 +1,18 @@
+ Các kiểu DL trong Java
+ 
+ 	+ KDL nguyên thủy --> int, float, double, char
+ 	--> Lưu trữ single value
+ 	
+ 	+ KDL đối tượng   --> Integer, String, Item, Store
+ 	--> Lưu trữ single/multiples values
+ 	
+ 	. single: Interger, String, Double, Long .. (class)
+ 	.multiple: Item, Store, Employee (custom class)
+ 	
+ 	==> custom class là gì ??
+ 	==> KDL đối tượng ??
+ 	==> class, object --> Item x = new Item(1, "Item 1")
+ 	==> constructor, getter, setter, access modifier
+ 	==> static : cho thuộc tính (attribute)
+ 				 cho hàm (/method) 
+ 				 không cho hàm khởi tạo (not constructor)

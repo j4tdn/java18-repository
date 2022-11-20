@@ -1,0 +1,13 @@
++ class
+	customer: name
+	vehicle: type vehicle, dung tích, cost
+	
+ B1: tạo danh sách (mảng) khách hàng
+ B2: tạo mảng chứa những vehicle trong cửa hàng
+ B3: chức năng mua hàng
+ 
+ 	+ Ai đang mua hàng
+ 	+ Danh sách của những mặt hàng người đã mua (list of items)
+ 	+
+ 	
+ ==> Order: Customer, vehicle
