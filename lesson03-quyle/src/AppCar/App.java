@@ -14,9 +14,23 @@ public class App {
 		UsingCar P1 = new UsingCar(c1, KH1);
 		UsingCar P2 = new UsingCar(c2, KH2);
 		UsingCar P3 = new UsingCar(c3, KH3);
+		OutPut.OutPut();
+		String tieude ="Tên chủ xe        Loại xe       Dung tích    Trị giá         Thuế phải nộp";
+		for(int i=0;i<tieude.length();i++) {
+			System.out.print("=");
+		}
+		System.out.println("");
 		
-		System.out.println(UsingCarFunsion.calculate(P1));
-		System.out.println(UsingCarFunsion.calculate(P2));
-		System.out.println(UsingCarFunsion.calculate(P3));
+		OutPut.OutPuta(P1);
+		OutPut.OutPuta(P2);
+		OutPut.OutPuta(P3);
+		
+		
+		/*
+		 * System.out.println(UsingCarFunsion.calculate(P1));
+		 * System.out.println(UsingCarFunsion.calculate(P2));
+		 * System.out.println(UsingCarFunsion.calculate(P3));
+		 */
+		
 	}
 }
