@@ -3,11 +3,11 @@ package AppCar;
 public class Car {
 	private String nameCar;
 	private String color;
-	private float cost;
+	private int cost;
 	private int cc;
 	public Car() {
 	}
-	public Car(String nameCar, String color, float cost, int cc) {
+	public Car(String nameCar, String color, int cost, int cc) {
 		this.nameCar = nameCar;
 		this.color = color;
 		this.cost = cost;
@@ -25,10 +25,10 @@ public class Car {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public float getCost() {
+	public int getCost() {
 		return cost;
 	}
-	public void setCost(float cost) {
+	public void setCost(int cost) {
 		this.cost = cost;
 	}
 	public int getCc() {
