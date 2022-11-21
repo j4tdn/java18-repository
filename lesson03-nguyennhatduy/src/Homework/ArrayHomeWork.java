@@ -64,7 +64,7 @@ public class ArrayHomeWork {
 		System.out.println("Hien thi ma tran");
 		for (int i = 0; i < sh; i++) {
 			for (int j = 0; j < sc; j++) {
-				System.out.printf("%6d", arr[i][j]);
+				System.out.printf("%5d", arr[i][j]);
 			}
 			System.out.println();
 		}

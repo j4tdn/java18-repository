@@ -32,7 +32,7 @@ public class Test {
 	}
 
 	private static void show(Vehicle v) {
-		System.out.printf("%-20s%-20s%-20s%-20s%s\n", v.getName(), v.getModel(), v.getCapacity(), v.getPrice(), tax(v));
+		System.out.printf("%-20s%-20s%-20s%-21s%s\n", v.getName(), v.getModel(), v.getCapacity(), v.getPrice(), tax(v));
 
 	}
 }
