@@ -32,7 +32,6 @@ public class Test {
 	}
 
 	private static void show(Vehicle v) {
-		// TODO Auto-generated method stub
 		System.out.printf("%-20s%-20s%-20s%-20s%s\n", v.getName(), v.getModel(), v.getCapacity(), v.getPrice(), tax(v));
 
 	}

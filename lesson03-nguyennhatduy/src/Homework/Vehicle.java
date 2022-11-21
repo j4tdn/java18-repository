@@ -53,7 +53,7 @@ public class Vehicle {
 	public double tinhThue() {
 		double thue;
 		if (capacity < 100)
-			thue = price * 100;
+			thue = price * 0.01;
 		else if (capacity >= 100 && capacity <= 200)
 			thue = price * 0.03;
 		else
