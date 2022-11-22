@@ -7,7 +7,7 @@ public class Ex03VehicleApp {
 		Vehicle v2 = new Vehicle("Le Minh Tinh", "Ford Ranger", 3000, 255000000);
 		Vehicle v3 = new Vehicle("Nuyen Minh Triet", "Landscape", 15000, 1000000000);
 
-		System.out.printf( "%-20s%-20s%-20s%-20s%s\n", "Ten chu xe   " , "Loai xe   " , "Dung tich   " , " Tri gia   " , "Thue phai nop    ");
+		System.out.printf( "%-20s%-20s%-20s%-20s%-20s\n", "Ten chu xe   " , "Loai xe   " , "Dung tich   " , " Tri gia   " , "Thue phai nop    ");
 		System.out.println("==========================================================");
 
 		show(v1);
