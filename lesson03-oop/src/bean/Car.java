@@ -10,7 +10,7 @@ public class Car {
 	public static String model;
 
 	public Car() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Car(String id, String color) {
