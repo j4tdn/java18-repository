@@ -19,11 +19,9 @@ public class Ex05SymmetryNumber {
 		int temp1 = n;
 		int temp2 = n;
 		int rev = 0;
-		int count = -1;
-
+		
 		while (temp1 != 0) {
 			temp1 = temp1 / 10;
-			count++;
 		}
 
 		while (temp2 != 0) {
