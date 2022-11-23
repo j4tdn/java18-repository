@@ -27,7 +27,7 @@ public class Ex02ShopApp {
 		
 		Order o3 = new Order(c2, new ItemDetail[] {
 				new ItemDetail(i4, 2) 
-			 
+			  
 				
 		}, LocalDateTime.of(2021, 5, 8, 9, 28, 32));
 		
