@@ -8,6 +8,13 @@ public class Ex01MultiplesOfTwo {
 		int wrongTimes = -1;
 		String preCheck = "";
 		do {
+			/**
+			 * 
+			 * if (text.matches("[1-9][0-9]*"){
+			 * 	break;
+			 * }
+			 * 
+			 */
 			wrongTimes++;
 			if (wrongTimes == 5) {
 				return;
