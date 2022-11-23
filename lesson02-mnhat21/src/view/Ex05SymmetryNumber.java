@@ -16,17 +16,12 @@ public class Ex05SymmetryNumber {
 	}
 
 	private static boolean isSymmetryNumber(int n) {
-		int temp1 = n;
-		int temp2 = n;
+		int temp = n;
 		int rev = 0;
-		
-		while (temp1 != 0) {
-			temp1 = temp1 / 10;
-		}
 
-		while (temp2 != 0) {
-			int a = temp2 % 10;
-			temp2 = temp2 / 10;
+		while (temp != 0) {
+			int a = temp % 10;
+			temp = temp / 10;
 			rev = rev * 10 + a;
 		}
 
