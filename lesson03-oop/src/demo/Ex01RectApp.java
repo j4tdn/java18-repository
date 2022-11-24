@@ -25,8 +25,8 @@ public class Ex01RectApp {
 
 		// tạo một đối tượng có w-20 h-10
 		Rectangle r3 = new Rectangle();
-		r3.width = 20;
-		r3.height = 10;
+		r3.setWidth(20);
+		r3.setHeight(10);
 		System.out.println("r3 --> " + r3);
 	}
 }

@@ -14,8 +14,8 @@ public class Rectangle {
 		//trực tiếp(biếc chính xác thông tin bên trong) từ bên ngoài
 		
 		
-		public int width;
-		public int height;
+		private int width;
+		private int height;
 
 		// con structor -- default
 		// -- tạo ra(khởi tạo dối tượng(giá trị) cho biến thuộc KDL class này
