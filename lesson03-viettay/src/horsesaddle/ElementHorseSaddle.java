@@ -24,7 +24,17 @@ public class ElementHorseSaddle {
 		int row = ip.nextInt();
 		System.out.print("Enter col of array: ");
 		int col = ip.nextInt();
+		int[][] arr = inputArr(row, col);
+		showArr(arr, row, col);
+		if (checkHorseSaddle(arr, row, col)) {
+			System.out.println("Có phần tử yên ngựa");
+		} else {
+			System.out.println("Không có phần tử yên ngựa");
+		}
 
+	}
+
+	private static int[][] inputArr(int row, int col) {
 		Random rd = new Random();
 		int[][] arr = new int[row][col];
 		for (int i = 0; i < row; i++) {
@@ -32,7 +42,10 @@ public class ElementHorseSaddle {
 				arr[i][j] = 1 + rd.nextInt(99);
 			}
 		}
+		return arr;
+	}
 
+	private static void showArr(int arr[][], int row, int col) {
 		System.out.println("\nArray after random: \n");
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < col; j++) {
@@ -40,7 +53,9 @@ public class ElementHorseSaddle {
 			}
 			System.out.println("\n");
 		}
+	}
 
+	private static boolean checkHorseSaddle(int[][] arr, int row, int col) {
 		int temp = 0, count = 0;
 		for (int i = 0; i < row; i++) {
 			int minRow = arr[i][0];
@@ -55,15 +70,10 @@ public class ElementHorseSaddle {
 					break;
 				}
 				if (t == row - 1) {
-					count++;
+					return true;
 				}
 			}
 		}
-
-		if (count >= 1) {
-			System.out.println("Có phần tử yên ngựa");
-		} else {
-			System.out.println("Không có phần tử yên ngựa");
-		}
+		return false;
 	}
 }
