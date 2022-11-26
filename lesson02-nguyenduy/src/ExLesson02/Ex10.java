@@ -8,11 +8,11 @@ public class Ex10 {
 		
 		do {
 			Random rand = new Random();
-			a = rand.nextInt(11) + 20;
-			b = rand.nextInt(11) + 20;
-			c = rand.nextInt(11) + 20;
-			d = rand.nextInt(11) + 20;
-			e = rand.nextInt(11) + 20;
+			a = rand.nextInt(11)+20;
+			b = rand.nextInt(11)+20;
+			c = rand.nextInt(11)+20;
+			d = rand.nextInt(11)+20;
+			e = rand.nextInt(11)+20;
 		} while(repeat(a, b, c, d, e));
 		System.out.println("a : "+a);
 		System.out.println("b : "+b);
