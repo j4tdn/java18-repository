@@ -1,0 +1,20 @@
+1. Tính chất đa hình là gì
++ Đa hình trong phương thức: 
+	--> Là 2/n phương thức cùng tên
+		+ Khác sl tham số
+		+ KDL truyền vào của tham số
+		--> Overloading
+		+ thuộc 2 class có quan hệ thừa kế, phương thức trong lớp con định nghĩa lại phương thức trong lớp con
+		--> Overriding
+	vd: class X --> sum(a, b), sum(a, b, c)
+	class A#paint --> class B#paint
+	A extends B 
+	
++ Đa hình trong đối tượng:
+	--> Là 1 đói tượng/ biến có KDL lớp cha lúc compile có thể tham chiếu/ trỏ đến KDL của các lớp con luc runtime
+	
+Cau hoi: Vi sao khong lay class hien tai new class ma phai lay class cha new class con?
+		 Tra loi: 
+		 1. Se dang ep kieu/ gan gia tri qua ve giua cac bien co KDL thuoc nhom (cha - con)
+		 	Vi tat ca deu la KDL cha luc compile
+		 2. Co the gop/gom tat ca cac phan tu co KDL cha/con vao trong 1 mang/ danh sach co KDL cua cha
