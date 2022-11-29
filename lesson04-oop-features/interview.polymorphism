@@ -1,0 +1,47 @@
+1. Tính chất đa hình là gì? Cho VD, code demo đã từng sử dụng
++ Đa hình trong phương thức:
+--> Là 2 hay nhiều phương thức cùng tên
+    + khác số lượng tham số 
+    + KDL truyền vào của tham số
+    --> Overloading
+    VD: Class X --> sum(int a, int b), sum (int a, int b, int c)
+    
+--> Thuộc 2 class có quan hệ thừa kế, phương thức trong lớp con định nghĩa lại phương thức trong lớp cha 
+	--> Override
+	VD: toString()
+	Class A #paint --> Class B #paint
+	A extends B
+
++ Đa hình trong đối tượng:
+--> Là 1 đối tượng/biến có KDL lớp Cha lúc compile, có thể tham chiếu/trỏ đến KDL của các lớp con lúc runtime
+	VD: Cha -> Shape
+	    Con -> Rectangle, Circle, Square
+
+2. Vì sao không lấy class hiện tại new class hiện tại mà phải lấy class cha new class con?
+   Trả lời: 
+		 1. Dễ dàng ép kiểu/gán giá trị qua về giữa các biến có KDL thuộc nhóm cha-con
+		 	Vì tất cả đều là KDL cha lúc compile (VD phía trên)
+		 2. Có thể gộp/gom tất cả các phần tử có KDL cha-con vào 1 mảng/danh sách có KDL của cha	
+		 3. Thỏa mãn tính chất trong design pattern --> factory pattern 
+		 
+3. KDL cha = new KDL con => OK
+   KDL con = new KDL cha => fail
+   
+   VD:
+   KNT: long l = ... -- int i = ...
+   		l = i ==> OK
+   		i = l ==> fail
+   		
+   KDT: Shape sh = new Shape(); --> H1 --> method: x
+        Square sq = new Square(); --> H2 --> method: x, y
+   		sh = sq ==> OK
+   		sq = sh ==> Fail
+   	   (H1) (H1)
+   	   
+   	Giải thích: lúc gán cha cho con => con và cha cùng trỏ đến ô nhớ của cha (H1)
+   	Lúc compile => sq có thể truy cập hàm x và y 
+   	Nhưng lúc runtime => sq sẽ vào các hàm trong Cha, mà trong Cha ko có y => fail 
+   	==> JAVA bắt lỗi ngay tại lúc Compile
+   	   
+   
+
