@@ -1,0 +1,19 @@
+1. Tinhs chất đóng gói là gì?
+==> TCĐG được thể hiện qua các access modifier
+	+ private: đóng gói trong phạm vi class
+	+ public:dùng ở đâu cũng được 
+	+ no ( default): đóng gói trong phạm vi package
+	+ protected:
+	
+	
+===> TCDH cho class/interface/abstractclass/enum
+	+ private: đóng gói trong phạm vi package
+	+ public:dùng ở đâu cũng được 
+	
+2. Được sử dụng ở đây? code như thế nào , cho ví dụ 
+--> ví dụ khi mình tạo class thì :	
+	+ các thuộc tính nên cho private
+	+ các thuộc tính/pt nào có thể sử dụng bên trong package hiện tại --> no
+	
+	ví dụ : EmployeeA1 --> assignedProjects
+			EmployeeA2 --> OK
