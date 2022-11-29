@@ -1,17 +1,13 @@
 package bean;
 
 public class Car {
-	// non-static: object scope
-	// mỗi thuộc tính sẽ lưu trữ ở một ô nhớ riêng của đối tượng
+	//non-static: object scope -> mỗi thuộc tính sẽ lưu trữ ở 1 ô nhớ riêng cảu đối tượng
 	private String id;
 	private String color;
-	
-	// static : class scope (phạm vi)
-	// tất cả các đối tượng sẽ mang giá trị chung đó
-	// có thể xóa getter, setter và truy cập trực tiếp
+	//static: class scope -> Lưu trữ trong 1 ô nhớ chung của class, tất cả các dối tượng sẽ mang cùng 1 giá trị
 	public static String model;
-	
 	public Car() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public Car(String id, String color) {
@@ -39,5 +35,4 @@ public class Car {
 	public String toString() {
 		return "Car [id=" + id + ", model=" + model + ", color=" + color + "]";
 	}
-	
 }

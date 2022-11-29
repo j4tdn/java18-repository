@@ -1,27 +1,22 @@
 package bean;
 
 public class Item {
-
-	// thuộc tính trong class
-
+	//int id, String name,double salesPrice, String origin
 	private int id;
 	private String name;
 	private double salesPrice;
 	private String origin;
-
-	// constructor -- hàm khởi tạo rỗng
+	
 	public Item() {
-
+		
 	}
-
-	// hàm khởi tạo đầy đủ tham số
-	public Item(int pid, String pname, double psalesPrice, String porigin) {
-		this.id = pid;
-		this.name = pname;
-		this.salesPrice = psalesPrice;
-		this.origin = porigin;
+	
+	public Item(int id, String name, double salesPrice, String origin) {
+		this.id = id;
+		this.name = name;
+		this.salesPrice = salesPrice;
+		this.origin = origin;
 	}
-	// setter, getter, toString
 
 	public int getId() {
 		return id;
@@ -54,10 +49,5 @@ public class Item {
 	public void setOrigin(String origin) {
 		this.origin = origin;
 	}
-
-	@Override
-	public String toString() {
-		return "id" + this.id + ", " + "n" + this.name + ", " + "sP" + this.salesPrice + ", " + "or" + this.origin;
-
-	}
+	
 }

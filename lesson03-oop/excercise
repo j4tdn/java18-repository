@@ -1,0 +1,8 @@
+Tạo class item(int id, String name,double salesPrice, String origin)
+==> tạo default constructor
+==> tạo constructor
+==> getter,setter
+
+Tạo class Ex02ItemApp
+==> Khởi tạo item1, item2 với giá trị tuỳ ý
+==> tính tổng tiền 2 cái mặt hàng đó và in ra
