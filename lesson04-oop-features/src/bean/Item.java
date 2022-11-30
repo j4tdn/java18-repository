@@ -37,7 +37,7 @@ public class Item {
 	
 	@Override
 	public String toString() {
-		return id+ ", "+name+", "+salePrice;
+		return id + ", " + name + ", " + salePrice;
 	}
 	
 }
