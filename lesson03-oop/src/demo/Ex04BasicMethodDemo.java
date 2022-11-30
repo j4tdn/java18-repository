@@ -23,7 +23,7 @@ public class Ex04BasicMethodDemo {
 		Ex04BasicMethodDemo c2 = new Ex04BasicMethodDemo(3, 1);
 
 		int r1 = o1.sub();
-		int	r2 = o2.sub();
+		int r2 = o2.sub();
 		System.out.println("rd --> " + r1);
 		System.out.println("rd --> " + r2);
 	}

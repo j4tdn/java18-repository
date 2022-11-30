@@ -1,0 +1,18 @@
+1. Tính chất đóng gói là gì?
+==> TCĐG được thể hiện qua các access modifier
+	+ private: đóng gói trong phạm vi Class (hiện tại)
+	+ public: dùng ở đâu cũng được
+	+ __ : chỉ đóng gói trong phạm vi package (hiện tại)
+	+ protected: 
+==> TCĐG cho class/interface/abstract class/enum
+	+ public: dùng ở đâu cũng được 
+	+ __ : dùng trong phạm vi package
+
+2. Được sử dụng ở đâu? Code như nào, cho ví dụ?
+==> Ví dụ khi tạo Class thì 
+	+ các thuộc tính nên cho private 
+(để class nào quản lý thông tin của class đó, lấy ví dụ về việc chuyển lương của cty và nhân viên)
+
+	+ các thuộc tính (phương thức) nào có thể sử dụng bên trong package hiện tại --> __
+VD: EmployeeA1 --> assignedProjects 
+	EmployeeA2 --> OK

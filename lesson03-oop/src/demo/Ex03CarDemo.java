@@ -11,10 +11,10 @@ public class Ex03CarDemo {
 		Car c4 = new Car("C4", "Yellow");
 		Car ck = new Car("C5", "Purple");
 		Car c100 = new Car("C100", "Black");
-		
-		//c1.setmodel("MG");
+
+		// c1.setmodel("MG");
 		Car.model = "MG";
-		
+
 		System.out.println("c1 --> " + c1);
 		System.out.println("c2 --> " + c2);
 		System.out.println("c3 --> " + c3);

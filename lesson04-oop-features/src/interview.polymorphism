@@ -1,0 +1,51 @@
+1. tính chất đa hình là gì
++ Đa hình trong phương thức
+	--> là 2 hoặc nhiều phương thức cùng tên
+		+ khác SL tham số
+		+ KDL truyền vào của tham số
+		
+		
+		--> Overloading
+		+ thuộc 2 class có quan hệ thừa kế, phương thức 
+		trong lớp con định nghĩa lại phương thức từ lớp cha
+		là
+		--> Overriding
+	VD: Class X --> sum(a, b), sum(a, b, c)
+		Class A#paint --> Class B#paint
+		A extends B
+	
+
+
+
++ Đa hình trong đối tượng
+	--> là 1 đối tượng/biến có KDL lớp cha lúc cpmile
+		có thể tham chiếu/trỏ đén KDL của các lớp con lúc runtime
+		
+
+
+2. cho ví dụ, code demo đã từng sử dụng
+		// vì sao không lấy class hiện tại new class hiện tại 
+		mà phải lấy class cha new classs con?
+		//1 . dễ dàn ép kiểu/gắn giá trị qua về giữa các biến
+		 có kiểu dữ liệu thuộc nhóm (cha-con)
+		//2 . có thể gộp/gom tất cac các phần tử có KDL
+		 cha/con vào trong 1 mảng/danh sách có KDL của cha
+		//3 . thỏa mãn tính chất trong
+				design pattern -- factory pattern
+				cha cha = new COn()
+		// câu hỏi: KDl cha = KDL con ==> OK
+		// KDL con = KDL cha ==> fail
+		.
+		
+		ví dụ:
+		KNT: long 1 = .. -- int i - ...
+			 1 = i ==> OK
+			 i = 1 ==> FAIL
+			 
+			 
+		KDL Shap sh = ... -- Square sq = ...
+			sh = sq ==> OK 
+			sq = sh ==> FAIL
+			 
+
+
