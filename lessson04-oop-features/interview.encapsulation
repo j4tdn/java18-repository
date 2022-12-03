@@ -1,0 +1,21 @@
+1. Tính chất đóng gói là gì?
+==> TCDG được thế hiện qua các access modifier
+	+ private: đóng gói trong phạm vi class
+	+ public: dùng ở đâu cũng được hết
+	+ (default)	__: đóng gói trong phạm vi package
+
+==> TCDG cho class/interface/abstractclass/enum
+	+ public: dùng ở đâu cũng được hết
+	+ __	: dóng gói trong phạm vi package
+	+ protected
+
+2. Được sủ dụng ở đâu, code như thế nào, cho ví dụ
+==> ví dụ khi mình tạo class thì 
+	+ các thuộc tính nên cho private
+	+ các thuộc tính/pt nào có thể sử dụng bên trong
+	package hiện tại --> no__
+	
+	EmployeeA1 --> assignedProjects
+	EmployeeA2 --> OK
+
+3. Code như thế nào, cho ví dụ
