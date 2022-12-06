@@ -1,14 +1,16 @@
 package polymorphism.object;
 
-	// this --> đối tượng hiện tại
-	// 
 public class Circle extends Shape {
+	
+	// this ---> đối tượng trong class hiện tại
+	// super ---> đối tượng của lớp cha
 	@Override
 	void paint() {
-		System.out.println("Circle ---> paint");
+		// super.paint();
+		System.out.println("Circle --->   paint");
 	}
 	@Override
 	void calSuperficiality() {
-		System.out.println("Shape ---> calS...");
+		System.out.println("Circle ----> calS...");
 	}
 }

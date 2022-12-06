@@ -2,10 +2,9 @@ package polymorphism.object;
 
 public class Shape {
 	void paint() {
-		System.out.println("Shape --> paint");
+		System.out.println("Shape ----> paint");
 	}
-	
 	void calSuperficiality() {
-		System.out.println("Shape ---> calS...");
+		System.out.println("Shape ----> calS...");
 	}
 }
