@@ -1,0 +1,103 @@
+1. Tính chất thừa kế là gì  cho ví dụ tính minh họa
+
+--->Khi các class có chung thuộc tính / phương thức , trùng lập code
+	---> sẽ tạo ra 1 class cha chứa những thuộc tính/ phương thucứ chung đó
+	---> sau đó một class con sẽ kế thừa từ cha, muốn extends/override thì tạo thêm
+	ở lớp con
+Ví dụ:
+	+ thừa kế thuộc tính 
+		class book : id , name , publisher
+		class ClassicalBook extends Book 
+			status
+		class ReferenceBook extends Book 
+			tax
+	+ thừa kế phương thức 
+		interface Shape
+			void calS();
+		class rectangle implement Shape{
+			public void calS()
+			}
+			
+			class Father{
+				string getSports(){
+					return "badminton , volleyball";
+				}
+			}
+			
+			
+			class Son extends Father{
+			
+			}
+			
+			
+2 KDL cha có thể là ai 
+	---> class , abstract class , interface
+	---> 
+	
+3 Phân biệt class / abstract class / interface 
+
+	+ class : chứa thuộc tính và phương thức binhg thường  
+	+ abstract class : chứa thuộc tính và phương thức binhg thường và trừu tượng
+	
+	--> cha là [abstract]class thì class con chỉ kế thừa duy nhất 
+		đc 1 [abstract]class
+	
+	+ interface : chứa thuộc tính và phương thức trừu tượng
+	  
+	  . thuộc tính trong interface bắt buộc phải khởi tạo giá trị
+	  vì ko thể override trong lớp con( mặc định là static)
+	  . hiếm khi tạo biến/ thuộc tính trong interface
+	  
+	  --> cha là interface thì class con kế thừa được 1 hoặc nhiều  
+		interface
+	  + interaface mở rộng từ JAVA 08 đến hiện tại
+	  	--> có thể chứa
+	  	. phương thức trừu tượng 
+	  	. phương thức bình thường
+	  		private/default/static return_type method_name(..){
+	  			//body
+	  		}
+	  	. Vì sao từ JAVA 8 interface đc phép chứa hàm bình thường lúc này 
+	  	interface có chức năng giống với abstract class 
+	  	--> sao ko dùng abstract class luôn ? Lợi ích gì ?
+	  	
+	  	--> Interface --> 1/N hàm trừu tượng 
+	  	   + có 2 cách để override hàm trừu tượng
+	  	     1. Tạo class con implement từ interface
+	  	     	--> override abstract method
+	  	     2. New trực tiếp interface ---> anonymous class
+	  	     	--> override abstract method
+	  	-new-> Khi interface có 1 hàm trừu tượng duy nhất 
+	  		--> functional interface @FunctionalInterface
+	  		--> Để tạo 1 đối tượng cho kiểu biến functionalinterface
+	  		thay vì dùng cách 1 2 phía trên thì sử dụng anonymous funsion (lambda 
+	  		expression)
+	  		
+	  	
+	  . phương thức bình thường : có body
+	  . phương thức trừu tượng : không có body
+---> n KDL con có thể kế thừa từ 1 KDL cha --> DONE
+	  
+4. 1 KDL con có thể kế thừa 1/n KDL cha không , vì sao ?
+	con: class/interface/abstract class
+	cha: class/interface/abstract class
+			
+	Khi KDL con là CLASS
+	--> chỉ được kế thừa (extends) duy nhất từ 1 class cha
+	
+	Vì nếu như 1 class con kế thừa từ nhiều class cha
+	Trong trường hợp các class cha có chung hàm ( khai báo ) và các 
+	phương thức lại ko bắt buộc override trong class --> con kế thừa dùng mặc định 
+	ác hàm chung từ class cha 
+	
+	--> con gọi phương thức chung đó  --> ko biết gọi ai
+	--> error first --> ko cho extends từ nhiều class cha 
+	
+	
+	--> có thể kế thừa(thực thi,implesments) từ N interface cha
+	
+	KEY:
+	--> Phương thức trong CLASS cha --> không bắt buộc override trong CLASS con
+	--> Phương thức trong INTERFACE cha --> bắt buộc override lại trong class con 	
+			
+				
