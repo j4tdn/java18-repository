@@ -1,0 +1,18 @@
+1. Tính chất đóng gói là gì ?
+==> TCDG được thể hienj qua các access moddifier
+	+ private: đóng gói trong phạm vi class
+	+ public: dùng ở đâu cũng đc hết
+	+ (no) __: đóng gói trong phạm vi package
+
+2. Được sử dụng ở đâu ?
+==> khi tạo class thì thì
+	+ các thuộc tính nên cho private
+	+ các thuộc tính/pt nào có thể sử dụng bên trong 
+	package hiện tại --> (no)___
+	
+	
+	+
+
+
+
+3. code ntn, cho vdu ?
