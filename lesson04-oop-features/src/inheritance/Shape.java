@@ -13,6 +13,12 @@ public interface Shape {
 	// --> method without implementation
 	
 	// abstract method
+	// ... (access modifier - default) --> interface --> same as public
+	// default --> "public abstract"
+	
+	// protected --> using in current package
+	// --> using in different package if it's child of current class
+	
 	void paint();
 	
 	void calSuperficialiity();

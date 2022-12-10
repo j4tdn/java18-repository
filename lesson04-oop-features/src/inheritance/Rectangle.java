@@ -11,5 +11,9 @@ public class Rectangle implements Shape {
 	public void calSuperficialiity() {
 		System.out.println("Rectangle --> calS ...");
 	}
+	
+	protected void clear() {
+		System.out.println("Rectangle --> clear ...");
+	}
 
 }
