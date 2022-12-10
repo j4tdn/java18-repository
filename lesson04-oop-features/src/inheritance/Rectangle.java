@@ -12,4 +12,22 @@ public class Rectangle implements Shape {
 		System.out.println("Rectangle --> calS....");
 		
 	}
+	
+	// A
+	// private
+	/*
+	 * Public: [abstract]class --> using in current package
+	 * 			interface --> same as public
+	 * protected: using in current package
+	 * 			using in diferent package if it's child of current package
+	 */
+	
+	
+	
+	
+	protected void clear() {
+		System.out.println("Rectangle --> clear");
+	}
+	
+	
 }
