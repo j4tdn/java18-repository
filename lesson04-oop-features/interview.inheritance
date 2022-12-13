@@ -1,0 +1,51 @@
+1. Tính chất kế thừa là gì, cho vd, code minh họa
+
+--> khi các class mình code có chung thuộc tinh/phương thức chung đó
+--> sau đó 1 class con sẽ kế thừa từ cha, muốn extends/override thì tạo thêm ở lớp con
+
+vd:
++ Thừa kế thuộc tinh
+  class Book: id, name, publisher
+  class ClassicalBook extends Book
+  		status
+  class ReferenceBook extends Book
+  		tax
+  		
+ + Thừa kế/định gnhiax phương thức
+ 	interface Shape
+ 		void calS();
+ 	class Rectangle implement Shape{
+ 	@Override
+ 	public void calS(){
+ 	}
+ }
+ 
+ class Father{
+ String getSports(){
+ return "batminton, volleyball";
+ 	}
+ }
+ class Son extends Father{
+ 	
+ }
+ 
+ 
+ 2. KDL cha có thể là ai
+ --> class, abstract class, interface
+ 
+ 3. phân biệt class, abstract class, interface
+ 
+ 
+ 
+ 4. 1 KDL con có thể kế thauwf 1/n KDL cha không, vì sao?
+ 	con: class, abstract class, interface
+ 	cha: class, abstract class, interface
+ 	
+ 	khi KDL con là CLASS
+ 	--> chỉ được kế thừa (extends) duy nhất từ 1 class cha
+ 	--> có thể kế thừa (thực thi)(implement) từ N interface cha
+ 	
+ 	KEY:
+ 	--> phương thức trong CLASS cha --> không bắt buộc override trong CLASS con
+ 	--> phương thức trong INTERFACE cha --> bắt buộc override trong CLASS con
+ 	
