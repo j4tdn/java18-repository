@@ -54,7 +54,7 @@
 	--> cha là interface thì class con có thể kế thừa từ 1 hoặc nhiều interface
 	
 	+ interface mở rộng từ JAVA08 đến hiện tại
-		--> phương thức có thể chứa 
+		--> phương thức có thể chứa
 		. phương thức trừu tượng
 		. phương thức bình thường: không bắt buộc phải override 
 			private / default / static return_type method_name() {
