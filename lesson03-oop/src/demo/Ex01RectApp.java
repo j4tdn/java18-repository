@@ -11,6 +11,7 @@ public class Ex01RectApp {
 		String s2 = new String("hello");
 
 		// Rectangle --> class --> KDL đối tượng
+		// r1 --> variable
 		// new Rectangle() --> object --> giá trị
 		Rectangle r1 = new Rectangle();
 		r1.setWidth(10);
