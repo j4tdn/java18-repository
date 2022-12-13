@@ -1,0 +1,34 @@
+1. Tính chất đóng gói là gì ?
+==> Được thể hiện qua các access modifier
+	+ private: đóng gói trong phạm vi class
+	+ public: dùng ở đâu cũng được
+	+  ___  : đóng gói trong phạm vi package
+	+ protected:
+
+==> Cho class/interface/abstractclass/enum
+	+ public: dùng ở đâu cũng được hết
+	+ ___	: đóng gói trong phạm vi package
+2. Được sử dụng ở đâu, code như thế nào, cho ví dụ?
+==> ví dụ khi tạo class thì
+	+ các thuộc tính nên cho private
+	+ các thuộc tính/phương thức nào có thể sử dụng
+	bên trong package hiện tại --> no__(default)
+	
+	EmployeeA1 --> assignedProjects
+	EmployeeA2 --> OK
+	
+	EmployeeB1 --> x
+	
+	
+	
+		Q: Vì sao không lấy class hiện tại new class hiện tại new class
+		  mà phải lấy class cha new class con ?
+		 A: 
+		 1. Dễ dàng ép kiểu/gán giá trị qua về giữa các biến có KDL 
+		 thuộc nhóm (cha-con)
+		 	Vì tất cả đều là KDL cha lúc compile
+		 2. Có thể gộp/gom tât cả các phần tử có KDL cha/con
+		 vào trong 1 mảng/danh sách có KDL của cha
+		 
+		 3. Thỏa mãn tính chất trong design pattern --> factory pattern
+

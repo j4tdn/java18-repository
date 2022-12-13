@@ -1,0 +1,19 @@
+1. Tính chất đa hình là gì?
+s
++ Đa hình trong phương thức
+	--> Là 2|nhiều phương thức cùng tên nhưng:
+	  	. khác số lượng tham số 
+		. KDL truyền vào của tham số
+		--> Overloading
+		. thuộc 2 class có quan hệ thừa kế,
+		phương thức trong lớp con định nghĩa lại phương thức
+		--> Overriding
+	VD: Class X --> sum(a, b), sum(a, b, c)
+		Class A#paint --> Class B#paint
+		A extends B
+		
++ Đa hình trong đối tượng
+	--> Là 1 đối tượng|biến có KDL lớp cha lúc compile có thể tham chiếu/trỏ đến
+	KDL của các lớp con lúc runtime
+	
+2. Cho ví dụ, code demo đã từng sử dụng
