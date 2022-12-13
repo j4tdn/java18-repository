@@ -1,0 +1,61 @@
+1. Tính chất kế thừa là gò, cho ví dụ, code minh họa
+
+	--> khi class có chung thuộc tính/ phương thức, trùng lặp code
+		--> sẽ tạo ra 1 class cha có chung thuộc tính/phương thức chung đó
+		--> sau đó 1 class con sẽ kế thừa từ cha, muốn extends/ override thì tạo thêm
+		ở lớp con 
+		
+
+	Ví dụ:
+		+ Thừa kế thuộc tính
+			class Book: id, name, publisher
+			class ClassicalBook extends Book
+				status
+			class ReferenceBook extends Book
+				tax
+		+ Thừa kế/ định nghĩa phương thức
+			interface Shape
+				void calS();
+				Class Rectangle implement Shape{
+				@override
+				public void calS(){
+				}
+			}
+			class father {
+				String geSports(){
+					return "badminton, volleyball";
+				}
+			}
+			class Son extends father {
+				
+			}
+			
+			Shape sh = new Shape();
+					
+2. KDL cha có thể là ai
+	--> class, abstract class, interface
+	
+3. Phân biệt class/ abstract class/ interface
+	class: thuộc tính/ phương thức bình thường
+	abstract class: chứa thuộc tính và phương thức bình thường & trừu tượng
+	interface: chứa thuộc tính và phương thức trừu tượng
+	 . phương thức bình thường: có body
+	 . phương trừu tượng: không có body
+	 . thuộc tisnht rong interface bắt buộc
+	 	+ phải khởi tạo giá trị --> vì ko thể override trong lớp con
+	 	+ mặt định là static
+	 	+ hiếm khi tạo thuộc tính/ biến trong interface
+	 	
+--> N KDL con có thể kế thừa từ 1 KDL cha ---> Done 
+	 
+4.--> 1 KCL con có thể kế thừa từ 1/n KDL cha không? Vì sao?
+ 	con: class, abstract class, interface
+ 	cha: class, abstract class, interface
+ 	
+ 	Khi KDL con là class
+ 	--> chỉ đc kế thừa (extends) duy nhất từ 1 class cha
+ 	--> có thể kế thừa(thực thi)(implements) từ N interface cha
+ 	
+ 	KEY: 
+ 	--> Phương thức trog CLASS cha --> không bắt buộc override trong class con
+ 	--> Phương thức trog INTERFACE cha --> bắt buộc override trong class con
