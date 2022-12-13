@@ -20,5 +20,6 @@ public class Ex01BasicDemo {
 		System.out.println(firstName + " " + lastName + " " + email);
 		System.out.println(age);
 	}
+	
 
 }
