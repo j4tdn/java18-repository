@@ -1,0 +1,104 @@
+ Tính chất thừa kế là gì, cho ví dụ, code minh họa
+ 
+ => Khi các class mình code có chung thuộc tính phương thức, trùng lập code
+     -> mình sẽ tạo ra 1 class cha chứa những tt/pt chung đó
+     -> sau đó 1 class con sẽ kế thừa từ cha, nuốn mở rộng( extebds/overide) thì rạo thêm ở lớp con
+ 
+ 
+ 
+ VÍ DỤ :
+       + Thừa kế thuộc tính
+             class Book : id, name, publisher
+             class  ClassicalBook extends Book
+                  status
+             class ReferenceBook extends Book
+                   tax
+                   
+                   
+       + Thừa kế phương thức
+              interface Shape
+                    void calS();
+              class Rectangle implement Shape{
+              @Override
+                  public void calS(){
+              }
+           }
+           
+           class Father{
+                String getSports(){
+                    return "badminton, volleyball";
+              }
+           }
+           
+           
+           clas Son extends Father{
+           }
+           
+           
+ 2. KDL cha có thể là ai
+     => class, abstract class, interface 
+ 3. Phân biệt class/abstract class/interface
+       
+       + class : chứa thuộc tính và phương thúc bình thường
+       + abstract class : chứa thuộc tính và phương thức bihf thường & trừu tượng
+       
+       --> cha là [abstract]class thì class con chỉ kế thừa duy nhất được 1 [abstract]class
+       
+       
+       + interface : chứa thuộc tính và phương thức trưu tượng   
+            
+            
+            . thuộc tính trong interface bắt buộc
+                   + phải khởi tạo giá trị --> vì không thể override trong lớp cpn
+                   + mặt định là static
+                   + hiếm khi tạo biến/ thuộc tính trong interface
+                   
+        --> cha là interface thì class con chỉ kế thừa duy nhất được 1/n interface
+      + interface mở rộng từ java18 đến hiện tại
+            --> có thể chứa 
+                . phương thức trừu tượng
+                . phương thức bình thường : không bắt buộc override trong kdl con
+                     private/default/static return_type method_name(..){
+                         // body
+                     }
+        * CÂU HỎI :
+                . Vì sao JAVA08 interface đươc phép chứa hàm bình thường
+                . Lúc này interface sẽ có chức năng giống với abstract class
+                --> vì sao ko dùng abstract luôn? lợi ích gì?
+                
+                --> Interface --> 1/n hàm trừu tượng
+                     + có 2 cách để override hàm trừu tượng
+                          1. Tạo class con implement từ interface
+                              --> override abstract method
+                          2. New trực tiếp interface --> anonymous class
+                              --> override abstract method
+               -new -> Khi interface có 1 hàm trừ tượng 
+                     --> gọi là functional interface @FunctionalInterface
+                     --> Để tạo đối tượng/ thể hiện/ giá trị cho biến kiểu 
+                     functional interface --> thay vì dùng cách 1/2 phía trên thì
+                     sử duchj anonymous function(lambda expression)
+    . phương thức bình thường : có body
+    . phương thức trừu tượng : không có body 
+  => N KDL con có thể kế thừa từ 1 KDL cha --> DONE           
+4. 1 KDL con có thể kế thừa từ 1/n KDL cha không , vì sao?
+
+     con: class/interface/abstract class
+     cha: class/interface/abstract class
+     
+     Khi KDL con là CLASS
+     --> chỉ được kế thừa(extends) duy nhất từ 1 class cha
+     
+     Vì nếu trường hợp 1 class con kế thừa từ nhiều class cha
+     Trong trường hợp các class cha có chung hàm(khai báo) và các phương thức lại 
+     không k=bắt buộc override trong class--> con kế thừa dùng mặ định các hàm chung từ class class cha
+     
+     --> con gọi phương thức chung đó --> không biết gọi ai
+     --> error first --> không cho extends từ nhiều class cha
+     
+     --> có thể kế thừa(thực thi) (implements) từ N interface cha
+     
+     KEY:
+     --> Phương thức trong CLASS cha --> không bắt buộc override trong CLASS con
+     --> Phương thức trong INTERFACE cha --> bắt buộc override trong CLASS con
+     
+  
