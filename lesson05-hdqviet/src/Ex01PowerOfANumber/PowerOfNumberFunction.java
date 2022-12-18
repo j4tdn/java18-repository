@@ -3,23 +3,37 @@ package Ex01PowerOfANumber;
 public class PowerOfNumberFunction {
 	
 	public static void main(String[] args) {
-		if(isPowerOf(8, 2)) {
-			System.out.println("true");
-		} else {
-			System.out.println("false");
-		}
+		isPowerOf(8, 8);
+		isPowerOf(8, 2);
+		isPowerOf(2, 8);
+		isPowerOf(6, 2);
+		isPowerOf(20, 4);
+		isPowerOf(64, 4);
 	}
 	
-	public static boolean isPowerOf(int a, int b) {
-		int x = a / b;
-		int y = a % b;
-		while(x > 0) {
-			if (y != 0) {
-			return false;
+	public static void isPowerOf(int a, int b) {
+		if(a == b) {
+			System.out.println("false");
+		} else {
+			int c = 0;
+			if(a < b) {
+				c = a;
+				a = b;
+				b = c;
+			} 
+			int i = b;
+			while(a > b) {
+				b *= i;
+				if(a == b) {
+				System.out.println("true");
+				c = 1;
+				break;
+				}
 			}
-			x = a / b;
-			y = a % b;
-		} return true;
+			if (c == 0) {
+				System.out.println("false");
+			}
+		}
 	}
 }
 	
