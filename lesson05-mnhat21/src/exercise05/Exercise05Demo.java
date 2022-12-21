@@ -29,7 +29,7 @@ public class Exercise05Demo {
 		
 		Order o1 = new Order(c1, bds);
 		
-		System.out.println(o1.calcPrice(bds));
+		System.out.println(o1.calcPrice());
 		
 	}
 	

@@ -13,10 +13,11 @@ public class Order {
 		this.bookDetails = bookDetails;
 	}
 
-	public double calcPrice(BookDetail[] bookDetails) {
+	public double calcPrice() {
 		double price = 0;
-		for(BookDetail bd : bookDetails) {
-			price = price + bd.getBook().getPrice() * bd.getQuantity();
+		for(BookDetail bd : this.bookDetails) {
+			price = price + (bd.getBook().calcPrice() * bd.getQuantity());
+			// System.out.println(price);
 		}
 		return price;
 	}

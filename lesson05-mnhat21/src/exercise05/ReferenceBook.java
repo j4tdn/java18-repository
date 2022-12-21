@@ -31,6 +31,6 @@ public class ReferenceBook extends Book {
 	@Override
 	double calcPrice() {
 		// TODO Auto-generated method stub
-		return this.getPrice()*(1 + this.getTax());
+		return this.getPrice()*(1 + this.getTax()/100d);
 	}
 }
