@@ -11,7 +11,7 @@ public class PowerOfNumberFunction {
 		isPowerOf(64, 4);
 	}
 	
-	public static void isPowerOf(int a, int b) {
+	private static void isPowerOf(int a, int b) {
 		if(a == b) {
 			System.out.println("false");
 		} else {
