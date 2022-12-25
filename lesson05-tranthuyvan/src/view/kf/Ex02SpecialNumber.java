@@ -1,4 +1,4 @@
-package view;
+package view.kf;
 
 public class Ex02SpecialNumber {
 	public static void main(String[] args) {

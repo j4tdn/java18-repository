@@ -1,4 +1,4 @@
-package view;
+package view.kf;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

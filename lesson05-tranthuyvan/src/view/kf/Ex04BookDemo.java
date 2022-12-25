@@ -1,4 +1,4 @@
-package view;
+package view.kf;
 
 import java.util.Arrays;
 
@@ -27,7 +27,7 @@ public class Ex04BookDemo {
 		 * Vấn đề: 
 		 * Cùng là 1 bộ dữ liệu, nhưng với các yêu cầu khác nhau, mình phải tạo các hàm khác nhau để xử lý
 		 * Hàm ít có khả năng tái sử dụng với các điều kiện khác nhau
-		 * Mục đích --> Hàm/chức năng tạo ra có thể tái sử dụng cho hầu hết mọi yêu cầu/điều kiện
+		 * Mục đích --> Hàm/chức năng tạo ra có thể tái sử dụng cho hầu hết mọi yêu cầu/điềukiện
 		 */
 
 	}

@@ -1,4 +1,4 @@
-package view;
+package view.kf;
 
 /**
  * 12abu02muzk586cyx => sau khi split {12, 2, 586}
