@@ -1,0 +1,25 @@
+Mục đích: Chương trình có thể tiếp tục thực thi khi xảy ra ngoại lệ.
+In ra thông tin lỗi
+
+Xử lý lỗi
++ Cách 1: Tiền xử lý (validate) để không xảy ra ngoại lệ
+  --> Validate cho đoạn code bị lỗi
+
++ Cách 2: Sử dụng khối try catch để bắt ngoại lệ
+  --> Try/Catch cho đoạn code có khả năng xảy ra lỗi
+  
++ Cách 3: Sử dụng throw, throws để ném ngoại lệ
+  --> throw trước đoạn code xảy ra ngoại lệ
+  	  + điều khiển việc ném ngoại lệ thay JAVA
+  	  + mục đích: chọn exception, message phù hợp
+  	  
+  --> throws tại phần khai báo của hàm chứa đoạn code xảy ra ngoại lệ
+  	  + khi bên trong hàm có throw complite-exception
+  	  	--> bắt buộc  phải throws complite-exception
+  	  	
+  	  + khi bên trong hàm có throw runtime-exception
+  	  	--> không bắt buộc/không cần  phải throws runtime-exception
+  	  	
+  	  + chổ gọi hàm này phải try/catch nếu muốn chương trình tiếp tục
+  	  không bị kết thúc khi gặp ngoại lệ
+  	  
