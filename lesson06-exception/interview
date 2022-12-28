@@ -1,0 +1,62 @@
+1. Exception là gì? 
++ Là một ngoại lệ xảy ra trong quá trình thực thi chương trình. Khi chương trình gặp một số lỗi không mong muốn như
+  . NullPointerException
+  . ArithmeticException
+  . ArrayIndexOutOfBoundException
++ Khi gặp những lỗi này thì JAVA sẽ ném ra exception (chứa thông tin lỗi) và dừng chương trình ngay lập tức 
+
+2. Có bao nhiêu loại Exception? 2 loại
++ Compile exception (checked exception)
++ Runtime exception (unchecked exception)
+
+Phân biệt: 
++ Compile exception (checked exception) --> bắt buộc phải xử lý tại compile
+--> Khi gọi một hàm (tự viết ra, có sẵn của JAVA). 
+    Nếu hàm đó có throws Compile Exception --> chỗ gọi hàm phải xử lý ngoại lệ (throws, try/catch) 
++ Runtime exception (unchecked exception) --> không bắt buộc phải xử lý tại compile 
+
+3. Cách xử lý exception: 3
++ Validate
++ Try/catch 
++ Throw/Throws --> try catch
+
+4. Phân biệt throw/throws khi nào nên sử dụng.
+--> throw/throws đều dùng ở trong hàm (khác hàm main)
+   + throw: 
+   --> điều khiển việc ném ngoại lệ của chương trình 
+   --> thay vì đợi gọi đoạn code và để JAVA tự ném ra exception
+   thì mình sẽ kiểm tra điều kiện gây ra exception đó và tự ném
+   --> Khi tự ném, có thể dùng bất kỳ exception nào hợp lệ --> mô tả chi tiết thông tin lỗi
+       throw new *Exception(...);
+    + throws:
+       . Nếu (*) là runtime exception --> không bắt buộc phải throws ở phần khai báo 
+       . Nếu (*) là compile exception --> bắt buộc phải throws ở phần khai báo
+       									  (chỗ gọi hàm này, bắt buộc try-catch hoặc tiếp tục ném để xử lý)
+       									  (trừ hàm main --> vì main() là đơn vị nhỏ nhất, ko có hàm nào nhỏ hơn để bắt nó)
+       									  
+5. Có thể tự tạo ra exception được không?
+
+6. Finally là gì? Khi nào sử dụng
+--> Là block code để execute những đoạn code quan trọng như close connection, stream, etc .
+--> 
+
+7. Phân biệt từ khóa final và finally
+
+
+
+=======
+
+1. Tính chất trừu tượng là gì?
+-> Tính chất trừu tượng được thể hiện qua:
+ + class/abstract class/interface
+ + abstract method
+--> Khi tạo ra đối tượng từ class hoặc override abstract method thì đối tượng, 
+    method mới có phần dữ liệu/thực thi
+    
+ 2. Cho ví dụ code demo
+ + class EmailService
+    + login
+    + abstract login2Steps
+ + BookPredicate
+    + test (Book book)
+   
