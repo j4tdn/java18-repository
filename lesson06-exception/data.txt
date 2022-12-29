@@ -1,0 +1,6 @@
+1 ---> 2
+2 ---> 2
+>>> Employee 3 has wrong data ...
+4 ---> 30
+>>> Employee 5 has wrong data ...
+6 ---> -2
