@@ -1,0 +1,22 @@
+
+Xử lý lỗi
++ Cách 1: tiền xử lý (validate) để không xảy ra ngoại lệ 
+--> validate cho đoạn code bị exception 
+
++ Cách 2: Sử dụng khối try catch để bắt ngoại lệ 
+--> Try/catch cho đoạn code có khả năng xảy ra exception
+
++ Cách 3: Sử dụng throw, throws để ném ngoại lệ 
+--> throw tại đoạn code xảy ra ngoại lệ 
+	+ điều khiển việc ném ngoại lệ thay JAVA
+	+ mục đích: chọn exception, message phù hợp
+	
+--> throws exception tại phần khai báo của hàm chứa đoạn code xảy ra ngoại lệ
+	+ khi bên trong hàm có throw compile-exception
+	--> bắt buộc phải throws compile-exception
+	
+	+ khi bên trong hàm có throw runtime-exception
+	--> không bắt buộc/cần phải throw runtime-exception
+  	+ chỗ gọi hàm này phải try/catch nếu muốn chương trình
+  	 không bị kết thúc khi gặp ngoại lệ
+  	
