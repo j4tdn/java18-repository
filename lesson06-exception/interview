@@ -1,0 +1,33 @@
+1. Exception là gì
++ là 1 ngoại lệ xảy ra trong quá trình thực thi chương trình.
+khi chương trình gặp 1 số lỗi không mong muốn
+ .NullOinterException
+ .ArithemeticException
+ .ArrayIndexOutOfBouldException
++ Khi gặp những lỗi này thì JAVA sẽ ném ra exception ngoại lệ
+(chứ thông tin lỗi) và dừng ngay lập tức
+
+2. Có bao nhiu loại exception phân biệt
++ Compile(checked) - Exception
+  --> Bắt buộc phải xử lý tại compile
+  Khi gọi 1 hàm (tự viết ra, có sẵn của java). Nếu hàm đó
+  có throws Compile-Exception thì tại chỗ gọi hàm mình
+  phải xử lý ngoại lệ (throws, try/catch)
++ Runtime(Uncheck) - Exception
+  --> không bắt buộc phải cử lý ở compile
+3. Cách xử lý Exception
++Validate
++Try/catch
++Throw/throws --> try/catch
+
+4. Phân biệt throw/throws khi nào nên sử dụng
+ + throw
+ --> điều khiển việc ném ngoại lệ của chương trình
+ --> thay vì ggoiwj gọi đoạn code và để JAVA tự ném ra Exception
+ thì mình sẽ tự kiểm tra điều kiện gây ra exception đó và tự ném
+ --> tự ném --> dùng bất kỳ exception nào hợp lệ
+ 			--> mô tả chi tiết thông tin lỗi throw
+ 			new *Exception(...);
+ 			 *(runtime)--> ko bắt buộc phải throws ở phần khai báo
+ 			 *(complite)--> bắt buộc
+5. Có thể tự tạo ra Exception đc ko? đc
