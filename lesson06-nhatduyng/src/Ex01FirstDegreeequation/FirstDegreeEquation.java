@@ -1,4 +1,4 @@
-package Ex01FirstDegreeEquation;
+package Ex01FirstDegreeequation;
 
 import java.util.Scanner;
 

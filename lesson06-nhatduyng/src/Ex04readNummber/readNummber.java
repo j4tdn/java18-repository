@@ -1,4 +1,4 @@
-package Ex04ReadNummber;
+package Ex04readNummber;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package Ex02EmailAndPasswork;
+package Ex02EmailandPasswork;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
