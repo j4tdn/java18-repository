@@ -1,0 +1,9 @@
+- Date Time --> JAVA01 - JAVA07
++ Date: Ngay + Thang + Nam
++ Time: Gio + Phut + Giay
+
+JAVA
++ java.util.Date: Lưu trữ
++ Calendar: Lưu trữ + HÀm xử lý
++ DateFormat, SimpleDateFormat:
+--> Chuyển đổi KDL (Date, Calendar, String)
