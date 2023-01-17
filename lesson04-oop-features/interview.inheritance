@@ -1,0 +1,56 @@
+1. Tính chất thừ kế là gì cho ví dụ code minh hoạ
+	--> Khi các class mình code có chung thuộc tính/phương thức, trùng lặp code
+		->sẽ tạo ra 1 class cha chứa những thuộc tính/phương thức chung đó
+		->sau đó một class con sẽ kế thừa từ cha, muốn extends/override thì tạo thêm ở lớp con.
+		
+	ví dụ:
+		+ Thừa kế thuộc tính 
+			class Book: id, name, publisher
+			class ClassicalBook extends Book
+		+ Thừa kế phương thức 
+		
+2. KDL cha có thể là ai
+	--> class, abstract class, interface
+	+ class: chứa thuộc tính và phương thức bình thường
+	+ abstract class: chứa thuộc tính và phương thức bình thường & trừu tượng
+	+ interface: chưa thuộc tính và phương thức trừu tượng
+	- thuộc tính trong interface bắt buộc 
+		+ Phải khởi tạo giá trị --> vì không thể override trong lớp con
+		+ mặc định là static
+		+ hiển thị tạo biến/thuộc tính trong interface
+		
+		
+	+interface mở rộng từ Java08 đến hiện tại
+		--> phương thức có thể:
+			+phương thức trừu tượng
+			+phương thức bình thường
+				-private/default/static return_type method_name(..){
+										//body
+					}
+	+ CÓ 2 cách override hàm trừu tượng
+		1. Tạo class con implerment từ interface
+			-->override abstract method
+		2. New trực tiếp interface ---> anoymous class
+	-new->Khi interface có 1 hàm trừu tượng 
+		-->functional interface @functionalInterface
+		-->Để tạo đối tượng/thể hiện/giá trị cho biến kiểu functional interface --> thay vì dùng cách 1/2 phía trên thì
+		sử dụng anonymus function( lamda expression)
+			
+3. KDL con có thể kế thừa từ 1/n KDL cha không, vì sao?
+	
+	con: class/interface/abstract class
+	cha: class/intenface/abstract class
+	
+	Khi KDL con là class
+	--> chỉ kế thưuaf duy nhất 1 class cha
+	
+	Vì nếu 1 class con kê thừa từ nhiều class cha mà class cha có các hàm chung mà kh override
+	--> con kế thừa dùng mặc định các hàm chung --> con không biết dùng hàm của cha nào :v
+	
+	
+	--> có thể kế thừa thực thi từ n interface cha
+	
+	Key:
+		-->Phương thức trong class cha --> không bắt buộc override trong class con
+		-->Phương thức trong InTERFACE cha --> bắt buộc overrie trong class con
+	

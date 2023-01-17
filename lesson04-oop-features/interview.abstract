@@ -1,0 +1,13 @@
+1. Tính chất trừu tượng là gì
+	--> tính chát trừu tượng thể hiện qua 
+	+ class/abstract class/interface
+	+ abstract method
+	--> Khi nào tạo ra đối tượng từ class hoặc override abstract method thì 
+		đối tượng, method mới có phần dữ liệu/thực thi
+		
+2. Cho ví dụ code demo
+	+ class EmailService
+		+ login
+		+ abstract login2Steps
+	+ bookPredicate
+		+ test (Book book)

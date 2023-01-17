@@ -1,0 +1,42 @@
+1. Exception là gì
+	-> Là 1 ngoại lệ xảy ra trong quá trình thực thi chương trình. Khi chương trình gặp 1 số lỗi
+	không mong muốn :
+		- NullPointerException
+		- ArithemeticExeption
+		- ArrayIndexOutOfBouldException
+	-> Khi gặp những lỗi thì java ném ra exception chưa thông tin lỗi và dừng chương trình ngay lập tức
+
+2. Có bao nhiêu loại exception
+	+ Compile(checked) Exception: 
+		--> Bắt buộc phải xử lý tại compile
+		
+		Ex: Khi gọi 1 hàm ( tự viết ra, có sẵn của java). Nếu hàm đó có throws Compile-Exception thì tại chỗ gọi hàm
+		mình phải xử lý ngoại lệ(throws, try/catch).
+		
+	+ Runtime Exception:
+		--> Không bắt buộc phải xử lý tại compile
+		
+3. Các cách xử lý exception
+	+ Validate
+	+ Try/catch
+	+ Throw/Throws --> try/catch
+	
+4. Phân biệt throw/throws khi nào nên sử dụng
+	--> Trong hàm (#main)
+		+ throw :
+			- điều khiển việc ném ngoại lệ của chương trình
+			- thay vì đợi gọi đoạn code và để JAVA tự ném ra exception thì mình sẽ kiểm tra điều kiện gây ra 
+			  exception đó và tự ném ngoại lệ.
+			- Tự ném --> dừng bất kỳ exception nào hợp lệ
+					 --> mô tả chi tiết thông tin lỗi 
+					 throw new *Exception(...)
+					 
+			*(runtime) -> không bắt buộc phải throws ở phần khai báo
+			*(compile) -> bắt buộc
+
+5. Có thể tự tạo ra exception được không.
+
+6. finally là gì? khi nào sử dụng
+	-->  
+		
+	

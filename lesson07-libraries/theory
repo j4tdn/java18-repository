@@ -1,0 +1,8 @@
+1. Date Time : Java01->Java07
+	+ Date: Day,Month,Year
+	+Time : Hour, Minute, second
+
+2. JAVA
+	+ java.util.Date: Lưu trữ
+	+ Calender: Lưu trữ + hàm sử lý
+	+ DateFormat, SimpleĐateFormat: Chuyển đổi kiểu dữ liệu(Date, Calendar, String)

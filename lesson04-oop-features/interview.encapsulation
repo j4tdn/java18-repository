@@ -1,0 +1,17 @@
+1. What is encapsulation in java?
+	-->TCDG được thể hiện qua các access modifier
+	 	+ private: đóng gói trong phạm vi class
+	 	+ public: dùng ở đâu cũng được hết
+	 	+ __(abstract)class : chỉ đóng gói trong phạm vi package
+	 				  interface: tương đương với public
+	 	+ protected: Sử dụng inside và subclass
+	 	
+	 -->TCDH
+	 	+ public: dung ở đâu cũng được
+	 	+__ : đóng gói trong phạm vi package
+	 	
+2. Where it used?Example?
+	--> Khi tạo class thì 
+		+ các thuộc tính nên cho private
+		+ các thuộc tính/pt nào có thể sử dụng brrn trong package hiện tại --> __ 
+	--> 

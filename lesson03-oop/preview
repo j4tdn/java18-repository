@@ -18,7 +18,8 @@ Các KDL trong Java
 ========================================================================================================================
 static
 	--> for attribute
-	
+		non-static: object scope -> mỗi thuộc tính sẽ lưu trữ ở 1 ô nhớ riêng cảu đối tượng
+	    static: class scope -> Lưu trữ trong 1 ô nhớ chung của class, tất cả các dối tượng sẽ mang cùng 1 giá trị
 	--> method(exception: constructor)
 	  	1. Khi 1 hàm --> không phụ thuộc vào đối tượng đang gọi --> static
 	  	2. Khi 1 hàm --> phụ thuộc vào đối tượng đang gọi --> non-static
