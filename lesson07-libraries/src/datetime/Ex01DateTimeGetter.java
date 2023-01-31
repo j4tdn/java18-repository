@@ -61,12 +61,13 @@ public class Ex01DateTimeGetter {
 		int diy = c.getActualMaximum(Calendar.DAY_OF_YEAR);
 		System.out.println(dim);
 		System.out.println(diy);
-		// 2.
+		// 2.Hour, minute, second
 		TimeZone tz = TimeZone.getTimeZone("HST");
 		Calendar cAt = Calendar.getInstance(tz);
 		System.out.println("cAtist: " + cAt);
+		// printTzIds();
 
-		// 3. Thứ ngày, tuần/ ngày trong tháng năm
+		// 3. Thứ ngày, tuần/ngày trong tháng năm
 		int dow = cAt.get(Calendar.DAY_OF_WEEK);
 		System.out.println("dow: " + dow);
 		String[] weekDayStrings = { "Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7" };
@@ -86,7 +87,7 @@ public class Ex01DateTimeGetter {
 		printCurrentWeekDays(cInVn);
 	}
 
-	private static void printTzids() {
+	private static void printTzIds() {
 		System.out.println("Timezone Ids");
 		System.out.println("-----------------------------");
 		String[] tzIds = TimeZone.getAvailableIDs();
@@ -108,7 +109,10 @@ public class Ex01DateTimeGetter {
 	}
 
 	private static void printCurrentWeekDays(Calendar c) {
+		//b1: tìm ngày đầu tiên của tuần
 		Calendar start = getDayOfFdow(c);
+		
+		//B2; Tìm ngày cuối tuàn
 		Calendar end = Calendar.getInstance();
 		end.setTimeInMillis(start.getTimeInMillis());
 		end.add(Calendar.WEEK_OF_YEAR, 1);

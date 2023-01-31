@@ -6,3 +6,12 @@
 	+ java.util.Date: Lưu trữ
 	+ Calender: Lưu trữ + hàm sử lý
 	+ DateFormat, SimpleĐateFormat: Chuyển đổi kiểu dữ liệu(Date, Calendar, String)
+	
+4. Vấn đề cần phải sử dụng Java08
+	- Tốn memory
+	- Khó xử lý logic 
+	- Java 8 tách riêng ngày và giờ ra riêng
+	--> LocalDate
+	--> LocalTime
+	--> LocalDateTime
+	--> DateTimeFormatter
