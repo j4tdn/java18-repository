@@ -23,4 +23,22 @@
    . Ngoài ra còn chia múi giờ theo khu vực 
      -> VD: ICT: Indochina Time (UTC+7)
             WET: Western Europe Time (UTC-0)
+            
+ -- JAVA)8 --> now
+ Đặt vấn đề: 
+ 	. JAVA01 - JAVA07 => Date, Calendar
+ 	  --> Lưu trữ cả ngày/tháng/năm giờ:phút:giây
+ 	  
+ 	  VD: ngày sinh => lưu dưới dạng ngày/tháng/năm         -> n/t/n 00:00:00 -> tốn 2 bytes
+ 	      mặt hàng tươi sống => lưu dưới dạng giờ:phút:giây -> 0/0/0 h:m:s    -> tốn 2 bytes
+ 	  --> Tốn memory không cần thiết 
+ 	  --> Khó xử lý logic
+ 	  --> Save 100 mặt hàng => chúng save dưới dạng "data in memory" (tức chỉ lưu data tạm thời , khi tắt ứng dụng sẽ mất)
+ 	  --> Bình thường data sẽ được lưu trong database (SQL)
+ 	      -> DATE, TIME, DATETIME (lưu riêng biệt, khi cần gì sẽ truy cập đến và load data ra)
+ 	      -> Nếu dùng JAVA01-07 mất thêm giai đoạn convert cho đúng với format rồi mới được get dữ liệu
+==> JAVA08: LocalDate
+			LocalTime
+			LocalDateTime
+			DateTimeFormatter
   
