@@ -1,0 +1,46 @@
+- Date Time --> JAVA01 - JAVA07
+	+ Date: Ngày + Tháng + Năm
+	+ Time: Giờ + Phút + Giây
+	
+  JAVA
+  + java.util.Date: Lưu trữ
+  + Calendar: Lưu trữ + Hàm xử lí
+  + DateFormat, SimpleDateFormat: Chuyển đổi KDL (Date, Calendar, String)
+  
+TimeZone: 
++ Thời gian ở mỗi múi(khu vực, địa điểm)
+
++ Có 2 cách quy ước timezine
+	. GMT((Greenwich Mean Time(Kinh độ = 0)) --> GMT - 0 ==> 0h ( sáng )
+		. GMT - 1: 23h
+		. GMT + 1: 1h
+		--> có thể xảy ra sai số giữa nhũng khu vực theo thời gian
+			vì phụ thuộc vào tốc độ quay của Trái Đất quanh Mặt Trời
+		
+	. UTC(Cordinated Universal Time)
+		. Quy ước thời gian theo cấu hình của đồng hồ nguyên tử
+		. --> vật liệu nguyên tử không bị ảnh hưởng bởi yếu tố tự nhiên
+		. Được sử dụng cho WWW
+		. UTC-0,1,2,3
+	. Chia múi giờ theo khu vực
+		. ICT: Indochina Time --> UTC+7
+		. WET: Western Europe Time --> UTC-0
+		
+  -- JAVA08 --> now
+ + Đặt vấn đề
+	. JAVA01 - JAVA07 ==> Date, Calendar
+	--> Lưu trữ cả ngày/tháng/năm giờ:phút:giây
+	
+	--> ngày/tháng/năm --> Date: n/t/n 00:00:00
+	--> giờ/phút -->  : 0/0/0 g/p
+	
+	--> * Tốn memory ==> Datetime
+	--> * Khó xử lí logic
+	--> * --> JAVA --> Data in memory
+	--> Database (SQL) --> convert
+	
+	--> LocalDate
+	--> LocalTime
+	--> LocalDateTime
+	--> DateTimeFormatter
+  
