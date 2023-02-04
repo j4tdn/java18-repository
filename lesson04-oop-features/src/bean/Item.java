@@ -1,6 +1,10 @@
 package bean;
 
 public class Item {
+	public static final int ID = 1;
+	public static final int NAME = 2;
+	public static final int SALES_PRICE = 3;
+	
 	private int id;
 	private String name;
 	private double salesPrice;
@@ -13,6 +17,32 @@ public class Item {
 		this.name = name;
 		this.salesPrice = salesPrice;
 	}
+	
+	public Object get(int field) {
+		switch (field) {
+		case ID:
+			return id;
+		case NAME:
+			return name;
+		case SALES_PRICE:
+			return salesPrice;
+		}
+		return null;
+	}
+	
+	public void set(int field, Object value) {
+		switch (field) {
+		case ID:
+			this.id = Integer.parseInt(value.toString());
+			break;
+		case NAME:
+			this.name = value.toString();
+			break;
+		case SALES_PRICE:
+			this.salesPrice = Double.parseDouble(value.toString());
+		}
+	}
+	
 
 	public int getId() {
 		return id;
