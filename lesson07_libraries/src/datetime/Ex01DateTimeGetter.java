@@ -1,8 +1,12 @@
 package datetime;
 
+import java.time.Year;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Iterator;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class Ex01DateTimeGetter {
 	public static void main(String[] args) {
@@ -40,7 +44,64 @@ public class Ex01DateTimeGetter {
 		System.out.println("daysInMonth: " + daysInMonth);
 		System.out.println("daysInYear: " + daysInYear);
 		
+		System.out.println("default time zone: " + TimeZone.getDefault());
+		TimeZone bITz = TimeZone.getTimeZone("HST");
+		Calendar cAtBerLin = Calendar.getInstance(bITz);
+		System.out.println("cAtBerLin --> " + cAtBerLin);
+		//printTzIds();
 		
+		int dow = cAtBerLin.get(Calendar.DAY_OF_WEEK);
+		System.out.println("dow: " + dow);
+		
+		String[] weekDayAsString = {"CHủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"};
+		String weekday = weekDayAsString[dow -1];
+		System.out.println("weekday: " + weekday);
+		
+		int currentYear = Year.now().getValue();
+		GregorianCalendar gc = new GregorianCalendar();
+		System.out.println("isLeapYear: " + gc.isLeapYear(currentYear));
+		
+		Calendar cInVn = Calendar.getInstance(new Locale("vi", "VN"));
+		System.out.println("fdow in VN: " + cInVn.getFirstDayOfWeek());
+		System.out.println("current day: " + cInVn.get(Calendar.DAY_OF_MONTH));
+		
+		cInVn.set(Calendar.DAY_OF_MONTH, 1);
+		Calendar cfodw = getDayOffdow(cInVn);
+		System.out.println("d/M/Y --> " + cfodw.get(Calendar.DAY_OF_MONTH) + "/" + (cfodw.get(Calendar.MONTH) + 1) + "/" + (cfodw.get(Calendar.YEAR)) );
+		System.out.println("--------current weekday--------------");
+		printCurrentWeekday(cInVn);
+	}
+	
+	private static Calendar getDayOffdow(Calendar c) {
+		Calendar cr = Calendar.getInstance();
+		cr.setTimeInMillis(c.getTimeInMillis());
+		int dow = cr.get(Calendar.DAY_OF_WEEK);
+		int fdow = cr.getFirstDayOfWeek();
+		cr.add(Calendar.DAY_OF_MONTH, fdow - dow);
+		if (dow == Calendar.SUNDAY) {
+			cr.add(Calendar.DAY_OF_WEEK, -7);
+		}
+		return cr;
+	}
+	
+	private static void printCurrentWeekday(Calendar c) {
+		Calendar start = getDayOffdow(c);
+		Calendar end = Calendar.getInstance();
+		end.setTimeInMillis(start.getTimeInMillis());
+		end.add(Calendar.WEEK_OF_YEAR, 1);
+		
+		for (Calendar running = start; running.before(end); running.add(Calendar.DAY_OF_MONTH, 1)) {
+			System.out.println("d/M/Y --> " + running.get(Calendar.DAY_OF_MONTH) + "/" + (running.get(Calendar.MONTH) + 1) + "/" + (running.get(Calendar.YEAR)) );		
+		}
+	}
+	
+	private static void printTzIds() {
+		System.out.println("TImezone Ids ...");
+		System.out.println("----------------");
+		String[] tzIds = TimeZone.getAvailableIDs();
+		for (String tzId: tzIds ) {
+			System.out.println(tzId);
+		}
 	}
 	
 	
