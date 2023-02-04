@@ -1,0 +1,25 @@
+-Date Time --> JAVA01-JAVA07
++Date: NGay+Thang+nam
++Time: gio+phut+giay
+
+JAVA
++java.until.Date:lưu trữ
++Calendar:lưu trữ+ Hàm xử lí
++DateFormat, SImpleDateFormat:
+   -->chuyển đổi KDL(Date,Calendar, String)
+
+
+
+-JAVA08 -->now
++Đặt vấn đề:
+  .JAVA01 -JAVA07 ->Date, Calendar
+       -->lưu trữ cả ngày/tháng/năm giờ/phút/giây
+       
+       -->ngày/tháng/năm -->Date: n/t/n 00:00:00 -->2bytes
+       -->giờ/phút       -->    :0/0/0 g/p       -->2bytes
+       
+       --> *Tốn memory ==>Date TIme
+       --> *Khó xử lý logic
+       --> *--> JAVA --> 100 --> 99 --> Date in memory
+       --> Database(SQL) --> DATE(ntn) TIME DATETIME(sql)--> convert --> java
+                
