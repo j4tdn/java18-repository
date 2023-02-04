@@ -1,7 +1,0 @@
-- Date Time --> Java01 --> 07
- + Date: ngày, tháng, năm
- + Time: giờ, phút, giây
- JAVA
- + java.util.Date: lưu trữ
- + Calendar: Lưu trữ + hàm xử lý
- + DateFormat, SimpleDateFormat: Chuyển đổi KDL (Date, Calendar, String)
