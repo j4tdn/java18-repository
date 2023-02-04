@@ -1,5 +1,5 @@
 package encapsulation.companya;
-/*
+/**
 	public: everywhere
 	protected : current class, current package, subclass.
 	unmodified : current class, current package.

@@ -6,6 +6,7 @@ public class EmployeeA2 {
 		System.out.println(EmployeeA1.skills);
 		System.out.println(EmployeeA1.assignedProject);
 		
+		// private
 		//System.out.println(EmployeeA1.salary);
 	}
 }

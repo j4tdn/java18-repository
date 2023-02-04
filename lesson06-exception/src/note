@@ -1,0 +1,18 @@
+In ra thông tin lỗi
+
+Xử lý lỗi
+
++ Cách 1: tiền xử lý (validate) để không xảy ra ngoại lệ
+	--> Validate cho đoạn code bị lỗi
+	
++ Cách 2: Sử dụng khối try catch để bắt ngoại lệ 
+	--> Try/ catch cho đoạn code có khả năng xảy ra lỗi
+	
++ Cách 3: Sử dụng throw, throws để ném ngoại lệ
+	--> throw trước đoạn code xảy ra ngoại lệ
+		+ Điều khiển việc ném ngoại lệ thay JAVA
+		+ mục đích: chọn exception, message phù hợp
+	
+	--> throws tại phần khai báo của hàm chứa đoạn code xảy ra ngoại lệ
+	+ Khi bên trong hàm có throw compile-exception
+		--> bắt buộc phải throws 

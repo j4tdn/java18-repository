@@ -2,9 +2,9 @@ package polymorphism.method.overloading;
 /*
  * Đa hình trong phương thức
  * 	==> overloading 
- * 		2 phương thức cùng 1 class trùng tên
- * 			+ Khác tham số 
- * 			+ Khác KDL của tham số
+ * 		2 hoặc nhiều phương thức cùng 1 class trùng tên
+ * 			+ Khác tham số truyền vào
+ * 			+ Khác ít nhất 1 KDL của tham số truyền vào
  */
 
 public class MethodOverloadDemo {
