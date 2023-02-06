@@ -9,5 +9,12 @@ public class UserBuilderDemo {
 			.build();
 		
 		System.out.println("User --> " + user);
+		
+		//==========================================================
+		
+		System.out.println("=== Level 2 ===");
+		UserAdv userAdv = UserAdv.newInstance().withLastName("Nhat")
+				.withAge(21);
+		System.out.println(userAdv);
 	}
 }
