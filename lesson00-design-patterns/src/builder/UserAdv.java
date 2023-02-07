@@ -1,5 +1,10 @@
 package builder;
 
+/**
+ * UserAdv is builder of User contains User properties
+ *
+ */
+
 public class UserAdv {
 	private String firstName;
 	private String lastName;
