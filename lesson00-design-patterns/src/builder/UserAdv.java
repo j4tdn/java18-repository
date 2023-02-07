@@ -1,5 +1,11 @@
 package builder;
 
+/**
+ * UserAdv is builder of User contains User properties
+ * or User object(contains properties) inside
+ *
+ * @author qphan
+ */
 public class UserAdv {
 	private String firstName;
 	private String lastName; 
