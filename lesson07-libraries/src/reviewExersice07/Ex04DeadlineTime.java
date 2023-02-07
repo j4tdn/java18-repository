@@ -20,8 +20,10 @@ public class Ex04DeadlineTime {
 					break;
 				}
 			}
+
+			runningDate = runningDate.plusDays(1);
+
 		}
-		runningDate = runningDate.plusDays(1);
 	}
 
 	private static boolean isWeekendDay(LocalDate ldate) {
