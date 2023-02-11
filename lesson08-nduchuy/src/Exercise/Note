@@ -1,0 +1,62 @@
+Bài 1: Viết chương trình nhập vào một chuỗi kí tự bất kì sau đó thực hiện các công việc sau :
+	Yêu cầu: Chuỗi chỉ chứa các kí tự tiếng việt có dấu, phím space.
+	In ra mỗi kí tự trên một dòng
+	In ra mỗi từ trên mỗi dòng
+	In ra chuỗi đảo ngược theo kí tự
+	In ra chuỗi đảo ngược theo từ
+
+Bài 2: Viết chương trình cho phép người dùng nhập vào họ và tên sau đó in ra kết quả theo yêu cầu
+sau:
+
+	Họ tên nhập vào chỉ bao gồm các kí tự [A-Za-z ]
+	Viết HOA chữ cái đầu tiên của mỗi từ, còn lại là kí tự thường
+	Các kí tự cách nhau một khoảng trắng
+	Example : aDam Le vAN john Son => Adam Le Van John Son
+	Anne frAnk => Lê Phan
+
+Bài 3: Viết chương trình nhập vào chuỗi TIẾNG VIỆT có dấu bất kì sau đó xuất ra kết quả là chuỗi
+không dấu.
+	Input: Em có yêu anh không anh để anh biết còn chờ
+	Em xin lỗi em đã có thái độ không đúng với anh
+	Output: Em co yeu anh khong de anh biet con cho
+	Em xin loi em da co thai do khong dung voi anh
+
+Bài 4: Số nguyên tố tương đương
+	Hai số tự nhiên được gọi là nguyên tố tương đương nếu chúng có chung các ước
+	số nguyên tố.
+	Ví dụ: Các số 75 và 15 là nguyên tố tương đương vì cùng có các ước nguyên tố là
+	3 và 5.
+	Yêu cầu: Cho trước hai số tự nhiên N, M. Hãy viết chương trình kiểm tra xem các
+	số này có là nguyên tố tương đương với nhau hay không?
+	Input: N,M ( 2 ≤ M ≤ N ≤ 300000000000000000).
+	Output: Nếu chúng là nguyên tố tương đương ghi YES, ngược lại: ghi NO.
+Bài 5: Xâu s1 có dộ dài m và s2 có độ dài n ( m,n là hai số tự nhiên; n,m<250)
+Biết rằng s1,s2 chỉ chứa các kí tự ‘A’...’Z’.
+	
+	Yêu cầu: Hãy viết phương trình tìm xâu con chung dài nhất của xâu s1 và s2.
+	
+	Dữ liệu vào: Nhập từ bàn phím 2 xâu s1 và s2.
+	Kết quả: Xuất ra màn hình xâu con chung của 2 xâ s1 và s2.
+	Example:
+	Input: S1:ABCEDEABC
+	S2:ABCEDCBBCK
+	Output: ABCED
+Bài 6: Cho dãy các số tự nhiên được viết ra thành một dãy vô hạn trên đường thẳng:
+	1234567891011121314 ........ (1). Hỏi số ở vị trí thứ 100 trong dãy trên là số nào ?
+	Bạn hãy làm bài này theo hai cách: Cách 1 dùng suy luận logic trong vòng 30s rồi nhớ
+	kết quả trong đầu và cách 2 viết chương trình để tính toán và so sánh hai kết quả với
+	nhau.
+	Tổng quát bài toán trên: Chương trình yêu cầu nhập số K từ bàn phím và in ra trên màn
+	hình kết quả là số nằm ở vị trì thứ K trong dãy (1) trên. Yêu cầu chương trình chạy càng
+	nhanh càng tốt.
+Bài 7: Cho xâu kí tự S bao gồm toàn các ký tự ‘a’ đến ‘z’, không quá 255 ký tự. “Dãy
+con đúng” trong xâu S là dãy có các kí tự liền kề giống nhau
+	Yêu cầu:
+	
+	Hãy tính độ dài lớn nhất của dãy con đúng của dãy S.
+	Hãy tính độ dài nhỏ nhất của dãy con đúng của dãy S.
+	
+	Example: ‘aaabaaabbaaaaa’
+	Độ dài lớn nhất của dãy con đúng : 5 “aaaaa” [9]
+	Độ dài nhỏ nhất của dãy con đúng: 1 “b” [3]
+	Với [x] => bắt đầu từ vị trí x trong xâu S
