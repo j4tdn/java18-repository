@@ -1,6 +1,6 @@
 package mutable;
 
-public class Ex02StringMutableDemo {
+public class Ex01StringMutableDemo {
 	public static void main(String[] args) {
 		// Hầu hết các trường hợp đều sử dụng String Literal
 		
