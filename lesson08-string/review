@@ -1,0 +1,14 @@
+String Immutable
++ Literal
++ Object
+
+String Mutable
++ Builder
++ Buffer
+
+==> Sử dụng nhiều nhất --> Literal
+==> Tiếp theo Builder --> +- chuỗi
+==> Bài toán đa luồng --> Buffer
+
+Tốc độ: Đơn luồng StringBuilder -> StringBuffer --> String
+      : Đa luồng: StringBuffer
