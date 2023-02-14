@@ -1,19 +1,26 @@
 package inheritance;
 
-
 /**
- * khi yêu cầu có kiểu cha chỉ chứa những hàm không có phần thực thi
+ * Khi hiểu yêu cầu cha chỉ chứa những hàm không có phần thực thi
  * --> cha là interface --> từ JAVA 1.0 đến JAVA 7.0
  * 
- * --> từ JAVA 8 trở đi --> interface có thể chứa hàm trừu tượng hoặc hàm bình thường(
- * có thân hàm)
- * --> defalt
- *
+ * --> từ JAVA 8 trở đi --> interface có thể chứa hàm trừu tượng hoặc hàm bình thường (có thân hàm)
+ * --> default/static/private
  */
+
 public interface Shape {
+	// parent method --> undefined implementation
+	// --> method without implementation
 	
-	//abstract method --> hàm trừu tượng
+	// abstract method
+	// ... (access modifier - default) --> interface --> same as public
+	// default --> "public abstract"
+	
+	// protected --> using in current package
+	// --> using in different package if it's child of current class
+	
 	void paint();
 	
-	void calSuperficiality();
+	void calSuperficialiity();
+
 }

@@ -6,9 +6,10 @@ public class Circle implements Shape {
 	public void paint() {
 		System.out.println("s1 --> paint ...");
 	}
-	
+
 	@Override
-	public void calSuperficiality() {
-		System.out.println("s1 --> cals ...");
+	public void calSuperficialiity() {
+		System.out.println("s1 --> calS ...");
 	}
+
 }

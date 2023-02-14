@@ -1,48 +1,62 @@
 package bean;
 
 public class Item {
+	// attributes
 	private int id;
 	private String name;
-	private double salePrice;
+	private double salesPrice;
 	private String origin;
+	
+	// default constructor
 	public Item() {
-		
 	}
-	public Item(int id, String name, double salePrice, String origin) {
+	
+	// Constructor with parameters
+	public Item(int id, String name, double salesPrice, String origin) {
 		this.id = id;
 		this.name = name;
-		this.salePrice = salePrice;
+		this.salesPrice = salesPrice;
 		this.origin = origin;
 	}
+	
+	// getter, setter
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double getSalePrice() {
-		return salePrice;
+
+	public double getSalesPrice() {
+		return salesPrice;
 	}
-	public void setSalePrice(double salePrice) {
-		this.salePrice = salePrice;
+
+	public void setSalesPrice(double salesPrice) {
+		this.salesPrice = salesPrice;
 	}
+
 	public String getOrigin() {
 		return origin;
 	}
+
 	public void setOrigin(String origin) {
 		this.origin = origin;
 	}
+	
+	// toString
 	@Override
 	public String toString() {
-		return "ID : "+this.id+",Name : "+this.name+",SalePrice : "+this.salePrice+",Origin : "+this.origin;
+		return "id: " + this.id + ", " + "name: " + this.name + ", " + 
+	           "sales price: " + this.salesPrice + ", " + "origin: " + this.origin;
 	}
-	
-	
-	
+
 }

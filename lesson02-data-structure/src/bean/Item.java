@@ -1,30 +1,37 @@
 package bean;
+
 /*
-*Khai bao kieu du lieu Item gom : (ma mat hang , ten mat hang , gia ban)=>attributes
-*class : KDL đối tượng
-*class : có thẻ chưa nhiều thông tin
-*class : giá trị của class là một đối tượng(ô nhớ ở HEAP)
+ Khai báo KDL mặt hàng (class) gồm 
+ 	↓ attributes (thuộc tính)
+ 	+ Mã mặt hàng 
+ 	+ Tên mặt hàng 
+ 	+ Giá bán
  */
 public class Item {
-    public int id;
-    public String name;
-    public double salesPrice;
-    //Hàm khởi tạo ra 1 đối tượng cho class hiện tại
-    //==> trả về kiểu dữ liệu Item
-    public  Item()
-    {
+	// non-static
+	public int id;
+	public String name;
+	public double salesPrice;
+	
+	// Hàm "khởi tạo" mặc định
+	// Mục đích: khởi tạo ra một đối tượng cho Class hiện tại
+	// ==> thuộc kiểu dữ liệu của Class hiện tại (tức trả về KDL Item)
+	
+	public Item() {	
+		
+	}
+	
+	// external: 
+	public Item(int pId, String pName, double pSalesPrice) {
+		this.id = pId;
+		this.name = pName;
+		this.salesPrice = pSalesPrice;
+	}
 
-    }
+	@Override // (định nghĩa lại từ Cha)
+	// this: biến đối tượng hiện tại đang gọi toString
+	public String toString() {
+		return this.id + ", " + this.name + ", " + this.salesPrice;
+	}
 
-    public Item(int id, String name, double salesPrice) {
-        this.id = id;
-        this.name = name;
-        this.salesPrice = salesPrice;
-    }
-
-    @Override //(định nghĩa lại từ lớp cha)
-
-    public String toString() {
-        return id + ", "+name +", "+salesPrice;
-    }
 }

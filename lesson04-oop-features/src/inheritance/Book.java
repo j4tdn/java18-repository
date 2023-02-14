@@ -4,12 +4,11 @@ public class Book {
 	private String id;
 	private String name;
 	private double salesPrice;
-	
+
 	public Book() {
 	}
 
 	public Book(String id, String name, double salesPrice) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.salesPrice = salesPrice;
@@ -43,6 +42,5 @@ public class Book {
 	public String toString() {
 		return "Book [id=" + id + ", name=" + name + ", salesPrice=" + salesPrice + "]";
 	}
-	
-	
+
 }

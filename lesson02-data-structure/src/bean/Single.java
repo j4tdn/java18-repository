@@ -1,16 +1,18 @@
 package bean;
 
 public class Single {
-    public  int value;
-    public Single() {
+	public int value;
 
-    }
-    public Single(int value) {
-        this.value = value;
-    }
+	public Single() {
+	}
 
-    @Override
-    public String toString() {
-        return ""+this.value;
-    }
+	public Single(int pValue) {
+		this.value = pValue;
+	}
+
+	@Override
+	public String toString() {
+		return "" + this.value;
+	}
+
 }

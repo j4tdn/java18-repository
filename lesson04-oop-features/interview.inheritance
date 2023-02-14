@@ -1,96 +1,107 @@
-1.Tình chất thừa kế là gì, cho ví dụ, code minh họa
-
- --> khi mà các class có chung thuộc tính / phương thức , trùng lặp code 
-   ---> tạo ra 1 class cha chứa những thuộc tính / phương thức chung đó
-   ---> sau đó 1 class con sẽ kế thừa từ cha, muốn extends/override thì tạo thêm ở lớp con 
-   
-  Ví dụ: 
-  	+Thừa kế thuộc tính:
-  		class Book: id,name,publisher
-  		class ClassicalBook extends Book
-  			status
-  		class ReferenceBook extends Book
-  			tax
-  			
-  	+Thừa kế/ định nghĩa phương thức:
-  		interface Shape
-  			void calS();
-  		class Rectangle() implement Shape {
-  			public void calS();
-  		}
-  		class Father{
-  			String getSport(){
-  				return "badminton,volleyball";
-  			} 
-  		}
-  		class Son extends Father{
-  		}
-  			
-  		
-2.KDL cha cha có thể là ai?
-	---> class, abstract class, interface
-	
-3.Phân biệt abstract class/class/interface
-	+class: chứa thuộc tính và phương thức bình thường
-	+abstract class : chứa thuộc tính và phương thức bình thường & trừu tương
-		--> cha là [abstract]class thì class con chỉ kế thừa duy nhất được 1 [abstract]class
-	+interface: chứa thuộc tính và phương thức trừu tượng
-	 .phương thức bình thường: có body
-	 .phương thức trừu tượng; ko có boby 
-	 .thuộc tính trong interface bắt buộc
-	 	+phải khởi tạo giá trị --> vì ko thẻ override trong lớp con
-	 	+mặc định là static
-	 	+hiếm khi tạo biến/thuộc tính trong interface
-	 --> cha là interface thì class con chỉ kế thừa duy nhất được 1 | n interface
-	 +interface mở rộng từ JAVA08 đến hiện tại
-	 	-->có thể chứa:
-	 	. phương thức trừu tượng
-	 	. phương thức bình thường: ko bắt buộc override trong KDL con
-	 		privete/default/static return_type method_name(...){
-	 		//body
-	 		}
-	 	.Vì sao từ JAVA08 interface được phép chứa hàm bình thường
-	 	.Lúc này interface sẽ có chwusc nawg giống với abstract class
-	 	--> sao ko dùng abstract class luôn? lợi ích gì?
-	 	
-	 	--> Interface -->1|N hàm trừu tương
-	 		+ có 2 cách để override hàm trựu tượng
-	 		1.tạo class con implement từ interface
-	 		--> override abstract method
-	 		2.New trực tiếp interface --> anonymous class
-	 		--> override abstract method
-	 	-new-> khi interface có 1 hàm trực tượng
-	 		--> functional interface @FuntionalInterface
-	 		--> để tạo 1 đối tượng/thể hiện/giá trị cho biến kiểu functional interface 
-	 		--> thay vì dùng cách 1,2 phía trên thì sử dụng anonymous function(lambda expression)
- ---> KDL con có thể kế thừ từ 1/n KDL cha
- --->N KDL con có thể kế thừa từ 1 KDL cha
+1. Tính chất thừa kế là gì? Cho ví dụ, code minh họa
+ --> khi các class muốn dùng trong dự án, có phương thức và thuộc tính trùng nhau
+ --> thay vì ở mỗi class lặp đi lặp lại các phương thức và thuộc tính chung đó -> gây trùng lặp code
+ --> Giải quyết: tạo class cha chứa các phương thức và thuộc tính chung đó
+ --> Sau đó mỗi class con sẽ kế thừa từ cha, muốn mở rộng (extends) hoặc override thì tạo thêm ở class con
  
- 4.1 KDL con có thể kế thừa từ 1/n KDL cha không, vì sao?	
-  con: class/interface/abstract class
-  cha: class/interface/abstract class
-   KHi KDL con là CLASS
-   --> chỉ được kế thừa(extends) duy nhất từ 1 CLASS cha 
-   		Vì nếu như 1 class con kế thừa từ nhiều class cha
-		Trong trường hợp các class cha có chung hàm(khai báo) và các
-		phương thức lại không bắt buộc override trong class --> con kế thừa
-		dùng mặc định các hàm chung từ class cha
-		
-		--> con gọi phương thức chung đó --> không biết gọi ai
-		--> error first --> không cho extends từ nhiều class cha
-   
-   --> có thể kế thừa(thực thi) (implements) từ N interface cha
-   
-   KEY:
-   	--> Phương thức trong CLASS cha --> không bắt buộc override trong CLASS con
-   	--> Phương thức trong interface cha --> bắt buộc override trong CLASS con
-
-   
-	 	
-	 	
-	 	
-	 	
-	 	
-	 	    
+ VD: 
+  + Thừa kế thuộc tính 
+    class Book: id, name, publisher
+    class ClassicalBook extends Books 
+        status
+    class ReferenceBook extends Books
+    	tax
+    
+  
+  + Thừa kế phương thức (override)
+    interface Shape 
+        void calS();
+    class Rectangle implements Shape {
+    	@Override
+        public void calS() {
+        }
+    }
+    
+    class Father {
+    	String getSport() {
+    	return "badminton, volleyball";
+    	}
+    }
+    
+    class Son extends Father {
+    
+    }
+    
+2. KDL Cha có thể là ai? 
+ --> class, abstract class, interface
+ 
+3. Phân biệt class, abstract class, interface 
+	+ class: chứa thuộc tính và phương thức bình thường
+	+ abstract class : chứa thuộc tính và phương thức bình thường & trừu tượng
+	--> cha là [abstract] class thì class con chỉ kế thừa duy nhất 1 [abstract] class
 	
-4.
+	+ interface: chứa thuộc tính và phương thức trừu tượng
+	. thuộc tính trong interface bắt buộc phải khởi tạo giá trị 
+		--> vì không thể override trong lớp con
+		--> mặc định là static
+		--> hiếm khi tạo biến/thuộc tính trong interface
+	
+	--> cha là interface thì class con có thể kế thừa từ 1 hoặc nhiều interface
+	*** interface mở rộng từ JAVA08 đến hiện tại
+		--> có thể chứa 
+		. phương thức trừu tượng 
+		. phương thức bình thường: không bắt buộc phải override
+			private, default, static return_type method_name(..) {
+				// body
+			}
+		. Vì sao từ JAVA08 interface được phép chứa hàm bình thường?
+		. Lúc này interface sẽ có chức năng giống với abstract class
+		--> sao không dùng abstract class luôn? Lợi ích gì?
+		
+		--> Interface --> 1/N hàm trừu tượng
+			+ có 2 cách để override hàm trừu tượng
+			 1. Tạo class con implements từ interface 
+			    --> override abstract method
+			 2. New trực tiếp interface --> anonymous class 
+			    --> override abstract method
+		-new-> Khi interface có 1 hàm trừu tượng
+			  --> functional interface @FunctionalInterface
+			  --> Để tạo đối tượng/thể hiện/giá trị cho biến kiểu functional interface 
+			  => thay vì dùng cách 1 và 2 ở trên 
+			  => thì sử dụng anonymous function (lambda expression)
+	
+		
+		
+		
+		. phương thức bình thường: có body
+		. phương thức trừu tượng: không có body
+	
+	--> N KDL con có thể kế thừa từ 1 KDL cha --> DONE	
+4. 1 KDL con có thể kế thừa từ một hoặc nhiều KDL cha không, vì sao?
+	con: class/abstract class/interface
+	cha: class/abstract class/interface
+	
+	Khi KDL con là CLASS 
+	--> chỉ được kế thừa (extends) duy nhất từ 1 CLASS cha 
+	↓
+	Trả lời:
+	Nếu như 1 class con kế thừa từ nhiều class cha 
+	Trong trường hợp các class cha có chung hàm (khai báo) và các phương thức lại ko bắt buộc override trong class con
+	--> con kế thừa dùng mặc định các hàm chung từ class cha
+	--> con gọi phương thức chung đó --> ko biết gọi ai 
+	--> error first (bắt lỗi ngày từ đầu) --> ko cho extends từ nhiều class cha 
+	
+	--> có thể thực thi (implements) từ N interface cha
+	↓
+	Trả lời:
+	
+	
+	KEY:
+	--> Phương thức trong CLASS cha --> không bắt buộc override trong CLASS con
+	--> Phương thức trong INTERFACE cha --> bắt buộc override trong CLASS con
+	
+	
+ 
+ 
+ 
+ 

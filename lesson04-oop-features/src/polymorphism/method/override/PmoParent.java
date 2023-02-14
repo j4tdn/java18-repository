@@ -1,13 +1,16 @@
 package polymorphism.method.override;
 
+// PmoParent = Polymorphism Override Parent
+
 public class PmoParent {
-	//attrbbute
+	
+	// attribute
 	int a = 10;
 	String s = "parent";
 	
-	//method
+	// method
 	void log() {
-		System.out.println("log ---> parent");
+		System.out.println("log --> parent");
 	}
+
 }
-;

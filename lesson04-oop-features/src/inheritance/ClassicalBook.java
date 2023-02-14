@@ -2,7 +2,7 @@ package inheritance;
 
 public class ClassicalBook extends Book {
 	private boolean status;
-	
+
 	public ClassicalBook() {
 	}
 
@@ -23,6 +23,5 @@ public class ClassicalBook extends Book {
 	public String toString() {
 		return "ClassicalBook [status=" + status + ", toString()=" + super.toString() + "]";
 	}
-	
-	
+
 }

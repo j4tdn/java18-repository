@@ -1,0 +1,44 @@
+- Date Time --> JAVA01 - JAVA07
+  + Date: Ngày + Tháng + Năm 
+  + Time: Giờ + Phút + Giây
+  
+  JAVA
+  + Date (java.util.Date): lưu trữ 
+  + Calendar: Lưu trữ + Hàm xử lý
+  + DateFormat, SimpleDateFormat: chuyển đổi KDL (Date, Calendar, String)
+  
+ - TimeZone
+ + Thời gian ở mỗi múi (khu vực, địa điểm)
+ 
+ + Có 2 cách quy ước TimeZone 
+   . GMT (Greenwich Mean Time): kinh độ = 0 --> GMT-0 => 0h
+                                                GMT-1 => 23h
+                                                GMT+1 => 1h
+     => Problem: có thể xảy ra sai số giữa những khu vực theo thời gian
+     Vì phụ thuộc vào tốc độ quay của Trái Đất quanh Mặt trời
+   . UTC (Cordinated Universal Time)
+     -> Quy ước thời gian theo cấu hình của đồng hồ nguyên tử (vật liệu nguyên tử ko bị ảnh hưởng bởi yếu tố tự nhiên)
+     -> Được sử dụng cho www
+     UTC-0,1,2,3
+   . Ngoài ra còn chia múi giờ theo khu vực 
+     -> VD: ICT: Indochina Time (UTC+7)
+            WET: Western Europe Time (UTC-0)
+            
+ -- JAVA)8 --> now
+ Đặt vấn đề: 
+ 	. JAVA01 - JAVA07 => Date, Calendar
+ 	  --> Lưu trữ cả ngày/tháng/năm giờ:phút:giây
+ 	  
+ 	  VD: ngày sinh => lưu dưới dạng ngày/tháng/năm         -> n/t/n 00:00:00 -> tốn 2 bytes
+ 	      mặt hàng tươi sống => lưu dưới dạng giờ:phút:giây -> 0/0/0 h:m:s    -> tốn 2 bytes
+ 	  --> Tốn memory không cần thiết 
+ 	  --> Khó xử lý logic
+ 	  --> Save 100 mặt hàng => chúng save dưới dạng "data in memory" (tức chỉ lưu data tạm thời , khi tắt ứng dụng sẽ mất)
+ 	  --> Bình thường data sẽ được lưu trong database (SQL)
+ 	      -> DATE, TIME, DATETIME (lưu riêng biệt, khi cần gì sẽ truy cập đến và load data ra)
+ 	      -> Nếu dùng JAVA01-07 mất thêm giai đoạn convert cho đúng với format rồi mới được get dữ liệu
+==> JAVA08: LocalDate
+			LocalTime
+			LocalDateTime
+			DateTimeFormatter
+  
