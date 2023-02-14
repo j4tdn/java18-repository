@@ -1,0 +1,13 @@
+String Immutable
++ Literal 
++ Object  
+
+String Mutable 
++ Builder
++ Buffer
+
+==> Sử dụng nhiều nhất --> Literal > Builder > Buffer (đối với bài toán đa luồng)
+
+Tốc độ xử lý
++ Đơn luồng: String Builder > String Buffer > String
++ Đa luồng: String Buffer
