@@ -12,10 +12,14 @@ public class Ex04DaysToWork {
 		do {
 			if (today.getMonth() == Month.SEPTEMBER) {
 				if (today.getDayOfMonth() == 1 || today.getDayOfMonth() == 2) {
+
 					System.out.println("Day off: "+today);
 					today = today.plusDays(1);
 				} else if (today.getDayOfWeek() == DayOfWeek.SATURDAY || today.getDayOfWeek() == DayOfWeek.SUNDAY) {
 					System.out.println("Day off: "+today);
+
+					today = today.plusDays(1);
+				} else if (today.getDayOfWeek() == DayOfWeek.SATURDAY || today.getDayOfWeek() == DayOfWeek.SUNDAY) {
 					today = today.plusDays(1);
 				} else {
 					today = today.plusDays(1);
