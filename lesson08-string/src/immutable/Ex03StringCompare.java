@@ -1,5 +1,5 @@
+package immutable;
 import bean.A;
-
 public class Ex03StringCompare {
 	public static void main(String[] args) {
 		// Use 100% string literal in string immutable

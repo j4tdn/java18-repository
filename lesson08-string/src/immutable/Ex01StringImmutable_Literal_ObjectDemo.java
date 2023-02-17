@@ -1,4 +1,4 @@
-
+package immutable;
 public class Ex01StringImmutable_Literal_ObjectDemo {
 	public static void main(String[] args) {
 		//giá trị của biến string literal sẽ được lưu trữ ở vùng nhớ HEAP

@@ -1,4 +1,4 @@
-
+package immutable;
 public class Ex02Performance {
 	private static final long N = 1000000;
 	public static void main(String[] args) {
