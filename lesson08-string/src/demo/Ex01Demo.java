@@ -35,7 +35,7 @@ public class Ex01Demo {
 		// cách nhau bởi khoảng trắng) --> vng
 		s = s.strip();
 		System.out.println("s --> " + "||" + s + "||");
-		s = s.replaceAll("\\s+", " ");
+//		s = s.replaceAll("\\s+", " ");
 		System.out.println("s replaceAll --> " + "||" + s + "||");
 		String[] words = s.split("\\s+");
 		System.out.println(Arrays.toString(words));
