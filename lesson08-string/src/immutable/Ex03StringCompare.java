@@ -34,6 +34,6 @@ public class Ex03StringCompare {
 		// Str,ing implements Comparable<String>
 		// String override compareTo từ interface Comparable
 		
-		System.out.println("se.conpare(o1)" + v  );
+		//System.out.println("se.conpare(o1)" + v  );
 	}
 }
