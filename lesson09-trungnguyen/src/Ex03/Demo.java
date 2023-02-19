@@ -14,6 +14,7 @@ public class Demo {
 		System.out.println("s replaceAll --> " + s);
 		
 		String[] tokens = s.split(" ");
+
 		
 		for(String token: tokens) {
 			char []stt = token.toCharArray();
