@@ -1,0 +1,24 @@
+Array
+- Fix-size
+ --> Khi biết được số lượng phần tử tối đa lưu trữ --> có thể dùng aray 
+ 
+ --- HẠN CHẾ ---
+ 	+ VD limit: 30 --> Student[] students = new Student[30];
+ 	+ Thực tế chỉ dùng 5 --> 25 nulls
+ 	+ Chiếm memory 30 cells(ô) cho mảng đối tượng (những cái đang null thì dễ bị lỗi)
+ 	+ Không hỗ trợ add/remove method
+ 	 (phải tự code, đồng thời phải biết vị trí hiện tại, slg phần tử đang khác null là bn rồi mới đưa phần tử mới vô đc)
+ 
+- Modifiable-size
+	+ danh sách liên kết 
+	+ cấu trúc về cây
+  
+- JAVA idea:
+     JAVA class
+	+ thuộc tính là mảng
+	+ hỗ trợ dynamic-size và các function add/remove
+	
+- Add and Remove 
+ + Add --> shift left to right --> loop right to left --> a[i] = a[i-1]
+ + Remove --> shift right to left --> loop left to right --> a[i] = a[i+1] 
+
