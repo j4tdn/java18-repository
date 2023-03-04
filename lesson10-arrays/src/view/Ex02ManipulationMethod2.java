@@ -19,6 +19,7 @@ import java.util.Arrays;
 public class Ex02ManipulationMethod2 {
 	public static void main(String[] args) {
 		String[] sequences = {"x", "a", "z", "b", "t"};
+		
 		String[] newAddedArray = add(sequences, 0, "v");
 		System.out.println("After inserting (M2) --> " + Arrays.toString(newAddedArray));
 		
@@ -32,28 +33,31 @@ public class Ex02ManipulationMethod2 {
 	// --> cần tạo new array --> viết hàm add() trả về String[]
 	// insertedIndex = 2 
 	private static String[] add(String[] input, int insertedIndex, String insertedValue) {
+		if (insertedIndex < 0 || insertedIndex > input.length) {
+			throw new ArrayIndexOutOfBoundsException("Index is out of bound of input array");
+		}	
+		
 		String[] output = new String[input.length + 1];
 
-		// B1
-		for (int i = 0; i < input.length; i++) {
+		/*
+		for (int i = 0; i < output.length; i++) {
 			output[i] = input[i];
 		}
+		output[insertedIndex] = insertedValue;
 
-		// B2
-		for (int i = 0; i < output.length; i++) {
-			if (i == insertedIndex) {
-				output[i] = insertedValue;
-			}
-			if (i < insertedIndex) {
-				output[i] = input[i];
-			}
-			if (i > insertedIndex) {
+		for (int i = insertedIndex + 1; i < output.length; i++) {
 				output[i] = input[i - 1];
-			}
 		}
+		*/
+		
+		for (int i = 0; i < output.length; i++) {
+			output[i] = i == insertedIndex ? insertedValue
+										   : input[i < insertedIndex ? i : i - 1];
+		}	
 		return output;
 	}
 	
+	/*
 	private static String[] remove(String[] input, int removedIndex) {
 		String[] output = new String[input.length - 1];
 
@@ -64,7 +68,26 @@ public class Ex02ManipulationMethod2 {
 		for (int i = removedIndex; i < output.length; i++) {
 			output[i] = input[i + 1];
 		}
+		return output;
+	}
+	*/
+	
+	private static String[] remove(String[] input, int removedIndex) {
+		String[] output = new String[input.length - 1];
 
+		/*
+		for (int i = 0; i < output.length; i++) {
+			if (i < removedIndex) {
+				output[i] = input[i];
+			} else {
+				output[i] = input[i + 1];
+			}
+		}
+		*/
+		
+		for (int i = 0; i < output.length; i++) {
+			output[i] = input[i < removedIndex ? i : i + 1];
+		}
 		return output;
 	}
 }
