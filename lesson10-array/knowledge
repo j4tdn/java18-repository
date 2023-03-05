@@ -16,3 +16,14 @@ Array
   	JAVA class
   		+ thuộc tính là mảng
   		+ hỗ trợ dynamic-size và các function add/remove ...
+  		
++ Sorting
+  . Primitive Type || Object Single Type - Integer, String ...
+    + Bubble Sort
+    + Selection Sort
+    + Insertion Sort
+    + Quick Sort with Java Arrays.sort(...)
+  
+  . Object Type - Item, Employee
+    + 
+    

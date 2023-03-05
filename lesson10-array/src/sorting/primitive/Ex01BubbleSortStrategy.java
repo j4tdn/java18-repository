@@ -1,11 +1,11 @@
-package sorting;
+package sorting.primitive;
 
 import java.util.Arrays;
 
 import functional.interfface.ComparableStrategy;
 
 /**
- * Sắp xếp nổi bọt
+ * Sắp xếp nổi b�?t
  * 
  * @author qphan
  *
@@ -30,9 +30,9 @@ public class Ex01BubbleSortStrategy {
 				// asc: input[i] > input[i + 1] --> true
 				// desc: input[i] < input[i + 1] --> true
 				// input[i] - input[i+1] > 0
-				// 2 phần tử kề nhau sẽ hoán vị khi cs.compare(input[i], input[i+1]) > 0
-				// người dùng tử xử lý hàm conpare vs phần tử thứ i và i + 1
-				if (input[i] < input[i+1]) {
+				// 2 phần tử k�? nhau sẽ hoán vị khi cs.compare(input[i], input[i+1]) > 0
+				// ngư�?i dùng tử xử lý hàm conpare vs phần tử thứ i và i + 1
+				if (cs.compare(input[i], input[i+1]) > 0) {
 					int tmp = input[i];
 					input[i] = input[i + 1];
 					input[i + 1] = tmp;

@@ -1,4 +1,4 @@
-package sorting;
+package sorting.primitive;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import functional.interfface.ComparableStrategy;
 import utils.ArrayUtils;
 
 /**
- * Sắp xếp nổi bọt
+ * Sắp xếp nổi b�?t
  * 
  * @author qphan
  *
@@ -25,7 +25,7 @@ public class Ex02SelectionSortStrategy {
 	}
 
 	// default: ascending
-	// Quan trọng
+	// Quan tr�?ng
 	// Hiểu thuật toán(đoạn if) như thế nào
 	// Hiểu e1, e2 là phần tử nào trong mảng
 	public static void selectionSort(int[] input, ComparableStrategy cs) {

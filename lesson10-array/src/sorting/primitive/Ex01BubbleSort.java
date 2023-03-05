@@ -1,9 +1,9 @@
-package sorting;
+package sorting.primitive;
 
 import java.util.Arrays;
 
 /**
- * Sắp xếp nổi bọt
+ * Sắp xếp nổi b�?t
  * 
  * @author qphan
  *
