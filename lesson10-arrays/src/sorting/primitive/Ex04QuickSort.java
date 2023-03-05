@@ -1,32 +1,23 @@
-package sorting;
+package sorting.primitive;
 
 import java.util.Arrays;
-
+import common.SortOrder;
 import utils.ArrayUtils;
 
 /**
- * Sắp xếp chèn
+ * Arrays.sort --> quickSort, insertionSort --> Threshold (ngưỡng giá trị)
+ *             --> support ASC only (with primitive type)
  */
 
-public class Ex03InsertionSort {
+public class Ex04QuickSort {
 	public static void main(String[] args) {
 		int[] elements = { 1, 9, 5, 8, 4, 12 };
 		System.out.println("Elements --> " + Arrays.toString(elements));
 		
 		System.out.println("\n==============================\n");
 		
-		inserttionSort(elements);
+		ArrayUtils.sort(elements, SortOrder.ASC);
 		System.out.println("Elements sorted asc --> " + Arrays.toString(elements));
 	}
 
-	// default: ASC
-	public static void inserttionSort(int[] input) {
-		for (int round = 0; round < input.length; round++) { 
-			for (int i = 0; i < round; i++) {
-				if (input[i] > input[round]) { 
-					ArrayUtils.swap(input, i, round);
-				}
-			}
-		}
-	}
 }
