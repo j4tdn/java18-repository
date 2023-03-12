@@ -14,7 +14,7 @@ public class Ex03insertSort {
 	}
 
 	public static void selectionSort(int[] input) {
-		for (int round = 0; round < input.length ; round++) {
+		for (int round = 0; round < input.length; round++) {
 			for (int i = 0; i < round; i++) {
 				if (input[round] < input[i]) {
 					ArrayUtils.swap(input, round, i);

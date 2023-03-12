@@ -1,0 +1,16 @@
+Cấu trúc dữ liệu
+Truyền thống : int, float, double ,...
+			   array, linked list, tree, stack, quêu
++Java custom
+	. collections --> tập hợp, danh sách
+		+interface
+		+list, set, map
+			->list: dựa trên cấu trúc dữ liệu của mảng và danh sách liên kết
+				  : thêm các function, tối ưu để có thể dễ dàng thêm sửa xong
+				  : ìnterface/implementation classes dựa trên mảng, danh sách liên kết
+				  
+			->set : dựa trên idea của dnah sách liên kết
+				  : lưu những phần tử không trùng nhau
+				  
+			->map : lưu trữ theo cơ chế key, value
+				  : hỗ trợ tìm kiếm fast searching
