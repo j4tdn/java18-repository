@@ -43,19 +43,21 @@ public class Ex03QuickSort_Item {
 		});
 		System.out.println("items sorted sales price asc --> \n" + Arrays.toString(items));
 
-		Arrays.sort(items, new Comparator<Item>() {
-			@Override
-			public int compare(Item i1, Item i2) {
-				int expiredDateInt = i1.getExpiredDate().compareTo(i2.getExpiredDate());
+		Arrays.sort(items, Ex03QuickSort_Item::sortItemDateAscIdDesc);
+		// method reference --> (i1, i2) -> Ex03QuickSort_Item.sortItemDateAscIdDesc(i1, i2);
 
-				if (expiredDateInt == 0) {
-					return i2.getId() - i1.getId();
-				}
-				return expiredDateInt;
-			}
-		});
 		System.out.println("items sorted expiredDate ASC & id DESC (when having the same expiredDate)  --> \n"
 				+ Arrays.toString(items));
+	}
+
+	// A#x --> static method --> A::x
+	// Tạo phương thức static method bất kỳ
+	public static int sortItemDateAscIdDesc(Item i1, Item i2) {
+		int expiredDateInt = i1.getExpiredDate().compareTo(i2.getExpiredDate());
+		if (expiredDateInt == 0) {
+			return i2.getId() - i1.getId();
+		}
+		return expiredDateInt;
 	}
 
 	private static Item[] getItems() {

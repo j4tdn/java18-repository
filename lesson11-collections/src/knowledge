@@ -1,0 +1,97 @@
+CẤU TRÚC DỮ LIỆU
+* Truyền thống 
+	+ int, float, double, char, boolean
+	+ array, linked list, tree, stack, queue
+	--- Hạn chế ---
+	VD: Array --> fixed size
+	
+* JAVA custom
+	- Collections --> danh sách, tập hợp
+	  + là một interface
+	  + list, set, map
+	     . list: dựa trên cấu trúc dữ liệu của mảng và danh sách liên kết 
+	           : thêm các functions, tối ưu để có thể dễ dàng thêm sửa xóa...
+	           : interface/implementation classes dựa trên mảng, danh sách liên kết
+	           
+	     . set : dựa trên idea của danh sách liên kết 
+	           : lưu những phần tử không trùng nhau
+	           
+	     . map : lưu trữ theo cơ thế key, value
+	           : hỗ trợ tìm kiếm nhanh (fast searching)
+	           
+=================================
+
+LIST
+* ArrayList
+  Object[] elementData;
+  int size;
+  
+  + new ArrayList();
+    --> elementData = {};
+    
+  + add
+    --> 
+    public boolean add(E e) {
+        modCount++;
+        add(e, elementData, size);
+        return true;
+    }
+    
+    private void add(E e, Object[] elementData, int s) {
+        if (s == elementData.length)
+            elementData = grow();
+        elementData[s] = e;
+        size = s + 1;
+    }
+    
+    private Object[] grow() {
+        return grow(size + 1);
+    }
+    
+    private Object[] grow(int minCapacity) {
+        int oldCapacity = elementData.length;
+        if (oldCapacity > 0 || elementData != DEFAULTCAPACITY_EMPTY_ELEMENTDATA) {
+            int newCapacity = ArraysSupport.newLength(oldCapacity,
+                    minCapacity - oldCapacity, /* minimum growth */
+                    oldCapacity >> 1           /* preferred growth */);
+            return elementData = Arrays.copyOf(elementData, newCapacity);
+        } else {
+            return elementData = new Object[Math.max(DEFAULT_CAPACITY, minCapacity)];
+        }
+    }
+    
+    ***
+    --> Lần đầu tiên add vào newCapacity = 10 (tức length của array elementData = 10)
+        [null, null, null, null, null, null, null, null, null, null]
+        ↓
+        elementData[0] = "Hello";
+        ['Hello', null, null, null, null, null, null, null, null, null]
+        // size = 1
+        ↓
+        elementData[1] = "Welcome";
+        ['Hello', 'Welcome', null, null, null, null, null, null, null, null]
+        // size = 2
+        ↓
+        "size" --> số lượng phần tử thực sự chứa trong elementData
+        
+        Khi duyệt --> truy cập ArrayList được phép từ [0, size)
+        
+        P/s: oldCapacity >> 1 
+             a >> b (a dịch phải b đơn vị) => Công thức: a/2^b
+             
+        KẾT LUẬN
+        + Lần đầu mặc định capacity = 10
+        + Mỗi lần tiếp theo capacity += capacity/2
+        
+        TUY NHIÊN 
+        Khi mình biết trước số lượng phần tử tối đa lưu trong ArrayList
+        --> nên điền capacity vào lúc tạo ArrayList
+        --> để tạo ra 1 mảng elementData duy nhất
+             
+
+
+
+
+
+
+
