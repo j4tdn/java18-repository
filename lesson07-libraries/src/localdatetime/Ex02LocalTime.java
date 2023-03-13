@@ -6,7 +6,7 @@ import java.time.LocalTime;
 public class Ex02LocalTime {
 	public static void main(String[] args) {
 		LocalTime now = LocalTime.now();
-		System.out.println("now: " + now);
+		System.out.println("now ok con bò có cò cổ: " + now);
 		 
 		LocalTime until = LocalTime.of(23,12,02);
 		System.out.println("until: " + until);
