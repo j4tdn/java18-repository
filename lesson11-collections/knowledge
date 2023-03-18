@@ -1,0 +1,13 @@
+
+CẤU TRÚC DỮ LIỆU
++ Truyền thống
+	. int, float, double, char, boolean
+	. array, linked list, tree
+	--> Hạn chế
+	VD: mảng: --> fixed size
+	
+	
++ Java custom
+	. Collections --> tập hợp, danh sách
+	 + interface
+	 + list, set, map
