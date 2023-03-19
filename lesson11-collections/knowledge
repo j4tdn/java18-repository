@@ -1,0 +1,32 @@
+Cấu trúc dữ liệu
++ Truyền thống
+. int, float, double, char, boolean
+. array, linked, list, tree, stack, queue
+--> Hạn chế
+VD: Mảng --> fixed size
+
++Java custom 
+. Collections --> Tập hợp, danh sách
+	+ interface 
+	+ list, set, map
+		.list : dựa trên cấu trúc dữ liệu của mảng và danh sách liên kết
+			  : thêm các function, tối ưu để có thể dễ dàng thêm sửa xóa ...
+			  : interface/implementation classes dựa trên mảng, danh sách liên kết
+			  
+		.set  : dựa trên idea của linked list
+			  : lưu trữ những phần tử không trùng nhau
+			 
+		.map  : lưu trữ theo cơ chế key, value
+			  : hỗ trợ tìm kiếm fast searching
+
+GET, SET :
+ArrayList: O(1)
+LinkedList: O(k)
+ArrayList > LinkdedList
+
+ADD, REMOVE
+ArrayList: vị trí Đầu đến vị trí cuối --> Chậm đến nhanh
+LinkedList: Càng gần 2 đầu --> Càng nhanh (Deque)
+            Càng về giữa --> Càng chậm
+
+

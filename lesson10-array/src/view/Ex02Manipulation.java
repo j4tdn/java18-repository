@@ -7,7 +7,7 @@ public class Ex02Manipulation {
 		String[] sequences = {"x", "a", "z", "b", "t"};
 		
 		// Thêm 1 phần tử String có giá trị bất kì vào vị trí thứ k trong mảng sequences
-		String[] add = add(sequences, 2, "dume");
+		String[] add = add(sequences, 5, "abc");
 		System.out.println(Arrays.toString(add));
 		
 		String[] del = del(sequences, 2);
@@ -19,26 +19,33 @@ public class Ex02Manipulation {
 	}
 	
 	private static String[] add(String[] input, int index, String value) {
+		if(index < 0 || index > input.length) {
+			throw new ArrayIndexOutOfBoundsException("Index is out of bound");
+		}
 		String[] output = new String[input.length + 1];
-		for(int i = 0; i < input.length; i++) {
-			output[i] = input[i];
-		}
-		for(int i = output.length - 1; i > index; i--) {
-			output[i] = output[i-1];
-		}
+//		for(int i = 0; i < input.length; i++) {
+//			output[i] = input[i];
+//		}
+//		for(int i = output.length - 1; i > index; i--) {
+//			output[i] = output[i-1];
+//		}
 		output[index] = value;
+		for(int i = 0; i < input.length; i++) {
+			output[i] = i == index ? value : i < index ? input[i] : input[i - 1];
+		}
 		return output;
 	}
 	
 	private static String[] del(String[] input, int index) {
 		String[] output = new String[input.length - 1];
 		for(int i = 0; i < input.length - 1; i++) {
-			if(i < index) {
-				output[i] = input[i];
-			}
-			else {
-				output[i] = input[i+1];
-			}
+//			if(i < index) {
+//				output[i] = input[i];
+//			}
+//			else {
+//				output[i] = input[i+1];
+//			}
+			output[i] = input[i < index ? i : i + 1];
 		}
 		return output;
 	}
