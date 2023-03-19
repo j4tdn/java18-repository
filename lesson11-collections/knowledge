@@ -1,0 +1,65 @@
+LIST
++ ArrayList
+	 	Object[] elementData;
+	 	int size; // số lượng phần tử thật sự chứa trong elementData
+	 			  // duyệt, truy cập ArrayList được phéo truy cập từ [0,size)
+		int moundCount = 0;
+	
+	+ new ArrayList();
+		--> elementData = {};
+	+ thêm, add('x');
+	  	--> public boolean add(E e) {
+		        modCount++;
+		        add(e, elementData, size);
+		        return true;
+		    }
+		--> private void add(E e, Object[] elementData, int s) {
+		        if (s == elementData.length)
+		            elementData = grow();
+		        elementData[s] = e;
+		        size = s + 1;
+    		}
+	    -->	private Object[] grow() {
+	        return grow(size + 1);
+	        }
+	    --> Lần đầu tiên add vào --> newCapacity = 10
+	    
+	    ['hello', 'welcome', null, null, null, null, null, null, null]
+	    size = 2
+	    
+	    lần đầu mặc định capacity = 10
+	    mỗi lần tiếp theo capacity += capacity/2
+	    
+	    khi biết được số lượng phần tử tối đa lưu trong arraylist
+	    thì nên điền capacity(sức chứa) vào lúc tạo ra arraylist
+	    --> để arraylist tạo duy nhất 1 mảng
+    
+    }
+
+	size: số lượng phần tử của list --> dynamic size
+	add: add last 
+
+
+
+CẤU TRÚC DỬ LIỆU
++ Truyền thống
+	. int, float, double, char, boolean
+	. array, linked list, tree, stack, queue
+	--> hạn chế
+	VD: Mảng: --> fixed size
+	
++ Java custom
+	. Collections --> tập hợp, danh sách
+		+ interface
+		+ list, set, map
+			. list : dựa trên cấu trúc dử liệu của mảng và danh sách liên kết
+			       : thêm các function, tối ưu để có thể dễ dàng thêm sửa xóa ...
+			       : interface/implementation classes dựa trên mảng, danh sách liên kết
+			
+			. set  : dựa trên idea của danh sách liên kết
+			       : lưu những phần tử không trùng nhau
+			
+			. map  : lưu trữ theo cơ chế key, value
+			       : hỡ trợ tìm kiếm fast searching
+
+		     

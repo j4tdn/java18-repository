@@ -1,0 +1,59 @@
+1. Phân biệt Array và ArrayList
+
+Similar
+	+ work bases on idea of array
+	
+Array:
+	+ fixed-size
+	+ original data type ( KDL truyền thống )
+	+ CRUD: unsupported
+	+ add/remove an element --> always create new array
+	+ store array of primitive or object type
+	
+ArrayList
+	+ dynamic-size
+	+ Java class and has property is Object[]
+	+ CRUD: supported
+	+ add/remove an element --> only create new array when size = capacity(length)
+	VD: [13, 14, 'null', null, null]   --> size = 3, length = 5
+	    [14, 'null', null, null, null] --> size = 2, length = 5
+	+ store list of object type
+	
+	
+2. Phân biệt ArrayList với LinkedList
+
+Giống nhau:
+	+ Đều lớp thực thi từ List
+	+ Có thể chứa những phần tử trùng nhau hay null
+	+ Dynamic-Size(ngoại trừ Arrays.asList, List.of)
+
+Khác nhau:
+	+ ArrayList
+	  . Code base --> mảng 1 chiều với capacity là length
+	  . Tốc độ xử lý 
+	  	. Get, Set --> O(1)
+	  	. Add, Remove --> Đầu đến cuối <=> chậm đến nhanh
+	 
+	+ LinkedList
+	 . Code base --> doubly linked list
+	 	. Get, Set --> O(n)
+	 	. Add, Remove --> Đầu, cuối đến giữa <=> nhanh đến chậm
+	 	
+	+ So sánh tốc độ AL và LL
+	 . Đầu: LinkedList
+	 . Giữa: ArrayList
+	 . Cuối: ====
+	 
+	 
+
+=== Chi tiết ===
+			       
+GET, SET
+	ArrayList: O(1)
+	LinkList:  O(k)
+	
+	ADD, REMOVE
+	ArrayList(mất time để shift):  Vị trí đầu(chậm) đến vị trí cuối(nhanh)
+	
+	LinkedList(mất thời gian để iterate): Vị trí càng về đầu(nhanh), cuối(nhanh) --> DeQue
+				Vị trí càng về giữa(chậm)	
