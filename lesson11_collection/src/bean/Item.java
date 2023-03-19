@@ -2,17 +2,17 @@ package bean;
 
 import java.time.LocalDate;
 
-public class Store {
+public class Item {
 	private int id ;
 	private String name ;
 	private LocalDate date ;
 	private int warehouseId ;
 	
-	public Store() {
+	public Item() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Store(int id, String name, LocalDate date, int warehouseId) {
+	public Item(int id, String name, LocalDate date, int warehouseId) {
 		this.id = id;
 		this.name = name;
 		this.date = date;
@@ -60,10 +60,10 @@ public class Store {
 		if(this == o) {
 			return true;
 		}
-		if(!(o instanceof Store)) {
+		if(!(o instanceof Item)) {
 			return false;
 		}
-		Store that = (Store) o;
+		Item that = (Item) o;
 		return this.getId() == that.getId(); 
 	}
 }

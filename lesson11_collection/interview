@@ -16,3 +16,4 @@ ArrayList
 + add, remove an element --> only create new array when size = capacity
 	VD:[13,14,'null',null,null] --> size = 3, length = 5 
 	   [14,'null',null,null,null] -->  size = 2, length = 5
++ store list of object type
