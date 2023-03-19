@@ -4,27 +4,26 @@ public class Ex05StaticDemo {
 	/*
 	 * static
 	 * 	 + attribute
-	 *     . static --> tất cả các đối tượng mang một giá trị chung
-	 *     . non    --> mỗi đối tượng mang một giá trị riêng
+	 *     . static --> táº¥t cáº£ cÃ¡c Ä‘á»‘i tÆ°á»£ng mang má»™t giÃ¡ trá»‹ chung
+	 *     . non    --> má»—i Ä‘á»‘i tÆ°á»£ng mang má»™t giÃ¡ trá»‹ riÃªng
 	 * 
 	 *   + method
-	 *     . static --> hàm không phụ thuộc vào đối tượng đang gọi
-	 *     . non    --> hàm phụ thuộc vào đối tượng đang gọi
+	 *     . static --> hÃ m khÃ´ng phá»¥ thuá»™c vÃ o Ä‘á»‘i tÆ°á»£ng Ä‘ang gá»�i
+	 *     . non    --> hÃ m phá»¥ thuá»™c vÃ o Ä‘á»‘i tÆ°á»£ng Ä‘ang gá»�i
 	 *     
 	 *  invoke
 	 *   --> attribute, method
-	 *       + static --> lấy class gọi trực tiếp
-	 *       + non    --> khởi tạo một đối tượng từ class rồi gọi    
+	 *       + static --> láº¥y class gá»�i trá»±c tiáº¿p
+	 *       + non    --> khá»Ÿi táº¡o má»™t Ä‘á»‘i tÆ°á»£ng tá»« class rá»“i gá»�i    
 	 */
 	public static void main(String[] args) {
 		Ex05StaticDemo.f1();
 		Ex05StaticDemo e1 = new Ex05StaticDemo();
 		e1.f4();
-		
 	}
 	
 	private static void f1() {
-		// f2(); // khởi tạo đối tượng từ class hiện tại mới gọi dc
+		// f2(); // khá»Ÿi táº¡o Ä‘á»‘i tÆ°á»£ng tá»« class hiá»‡n táº¡i má»›i gá»�i dc
 	}
 
 	private void f2() {
