@@ -20,6 +20,7 @@ public class Ex02ArrayListBasicDemo {
 		for (int i = 0; i < sequences.size(); i++) {
 			System.out.println("e --> i: " + sequences.get(i));
 		}
+		System.out.println("================");
 	}
 
 }
