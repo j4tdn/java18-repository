@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Ex08ListComparision {
-    private static int COUNT = 50000;
+    private static final int COUNT = 50000;
     public static void main(String[] args) {
         List<String> alist = new ArrayList<>();
         List<String> llist = new LinkedList<>();

@@ -5,7 +5,7 @@ Cấu trúc dữ liệu
 --> Hạn chế
 VD: Mảng --> fixed size
 
-+Java custom 
++ Java custom
 . Collections --> Tập hợp, danh sách
 	+ interface 
 	+ list, set, map
@@ -18,6 +18,26 @@ VD: Mảng --> fixed size
 			 
 		.map  : lưu trữ theo cơ chế key, value
 			  : hỗ trợ tìm kiếm fast searching
+
+
+2. Phân biệt ArrayList vs LinkedList
+Giống nhau
+    + Đều chứa lớp thực thi từ List
+    + Có thể chưa những phần tử trùng nhau, null
+    + Dynamic-size (ngoại trừ Arrays.asList, List.of)
+
+Khác nhau
+    + ArrayList
+        .Code base --> mảng 1 chiều với capacity là length
+        .Tốc độ xử lí
+            .GET, SET --> O(1)
+            .Add, Remove --> Đầu đến cuối <==> Chậm đến nhanh
+
+    + Linked List
+        .Code base --> doubly linked list
+        .Tốc độ xử lí
+            .GET, SET --> O(n)
+            .Add, Remove --> Đầu, Cuối đến Giữa <==> Nhanh đến chậm
 
 GET, SET :
 ArrayList: O(1)
