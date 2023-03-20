@@ -17,3 +17,61 @@
    + CRUD: supported
    + add/remove an element --> only create new array when size = capacity (length of array)
    + store list of object type
+   
+========
+  ARRAY
+	- các phần tử nằm kề nhau 
+	- mỗi phần tử mang một giá trị 
+	- được truy cập thông qua index
+
+======
+	Queue: hàng đợi --> vào trước ra trước, vào sau ra sau 
+	FIFO --> first in first out 
+	
+	Stack: Ngăn xếp --> vào trước ra sau, vào sau ra trước 
+	FILO --> first in last out
+	LIFO --> last in first out
+	
+=======
+2. PHÂN BIỆT ArrayList VÀ LinkedList
+
+*** Giống ***
+- Đều là lớp thực thi từ List
+- Đều có thể chứa danh sách các phần tử trùng nhau hay phần tử null
+- Dynamic-size (ngoại trừ Arrays.asList, List.of)
+
+*** Khác ***
+- ArrayList:
+  + Code base --> mảng 1 chiều với capacity là length
+  + Tốc độ xử lý 
+    . Get, Set --> O(1) -> complexity (độ phức tạp của thuật toán)
+    . Add, Remove --> Đầu đến Cuối <=> Chậm đến Nhanh 
+  
+  
+- LinkedList:
+  + Code base --> doubly linked list 
+  + Tốc độ xử lý
+    . Get, Set --> O(n)
+    . Add, Remove --> Đầu, Cuối đến Giữa <=> Nhanh đến Chậm 
+    
+- So sánh tốc độ ArrayList và LinkedList
+
+
+----- Chi tiết -----
+	GET, SET ==> ArrayList > LinkedList
+	+ ArrayList: O(1)
+	+ LinkedList: O(k)
+	
+	ADD, REMOVE
+	+ ArrayList(mất thời gian để shift)   :  vị trí đầu (chậm), đến vị trí cuối (nhanh)
+	+ LinkedList(mất thời gian để iterate):  vị trí càng về đầu (nhanh), cuối (nhanh) --> DeQue
+				  							 vị trí càng về giữa (chậm) --> vì cần nhiều time để di chuyển
+				  							 
+	==> thường sử dụng ArrayList hơn (vì so sánh các tốc độ trên)
+	
+========
+P/s: Code base (nền tảng code bên trong/ bên trong thực thi cái gì)
+	
+	
+	
+  

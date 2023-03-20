@@ -39,19 +39,22 @@ package collections.list;
  * --> Duyệt tuần tự
  * --> Iterable --> dùng Iterator
  * 
+ * ======
+ * 
+ * Arrays 	   --> Arrays.sort(List<T>, Comparator)
+ * Collections --> stores.sort(comparator)
  */
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.function.Predicate;
+import static java.util.Comparator.*;
 
 import bean.Store;
 
 public class Ex03ArrayListFunctions {
 	public static void main(String[] args) {
-		// list, arrayList --> danh sách 
+		// list, arrayList 
 		// add-addAll, remove-removeAll-removeIf, get, set
 		// contains
 		// sorting
@@ -99,5 +102,11 @@ public class Ex03ArrayListFunctions {
 		*/	
 		System.out.println("\n ===== remove if > 02.02.2018 =====\n");
 		stores.forEach(System.out::println);
+		
+		// sorting with id desc, startedDate desc
+		stores.sort(comparing(Store::getWarehouseId, reverseOrder())
+				.thenComparing(Store::getStartedDate, reverseOrder()));
+		System.out.println("\n ===== sorting wareHouseId desc, startedDate desc =====\n");
+		stores.forEach(System.out::println);		
 	}
 }
