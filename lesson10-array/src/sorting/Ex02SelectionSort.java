@@ -1,0 +1,33 @@
+package sorting;
+
+import java.util.Arrays;
+
+import utils.ArrayUtils;
+import utils.ArrayUtils.*;
+/**
+ * Sắp xếp nổi bọt
+ * 
+ * @author ADMIN
+ *
+ */
+public class Ex02SelectionSort {
+	public static void main(String[] args) {
+		int[] elements = {1,9,5,8,4,12};
+		System.out.println("elements --> "+Arrays.toString(elements));
+		System.out.println("\n=================\n");
+		SelectionSort(elements);
+		System.out.println("elements sorted asc--> "+Arrays.toString(elements));
+	}
+	private static void SelectionSort(int[] input) {
+	
+		for(int pivot = 0 ; pivot<input.length-1;pivot++) {
+			for(int i = pivot+1;i<input.length;i++) {
+				if(input[i]>input[pivot]) {
+					ArrayUtils.swap(input, i, pivot);
+				}
+			}
+			
+		}
+		
+	}
+}

@@ -1,0 +1,17 @@
+Array
++fixed-size
+	--> Khi biết được số lựogn phần tử tối đa lưu trữ --> có thể dùng array
+	hạn chế
+	+Limit: 30 --> Student[] students = new Students[30]
+	+Real: 5 --> 25 nulls
+	+Chiếm memory 30 cells cho mảng đối tượng
+	+Không hỗ trợ add/remove
+
+
++modifiable-size
+	+ danh sách liên kết
+	+ cây
+	JAVA idea
+		JAVA calss 
+		+ thuộc tính là mảng
+		+ hộ trợ dynamic-size và các function add/remove...
