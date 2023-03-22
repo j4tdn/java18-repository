@@ -1,0 +1,65 @@
+
+
+1. Phân biệt Array với ArrayList
+
+	#Similars
+	+ Work bases on idea of array
+	
+	#Diffrents
+
+	Array :
+	
+	+ fixed size
+	+ original data type
+	+ CRUD: unsupported // CRUD --> Create Read Update Delet
+	+ Add/remove an element --> always create new array
+	
+	ArrayList
+	
+	+ dynamic-size
+	+ Java class and has property is Object[]
+	+ CRUD: supported
+	+ add/remove an element --> only create new array when size = capacity(length)
+	
+	Ex: [13,14,'null',null,null] --> size = 3, length = 5; (size change when add/remove new element)
+		[14,'null',null,null,null] --> size = 2, length = 5
+----------------------------------------		
+
+LinkedList vs ArrayList
+
+=== Chi tiết ===
+- Get, Set --> ArrayList > LinkedList
+	ArrayList: o(1)
+	LinkedList: o(k)
+	
+- Add, Remove
+	ArrayList (mất time để shift): 	vị trí đầu (chậm) đến vị trí cuối (nhanh)
+	LinkedList (mất time để iterate (duyệt)): 	vị trí càng về đầu (nhanh), cuối (nhanh) --> Deque
+												vị trí càng về giữa (chậm).
+- 	Đầu --> LinkedList
+	Giữa --> ArrayList
+	Cuối --> same
+	==> thường sử dụng ArrayList
+=== Phỏng vấn ===
+Giống: 	+ Đều là lớp thực thi từ List
+		+ Có thể chứa những phần tử trùng nhau, null
+		+ Dynamic-size(ngoại trừ Arrays.asList, List.of)
+		
+Khác:
+	+ ArrayList: 
+		. Code base --> mảng 1 chiều với capacity là length
+		. Tốc độ xử lý: 
+			. Get, set --> o(1) --> complexity (độ phức tạp thuật toán)
+			. add, remove --> đầu đến cuối <==> chậm đến nhanh
+	+ LinkList:
+		. Code base --> doubly linked list
+		. Tốc độ xử lý:
+			. Get, set --> o(n)
+			. Add, remove --> đầu, cuối đến giữa <==> nhanh đến chậm
+			
+	+ Sp sánh tốc độ AL và LL
+		. Đầu: LinkedList
+		. Giữa: ArrayList
+		. Cuối: ==> như nhau
+												
+												

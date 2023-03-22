@@ -1,0 +1,11 @@
+-- JAVA08 --> now
++ Đặt vấn đề: 
+	. JAVA01 - JAVA07 ==> Date, Calendar
+		--> lưu trữ cả ngày/tháng/năm giờ/phút/giây
+		
+		--Ngày/tháng/năm ==> Date: n/t/n 00:00:00 --> 2bytes
+		--> giờ/phút --> 0/0/0 g/p --> 2bytes
+		
+		--> Tốn memory ==> Date Time
+		--> Khó xử lý logic
+		--> 
