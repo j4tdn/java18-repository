@@ -1,0 +1,20 @@
+Phân biệt array và arraylist
+
+Similar
+	+ work bases on idea of array
+
+Array
+	+ fixed-size
+	+ original data type
+	+ CRUD: unsupported
+	+ add/remove an element --> always create new array
+	+ store array of primitive or object type
+
+ArrayList
+	+ dynamic-size
+	+ java class and has property is Object[]
+	+ CRUD: supported
+	+ add/remove an element --> only create new array when size = capacity
+	VD: [13, 14, 'null', null, null] --> size = 3, length = 5;
+		[14, 'null', null, null, null] --> size = 2, length = 5;
+	+ store list object type
