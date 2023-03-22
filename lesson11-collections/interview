@@ -1,0 +1,20 @@
+
+-1. Phân biết Array và ArrayList
+
+Similar
++ Work bases on idea of array
+
+Array
++ fixed-size
++ original data type
++ CRUD: unsupported
++ add/remove an enlement --> alway create new array
+
+Arraylist
++ dynamic-size
++ Java class and has property is object[]
++ CRUD supported
++ add/remove an enlement  --> only create new array when size = capacity(element)
+	  VD: [13, 14, null, null, null]   ---> size: 3 , lenght: 5;
+	  	  [13, null, null, null, null] ---> size: 2 , lenght: 5;
++ store list of object type
