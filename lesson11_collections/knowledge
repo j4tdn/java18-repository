@@ -1,0 +1,18 @@
+CẤU TEUCS DỮ LIỆU
++ Truyền thống
+	. int, float, double, char, boolean
+	. array, linked list, tree, stack, queue
+	--> hạn chế
+	VD: mảng --> fixed size
+	
+java custom
+	. Collections --> tập hợp, danh sách
+		+ interface
+		+ list, set, map
+			. list: dựa trên cấu trúc dữ liệu của mảng và danh sách liên kết
+				  : thêm các function, tối ưu để có thể dễ dàng thêm, sửa, xóa
+				  : interface/ implementation classes dựa trên mảng, danh sách liên kết
+		+ set	  : dựa trên idea của danh sách liên kết
+				  : lưu những phần tử không trùng nhau
+		+ map	  : lưu trữ theo cơ chế key, value
+				  : hỗ trợ tim kiếm fast searching
