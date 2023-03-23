@@ -50,6 +50,7 @@ public class Ex03QuickSort_Item {
 			}
 			return expiredDateInt;
 		});
+		//A#x --> static method --> A::x
 		System.out.println("items sorted expiredDate ASC, id DESC --> \n" + Arrays.toString(items));
 	}
 
