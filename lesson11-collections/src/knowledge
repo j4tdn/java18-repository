@@ -88,6 +88,18 @@ LIST
         --> nên điền capacity vào lúc tạo ArrayList
         --> để tạo ra 1 mảng elementData duy nhất
              
+================================
+
+GENERIC TYPE 
++ Là khái niệm xuất hiện từ JAVA 1.5 
++ Là KDL đại diện cho bất kỳ KDL đối tượng nào 
++ Hỗ trợ bắt lỗi tại compile
+--> Phải khai báo và sử dụng
+--> Quy tắc đặt tên: 1 chữ cái và in hoa 
+
+GENERIC METHOD
++ Là method có KDL truyền vào là Generic Type
+
 
 
 

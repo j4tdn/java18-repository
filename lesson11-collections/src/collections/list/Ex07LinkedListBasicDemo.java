@@ -9,5 +9,4 @@ public class Ex07LinkedListBasicDemo {
 		averagePoints.add(7.8d);
 		averagePoints.add(8.2d);
 	}
-
 }
