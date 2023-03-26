@@ -26,5 +26,4 @@ public interface JavaList<E> {
 	int size();
 	
 	int capacity();
-
 }
