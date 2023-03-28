@@ -1,4 +1,4 @@
-package collections.list;
+package collection.list;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
