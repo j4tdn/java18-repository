@@ -15,6 +15,7 @@ public class Ex02GenericClass {
 		System.out.println("size --> " + sequences.size());
 		System.out.println("size --> " + sequences.capacity());
 		
+		sequences.add(1, "b22");
 		// for-index
 		for(int i = 0; i < sequences.size(); i++) {
 			System.out.println("i" + i + "-->" + sequences.get(i));
