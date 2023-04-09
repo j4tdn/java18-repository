@@ -7,5 +7,10 @@ public class Ex07LinkedListBasicDemo {
     public static void main(String[] args) {
         List<Double> averagePoints = new LinkedList<>();
 
+        averagePoints.add(7.8d);
+        averagePoints.add(8.2d);
+
+        System.out.println("size --> " + averagePoints.size());
+
     }
 }

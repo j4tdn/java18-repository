@@ -7,15 +7,15 @@ VD: Mảng --> fixed size
 
 + Java custom
 . Collections --> Tập hợp, danh sách
-	+ interface 
+	+ interface
 	+ list, set, map
 		.list : dựa trên cấu trúc dữ liệu của mảng và danh sách liên kết
 			  : thêm các function, tối ưu để có thể dễ dàng thêm sửa xóa ...
 			  : interface/implementation classes dựa trên mảng, danh sách liên kết
-			  
+
 		.set  : dựa trên idea của linked list
 			  : lưu trữ những phần tử không trùng nhau
-			 
+
 		.map  : lưu trữ theo cơ chế key, value
 			  : hỗ trợ tìm kiếm fast searching
 
@@ -48,5 +48,29 @@ ADD, REMOVE
 ArrayList: vị trí Đầu đến vị trí cuối --> Chậm đến nhanh
 LinkedList: Càng gần 2 đầu --> Càng nhanh (Deque)
             Càng về giữa --> Càng chậm
+
+3. GENERIC Type
++ Là khái niệm xuất hiện từ JAVA 1.5
++ Là KDL đại diện cho bất kỳ KDL đối tượng nào
++ Hỗ trợ bắt lỗi tại compile
+--> Phải khai báo và sử dụng
+--> Quy tắc đặt tên: 1 chữ cái và in hoa
+--> Giới hạn trên với từ khóa extends
+
+GENERIC METHOD
++ Là method có tham số truyền vào là generic type
+
+GENERIC CLASS, INTERFACE
++ Là class, interface có tham số truyền vào là generic type
+
+GENERIC WILDCARD(Kí tự ? đại diện)
++ Khi có generic class, interface, method có yêu cầu tham số truyền vào là GENERIC TYPE
+  * Lúc mình gọi chưa biết truyền KDL gì vào thì có thể sử dụng wildcard làm KDL tạm thời
+  * Cũng có thể khai báo wildcard để người dụng gọi xử lý
+
+  Sử dụng để truyền tham số > khai báo
+  --> Giới hạn trên với từ khóa extends
+  --> Giới hạn dưới với từ khóa super
+
 
 

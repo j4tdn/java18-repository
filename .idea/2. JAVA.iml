@@ -5,6 +5,9 @@
     <content url="file://$MODULE_DIR$/lesson08-string">
       <sourceFolder url="file://$MODULE_DIR$/lesson08-string/src" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/lesson10-array">
+      <sourceFolder url="file://$MODULE_DIR$/lesson10-array/src" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/lesson11-collections">
       <sourceFolder url="file://$MODULE_DIR$/lesson11-collections/src" isTestSource="false" />
     </content>
