@@ -1,6 +1,5 @@
 package collection.map;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
@@ -29,6 +28,7 @@ public class Ex01VehicleModelMap {
 	
 	*/
 	public static void main(String[] args) {
+		System.identityHashCode(null);
 		Map<Integer, String> vnVehicleModel = new LinkedHashMap<>();
 		vnVehicleModel.put(92, "Quảng Nam"); // put(k, v) --> put(new Entry(k, v));
 		vnVehicleModel.put(43, "Đà Nẵng");

@@ -1,7 +1,8 @@
 package collection.map;
 
+import static java.util.Comparator.comparing;
+
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,16 +10,13 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 
-import static java.util.Comparator.*;
-
 public class Ex02VehicleModelSortedMap {
 	
 	/*
-	 
 	 TreeMap
 	     . Hỗ trợ tự động sort theo key(con của Comparable<K>)
 	     . Key không thể chứa null --> NPE
-	 
+	     . Tự code nếu muốn sort theo value
 	 */
 	
 	public static void main(String[] args) {

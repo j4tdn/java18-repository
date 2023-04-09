@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Ex02ArrayListBasicDemo {
 	public static void main(String[] args) {
-		List<String> sequences = new ArrayList<>(40);
+		
+		List<String> sequences = new ArrayList<>(Integer.MAX_VALUE - 100);
 		
 		sequences.add("hello");
 		sequences.add("welcome");
