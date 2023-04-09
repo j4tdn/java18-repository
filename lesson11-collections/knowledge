@@ -1,3 +1,29 @@
+GENERIC TYPE
++ Là khái niệm xuất hiện từ JAVA 1.5
++ Là KDL đại diện cho bất kỳ KDL đối tượng nào
++ Hỗ trợ bắt lỗi tại compile
+--> Phải khai báo và sử dụng
+--> Quy tắc đặt tên: 1 chử cái và in hoa
+--> Giới hạn trên với từ khóa extends 
+
+GENERIC METHOD
++ Là method có tham số truyền vào là generic type
+
+GENERIC CLASS, INTERFACE
++ Là class, interface có tham số truyền vào là generic type
+
+WILDCARD WILDCARD(ký tự ? đại diện)
++ Khi có generic class, interface, method có yêu cầu tham số truyền vào là GENERIC TYPE
+   * Lúc mình gọi chưa biết truyền KDL gì vào thì có thể sử dụng wildcard làm KDL tạm thời
+   * Củng có thể khai báo wildcard để người dùng gọi xử lí
+   
+   Sử dụng để truyền tham số > khai báo
+   --> Giới hạn trên với từ khóa extends 
+   --> Giới hạn dưới với từ khóa super 
+   
+
+
+
 LIST
 + ArrayList
 	 	Object[] elementData;
@@ -60,6 +86,10 @@ CẤU TRÚC DỬ LIỆU
 			       : lưu những phần tử không trùng nhau
 			
 			. map  : lưu trữ theo cơ chế key, value
-			       : hỡ trợ tìm kiếm fast searching
+			       : hỡ trợ tìm kiếm fast searching theo key
+			       
+			    	VD: list --> tìm phần tử theo giá trị,duyệt 0(n) ai bằng thì lấy ra
+			    		map  --> tìm phần tử theo giá trị của key, get(key) --> O(1)
+			    		     --> put(key, value) --> key --> hashing --> dãy số trong memory
 
 		     

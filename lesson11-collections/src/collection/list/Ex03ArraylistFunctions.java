@@ -1,4 +1,4 @@
-package collections.list;
+package collection.list;
 
 import static java.util.Comparator.comparing;
 import static java.util.Comparator.reverseOrder;
