@@ -1,0 +1,93 @@
+GENERIC TYPE
++ Là khái niệm xuất hiện từ Java 1.5
++ Là KDL đại diện cho bất kỳ KDL đối tượng nào
++ Hỗ trợ bắt lỗi tại complie
+--> Phải khai báo và sử dụng
+--> Quy tắc đặt tên: 1 chữ cái và in hoa
+--> Giới hạn trên với từ khoá extends
+
+GENERIC METHOD
++ là method có KDL truyền vào là Generic type
+
+GENERIC CLASS, INTERFACE
++ là 1 class, interface có tham số truyền vào là Generic type
+
+GENERIC WILDCARD (ký tự ? đại diện) 
+	+ Khi có generic class, interface, method có yêu cầu tham số truyền vào là generic type	
+		* Lúc mình gọi chưa biết KDL truyền vào là gì thì có thể sử dụng Wildcard làm KDL tạm thời
+		* Cũng có thể khai báo Wildcard để người dùng gọi xử lí.
+	Sử dụng để truyền tham số hơn là khai báo 
+	
+	--> Giới hạn trên với từ khoá extends
+	--> giới hạn dưới với từ khoá super
+LIST
++ ArrayList
+    Object[] elementData;
+    int size; // số lượng phần tử thật sự chứa trong elementData
+              // duyệt, truy cập ArrayList được phép từ [0, size)
+    int moundCount = 0;
+  
+  + new ArrayList();
+    -->  elementData = {};
+  
+  + Thêm, add('x')
+    --> public boolean add(E e) {
+	        modCount++;
+	        add(e, elementData, size);
+	        return true;
+	    }
+	    
+	    private void add(E e, Object[] elementData, int s) {
+	        if (s == elementData.length)
+	            elementData = grow();
+	        elementData[s] = e;
+	        size = s + 1;
+	    }
+	    
+	    private Object[] grow() {
+	        return grow(size + 1);
+	    }
+	    
+	    --> Lần đầu tiên add vào --> newCapacity = 10
+	    
+	    ['hello', 'welcome', null, null, null, null, null, null, null, null]
+	    size = 2
+	    
+	    lần đầu mặc định capacity = 10
+	    mỗi lần tiếp theo capacity += capacity/2
+	    
+	    khi biết được số lượng phần tử tối đa lưu trong arraylist
+	    thì nên điền capacity vào lúc tạo arraylist
+	    --> để arraylist chỉ tạo duy nhất 1 elementData
+
+  size: số lượng phần tử của list  --> dynamic size
+  add: add last
+  
+
+
+
+
+CẤU TRÚC DỮ LIỆU
++ Truyền thống
+  . int, float, double, char, boolean
+  . array, linked list, tree, stack, queue
+  --> Hạn chế
+  VD: Mảng: --> fixed size
+ 
++ Java custom
+  . Collections --> tập hơn, danh sách
+    + interface
+    + list, set, map
+      . list: dựa trên cấu trúc dữ liệu của mảng và danh sách liên kết
+            : thêm các function, tối ưu để có thể dễ dàng thêm sửa xóa ...
+            : interface/implementation classes dưa trên mảng, danh sách liên kết
+
+      . set : dưa trên idea của danh sách liên kết
+            : lưu những phần tử ko trùng nhau
+    
+      . map : lưu trữ theo cơ chế key, value
+            : hỗ trợ tìm kiếm fast searching
+            
+      VD: 	list 	--> tìm phần tử theo giá trị, duyệt o(n) ai bằng thì lấy ra
+      		map 	--> tìm phần tử theo key, get(key) --> o(1).
+      			--> put(key, value) --> key --> hashing --> dãy số trong memory. 
