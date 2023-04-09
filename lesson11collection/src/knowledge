@@ -20,3 +20,15 @@ arraylist
 vd: [13,14,'null',null,null]  => size = 3 ,length = 5
 vd: [13,'null',null,null,null]  => size = 2 ,length = 5
 +store list of object type
+
+
+
+Generic TYPE
++Là khái niệm xuất hiện từ java 1.5
++Là KDL đối tượng cho bất kỳ KDL đối tượng nào
++Hỗ trợ bắt lỗi tại compile
+--> Phải khai báo và sử dụng
+
+-->> Quy tắc đặt tên : 1 chữ cái và in hoa
+Generic Method
++Là method có KDL truyền vào là generic type
