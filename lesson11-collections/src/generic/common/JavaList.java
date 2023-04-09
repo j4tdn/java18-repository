@@ -26,4 +26,8 @@ public interface JavaList<E> {
 	int size();
 	
 	int capacity();
+	
+	boolean contains(E[] es, E testE);
+	
+	E[] toArray();
 }

@@ -17,7 +17,13 @@ CẤU TRÚC DỮ LIỆU
 	           : lưu những phần tử không trùng nhau
 	           
 	     . map : lưu trữ theo cơ thế key, value
-	           : hỗ trợ tìm kiếm nhanh (fast searching)
+	           : hỗ trợ tìm kiếm nhanh (fast searching) theo key
+	           
+	           VD: list --> tìm kiếm phần tử theo giá trị 
+	                    --> cần duyệt O(n), ai bằng thì lấy ra
+	               map  --> tìm kiếm phần tử theo key
+	                    --> cần get(key) --> O(1)
+	                    --> put (key, value) --> key --> hashing --> dãy số trong memory
 	           
 =================================
 
@@ -96,9 +102,24 @@ GENERIC TYPE
 + Hỗ trợ bắt lỗi tại compile
 --> Phải khai báo và sử dụng
 --> Quy tắc đặt tên: 1 chữ cái và in hoa 
+--> Giới hạn trên với từ khóa extends
 
 GENERIC METHOD
 + Là method có KDL truyền vào là Generic Type
+
+GENERIC CLASS, METHOD
++ Là class, interface có tham số truyền vào là generic type
+
+GENERIC WILDCARD
+- Khi có generic class, interface, method có yêu cầu tham số truyền vào là GENERIC TYPE
+ + Lúc mình gọi chưa biết truyền KDL gì vào thì cso thể sử dụng wildcard làm KDL tạm thời
+ + Cũng có thể khai báo wildcard để người dùng gọi xử lý
+ 
+ Sử dụng đề truyền tham số hơn là khai báo
+ 
+ --> Không thể khai báo trong generic class, interface
+ --> Giới hạn dưới với từ khóa super
+
 
 
 

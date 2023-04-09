@@ -29,6 +29,7 @@ public class CustomList<E> implements JavaList<E> {
 		es = createGenericArray(capacity);
 	}
 
+	/*
 	@Override
 	public boolean add(E e) {
 		if (size == es.length) {
@@ -37,25 +38,29 @@ public class CustomList<E> implements JavaList<E> {
 		es[size++] = e;
 		return false;
 	}
-
+	*/
 	@Override
+	public boolean add(E e) {
+		return add(size, e);
+	}
+
+	@Override	
 	public boolean add(int index, E e) {
-		if (index < 0 || index > size) {
-			return false;
-		}
+		checkIndexRange(index, 0, size);
 		if (size == es.length) {
 			es = grow(es.length + es.length / 2);
+		}	
+		size++;	
+		for (int i = size - 1; i > 0; i--) {
+			es[i] = es[i - 1];
 		}
-		for (int i = size - 1; i >= index; i--) {
-			es[i + 1] = es[i];
-		}
-		es[index++] = e;
+		es[index++] = e;		
 		return true;
 	}
 
 	@Override
 	public boolean addIfAbsent(E e) {
-		if (contains(e)) {
+		if (contains(es, e)) {
 			return false;
 		}
 		return add(e);
@@ -120,6 +125,21 @@ public class CustomList<E> implements JavaList<E> {
 	public int capacity() {
 		return es.length;
 	}
+	
+	@Override
+	public boolean contains(E[] es, E testE) {
+		for (E e : es) {
+			if (testE.equals(e)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	@Override
+	public E[] toArray() {
+		return Arrays.copyOfRange(es, 0, size);
+	}
 
 	@SuppressWarnings("unchecked")
 	private E[] createGenericArray(int length) {
@@ -139,7 +159,9 @@ public class CustomList<E> implements JavaList<E> {
 		return list.indexOf(e);
 	}
 
-	private boolean contains(E e) {
-		return indexOf(e) != -1;
+	private void checkIndexRange(int index, int start, int end) {
+		if (index < start || index > end) {
+			throw new IndexOutOfBoundsException(index);
+		}
 	}
 }
