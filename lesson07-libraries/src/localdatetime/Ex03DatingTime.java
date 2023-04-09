@@ -42,7 +42,7 @@ public class Ex03DatingTime {
 		System.out.println(period + " " + duration);
 	}
 	
-	private static String format(LocalDateTime ldatetime) {
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("đ/")
-	}
+//	private static String format(LocalDateTime ldatetime) {
+//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("đ/");
+//	}
 }
