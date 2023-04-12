@@ -1,12 +1,12 @@
-package collections.list;
+package collection.list;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class Ex04ImmutableList {
 	public static void main(String[] args) {
-		// Toán tử ... gọi là java variables --> tương tự 1 mảng 1 chiều
-		// nhưng có thể truyền vào thoải mái hơn --> T...
+		// Toán tử ... g�?i là java variables --> tương tự 1 mảng 1 chi�?u
+		// nhưng có thể truy�?n vào thoải mái hơn --> T...
 		// VD: new String[] {"a", "b"}
 		// "a", "b", "c", "d"
 		

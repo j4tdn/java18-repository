@@ -1,4 +1,4 @@
-package collections.list;
+package collection.list;
 
 import static java.util.Comparator.comparing;
 import static java.util.Comparator.reverseOrder;
@@ -52,28 +52,28 @@ public class Ex03ArrayListFunctions {
 		// list.remove(Object o) --> internal code
 		// Duyệt từng phần tử trong biến list
 		// Nếu phần tử nào equals(mặc định so sánh địa chỉ) với phần tử cần xóa(o) 
-		// thì xóa phần tử đó khỏi list
+		// thì xóa phần tử đó kh�?i list
 		
 		// Thực tế
 		// VD: CSDL lưu trữ 10 phần tử nằm ở 10 ô nhớ khác nhau
-		//   : Khi người dùng muốn xóa --> nhập phần tử muốn xóa theo id
+		//   : Khi ngư�?i dùng muốn xóa --> nhập phần tử muốn xóa theo id
 		// Muốn xóa được --> thì phải duyệt từng phần tử trong list, kiểm tra
 		// xem phần tử nào có id bằng id cần xóa --> lấy đối tượng đó ra
-		// rồi gọi hàm remove đối tượng đó --> bad performance
+		// rồi g�?i hàm remove đối tượng đó --> bad performance
 		
 		// Mong muốn
-		// Khi truyền phần tử cần xóa vào, nếu phần tử nào trong list
+		// Khi truy�?n phần tử cần xóa vào, nếu phần tử nào trong list
 		// cùng id với phần tử cần xóa --> xóa
 		// Override hàm equals trong class Store theo thuộc tính id
 		
 		// Duyệt từng phần tử trong biến list
 		// Nếu phần tử nào equals(cùng store id) với phần tử cần xóa(o) 
-		// thì xóa phần tử đó khỏi list
+		// thì xóa phần tử đó kh�?i list
 //		int count = 0;
 //		
 //		for (Store store: stores) {
 //			
-//			// tường minh
+//			// tư�?ng minh
 //			stores.remove(new Store(6, "S6", LocalDate.now(), 101));
 //			
 //			count++;
@@ -94,10 +94,10 @@ public class Ex03ArrayListFunctions {
 		 at collections.list.Ex03ArrayListFunctions.main(Ex03ArrayListFunctions.java:72)
 		 
 		 Root cause: 
-		 	Đang duyệt phần tử thứ i mà mình đã truy cập được/xóa phần thứ i + k
+		 	�?ang duyệt phần tử thứ i mà mình đã truy cập được/xóa phần thứ i + k
 		 	Sau khi xóa duyệt đến phần tử i + k không còn nữa
 		 Solving:
-		 	Đang duyệt phần tử i là chỉ được phép truy cập giá trị tại i
+		 	�?ang duyệt phần tử i là chỉ được phép truy cập giá trị tại i
 		 	không được truy cập, xóa phần tử khác
 		 	--> Duyệt tuần tự
 		 	--> Interable
