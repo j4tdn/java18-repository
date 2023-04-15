@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class VehicleModalMap {
+public class Ex01VehicleModalMap {
 	/*
 	 * Tạo map lưu trữ danh sách biển số xe theo tỉnh, thành phố VN
 	 * Map<Integer, String> model = new HashMap, LinkedHashMap, Tree Map
