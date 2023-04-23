@@ -1,0 +1,2 @@
+1, red, 70000, America
+2, green, 5000, VietNam
