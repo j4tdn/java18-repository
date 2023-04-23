@@ -11,6 +11,12 @@
     <content url="file://$MODULE_DIR$/lesson11-collections">
       <sourceFolder url="file://$MODULE_DIR$/lesson11-collections/src" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/lesson11-collections-test">
+      <sourceFolder url="file://$MODULE_DIR$/lesson11-collections-test/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/lesson12-stream">
+      <sourceFolder url="file://$MODULE_DIR$/lesson12-stream/src" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

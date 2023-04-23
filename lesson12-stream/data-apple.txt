@@ -1,0 +1,4 @@
+1, white, 15, vietnam
+1, red, 25, america
+1, green, 35, japan
+1, orange, 45, belgium
