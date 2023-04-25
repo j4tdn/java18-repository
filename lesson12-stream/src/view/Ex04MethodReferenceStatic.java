@@ -11,25 +11,31 @@ import functional.AppleCondition;
 import functional.WeightHeavierAppleCondition;
 import model.DataModel;
 
-public class Ex04MethodReference {
+public class Ex04MethodReferenceStatic {
 	public static void main(String[] args) {
 		List<Apple> inventory = DataModel.getApples();
 		
 		// sorting by id desc, weight asc
-		inventory.sort(Ex04MethodReference::sortIdDescWeightAsc);
+		inventory.sort(Ex04MethodReferenceStatic::sortIdDescWeightAsc);
 		System.out.println("=--- SORTED BY ID DESC, WEIGHT ASC ---=");
 		inventory.forEach(System.out::println);
 		
 		
 		// lambda, anonymous function
 		List<Apple> greenAndWeightApples =  
-				filterApples(inventory, Ex04MethodReference::greenAndWightApple);
+				filterApples(inventory, Ex04MethodReferenceStatic::greenAndWightApple);
 		
 		// override for abstract method complex and lots of code
 		// create a 'static method reference' represent for override abstract method
 		// + arbitrary name
 		// + arbitrary place(class)
 		// --> require input and output
+		
+		// method reference --> 
+		
+		// constructor reference -->
+		
+		// stream
 		
 		System.out.println("=--- GREEN AND WEIGHT APPLES ---=");
 		greenAndWeightApples.forEach(System.out::println);

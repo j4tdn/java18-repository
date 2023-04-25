@@ -10,17 +10,12 @@ public class Apple {
 	public Apple() {
 	}
 	
-	public Apple(int id) {
-		this.id = id;
-	}
-	
-	public Apple(String country) {
-		this.country = country;
-	}
-	
-	public Apple(int id, String country) {
-		this.id = id;
-		this.country = country;
+	public Apple(String line) {
+		String[] tokens = line.split(", ");
+		this.id = Integer.parseInt(tokens[0]);
+		this.color = tokens[1];
+		this.weight = Double.parseDouble(tokens[2]);
+		this.country = tokens[3];
 	}
 	
 	public Apple(int id, String color, double weight, String country) {
