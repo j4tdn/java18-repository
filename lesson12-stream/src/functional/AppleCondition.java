@@ -1,5 +1,8 @@
 package functional;
 
-public class AppleCondition {
+import bean.Apple;
 
+
+public interface AppleCondition {
+	boolean test(Apple apple);
 }

@@ -10,6 +10,8 @@ public class Ex03LocalVariable {
 		//Local variable
 		int round = 0;
 		
+		// accessible --> closure
+		
 		// anonymous class, function, lamda
 		Runnable runner = new Runnable() {
 

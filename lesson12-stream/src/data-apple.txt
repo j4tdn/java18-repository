@@ -1,2 +1,4 @@
-1, red, 70000, America
-2, green, 5000, VietNam
+1, white, 15, vietnam
+2, black, 25, lao
+3, white, 15, vietnam
+4, black, 25, lao

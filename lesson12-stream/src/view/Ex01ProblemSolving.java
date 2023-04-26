@@ -13,7 +13,7 @@ public class Ex01ProblemSolving {
 		List<Apple> inventory = Datamodel.getApples();
 	}
 	
-	
+	// 1st 2nd : find all green/red/color apples in his inventory
 	public static List<Apple> findAppleByColor(List<Apple> inventory,String color){
 		Objects.requireNonNull(color,color + "should not null");
 		if(inventory.isEmpty()) {
@@ -28,6 +28,7 @@ public class Ex01ProblemSolving {
 		return result;
 	}
 	
+	// 3rd: find all apples heavier than 150 g
 	public static List<Apple> findAppleByWeight(List<Apple> inventory,double weight){
 		Objects.requireNonNull(weight,weight + "should not null");
 		if(inventory.isEmpty()) {
@@ -42,6 +43,7 @@ public class Ex01ProblemSolving {
 		return result;
 	}
 	
+	// 5th: find all apples that are green and heavier than 400 g
 	public static List<Apple> findAppleByWeight(List<Apple> inventory,String color,double weight){
 		Objects.requireNonNull(weight,weight + "should not null");
 		if(inventory.isEmpty()) {

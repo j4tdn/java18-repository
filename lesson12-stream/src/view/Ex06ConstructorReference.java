@@ -36,6 +36,9 @@ public class Ex06ConstructorReference {
 		Apple apple = sup.get();
 		System.out.println("apple -> " + apple);
 
+		
+		
+		
 		// VÍ dụ:
 
 		// map->set->list->sort->linkedhashmap
