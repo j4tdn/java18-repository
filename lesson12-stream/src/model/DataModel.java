@@ -27,7 +27,7 @@ public class DataModel {
 	
 	public static List<Apple> getApples() {
 		return Arrays.asList(
-				new Apple(1, "green", 200, "Vietnam"),	
+				new Apple(1, "blue", 200, "Vietnam"),	
 				new Apple(16, "green", 300, "Vietnam"),	
 				new Apple(22, "red", 300, "Lao"),	
 				new Apple(4, "yellow", 400, "Thailand"),	
