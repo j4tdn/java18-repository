@@ -6,11 +6,11 @@ import java.util.function.Predicate;
 
 import bean.Apple;
 import functional.AppleCondition;
-import model.Datamodel;
+import model.DataModel;
 
 public class Ex02StategyPattern {
 	public static void main(String[] args) {
-		List<Apple> inventory = Datamodel.getApples();
+		List<Apple> inventory = DataModel.getApples();
 		List<Apple> weightApples = findApples(inventory, (Apple apple) -> {
 			return "green".equals(apple.getColor()) && apple.getWeight() > 200;
 		});

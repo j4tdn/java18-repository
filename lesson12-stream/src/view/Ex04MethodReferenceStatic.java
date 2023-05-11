@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import bean.Apple;
-import model.Datamodel;
+import model.DataModel;
 
 public class Ex04MethodReferenceStatic {
 	public static void main(String[] args) {
-		List<Apple> inventory = Datamodel.getApples();
+		List<Apple> inventory = DataModel.getApples();
 //		List<Apple> weightApples = findApples(inventory, (Apple apple)->{
 //			return "green".equals(apple.getColor()) && apple.getWeight() > 200;
 //		});

@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Objects;
 
 import bean.Apple;
-import model.Datamodel;
+import model.DataModel;
 
 public class Ex01ProblemSolving {
 	public static void main(String[] args) {
-		List<Apple> inventory = Datamodel.getApples();
+		List<Apple> inventory = DataModel.getApples();
 	}
 	
 	// 1st 2nd : find all green/red/color apples in his inventory

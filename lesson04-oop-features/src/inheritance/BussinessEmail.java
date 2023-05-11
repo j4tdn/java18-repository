@@ -4,7 +4,6 @@ public class BussinessEmail extends EmailService {
 
 	@Override
 	void login() {
-		System.out.println("login");
-		
+		System.out.println("login business email");
 	}
 }

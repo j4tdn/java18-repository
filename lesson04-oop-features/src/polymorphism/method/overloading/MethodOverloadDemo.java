@@ -15,7 +15,7 @@ public class MethodOverloadDemo {
 	}
 	//tìm tổng các số
 	private static double sum(double a,double b ) {
-		return a+b;
+		return a+b; 
 	}
 	private static int sum(int a,int b) {
 		return a+b;

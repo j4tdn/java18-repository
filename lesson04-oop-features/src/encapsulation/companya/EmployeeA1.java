@@ -11,5 +11,4 @@ public class EmployeeA1 {
 	public static String[] skills;
 	static String[] assignedProject;
 	private static double salary;
-	
 }

@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.Map;
+
 /*
  * utils class --> chưa những hàm static
  * --> chỉ phụ thuộc vào tham số truyền vào, k phụ htuoocj vào dối tượng
@@ -12,15 +14,27 @@ package utils;
  * --> chỉ được phép lấy class gọi
  */
 public class PrintUtils {
-	
+
 	private PrintUtils() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public static <T> void printf(String prefix, Iterable<T> elements) {
 		System.out.println("\n" + prefix);
 		System.out.println("==========____---------____=========");
 		elements.forEach(System.out::println);
 		System.out.println("==========____---------____=========");
 	}
+
+	public static <K, V> void print(String prefix, Map<K, V> map) {
+
+		System.out.println("\n" + prefix);
+
+		System.out.println("===__------------__===");
+
+		map.entrySet().forEach(System.out::println);
+
+		System.out.println("===__------------__===\n");
+	}
+
 }

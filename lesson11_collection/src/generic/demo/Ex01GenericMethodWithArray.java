@@ -19,6 +19,7 @@ public class Ex01GenericMethodWithArray {
 		};
 		sort(sequences);
 		printf(sequences);
+		System.out.println("================");
 		printf(store);
 	}
 	//Commom method 
@@ -29,6 +30,7 @@ public class Ex01GenericMethodWithArray {
 		}
 	}
 	
+	//Generic Method
 	private static <E extends Comparable<E>> void sort(E[] elements) {
 		Arrays.sort(elements);
 	}

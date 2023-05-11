@@ -42,16 +42,15 @@ Khác nhau
 	
   == Chi tiết ==
   
-  GET, SET --> ArrayList > LinkedList
-	ArrayList: O(1)
-	LinkedList: O(k)
+  	GET, SET --> ArrayList > LinkedList
+		ArrayList: O(1)
+		LinkedList: O(k)
 	
 	ADD, REMOVE
-	
-	ArrayList:  Vị trí đầu (chậm) đến vị trí cuối (nhanh)
-	
-	LinkedList: Vị trí càng về đầu (nhanh), cuối (nhanh) --> DeQue
-				Vị trí càng về giữa (chậm)
+		ArrayList:  Vị trí đầu (chậm) đến vị trí cuối (nhanh)
+		
+		LinkedList: Vị trí càng về đầu (nhanh), cuối (nhanh) --> DeQue
+					Vị trí càng về giữa (chậm)
 				
 	
 	

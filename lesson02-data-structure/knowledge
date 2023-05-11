@@ -7,7 +7,7 @@
 		->Mục đích: Lưu trữ dữ liệu
 		->Đặc điểm: - Dữ liệu đơn: Interger, String, Long
 					- Dữ liệu có nhiều thông tin: Item(id,name,price)
-		->Lưu trữ : Heap , còn biên lưu trữ ở stack
+		->Lưu trữ : Heap , còn biến lưu trữ ở stack
 		
 	+Truyền tham số qua hàm ==> pass by value at stack
 	+Toán tử = luôn luôn hoạt động ở stack	

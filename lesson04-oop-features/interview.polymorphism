@@ -1,5 +1,5 @@
 1. Tính chất đa hình là gì
-	+ Đa hình trong trong phưng thức
+	+ Đa hình trong trong phương thức
 		-> là 1 phương thức cùng tên nhưng khác Sl tham số, KDL truyển vào của tham số
 		--> Overloading
 		
@@ -10,7 +10,7 @@
 		--> Là 1 đối tượng/biến có KDL lớp cha lúc compile có thể tham chiếu/trỏ đến KDL của các lớp con lúc runtime
 		
 2.
-		  question:  Vì sao không lấy class hiện tại mà phải lấy class cha = new clas con
+		  question:  Vì sao không lấy class hiện tại mà phải lấy class cha = new class con
 		   Answer: 
 		 	-> Dễ dàng ép kiểu, gán giá trị qua về giữa các biến có KDL thuộc nhóm (cha-con) 
 		 		vì đều là KDL cha lúc compile

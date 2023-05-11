@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Dish {
 	public enum Kind {
-		MEAT, FISH, OTHER
+		MEAT, FISH, VEGGIE, OTHER
 	}
 
 	private String id;

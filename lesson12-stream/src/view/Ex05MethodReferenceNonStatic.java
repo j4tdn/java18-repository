@@ -4,11 +4,11 @@ import java.util.Comparator;
 import java.util.List;
 
 import bean.Apple;
-import model.Datamodel;
+import model.DataModel;
 
 public class Ex05MethodReferenceNonStatic {
 	public static void main(String[] args) {
-		List<Apple> inventory = Datamodel.getApples();
+		List<Apple> inventory = DataModel.getApples();
 		
 		/*
 		 * non static reference

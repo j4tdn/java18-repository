@@ -33,8 +33,7 @@ public class Ex01GenericMethodWithList {
 	// Object là cha của Integer, Double
 	// List<Object> ko phải là cha của List<Integer>, Lits<Double>
 	
-	// List<E> --> E là generic type, tham số mà ngư�?i dùng
-	// phải truy�?n KDL đối tượng vào
+	// List<E> --> E là generic type, tham số mà ngư�?i dùngphải truy�?n KDL đối tượng vào
 	private static <E> void printf(String title, List<E> elements) {
 		System.out.print(title + " ---> ");
 		for(E element: elements) {
