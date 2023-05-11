@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Apple {
 	private int id;
 	private String color;
@@ -59,6 +61,27 @@ public class Apple {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(getId());
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		
+		if (this == o) {
+			return true;
+		}
+		
+		if (!(o instanceof Apple)) {
+			return false;
+		}
+		
+		Apple that = (Apple)o;
+		
+		return getId() == that.getId();
 	}
 
 	@Override

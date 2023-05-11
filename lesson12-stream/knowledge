@@ -1,0 +1,26 @@
++ Collection 
+--> Lưu trữ được dữ liệu --> List, Set, Queue, Map, Stack
+--> Hỗ trợ thao tác xử lý --> add, get, set, remove, removeIf, sort
+
+
++ Stream
+--> Lưu trữ được dữ liệu --> list.stream() --> Stream<?>, Arrays.stream(ar) --> Stream<?>
+--> Hỗ trợ thao tác xử lý --> filter, map, limit, sorted, reduce, forEach,...
+
+--> Collections are about data
+--> Streams are about computations
+
+1. Phân biệt Stream và Collection
+
+2. Phân biệt Internal và External iteration
+
+- Internal iteration: Chỉ gọi hàm --> tự bên trong hàm đó xử lý, duyệt 
+- External iteration: Tự for, if-else để duyệt và xử lý
+
+3. Tại sao phải dùng internal iteration?
+(những vòng lặp đã được xử lý sẵn bên trong)
+--> chỉ cần gọi và truyền thao tác 
+--> việc duyệt ở bên trong tự xử lý
+
+==> database-like operations 
+--> code gọn gàng, sạch sẽ, tránh trùng lặp code
