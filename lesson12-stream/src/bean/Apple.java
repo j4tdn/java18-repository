@@ -66,7 +66,7 @@ public class Apple {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(country);
 	}
 	
 	@Override
@@ -74,7 +74,11 @@ public class Apple {
 		if(this == obj) {
 			return true;
 		}
-		if(!(obj instanceof ))
+		if(!(obj instanceof Apple)) {
+			return false;
+		}
+		Apple that = (Apple)obj;
+		return getCountry().equals(that.country);
 	}
 
 	@Override
