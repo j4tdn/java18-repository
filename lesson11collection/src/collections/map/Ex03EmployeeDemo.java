@@ -37,7 +37,7 @@ public class Ex03EmployeeDemo {
 		Employee e31 = new Employee(31,"E31",400d,m3.getId());
 		Employee e32 = new Employee(32,"E32",400d,m3.getId());
 		 
-		Map<Employee,List<Employee>> result = new LinkedHashMap()<>();
+		Map<Employee,List<Employee>> result = new LinkedHashMap<>();
 		result.put(m1,List.of(e11, e12, e13));
 		result.put(m2,List.of(e21, e22));
 		result.put(m3,List.of(e31, e32));
