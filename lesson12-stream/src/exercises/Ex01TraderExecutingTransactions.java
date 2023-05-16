@@ -1,18 +1,5 @@
 package exercises;
 
-import static java.util.Comparator.comparing;
-import static java.util.Comparator.reverseOrder;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Predicate;
-
-import bean.Trader;
-import bean.Transaction;
-import model.DataModel;
-
 /**
  * Question: Build an application ‘trader executing transactions’ for your manager to
  * manage all system activities and answer following queries:
@@ -28,9 +15,10 @@ import model.DataModel;
 	10. Find the transaction with the smallest value.
  */
 
+/*
 public class Ex01TraderExecutingTransactions {
 	public static void main(String[] args) {
-		List<Trader> traders = DataModel.getTraders();
+		//List<Trader> traders = DataModel.getTraders();
 		List<Transaction> trans = DataModel.getTransactions();
 		
 		// 1. Find all transactions in the year 2011 and sort them by value (small to high).
@@ -77,13 +65,13 @@ public class Ex01TraderExecutingTransactions {
 		System.out.println("==================================\n"); 
 		
 		// 9. What’s the highest value of all the transactions?
-		int maxValue = findMaxValue(trans);
-		System.out.println("The highest value of all the transactions --> " + maxValue);
-		System.out.println("==================================\n"); 
+		//int maxValue = findMaxValue(trans);
+		//System.out.println("The highest value of all the transactions --> " + maxValue);
+		//System.out.println("==================================\n"); 
 		
 		// 10. Find the transaction with the smallest value.
-		int minValue = findMinValue(trans);
-		System.out.println("The smallest value of all the transactions --> " + minValue);
+		//int minValue = findMinValue(trans);
+		//System.out.println("The smallest value of all the transactions --> " + minValue);
 	}
 
 	private static <E> List<E> filter(List<E> lists, Predicate<E> predicate) {
@@ -133,6 +121,7 @@ public class Ex01TraderExecutingTransactions {
 		return count;
 	}
 	
+	/*
 	private static int findMaxValue(List<Transaction> trans) {
 		int max = Integer.MIN_VALUE;
 		for (Transaction tran : trans) {
@@ -152,4 +141,7 @@ public class Ex01TraderExecutingTransactions {
 		}
 		return min;
 	}
-}
+	}
+	*/
+
+

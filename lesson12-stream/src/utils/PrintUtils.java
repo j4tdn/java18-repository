@@ -6,6 +6,10 @@ public class PrintUtils {
 	private PrintUtils() {
 	}
 	
+	public static <T> void print(String prefix, T element) {
+		System.out.println("\n" + prefix + " --> " + element);
+	}
+	
 	public static <T> void print(String prefix, Iterable<T> elements) {
 		System.out.println("\n" + prefix);
 		System.out.println("===__--------------------__===");

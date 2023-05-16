@@ -24,27 +24,20 @@ public class DataModel {
 				new Apple(6, "green", 100, "Thailand"));
 	}
 	
-	public static List<Trader> getTraders() {
-        Trader raoul = new Trader("Raoul", "Cambridge");
-        Trader mario = new Trader("Mario", "Milan");
-        Trader alan = new Trader("Alan", "Cambridge");
-        Trader brian = new Trader("Brian", "Cambridge");
-        return Arrays.asList(raoul, mario, alan, brian);
-    }
-	
 	public static List<Transaction> getTransactions() {
-        Trader raoul = new Trader("Raoul", "Cambridge");
-        Trader mario = new Trader("Mario", "Milan");
-        Trader alan = new Trader("Alan", "Cambridge");
-        Trader brian = new Trader("Brian", "Cambridge");
-        return Arrays.asList(
-                new Transaction(brian, 2011, 300),
-                new Transaction(raoul, 2012, 1000),
-                new Transaction(raoul, 2011, 400),
-                new Transaction(mario, 2012, 710),
-                new Transaction(mario, 2012, 700),
-                new Transaction(alan, 2012, 950)
+		Trader raoul = new Trader(1, "Raoul", "Cambridge");
+		Trader mario = new Trader(2, "Mario", "Milan");
+		Trader alan = new Trader(3, "Alan", "Cambridge");
+		Trader brian = new Trader(4, "Brian", "Cambridge");
+		List<Transaction> transactions = List.of(
+			new Transaction(55, brian, 2011, 300L),
+			new Transaction(66, raoul, 2012, 1000L), 
+			new Transaction(77, raoul, 2011, 400L),
+			new Transaction(88, mario, 2012, 710L), 
+			new Transaction(99, mario, 2012, 700L), 
+			new Transaction(44, alan, 2012, 950L)
 		);
+		return transactions;
 	}
 	
 	public static List<Dish> getDishes() {
