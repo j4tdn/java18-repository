@@ -19,7 +19,7 @@ public class TransactionManagement {
 		PrintUtils.printf("4. ",
 				transactions.stream().filter(trans -> trans.getTrader().getCity().equals("Cambridge"))
 						.sorted(Comparator.comparing(Transaction::getTrader,
-								Comparator.comparing(Trader::getName, Comparator.reverseOrder())))
+								Comparator.comparing(Trader::getName, Comparator.reverseOrder()	)))
 						.collect(Collectors.toList()));
 
 	}
