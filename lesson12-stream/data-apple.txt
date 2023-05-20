@@ -1,0 +1,5 @@
+11, white, 12, vietnam
+12, black, 23, vietnam
+21, pink, 32, vietnam
+8, blue, 51, vietnam
+17, green, 11, vietnam
