@@ -19,10 +19,16 @@ public class PrintUtils {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static <T> void printf(String prefix, Iterable<T> elements) {
+	public static <T> void print(String prefix, Iterable<T> elements) {
 		System.out.println("\n" + prefix);
 		System.out.println("==========____---------____=========");
 		elements.forEach(System.out::println);
+		System.out.println("==========____---------____=========");
+	}
+	public static <T> void print(String prefix, int count) {
+		System.out.println("\n" + prefix);
+		System.out.println("==========____---------____=========");
+		System.out.println(count);
 		System.out.println("==========____---------____=========");
 	}
 
