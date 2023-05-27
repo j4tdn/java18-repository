@@ -14,7 +14,7 @@ public class Ex04DatingTime {
 		Calendar start = Calendar.getInstance();
 		// 16/10/2022 18:20:22
 		start.set(2021, Calendar.JANUARY, 20, 20, 20, 20);
-
+		
 		Calendar now = Calendar.getInstance();
 		long startInMls = start.getTimeInMillis();
 		long nowInMls = now.getTimeInMillis();
