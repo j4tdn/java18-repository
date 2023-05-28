@@ -8,7 +8,7 @@ import bean.Employee;
 
 public class Ex03EmployeeDemo {
 	public static void main(String[] args) {
-Map<Employee, List<Employee>> office = mockData();
+		Map<Employee, List<Employee>> office = mockData();
 		
 		// how map checks duplicated keys
 		Employee m1 = new Employee(1, "M1", 1000d, null);

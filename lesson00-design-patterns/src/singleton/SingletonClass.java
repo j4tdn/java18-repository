@@ -1,7 +1,18 @@
 package singleton;
 
 public class SingletonClass {
-	public static void main(String[] args) {
-		
+	private static SingletonClass instance = null;
+
+	int value;
+
+	private SingletonClass() {
+	}
+
+	public static SingletonClass getInstance() {
+		if (instance == null) {
+			instance = new SingletonClass(); // H1
+		}
+		return instance;
+
 	}
 }
