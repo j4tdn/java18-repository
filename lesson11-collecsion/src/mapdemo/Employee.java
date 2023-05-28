@@ -1,5 +1,7 @@
 package mapdemo;
 
+import java.util.Objects;
+
 public class Employee {
 	private Integer ID;
 	private String Name;
@@ -37,6 +39,24 @@ public class Employee {
 	public void setManagerID(Integer managerID) {
 		ManagerID = managerID;
 	}
+	@Override
+	public boolean equals(Object o) {
+		if(this == o) {
+			return true;
+		}
+		if(!(o instanceof Employee)) {
+			return false;
+		}else {
+			Employee that = (Employee)o;
+			return getID().equals(that.getID());
+		}
+	}
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return Objects.hash(getID());
+	}
+	
 	@Override
 	public String toString() {
 		return "Ex01 [ID=" + ID + ", Name=" + Name + ", Salary=" + Salary + ", ManagerID=" + ManagerID + "]";

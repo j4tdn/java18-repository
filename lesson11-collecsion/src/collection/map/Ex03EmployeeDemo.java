@@ -15,8 +15,8 @@ public class Ex03EmployeeDemo {
 		
 		// how map checks duplicated keys
 		Employee m1 = new Employee(1, "M1", 1000d, null);
-		Employee e41 = new Employee(41, "E41", 400d, m1.getId());
-		Employee e42 = new Employee(42, "E42", 400d, m1.getId());
+		Employee e41 = new Employee(41, "E41", 400d, m1.getID());
+		Employee e42 = new Employee(42, "E42", 400d, m1.getID());
 		
 		// Thông thường 1 đối tượng --> hashcode(Object) -> là địa chỉ mà JVM cấp phát cho vùng nhớ heap
 		// --> System.identityHashcode
@@ -52,19 +52,19 @@ public class Ex03EmployeeDemo {
 	private static Map<Employee, List<Employee>> mockData() {
 		// manager(s)
 		Employee m1 = new Employee(1, "M1", 1000d, null);
-		Employee m2 = new Employee(2, "M2", 800d, m1.getId());
-		Employee m3 = new Employee(3, "M3", 800d, m2.getId());
+		Employee m2 = new Employee(2, "M2", 800d, m1.getID());
+		Employee m3 = new Employee(3, "M3", 800d, m2.getID());
 		
 		// employee(s)
-		Employee e11 = new Employee(11, "E11", 400d, m1.getId());
-		Employee e12 = new Employee(12, "E12", 400d, m1.getId());
-		Employee e13 = new Employee(13, "E13", 400d, m1.getId());
+		Employee e11 = new Employee(11, "E11", 400d, m1.getID());
+		Employee e12 = new Employee(12, "E12", 400d, m1.getID());
+		Employee e13 = new Employee(13, "E13", 400d, m1.getID());
 		
-		Employee e21 = new Employee(21, "E21", 400d, m2.getId());
-		Employee e22 = new Employee(22, "E22", 400d, m2.getId());
+		Employee e21 = new Employee(21, "E21", 400d, m2.getID());
+		Employee e22 = new Employee(22, "E22", 400d, m2.getID());
 		
-		Employee e31 = new Employee(31, "E31", 400d, m3.getId());
-		Employee e32 = new Employee(32, "E32", 400d, m3.getId());
+		Employee e31 = new Employee(31, "E31", 400d, m3.getID());
+		Employee e32 = new Employee(32, "E32", 400d, m3.getID());
 		
 		Map<Employee, List<Employee>> result = new LinkedHashMap<>();
 		result.put(m1, List.of(e11, e12, e13));

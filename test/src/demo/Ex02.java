@@ -1,0 +1,38 @@
+package demo;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.function.Function;
+
+import bean.Apple;
+import bean.Condition;
+import utils.AppleUtilis;
+import utils.CollectionUtils;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		List<Apple> inventory = AppleUtilis.getAll();
+		List<Apple> result = filterApples(inventory, apple -> apple.getColor().equals("green"));
+		CollectionUtils.printf(result);
+	}
+	
+	private static List<Apple> filterApples(List<Apple> inventory,Condition<Apple> condition){
+		List<Apple> result = new ArrayList<>();
+		for(Apple apple : inventory) {
+			if(condition.behavior(apple)) {
+				result.add(apple);
+			}
+		}
+		return result;
+	}
+	
+	private static <T,R> Set<R> Country(List<T> inventory ,Function<T, R> function){
+		Set<R> es = new HashSet<>();
+		for(T t : inventory) {
+			es.add(function.apply(t));
+		}
+		return es;
+	}
+}
