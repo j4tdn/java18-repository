@@ -65,7 +65,7 @@ public class Ex06ConstructorReference {
 		// type inference
 		Supplier<Apple> s1 = Apple::new;
 		Function<String, Apple> f1 = Apple::new;
-		//PentaFunction<Integer, String, Double, String, Apple> p1 = Apple::new;
+		PentaFunction<Integer, String, Double, String, Apple> p1 = Apple::new;
 		
 		
 	}

@@ -5,5 +5,5 @@ package funtional;
  */
 @FunctionalInterface
 public interface PentaFunction<T, U, S, M, R> {
-	R apply(T t, U u, S s, R r ,M m);
+	R apply(T t, U u, S s, M m);
 }

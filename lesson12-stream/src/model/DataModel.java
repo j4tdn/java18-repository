@@ -4,11 +4,28 @@ import java.util.Arrays;
 import java.util.List;
 
 import bean.Apple;
+import bean.Dish;
+import bean.Dish.Kind;
+import bean.Trader;
+import bean.Transaction;
 
 public class DataModel {
 	
 	private DataModel() {
 		
+	}
+	
+	public static List<Dish> getDishes() {
+		return Arrays.asList(
+				new Dish("1", "D1", 308, Kind.FISH),
+				new Dish("2", "D2", 620, Kind.OTHER),
+				new Dish("3", "D3", 329, Kind.OTHER),
+				new Dish("4", "D4", 308, Kind.MEAT),
+				new Dish("5", "D5", 480, Kind.MEAT),
+				new Dish("6", "D6", 480, Kind.MEAT),
+				new Dish("7", "D7", 818, Kind.MEAT),
+				new Dish("8", "D8", 100, Kind.VEGGIE),
+				new Dish("9", "D9", 102, Kind.VEGGIE));
 	}
 	
 	public static List<Apple> getApples() {
@@ -21,5 +38,19 @@ public class DataModel {
 				new Apple(6, "green", 100, "Thailand")	
 		);
 	}
-
+	
+	public static List<Transaction> getTransactions() {
+		Trader raoul = new Trader(1, "Raoul", "Cambridge");
+		Trader mario = new Trader(2, "Mario", "Milan");
+		Trader alan = new Trader(3, "Alan", "Cambridge");
+		Trader brian = new Trader(4, "Brian", "Cambridge");
+		List<Transaction> transactions = List.of(
+			new Transaction(55, brian, 2011, 300),
+			new Transaction(66, raoul, 2012, 1000), 
+			new Transaction(77, raoul, 2011, 400),
+			new Transaction(88, mario, 2012, 710), 
+			new Transaction(99, mario, 2012, 700), 
+			new Transaction(44, alan, 2012, 950));
+		return transactions;
+	}
 }
