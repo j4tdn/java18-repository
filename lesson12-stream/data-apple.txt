@@ -1,0 +1,4 @@
+1, white, 15, vietnam
+2, black, 25, lao
+3, white, 15, vietnam
+4, black, 25, lao

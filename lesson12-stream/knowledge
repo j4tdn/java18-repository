@@ -1,0 +1,14 @@
++ collection
+--> Lưu trữ được dữ liệu --> List, Set, Queue, Map, Stack
+--> Hỗ trợ thao tác xử lý --> add, get, set,remove, removeIf, sorted
+
++ Stream
+--> Lưu trữ được dữ liệu --> list.stream() --> Stream<?>, Arrays.stream(ar) --> Stream<?>
+--> Hỗ trợ thao tác xử lý --> filter, map, sorted, limit, sorted, reduce, foreach
+
+--> Collections ars about data streams are about.
+
+1. Phân biệt Stream và Collection ?
+2. Phân việt internal và external iteration ?
+	--> Tại sao phải dùng internal iteration --> database-like operations
+	
