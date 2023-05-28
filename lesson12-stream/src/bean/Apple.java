@@ -71,4 +71,16 @@ public class Apple {
 	public String toString() {
 		return "Apple [id=" + id + ", color=" + color + ", weight=" + weight + ", country=" + country + "]";
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if(this == o){
+			return true;
+		}
+		if(!(o instanceof Apple)){
+			return false;
+		}
+		Apple that = (Apple) o;
+		return getCountry().equals(that.getCountry());
+	}
 }
