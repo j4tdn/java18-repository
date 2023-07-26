@@ -88,7 +88,7 @@ BEGIN
 		INSERT INTO INT_ARRAY(VAL) VALUES(i);
 		SET i = i + 1;
 	END WHILE;
-END
+END;
 DELIMITER $$;
 
 SELECT * FROM INT_ARRAY;
@@ -103,3 +103,68 @@ SELECT *
  
 -- IN     --> M --> k O(M + N*k) --> tốt khi k nhỏ
 -- EXISTS --> O(M * N) --> tốt khi k lớn
+
+-- DEMO 'ORDER BY'
+-- Sort items by item group id asc, id desc
+SELECT *
+  FROM item
+ ORDER BY ITEM_GROUP_ID, ID DESC;
+ 
+-- DEMO 'GROUP BY, HAVING'
+-- Thống kê theo ngày các đơn hàng được giao trong tháng 10 năm 2023
+-- B1. Tìm các đơn hàng được giao trong tháng 10/2023
+-- B2. Gom nhóm các đơn hàng theo từng ngày
+SELECT *
+  FROM `ORDER`
+ WHERE YEAR(DELIVERY_DATE) = 2023
+   AND MONTH(DELIVERY_DATE) = 10;
+
+-- count(*): đếm số dòng trong bảng, trong nhóm nếu có group by
+-- count(column): duyệt từng dòng trong bảng, nếu dòng có column value != null, count++
+-- count(column non-nullable) = count(*)
+SELECT DELIVERY_DATE,
+       COUNT(*) AMOUNT_OF_ORDER
+  FROM `ORDER`
+ WHERE YEAR(DELIVERY_DATE) = 2023
+   AND MONTH(DELIVERY_DATE) = 10
+ GROUP BY DELIVERY_DATE
+ HAVING AMOUNT_OF_ORDER > 2
+ ORDER BY AMOUNT_OF_ORDER;
+ 
+-- DEMO JOIN --
+-- Điều kiện: 2 bảng phải có liên kết trực tiếp với nhau(11, 1n, n1) thông qua khóa ngoại
+--            2 bảng có liên kết với nhau thông qua [các] bảng trung gian(n, n)
+SELECT * FROM PAYMENT_METHOD;
+SELECT * FROM `ORDER`;
+
+-- [INNER] JOIN
+SELECT od.*,
+       pm.`DESC`
+  FROM `ORDER` od
+  JOIN PAYMENT_METHOD pm
+    ON pm.ID = od.PAYMENT_METHOD_ID;
+    
+SELECT *
+  FROM `ORDER` od
+  RIGHT JOIN PAYMENT_METHOD pm
+    ON pm.ID = od.PAYMENT_METHOD_ID;
+    
+SELECT *
+  FROM PAYMENT_METHOD pm
+  LEFT JOIN `ORDER` od
+    ON pm.ID = od.PAYMENT_METHOD_ID;
+
+-- INSERT, UDPDATE, DELETE
+-- COMMIT, ROLLBACK(DML)
+-- DEFAULT AUTO COMMIT = TRUE: Khi thực hiện 1 câu lệnh database sẽ tự động commit, lưu kết quả vào csdl(memory)
+--     SET AUTO COMMIT = FALSE: Khi thực hiện 1 câu lệnh database sẽ lưu thay đổi vào staged
+--                              COMMIT   --> lưu vào csdl
+--                              ROLLBACK --> trở về dữ liệu trước khi thực hiện lệnh
+SET AUTOCOMMIT = 1; -- 1
+SELECT * FROM BILL; -- 1 2 3 4 7 8 9 10
+DELETE FROM BILL WHERE ID = 6;
+
+COMMIT;
+ROLLBACK;
+
+ 

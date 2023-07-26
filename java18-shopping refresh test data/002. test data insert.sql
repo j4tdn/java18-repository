@@ -172,7 +172,7 @@ ORDER BY ORDER_ID, STATUS_ID;
 -- order_id: 1-12
 -- item_id: 1-14
 -- amount: random
-INSERT INTO `order_detail`(ORDER_ID, ITEM_ID, AMOUNT)
+INSERT INTO `order_detail`(ORDER_ID, ITEM_DETAIL_ID, AMOUNT)
 VALUES(1,   1, 5),  (1, 2, 2),  (1, 5, 2),   (1, 14, 1),
       (2,   3, 2),  (2, 2, 2),  (2, 5, 3),   (2, 12, 12),
       (3,   2, 2),  (3, 3, 2),  (3, 5, 11),  (3, 13, 2),
@@ -185,6 +185,7 @@ VALUES(1,   1, 5),  (1, 2, 2),  (1, 5, 2),   (1, 14, 1),
       (10, 12, 2),  (10, 6, 2), (10, 5, 10), (10, 1, 10),
       (11, 10, 2),  (11, 8, 2), (11, 5, 2),  (11, 4, 11),
       (12, 11, 3),  (12, 8, 2), (12, 5, 1),  (12, 2, 12);
+UPDATE `order_detail` SET ITEM_DETAIL_ID = randInt(1, 70);
 
 INSERT INTO `employee_title`(EMPLOYEE_ID, TITLE_ID)
 VALUES(1, 1),
