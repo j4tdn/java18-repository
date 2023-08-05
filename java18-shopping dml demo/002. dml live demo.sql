@@ -101,8 +101,19 @@ SELECT ms.*,
 
 -- 16. Đếm số lượng các mặt hàng theo từng loại hàng
 --     MaLoai  TenLoai SoLuong
--- 	1       Giày    20
--- 	2       Áo      28
+-- 	     1       Giày    20
+-- 	     2       Áo      28
+
+SELECT ig.ID GROUP_ID,
+       ig.NAME GROUP_NAME,
+       SUM(itd.AMOUNT) AMOUNT_OF_ITEMS
+  FROM item it
+  JOIN item_detail itd
+    ON it.ID = itd.ITEM_ID
+  JOIN ITEM_GROUP ig
+    ON it.ITEM_GROUP_ID = ig.ID
+  GROUP BY ig.ID;
+
 -- 17. Tìm mặt hàng có giá bán cao nhất trong loại hàng 'Giày'
 -- 18. Tìm mặt hàng có giá bán cao nhất của mỗi loại hàng
 -- 19. Hiển thị tổng số lượng mặt hàng của mỗi loại hàng trong hệ thống >> 16
