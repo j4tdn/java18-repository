@@ -1,0 +1,15 @@
+-- 1. Tạo database
+CREATE SCHEMA JAVA18_SHOPPING CHAR SET utf8mb4;
+USE JAVA18_SHOPPING;
+
+-- 2. Chọn thứ tự các bảng cần thực hiện
+
+-- patchset1 --> PROVIDER, SIZE, ITEM_GROUP, ITEM, ITEM_DETAIL
+
+-- patchset2 --> DEPARTMENT, TITLE, EMPLOYEE, EMPLOYEE_DETAIL
+
+-- patchset3 --> CUSTOMER
+
+-- patchset4 --> PAYMENT_METHOD, ORDER, ORDER_DETAIL, BILL
+
+-- patchset5 --> DELIVERY_STATUS, ORDER_DELIVERY_STATUS_DETAIL
