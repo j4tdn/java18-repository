@@ -10,6 +10,16 @@ public interface ItemGroupService {
 	
 	ItemGroup get(int igId);
 	
+	List<ItemGroup> get(String name);
+	
 	void save(ItemGroup itemGroup);
+	
+	void save(List<ItemGroup> itemGroups);
+	
+	void update(ItemGroup itemGroup);
+	
+	void saveOrUpdate(ItemGroup itemGroup);
+	
+	
 	
 }

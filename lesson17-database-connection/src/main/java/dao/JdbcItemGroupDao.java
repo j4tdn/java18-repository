@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import bean.ItemGroup;
@@ -13,6 +14,8 @@ import connection.DbConnection;
 import utils.SqlUtils;
 
 public class JdbcItemGroupDao implements ItemGroupDao {
+	
+	private static final int BATCH_SIZE = 1000;
 
 	private static final String Q_GET_ALL_ITEM_GROUPS = ""
 			+ "SELECT * FROM item_group";
@@ -22,9 +25,19 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			+ "  FROM item_group\n"
 			+ " WHERE ID = ?";
 	
+	private static final String Q_GET_ITEM_GROUP_BY_NAME = ""
+			+ "SELECT * \n"
+			+ "  FROM item_group\n"
+			+ " WHERE NAME = ?";
+	
 	private static final String Q_INSERT_ITEM_GROUP = ""
 			+ "INSERT INTO item_group(ID, NAME) \n"
 			+ "VALUES(?, ?)";
+	
+	private static final String Q_UPDATE_ITEM_GROUP = ""
+			+ "UPDATE item_group \n"
+			+ "   SET NAME = ?\n"
+			+ " WHERE ID = ?";
 	
 	// ? tham số trong câu lệnh SQL
 	// --> theo thứ tự
@@ -42,6 +55,7 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 	//   pst = connection.preparedStatement(sql);
 	//   pst.setInt(1, igId)
 	//   pst.executeQuery();
+	//   process sql injection
 	
 	private Statement st;
 	private PreparedStatement pst;
@@ -101,6 +115,27 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 	}
 	
 	@Override
+	public List<ItemGroup> get(String name) {
+		List<ItemGroup> result = new ArrayList<>();
+		
+		try {
+			pst = connection.prepareStatement(Q_GET_ITEM_GROUP_BY_NAME);
+			pst.setString(1, name);
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				ItemGroup itemGroup = new ItemGroup(rs.getInt("ID"), rs.getString("NAME"));
+				result.add(itemGroup);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, st);
+		}
+		
+		return result;
+	}
+	
+	@Override
 	public void save(ItemGroup itemGroup) {
 		try {
 			pst = connection.prepareStatement(Q_INSERT_ITEM_GROUP);
@@ -115,7 +150,48 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 		} finally {
 			SqlUtils.close(pst);
 		}
-		
+	}
+	
+	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		try {
+			pst = connection.prepareStatement(Q_INSERT_ITEM_GROUP);
+			int batchCount = 0;
+			for (ItemGroup itemGroup: itemGroups) {
+				pst.setInt(1, itemGroup.getId());
+				pst.setString(2, itemGroup.getName());
+				pst.addBatch();
+				if (++batchCount % BATCH_SIZE == 0) {
+					pst.executeBatch();
+				}
+			}
+			int[] affectedRows = pst.executeBatch();
+			System.out.println(
+					"LOG info >> " 
+					+ Arrays.toString(affectedRows) 
+					+ " rows affected after save(List<ItemGroup>)");
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
+	@Override
+	public void update(ItemGroup itemGroup) {
+		try {
+			pst = connection.prepareStatement(Q_UPDATE_ITEM_GROUP);
+			pst.setString(1, itemGroup.getName());
+			pst.setInt(2, itemGroup.getId());
+			
+			int affectedRows = pst.executeUpdate();
+			System.out.println("LOG info >> " + affectedRows + " rows affected after update(ItemGroup)");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
 	}
 
 }
