@@ -10,10 +10,11 @@ public interface ItemGroupDao {
 	
 	ItemGroup get(int igId);
 	
+	List<ItemGroup> get(String name);
+	
 	void save(ItemGroup itemGroup);
 	
-	// save = persist
+	void save(List<ItemGroup> itemGroups);
 	
-	// saveOrUpdate = merge
-	
+	void update(ItemGroup itemGroup);
 }
