@@ -1,0 +1,6 @@
+INDEX VERSION 1.132+D:\BKIT-JAVA\4.Database Connection\.metadata\.plugins\org.eclipse.jdt.core
+3761902249.index
+188769184.index
+151954762.index
+3855810077.index
+1865797976.index

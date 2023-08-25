@@ -1,0 +1,27 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+import java.util.Set;
+
+import bean.Item;
+import connection.DbConnection;
+
+
+public class JdbcItemDao implements ItemDao{
+	
+	private Connection connection;
+	private PreparedStatement pst;
+	private ResultSet rs;
+	
+	public JdbcItemDao() {
+		connection = DbConnection.getConnection();
+	}
+	
+	@Override
+	public List<Item> getItems(Set<Integer> itemGroupIds) {
+		return null;
+	}
+}

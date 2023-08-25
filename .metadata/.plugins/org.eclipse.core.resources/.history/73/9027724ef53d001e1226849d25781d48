@@ -1,0 +1,29 @@
+package view;
+
+import service.ItemGroupService;
+import service.ItemGroupServiceImpl;
+import utils.SqlUtils;
+
+public class ItemGroup_View {
+	private static ItemGroupService itemGroupService;
+
+	static {
+		itemGroupService = new ItemGroupServiceImpl();
+	}
+
+	public static void main(String[] args) {
+		SqlUtils.generate("Câu 1A: ", 
+				itemGroupService.getAll());
+		
+		SqlUtils.generate("Câu 1B: ", 
+				itemGroupService.get(3));
+		
+		SqlUtils.generate(
+				"Câu 1C: Thêm mới loại hàng",
+				() -> itemGroupService.save(ItemGroup.of()
+						.withId(12)
+						.withName("Loại Hàng 12"))
+		);
+
+	}
+}

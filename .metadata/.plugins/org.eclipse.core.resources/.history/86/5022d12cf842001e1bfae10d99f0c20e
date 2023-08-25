@@ -1,0 +1,64 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+import bean.Item;
+import bean.ItemGroup;
+import connection.DbConnection;
+import utils.SqlUtils;
+
+
+public class JdbcItemDao implements ItemDao{
+	
+	private static final String Q_GET_ITEMS_BY_GROUP_IDS = ""
+			+ "SELECT *\r\n"
+			+ "  FROM item it \n"
+			+ "  JOIN item_group itg \n"
+			+ "    ON it.ITEM_GROUP_ID = itg.ID \n"
+			+ " WHERE itg.ID IN (%s);";
+			
+	
+	private Connection connection;
+	private PreparedStatement pst;
+	private ResultSet rs;
+	
+	public JdbcItemDao() {
+		connection = DbConnection.getConnection();
+	}
+	
+	@Override
+	public List<Item> getItems(Set<Integer> itemGroupIds) {
+		List<Item> result = new ArrayList<>();
+		
+		String replacement = itemGroupIds.stream()
+				.map(itemGroupId -> itemGroupId.toString())
+				.collect(Collectors.joining(","));
+		String sql = String.format(Q_GET_ITEMS_BY_GROUP_IDS, replacement);
+		
+		try {
+			pst = connection.prepareStatement(sql);
+			pst.
+			rs = st.executeQuery();
+			while(rs.next()) {
+				int id = rs.getInt("ID");
+				String name = rs.getString("NAME");
+				ItemGroup ig = new ItemGroup(id, name);
+				result.add(ig);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			SqlUtils.close(st);
+			SqlUtils.close(rs);
+		}
+		return result;
+	}
+}

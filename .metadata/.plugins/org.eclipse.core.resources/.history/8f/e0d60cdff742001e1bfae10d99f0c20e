@@ -1,0 +1,46 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import bean.Item;
+import bean.ItemGroup;
+import connection.DbConnection;
+import utils.SqlUtils;
+
+
+public class JdbcItemDao implements ItemDao{
+	
+	private Connection connection;
+	private PreparedStatement pst;
+	private ResultSet rs;
+	
+	public JdbcItemDao() {
+		connection = DbConnection.getConnection();
+	}
+	
+	@Override
+	public List<Item> getItems(Set<Integer> itemGroupIds) {
+		List<Item> result = new ArrayList<>();
+		try {
+			st = connection.createStatement();
+			rs = st.executeQuery(Q_GET_ALL_ITEM_GROUP);
+			while(rs.next()) {
+				int id = rs.getInt("ID");
+				String name = rs.getString("NAME");
+				ItemGroup ig = new ItemGroup(id, name);
+				result.add(ig);
+			}S
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			SqlUtils.close(st);
+			SqlUtils.close(rs);
+		}
+		return result;
+	}
+}
