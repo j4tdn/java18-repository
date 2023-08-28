@@ -11,6 +11,7 @@ import java.util.List;
 
 import bean.ItemGroup;
 import connection.DbConnection;
+import dto.ItemGroupDto;
 import utils.SqlUtils;
 
 public class JdbcItemGroupDao implements ItemGroupDao {
@@ -28,6 +29,18 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			+ "SELECT * \n"
 			+ "	 FROM item_group\n"
 			+ " WHERE NAME = ?";
+	
+	private static final String Q_GET_ITEM_GROUP_DETAILS = ""
+			+ "SELECT ig.ID GROUP_ID, \n"
+			+ "         ig.`NAME` GROUP_NAME, \n"
+			+ "         SUM(itd.AMOUNT) AMOUNT_OF_ITEMS, \n"
+			+ "         GROUP_CONCAT(concat(it.`NAME`, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') ITEMS_LIST \n"
+			+ "FROM item it  \n"
+			+ "JOIN item_group ig \n"
+			+ "  ON it.ITEM_GROUP_ID = ig.ID \n"
+			+ "JOIN item_detail itd \n"
+			+ "  ON it.ID = itd.ITEM_ID \n"
+			+ "GROUP BY ig.ID, ig.`NAME`";
 	
 	private static final String Q_INSERT_ITEM_GROUP = ""
 			+ " INSERT INTO item_group(ID, NAME)\n"
@@ -85,6 +98,29 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			SqlUtils.close(rs, st);
 		}
 		return result;
+	}
+	
+	@Override
+	public List<ItemGroupDto> getItemGroupDetails() {
+		List<ItemGroupDto> result = new ArrayList<>();
+		
+		try {
+			st = connection.createStatement();
+			rs = st.executeQuery(Q_GET_ITEM_GROUP_DETAILS);
+			
+			while(rs.next()) {
+				result.add(
+						ItemGroupDto.of()
+						.withIgId(rs.getInt("GROUP_ID"))
+						.withIgName(rs.getString("GROUP_NAME"))
+						.withAmountOfItems(rs.getLong("AMOUNT_OF_ITEMS"))
+						.withItemList(rs.getString("ITEMS_LIST"))
+						);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+			return result;
 	}
 	
 	@Override
@@ -197,6 +233,4 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			SqlUtils.close(pst);
 		}
 	}
-	
-	
 }

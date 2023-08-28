@@ -4,8 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -16,6 +15,8 @@ import bean.ItemGroup;
 import connection.DbConnection;
 import utils.SqlUtils;
 
+import static utils.DateUtils.*;
+
 public class JdbcItemDao implements ItemDao {
 	
 	private static final String Q_GET_ITEMS_BY_GROUP_IDS = ""
@@ -24,6 +25,18 @@ public class JdbcItemDao implements ItemDao {
 			+ "   JOIN item_group itg\n"
 			+ "     ON it.ITEM_GROUP_ID = itg.ID\n"
 			+ "  WHERE itg.ID IN (%s)";	
+	
+	private static final String Q_GET_ITEMS_BY_ORDER_DATE = ""
+			+ "SELECT it.ID ITEM_ID, \n"
+			+ "       it.`NAME` ITEM_NAME \n"
+			+ "   FROM item it \n"
+			+ "   WHERE EXISTS (SELECT * \n"
+			+ "				   FROM item_detail itd  \n"
+			+ "				   JOIN order_detail odd ON odd.ITEM_DETAIL_ID = itd.ID \n"
+			+ "				   JOIN `order` od ON odd.ORDER_ID = od.ID \n"
+			+ "				   WHERE it.ID = itd.ITEM_ID \n"
+			+ "                     AND CAST(od.CREATE_AT AS DATE) = ? \n"
+			+ "                     )";
 	
 	private Connection connection;
 	private PreparedStatement pst;
@@ -53,12 +66,7 @@ public class JdbcItemDao implements ItemDao {
 			pst = connection.prepareStatement(sql);
 			rs = pst.executeQuery();		
 			while (rs.next()) {
-				
-				Timestamp lastUpdatedAtTs = rs.getTimestamp("LAST_UPDATED_AT");
-				LocalDateTime lastUpdatedAt = lastUpdatedAtTs.toLocalDateTime();
-				
 				ItemGroup itemGroup = new ItemGroup(rs.getInt("itg.ID"), rs.getString("itg.NAME"));
-				
 				Item item = Item.of()
 						.withId(rs.getInt("ID"))
 						.withName(rs.getString("NAME"))
@@ -66,10 +74,33 @@ public class JdbcItemDao implements ItemDao {
 						.withMaterial(rs.getString("MATERIAL"))
 						.withImage1(rs.getString("IMAGE_01"))
 						.withImage2(rs.getString("IMAGE_01"))
-						.withLastUpdatedAt(lastUpdatedAt)
+						.withLastUpdatedAt(toLDTime(rs.getTimestamp("it.LAST_UPDATED_AT")))
 						.withItemGroup(itemGroup);
 				
 				result.add(item);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}  finally {
+			SqlUtils.close(rs, pst);
+		}
+		return result;
+	}
+	
+	@Override
+	public List<Item> getItemsByOrderDate(LocalDate localdate) {
+		List<Item> result = new ArrayList<>();	
+		
+		try {
+			pst = connection.prepareStatement(Q_GET_ITEMS_BY_ORDER_DATE);
+			pst.setDate(1, toSDate(localdate));
+			rs = pst.executeQuery();		
+			while (rs.next()) {
+				result.add(
+						Item.of()
+						.withId(rs.getInt("ITEM_ID"))
+						.withName(rs.getString("ITEM_NAME"))
+				);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

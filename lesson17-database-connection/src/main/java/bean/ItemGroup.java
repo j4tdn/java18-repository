@@ -1,5 +1,9 @@
 package bean;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Class holds information of item group
  * @author vtttran
@@ -8,6 +12,7 @@ package bean;
 public class ItemGroup {
 	private Integer id;
 	private String name;
+	private List<Item> items = new ArrayList<>();
 	
 	public ItemGroup() {
 	}
@@ -38,9 +43,39 @@ public class ItemGroup {
 		this.name = name;
 		return this;
 	}
+	
+	public List<Item> getItems() {
+		return items;
+	}
+	
+	public ItemGroup withItems(List<Item> items) {
+		this.items = items;
+		return this;
+	}
+	
+	@Override
+		public boolean equals(Object obj) {
+			if (this == obj) {
+				return true;
+			}
+			
+			if (!(obj instanceof ItemGroup)) {
+				return false;
+			}
+			
+			ItemGroup that = (ItemGroup) obj;
+			return getId().equals(that.getId());
+		}
 
 	@Override
 	public String toString() {
-		return "ItemGroup [id=" + id + ", name=" + name + "]";
+		String itemIds = items.stream()
+				.map(item -> item.getId().toString())
+				.collect(Collectors.joining(","));
+		
+		return "ItemGroup\n"
+				+ "    [id=" + id + ",\n"
+				+ "    name=" + name + ",\n"
+				+ "    items=" + itemIds + "]";
 	}
 }

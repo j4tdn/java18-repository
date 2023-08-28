@@ -1,6 +1,7 @@
 package view;
 
 import java.util.List;
+import java.util.Set;
 
 import bean.ItemGroup;
 import service.ItemGroupService;
@@ -64,7 +65,12 @@ public class ItemGroup_View {
 				 itemGroupService.get("Áo")
 		);
 		
+		System.out.println("---------------------------");
 		
+		SqlUtils.generate("1G: Liệt kê mặt hàng theo mã loại hàng (1,2,5) ", itemGroupService.getItemsGroupByIds(Set.of(1, 2, 5)));
 		
+		System.out.println("---------------------------");
+		
+		System.out.println("1-DTO: Số lượng các mặt hàng của từng loại hàng\n" + itemGroupService.getItemGroupDetails());
 	}
 }

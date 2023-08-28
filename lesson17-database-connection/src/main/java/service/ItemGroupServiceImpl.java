@@ -7,18 +7,27 @@ package service;
  */
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import bean.Item;
 import bean.ItemGroup;
+import dao.ItemDao;
 import dao.ItemGroupDao;
+import dao.JdbcItemDao;
 import dao.JdbcItemGroupDao;
+import dto.ItemGroupDto;
 
 public class ItemGroupServiceImpl implements ItemGroupService {
 	private ItemGroupDao itemGroupDao;
+	private ItemDao itemDao;
 	
 	public ItemGroupServiceImpl() {
 		itemGroupDao = new JdbcItemGroupDao();
+		itemDao = new JdbcItemDao();
 	}
 		
 	@Override
@@ -27,13 +36,29 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 	}
 	
 	@Override
-	public ItemGroup get(int igId) {
-		return itemGroupDao.get(igId);
+	public List<ItemGroup> get(String name) {
+		return itemGroupDao.get(name);
 	}
 	
 	@Override
-	public List<ItemGroup> get(String name) {
-		return itemGroupDao.get(name);
+	public List<ItemGroup> getItemsGroupByIds(Set<Integer> ids) {
+		List<Item> items = itemDao.getItems(ids);
+		Map<ItemGroup, List<Item>> itemGroupMap = items.stream().collect(Collectors.groupingBy(Item::getItemGroup));
+		
+		itemGroupMap.forEach((k, v) -> {
+			k.getItems().addAll(v);
+		});
+		return List.copyOf(itemGroupMap.keySet());
+	}
+	
+	@Override
+	public List<ItemGroupDto> getItemGroupDetails() {
+		return itemGroupDao.getItemGroupDetails();
+	}
+	
+	@Override
+	public ItemGroup get(int igId) {
+		return itemGroupDao.get(igId);
 	}
 	
 	@Override
@@ -64,7 +89,6 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 			update(itemGroup);
 		} else {
 			save(itemGroup);
-		}
-		
+		}	
 	}
 }

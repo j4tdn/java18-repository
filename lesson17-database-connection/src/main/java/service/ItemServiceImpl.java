@@ -1,7 +1,9 @@
 package service;
 
+import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import bean.Item;
@@ -22,6 +24,12 @@ public class ItemServiceImpl implements ItemService {
 			return Collections.emptyList();
 		}
 		return itemDao.getItems(itemGroupIds);
+	}
+	
+	@Override
+	public List<Item> getItemsByOrderDate(LocalDate orderdate) {
+		Objects.requireNonNull(orderdate, "OrderDate should not be null");
+		return itemDao.getItemsByOrderDate(orderdate);
 	}
 
 }
