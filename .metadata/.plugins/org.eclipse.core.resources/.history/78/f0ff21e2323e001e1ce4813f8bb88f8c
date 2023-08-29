@@ -1,0 +1,7 @@
+package utils;
+
+public class SqlUtils {
+
+	
+	Public static void close(AutoCloseable... objecsNeedToBeClose)
+}
