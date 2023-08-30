@@ -1,0 +1,26 @@
+package utilis;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public class SqlUtilis {
+	private SqlUtilis() {
+
+	}
+	
+	public static void close(AutoCloseable ... objectNeed ) {
+		for (AutoCloseable closeable : objectNeed) {
+			try {
+				closeable.close();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static <Element> void generate(String text ,List<Element> elements) {
+		System.out.println(text + "----> {");
+		elements.forEach(element -> System.out.println(element) );
+	}
+}

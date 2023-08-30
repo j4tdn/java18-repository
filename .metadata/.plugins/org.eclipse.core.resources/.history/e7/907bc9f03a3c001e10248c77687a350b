@@ -1,0 +1,25 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.List;
+
+import bean.ItemGroup;
+import connection.DbConnection;
+
+public class JdbcItemGroupDao implements ItemGroupDao{
+
+	private Connection connection;
+	private Statement st;
+	
+	public JdbcItemGroupDao() {
+		connection = DbConnection.getConnection();
+	}
+	
+	@Override
+	public List<ItemGroup> getAll() {
+		
+		return null;
+	}
+
+}

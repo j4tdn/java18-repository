@@ -1,0 +1,20 @@
+package utilis;
+
+import java.sql.SQLException;
+
+public class SqlUtilis {
+	private SqlUtilis() {
+
+	}
+	
+	public static void close(AutoCloseable ... objectNeed ) {
+		for (AutoCloseable closeable : objectNeed) {
+			try {
+				closeable.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package view;
+
+import bean.StudentOnClass;
+import dao.GoodStudentWork;
+import dao.StudentOnClassWork;
+import dao.StudentWork;
+
+public class Work_View {
+private static StudentWork studentWork;
+private static GoodStudentWork goodStudentWork;
+private static StudentOnClassWork studentOnClassWork;
+
+
+
+}

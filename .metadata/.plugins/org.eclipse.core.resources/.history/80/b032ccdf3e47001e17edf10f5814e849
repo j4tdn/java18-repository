@@ -1,0 +1,20 @@
+package bean;
+
+import java.time.LocalDate;
+
+public class employee {
+	private Integer id;
+	private String name;
+	private LocalDate localDate;
+	private String address;
+	private String phone;
+	private Boolean gender;
+	private String password;
+	private String email;
+	private Integer department_id;
+
+	public employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

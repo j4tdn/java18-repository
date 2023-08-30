@@ -1,0 +1,8 @@
+package dao;
+
+import bean.Student;
+
+public interface StudentWork {
+	
+	Student get (int id);
+}

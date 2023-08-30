@@ -1,0 +1,32 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+import bean.ItemGroup;
+import connection.DbConnection;
+
+public class JdbcItemGroupDao implements ItemGroupDao{
+
+	// biet duoc java va database da ket noi thanh cong hay chua 
+	private Connection connection;
+	// doi tuong cua jdbc chua API(ham) goi / thuc thi cau lenh sql ben trong database 
+	private Statement st;
+	
+	public JdbcItemGroupDao() {
+		connection = DbConnection.getConnection();
+	}
+	
+	@Override
+	public List<ItemGroup> getAll() {
+		try {
+			st = connection.createStatement();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}
