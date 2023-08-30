@@ -1,0 +1,267 @@
+package dao;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import bean.Item;
+import bean.ItemGroup;
+import connection.DbConnection;
+import utils.SqlUtils;
+
+public class JdbcItemGroupDao implements ItemGroupDao {
+	private static final int BATCH_SIZE = 1000;
+
+	private static final String Q_GET_ALL_ITEM_GROUPS = "" + "SELECT * FROM item_group";
+
+	private static final String Q_GET_ITEM_GROUP_BY_ID = "" + "SELECT * \n" + "  FROM item_group\n" + " WHERE ID = ?";
+
+	private static final String Q_GET_ITEM_GROUP_BY_NAME = "" + "SELECT * \n" + "  FROM item_group\n"
+			+ " WHERE NAME = ";
+	private static final String Q_INSERT_ITEM_GROUP = "" + "INSERT INTO item_group(ID, NAME) \n" + "VALUES(?, ?)";
+	
+	private static final String Q_UPDATE_ITEM_GROUP = "" + "update item_group set name = ? where id = ?";
+	
+	
+	private static final String Q_GET_ITEMS_BY_ITEM_GROUP_ID = "" + "Select * \n" + "from item \n"
+			+ "where ITEM_GROUP_ID = ?;";
+	// ? tham số trong câu lệnh SQL
+	// --> theo thứ tự
+
+	// biết được Java và Database đã kết nối thành công chưa
+	private Connection connection;
+
+	// Statement/PreparedStatement đối tượng của JDBC, chứa API(hàm) gọi/thực thi
+	// câu lệnh SQL bên trong database
+
+	// statement
+	// st = connection.createStatement()
+	// st.executeQuery(sql) --> yêu cầu sql phải là 1 câu lệnh hoàn chỉnh, có thể
+	// chạy được trên database
+
+	// preparedstatement
+	// pst = connection.preparedStatement(sql);
+	// pst.setInt(1, igId)
+	// pst.executeQuery();
+
+	private Statement st;
+	private PreparedStatement pst;
+
+	// đối tượng của JDBC chứa thông tin trả về khi thực hiện executeQuery
+	// --> tập hợp các đối tượng, mỗi đối tượng là 1 dòng dữ liệu trả về từ database
+	// table
+	// --> tương tự iterator
+	private ResultSet rs;
+
+	public JdbcItemGroupDao() {
+		connection = DbConnection.getConnection();
+	}
+
+	@Override
+	public List<ItemGroup> getAll() {
+		List<ItemGroup> result = new ArrayList<>();
+
+		try {
+			st = connection.createStatement();
+			rs = st.executeQuery(Q_GET_ALL_ITEM_GROUPS);
+			while (rs.next()) {
+				int id = rs.getInt("ID");
+				String name = rs.getString("NAME");
+				ItemGroup ig = new ItemGroup(id, name);
+				result.add(ig);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, st);
+		}
+
+		return result;
+	}
+
+	@Override
+	public ItemGroup get(int igId) {
+		ItemGroup result = null;
+
+		try {
+			pst = connection.prepareStatement(Q_GET_ITEM_GROUP_BY_ID);
+			pst.setInt(1, igId);
+			rs = pst.executeQuery();
+			if (rs.next()) {
+				int id = rs.getInt("ID");
+				String name = rs.getString("NAME");
+				result = new ItemGroup(id, name);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, pst);
+		}
+
+		return result;
+	}
+	@Override
+	public List<ItemGroup> get(String name) {
+		ItemGroup ig = null;
+		String sql = Q_GET_ITEM_GROUP_BY_NAME+"'"+name+"';";
+		try {
+			st = connection.createStatement();
+			rs = st.executeQuery(sql);
+			while (rs.next()) {
+				int id = rs.getInt("ID");
+				String nameIg = rs.getString("NAME");
+				ig = new ItemGroup(id, nameIg);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, pst);
+		}
+		return ig;
+	}
+	// khi theem moi 1 entry đã tồn tại trong db table
+	// 1.bắt lỗi
+	// 2.thực hiện cập nhật dữ liệu với đk là PK
+	@Override
+	public void save(ItemGroup itemGroup) {
+		try {
+			pst = connection.prepareStatement(Q_INSERT_ITEM_GROUP);
+			pst.setInt(1, itemGroup.getId());
+			pst.setString(2, itemGroup.getName());
+
+			int affectedRows = pst.executeUpdate();
+			System.out.println("LOG info >> " + affectedRows + " rows affected after save(ItemGroup)");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+
+	}
+	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		try {
+			pst = connection.prepareStatement(Q_INSERT_ITEM_GROUP);
+			int batchCount = 0;
+			for(ItemGroup itemGroup: itemGroups) {
+				pst.setInt(1, itemGroup.getId());
+				pst.setString(2, itemGroup.getName());
+				pst.addBatch();
+				if(++batchCount % BATCH_SIZE == 0) {
+					pst.executeBatch();
+				}
+			}
+			int[]  affectedRows = pst.executeBatch();
+			
+			System.out.println("LOG info >> " + Arrays.toString(affectedRows) + " rows affected after save(List<ItemGroup>)");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+		
+	}
+	@Override
+	public void update(ItemGroup itemGroup) {
+		try {
+			pst = connection.prepareStatement(Q_UPDATE_ITEM_GROUP);
+			pst.setString(1, itemGroup.getName());
+			pst.setInt(2, itemGroup.getId());
+
+			int affectedRows = pst.executeUpdate();
+			System.out.println("LOG info >> " + affectedRows + " rows affected after update(ItemGroup)");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+
+	@Override
+	public List<Item> getItemsByItemGroupID(int itemgroupId) {
+		List<Item> result = new ArrayList<>();
+		try {
+			pst = connection.prepareStatement(Q_GET_ITEMS_BY_ITEM_GROUP_ID);
+			pst.setInt(1, 1);
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				result.add(new Item(rs.getInt("ID"), rs.getString("COLOR"), rs.getString("NAME"),
+						rs.getString("MATERIAL"), rs.getString("IMAGE_01"), rs.getString("IMAGE_02"),
+						rs.getDate("LAST_UPDATE_AT"), rs.getInt("ITEM_GROUP_ID"), rs.getInt("PROVIDER_ID")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+
+	}
+
+	@Override
+	public Map<ItemGroup, List<Item>> getItemGroup_ItemByItemGroupID(int ItemGroupID) {
+		int count = 0;
+		Map<ItemGroup, List<Item>> result = new HashMap<>();
+		List<Item> items = new ArrayList<>();
+		ItemGroup ig = null;
+		Item i = null;
+
+		try {
+			pst = connection.prepareStatement("select ig.NAME as IG_NAME, i .* from item i join item_group ig "
+					+ "on i.ITEM_GROUP_ID = ig.id WHERE i.ITEM_GROUP_ID = ?;");
+			pst.setInt(1, ItemGroupID);
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				if (count == 0) {
+					ig = new ItemGroup(rs.getInt("ITEM_GROUP_ID"), rs.getString("IG_NAME"));
+				}
+				i = new Item(rs.getInt("ID"), rs.getString("COLOR"), rs.getString("NAME"), rs.getString("MATERIAL"),
+						rs.getString("IMAGE_01"), rs.getString("IMAGE_02"), rs.getDate("LAST_UPDATE_AT"),
+						rs.getInt("ITEM_GROUP_ID"), rs.getInt("PROVIDER_ID"));
+				items.add(i);
+			}
+			result.put(ig, items);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public List<Item> getItemsByDate(String date) {
+		List<Item> result = null;
+		String sql = "select i.* from item i join item_detail id on i.id = id.ITEM_ID join order_detail od on id.id = od.ITEM_DETAIL_ID join `order` o on od.ORDER_ID = o.id where cast(o.CREATE_AT as Date) = \'?\' GROUP BY i.id;";
+		try {
+			System.out.println("SQL: "+sql);
+			pst = connection.prepareStatement(sql);
+			pst.setString(1, date);
+			rs = pst.executeQuery();
+			if (rs.next()) {
+				result.add(new Item(rs.getInt("ID"), rs.getString("COLOR"), rs.getString("NAME"), rs.getString("MATERIAL"),
+						rs.getString("IMAGE_01"), rs.getString("IMAGE_02"), rs.getDate("LAST_UPDATE_AT"),
+						rs.getInt("ITEM_GROUP_ID"), rs.getInt("PROVIDER_ID")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, pst);
+		}
+
+		return result;
+	}
+
+	
+
+	
+
+}

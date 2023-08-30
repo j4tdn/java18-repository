@@ -1,0 +1,16 @@
+package view;
+
+import dao.ItemGroupDao;
+import service.ItemGroupService;
+import service.ItemGroupServiceImpl;
+import utils.SqlUtils;
+
+public class ItemGroupView {
+	private static ItemGroupService itemGroupService;
+	static {
+		itemGroupService = new ItemGroupServiceImpl();
+	}
+	public static void main(String[] args) {
+		SqlUtils.generate("Câu 1A: Liệt kê toàn bộ các loại mặt hàng: ", itemGroupService.getAll());
+	}
+}

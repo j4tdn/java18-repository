@@ -1,0 +1,98 @@
+package bean;
+
+import java.sql.Date;
+
+public class Item {
+	private Integer id;
+	private String name;
+	private String color;
+	private String material;
+	private String image_01;
+	private String image_02;
+	private Date last_update_at;
+	private ItemGroup item_group;
+
+	public Item() {
+		
+	}
+	public Item(Integer id, String name, String color, String material, String image_01, String image_02,
+			Date last_update_at, ItemGroup item_group, Integer provider) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.color = color;
+		this.material = material;
+		this.image_01 = image_01;
+		this.image_02 = image_02;
+		this.last_update_at = last_update_at;
+		this.item_group = item_group;
+		
+	}
+	public static Item of() {
+		return new Item();
+	}
+	public Integer getId() {
+		return id;
+	}
+	public Item withId(Integer id) {
+		this.id = id;
+		return this;
+	}
+	public String getName() {
+		return name;
+	}
+	public Item withName(String name) {
+		this.name = name;
+		return this;
+	}
+	public String getColor() {
+		return color;
+	}
+	public Item withColor(String color) {
+		this.color = color;
+		return this;
+	}
+	public String getMaterial() {
+		return material;
+	}
+	public Item withMaterial(String material) {
+		this.material = material;
+		return this;
+	}
+	public String getImage_01() {
+		return image_01;
+	}
+	public Item withImage_01(String image_01) {
+		this.image_01 = image_01;
+		return this;
+	}
+	public String getImage_02() {
+		return image_02;
+	}
+	public Item withImage_02(String image_02) {
+		this.image_02 = image_02;
+		return this;
+	}
+	public Date getLast_update_at() {
+		return last_update_at;
+	}
+	public Item withLast_update_at(Date last_update_at) {
+		this.last_update_at = last_update_at;
+		return this;
+	}
+	public ItemGroup getItem_group_id() {
+		return item_group;
+	}
+	public Item withItem_group_id(ItemGroup item_group) {
+		this.item_group = item_group;
+		return this;
+	}
+
+	@Override
+	public String toString() {
+		return "Item [id=" + id + ", name=" + name + ", color=" + color + ", material=" + material + ", image_01="
+				+ image_01 + ", image_02=" + image_02 + ", last_update_at=" + last_update_at + ", item_group_id="
+				+ item_group+  "]";
+	}
+	
+}

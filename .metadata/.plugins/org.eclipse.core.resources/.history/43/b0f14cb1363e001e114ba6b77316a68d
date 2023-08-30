@@ -1,0 +1,72 @@
+package service;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+
+import bean.Item;
+import bean.ItemGroup;
+import dao.ItemGroupDao;
+import dao.JdbcItemGroupDao;
+
+/**
+ * Thực thi abstract method từ ItemGroupService + Gọi đến DAO method tương ứng +
+ * Xử lý thêm LOGIC nếu có
+ * 
+ * @author dacduc
+ *
+ */
+public class ItemGroupServiceImpl implements ItemGroupService {
+
+	private ItemGroupDao itemGroupDao;
+
+	public ItemGroupServiceImpl() {
+		itemGroupDao = new JdbcItemGroupDao();
+	}
+
+	@Override
+	public List<ItemGroup> getAll() {
+		return itemGroupDao.getAll();
+	}
+
+	@Override
+	public ItemGroup get(int igId) {
+		return itemGroupDao.get(igId);
+	}
+	
+	@Override
+	public void save(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "itemGroup cannot be null");
+		itemGroupDao.save(itemGroup);
+	}
+	@Override
+	public void update(ItemGroup itemGroup) {
+		
+	}
+	@Override
+	public void saveOrUpdate(ItemGroup itemGroup) {
+		
+	}
+	@Override
+	public ItemGroup get(String name) {
+		return itemGroupDao.get(name);
+	}
+
+	@Override
+	public List<Item> getItemsByItemGroupID(int itemgroupId) {
+		return itemGroupDao.getItemsByItemGroupID(itemgroupId);
+	}
+
+	@Override
+	public Map<ItemGroup,List< Item>> getItemGroup_ItemByItemGroupID(int ItemGroupID) {
+		// TODO Auto-generated method stub
+		return itemGroupDao.getItemGroup_ItemByItemGroupID(ItemGroupID);
+	}
+
+	@Override
+	public List<Item> getItemsByDate(String date) {
+		// TODO Auto-generated method stub
+		return itemGroupDao.getItemsByDate(date);
+	}
+	
+}
