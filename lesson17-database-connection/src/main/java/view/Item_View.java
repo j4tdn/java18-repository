@@ -15,7 +15,7 @@ public class Item_View {
 	}
 	
 	public static void main(String[] args) {
-		SqlUtils.generate(
+		SqlUtils.generate(	
 				"Câu 1F: Liệt kê toàn bộ các mặt hàng theo loại hàng",
 				itemService.getItems(Set.of(1,2,5))
 		);

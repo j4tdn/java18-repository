@@ -2,13 +2,21 @@ package utils;
 
 import java.security.cert.X509CRLSelector;
 import java.util.List;
+import java.util.Objects;
 
 import javax.lang.model.element.VariableElement;
+
+import org.apache.commons.codec.digest.DigestUtils;
 
 public class SqlUtils {
 
 	private SqlUtils() {
 
+	}
+	
+	public static String md5(String text) {
+		Objects.requireNonNull(text, "text cannot be null");
+		return DigestUtils.md5Hex(text);
 	}
 	
 	public static void close(AutoCloseable ... objectNeedToBeClosed) {

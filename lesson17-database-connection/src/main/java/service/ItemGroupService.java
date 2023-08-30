@@ -1,6 +1,7 @@
-package service;
+	package service;
 
 import java.util.List;
+import java.util.Set;
 
 import bean.ItemGroup;
 
@@ -8,9 +9,11 @@ public interface ItemGroupService {
 
 	List<ItemGroup> getAll();
 	
-	ItemGroup get(int igId);
-	
 	List<ItemGroup> get(String igName);
+	
+	List<ItemGroup> getItemGroupById(Set<Integer> ids);
+	
+	ItemGroup get(int igId);
 	
 	void save(ItemGroup itemGroup);
 	

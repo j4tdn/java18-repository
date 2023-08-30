@@ -2,10 +2,15 @@ package service;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import bean.Item;
 import bean.ItemGroup;
+import dao.ItemDao;
 import dao.ItemGroupDao;
 import dao.JdbcItemGroupDao;
 
@@ -19,6 +24,7 @@ import dao.JdbcItemGroupDao;
 public class ItemGroupServiceImpl implements ItemGroupService {
 	
 	private ItemGroupDao itemGroupDao;
+	private ItemDao itemDao;
 	
 	public ItemGroupServiceImpl() {
 		itemGroupDao = new JdbcItemGroupDao();
@@ -30,16 +36,26 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 	}
 	
 	@Override
-	public ItemGroup get(int igId) {
-		return itemGroupDao.get(igId);
-	}
-	
-	@Override
 	public List<ItemGroup> get(String igName) {
 		if(igName == null || igName.isBlank()) {
 			return Collections.emptyList();
 		}
 		return itemGroupDao.get(igName);
+	}
+	
+	@Override
+	public List<ItemGroup> getItemGroupById(Set<Integer> ids) {
+		List<Item> items = itemDao.getItems(ids);
+		
+		Map<ItemGroup, List<Item>> itemGroupMap = items.stream()
+				.collect(Collectors.groupingBy(Item::getItemGroup));
+		
+		return null;
+	}
+	
+	@Override
+	public ItemGroup get(int igId) {
+		return itemGroupDao.get(igId);
 	}
 	
 	@Override
