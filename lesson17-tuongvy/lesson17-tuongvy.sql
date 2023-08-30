@@ -1,0 +1,81 @@
+CREATE SCHEMA lesson17 CHAR SET utf8mb4;
+USE lesson17;
+
+DROP TABLE IF EXISTS `CLASS`;
+CREATE TABLE `CLASS`
+(
+	ID 			INT,
+	`NAME` 		VARCHAR(100) 	NOT NULL,
+    TEACHER		VARCHAR(100)	NOT NULL,
+    CONSTRAINT PK_CLASS PRIMARY KEY (ID)
+);
+
+DROP TABLE IF EXISTS `STUDENT`;
+CREATE TABLE `STUDENT`
+(
+	ID 			INT,
+	`NAME` 		VARCHAR(100) 	NOT NULL,
+    GENDER 		BIT 			NOT NULL,
+    CLASS_ID 	INT				NOT NULL,
+    CONSTRAINT PK_STUDENT PRIMARY KEY (ID),
+    CONSTRAINT FK_STUDENT_CLASS FOREIGN KEY (CLASS_ID) REFERENCES CLASS(ID)
+
+);
+
+DROP TABLE IF EXISTS `RESULT`;
+CREATE TABLE `RESULT`
+(
+	STUDENT_ID 	INT,
+    `SUBJECT`	VARCHAR(100)	NOT NULL,
+    SCORE 		INT				NOT NULL,
+    CONSTRAINT PK_RESUFT PRIMARY KEY (STUDENT_ID)
+);
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+INSERT INTO CLASS(ID, `NAME`, TEACHER)
+VALUES(1, '12A', 'Dinh Thi Ngoc'),
+	  (2, '12B','Nguyen Thanh A'),
+      (3, '12C','Nguyen Thanh B');
+      
+INSERT INTO STUDENT(ID, `NAME`, GENDER, CLASS_ID)
+VALUES(1, 'Dinh Thi A', 0, 2),
+	  (2, 'Dinh Thi B', 1, 1),
+      (3, 'Dinh Thi C', 0, 2),
+      (4, 'Dinh Thi D', 1, 1),
+      (5, 'Dinh Thi E', 0, 3),
+      (6, 'Dinh Thi F', 1, 3);
+
+INSERT INTO RESULT(STUDENT_ID, `SUBJECT`, SCORE)
+VALUES(1, 'Toan', 8),
+	  (2, 'Anh', 7),
+      (3, 'Van', 9.5),
+      (4, 'Toan', 6.8),
+      (5, 'Anh', 4.9),
+      (6, 'Van', 8.2);
+      
+SET FOREIGN_KEY_CHECKS = 1;
+
+SELECT st.`NAME` NAME_STUDENT,
+		st.GENDER,
+        cl.TEACHER NAME_TEACHER
+FROM `STUDENT` st
+JOIN `CLASS` cl
+ON st.CLASS_ID = cl.ID;
+
+SELECT st.ID,
+        cl.TEACHER NAME_TEACHER
+FROM `STUDENT` st
+JOIN `CLASS` cl
+ON st.CLASS_ID = cl.ID
+WHERE cl.`NAME` IN ('12C');
+
+
+SELECT cl.`NAME`
+FROM `RESULT` rs
+JOIN `STUDENT` st
+ON rs.STUDENT_ID = st.ID
+JOIN `CLASS` cl
+ON st.CLASS_ID = cl.ID
+WHERE rs.`subject` IN ('Toan', 'Van')
+AND rs.score >= 8;
