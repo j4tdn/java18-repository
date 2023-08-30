@@ -30,7 +30,7 @@ SELECT *
   -- 1. Liệt kê các mặt hàng được bán trong ngày ...
   SELECT DISTINCT it.ID ITEM_ID,
          it.`NAME` ITEM_NAME,
-         od.CREATE_AT
+         CAST(od.CREATE_AT AS TIME) ORDER_TIME
    FROM item it
    JOIN item_detail itd ON it.ID = itd.ITEM_ID
    JOIN order_detail odd ON odd.ITEM_DETAIL_ID = itd.ID
@@ -55,8 +55,8 @@ SELECT *
   -- reviewed
   SELECT ig.ID GROUP_ID,
          ig.`NAME` GROUP_NAME,
-         SUM(itd.AMOUNT) AMOUNT_OF_ITEMS,
-         GROUP_CONCAT(concat(it.`NAME`, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') ITEMS_LIST
+         GROUP_CONCAT(concat(it.`NAME`, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') ITEMS_LIST,
+         SUM(itd.AMOUNT) AMOUNT_OF_ITEMS
 	FROM item it 
 	JOIN item_group ig ON it.ITEM_GROUP_ID = ig.ID
 	JOIN item_detail itd ON it.ID = itd.ITEM_ID
@@ -77,18 +77,48 @@ SELECT *
   GROUP BY ig.ID;
   
   -- 3. Liệt kê top 3 mặt hàng được bán nhiều nhất năm ...
-  SELECT it.ID,
-         it.`NAME`,
-         id.AMOUNT,
+  SELECT it.ID ITEM_ID,
+         it.`NAME`ITEM_NAME,
+		 sum(itd.AMOUNT) TOTAL_AMOUNT,
          od.CREATE_AT
-  FROM  item it
-  JOIN item_detail id
-  ON it.ID = id.ITEM_ID
-  JOIN `order` od 
-  ON id.ID = od.ID
+  FROM item it
+   JOIN item_detail itd ON it.ID = itd.ITEM_ID
+   JOIN order_detail odd ON odd.ITEM_DETAIL_ID = itd.ID
+   JOIN `order` od ON itd.ID = od.ID
   WHERE year(od.CREATE_AT) = 2023
-  ORDER BY id.AMOUNT DESC
+  GROUP BY ITEM_ID
+  ORDER BY itd.AMOUNT DESC
   LIMIT 3;
+  
+SELECT it.ID AS ITEM_ID,
+       it.`NAME` AS ITEM_NAME,
+       SUM(itd.AMOUNT) AS TOTAL_AMOUNT
+  FROM item it
+  JOIN item_detail itd ON it.ID = itd.ITEM_ID
+  JOIN order_detail odd ON odd.ITEM_DETAIL_ID = itd.ID
+  JOIN `order` od ON itd.ID = od.ID
+  WHERE YEAR(od.CREATE_AT) = 2023
+  GROUP BY ITEM_ID, ITEM_NAME
+  ORDER BY TOTAL_AMOUNT DESC
+  LIMIT 3;
+  
+SELECT it.`NAME` AS ITEM_NAME
+	FROM (
+	  SELECT it.ID AS ITEM_ID
+	  FROM item it
+	  JOIN item_detail itd ON it.ID = itd.ITEM_ID
+	  JOIN order_detail odd ON odd.ITEM_DETAIL_ID = itd.ID
+	  JOIN `order` od ON itd.ID = od.ID
+	  WHERE YEAR(od.CREATE_AT) = 2023
+	  GROUP BY ITEM_ID
+	  ORDER BY SUM(itd.AMOUNT) DESC
+	  LIMIT 3
+	) top_items
+	JOIN item it ON top_items.ITEM_ID = it.ID;
+
+
+  
+  select * from `order`;
   
   -- 4. tìm mặt hàng có giá bán cao nhất của mỗi loại hàng. 
   -- Nếu các mặt hàng trong cùng loại hàng có giá bán cao nhất và bằng nhau thì hiển thị tất cả mặt hàng đó
@@ -98,10 +128,8 @@ SELECT ig.ID ITEM_GROUP_ID,
        it.`NAME`,
 	   max(id.SELL_PRICE) MAX_PRICE_IN_GROUP
 FROM item it 
-JOIN item_group ig 
-  ON it.ITEM_GROUP_ID = ig.ID
-JOIN item_detail id
-  ON it.ID = id.ITEM_ID
+JOIN item_group ig ON it.ITEM_GROUP_ID = ig.ID
+JOIN item_detail id ON it.ID = id.ITEM_ID
 GROUP BY ig.ID, it.`NAME`
 )
 SELECT it.ID,
@@ -110,9 +138,7 @@ SELECT it.ID,
        id.SELL_PRICE,
        it.ITEM_GROUP_ID
 FROM item it 
-JOIN item_detail id
-  ON it.ID = id.ITEM_ID
-JOIN ITEM_GROUP_MAX_PRICE igm
-  ON it.ITEM_GROUP_ID = igm.ITEM_GROUP_ID
+JOIN item_detail id ON it.ID = id.ITEM_ID
+JOIN ITEM_GROUP_MAX_PRICE igm ON it.ITEM_GROUP_ID = igm.ITEM_GROUP_ID
  AND id.SELL_PRICE = igm.MAX_PRICE_IN_GROUP;
  
