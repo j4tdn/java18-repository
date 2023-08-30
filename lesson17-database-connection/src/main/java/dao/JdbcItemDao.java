@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 import bean.Item;
 import bean.ItemGroup;
 import connection.DbConnection;
+import dto.ItemDto;
 import utils.DateUtils;
 import utils.SqlUtils;
 
@@ -38,6 +39,16 @@ public class JdbcItemDao implements ItemDao{
 			+ "				   WHERE it.ID = itd.ITEM_ID \n"
 			+ "                  AND CAST(od.CREATED_AT AS DATE) = ?\n"
 			+ "               )";
+	
+	private static final String Q_GET_ITEMS_BY_ORDER_DATE_1 = ""
+			+ "SELECT it.ID ITEM_ID,\n"
+			+ "       it.NAME ITEM_NAME,\n"
+			+ "		  TIME(od.CREATED_AT) CREATED_AT\n"
+			+ "  FROM item it\n"
+			+ "JOIN item_detail itd ON it.ID = itd.ITEM_ID\n"
+			+ "JOIN order_detail odd ON itd.ID = odd.ITEM_DETAIL_ID\n"
+			+ "JOIN `order` od ON odd.ORDER_ID = od.ID\n"
+			+ "WHERE CAST(od.CREATED_AT AS DATE) = ?";
 	
 	private Connection connection;
 	private PreparedStatement pst;
@@ -97,6 +108,29 @@ public class JdbcItemDao implements ItemDao{
 							.withId(rs.getInt("ITEM_ID"))
 							.withName(rs.getString("ITEM_NAME"))
 				);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, pst);
+		}
+		
+		return result;
+	}
+	
+	@Override
+	public List<ItemDto> getItemsByOrderDate1(LocalDate orderDate) {
+		List<ItemDto> result = new ArrayList<>();
+		try {
+			
+			pst = connection.prepareStatement(Q_GET_ITEMS_BY_ORDER_DATE_1);
+			pst.setDate(1, DateUtils.toSDate(orderDate));
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				ItemDto itemDto = new ItemDto(rs.getInt("ITEM_ID"),
+												rs.getString("ITEM_NAME"),
+												DateUtils.toST(rs.getTime("CREATED_AT")));
+				result.add(itemDto);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -9,6 +9,7 @@ import java.util.Set;
 import bean.Item;
 import dao.ItemDao;
 import dao.JdbcItemDao;
+import dto.ItemDto;
 
 public class ItemServiceImpl implements ItemService{
 	
@@ -30,6 +31,12 @@ public class ItemServiceImpl implements ItemService{
 	public List<Item> getItemsByOrderDate(LocalDate orderDate) {
 		Objects.requireNonNull(orderDate, "orderDate should not be null");
 		return itemDao.getItemsByOrderDate(orderDate);
+	}
+	
+	@Override
+	public List<ItemDto> getItemsByOrderDate1(LocalDate orderDate) {
+		Objects.requireNonNull(orderDate, "orderDate should not be null");
+		return itemDao.getItemsByOrderDate1(orderDate);
 	}
 
 }

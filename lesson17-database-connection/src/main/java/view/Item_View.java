@@ -25,7 +25,7 @@ public class Item_View {
 		);
 		
 		// From JDK 10
-		List<String> items = itemService.getItemsByOrderDate(LocalDate.of(2023, 7, 9))
+		List<String> items = itemService.getItemsByOrderDate(LocalDate.of(2023, 8, 11))
 			.stream()
 			.map(item -> item.getId() + ", " + item.getName())
 			.collect(Collectors.toList());
@@ -34,6 +34,12 @@ public class Item_View {
 				"Câu 1H:  Liệt kê các mặt hàng được bán trong ngày bất kì",
 				items
 		);
+		
+		LocalDate date = LocalDate.of(2023, 8, 11);
+			SqlUtils.generate(
+					"Câu 1H1:  Liệt kê các mặt hàng được bán trong ngày bất kì",
+					itemService.getItemsByOrderDate1(date)
+			);
 	}
 
 }
