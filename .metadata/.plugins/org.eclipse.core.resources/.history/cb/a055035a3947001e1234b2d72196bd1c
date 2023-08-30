@@ -1,0 +1,15 @@
+package dao;
+
+import bean.Employee;
+
+public class JdbcEmployeeDao implements EmployeeDao {
+	private static final String Q_REGISTER_NEW_ACCOUNT=""
+			+"INSERT INTO EMPLOYEE(EMAIL,PASSWORD,DEPARTMENT_ID)\n"
+			+"VALUES(?,?,?)";
+	@Override
+	public Employee register(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

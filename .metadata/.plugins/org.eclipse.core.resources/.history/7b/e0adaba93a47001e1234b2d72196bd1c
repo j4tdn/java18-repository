@@ -1,0 +1,20 @@
+package service;
+
+import java.util.Objects;
+
+import dao.EmployeeDao;
+import dao.JdbcEmployeeDao;
+
+public class EmployeeServiceImpl  implements EmployeeService{
+
+	@Override
+	public boolean register(String email, String password) {
+		// TODO Auto-generated method stub
+		Objects.requireNonNull(email,"email cannot be null ");
+		Objects.requireNonNull(password,"password cannot be null ");
+		EmployeeDao e = new JdbcEmployeeDao();
+		
+		return e.register(email, password);
+	}
+	
+}

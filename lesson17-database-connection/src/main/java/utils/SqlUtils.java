@@ -2,6 +2,9 @@ package utils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+
+import org.apache.commons.codec.digest.DigestUtils;
 
 public class SqlUtils {
 
@@ -48,6 +51,11 @@ public class SqlUtils {
 			System.out.println(e1+"\n"+e2);
 		});
 		System.out.println("}\n");
+		
+	}
+	public static String md5(String text) {
+		Objects.requireNonNull(text,"text cannot be null!");
+		return DigestUtils.md5Hex(text);
 		
 	}
 
