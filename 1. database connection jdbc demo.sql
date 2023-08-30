@@ -78,3 +78,14 @@ SELECT ig.ID GROUP_ID,
   JOIN ITEM_GROUP ig
     ON it.ITEM_GROUP_ID = ig.ID
   GROUP BY ig.ID, ig.NAME;
+  
+-- 4. Đăng ký, đăng nhập tài khoản nhân viên
+
+SELECT * FROM employee;
+
+INSERT INTO employee(EMAIL, PASSWORD, DEPARTMENT_ID)
+VALUES('uu82j91kk@gmail.com', 'admin781', 1);
+
+-- Transaction Management
+
+-- Call Function / Stored Procedure
