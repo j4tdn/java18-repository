@@ -23,5 +23,10 @@ public class StudentServiceImpl implements StudentService{
 		// TODO Auto-generated method stub
 		return studentDao.AmoutOfStudent(id);
 	}
+
+	public List<student> getStudentByScore(double score) {
+		// TODO Auto-generated method stub
+		return studentDao.getStudentByScore(score);
+	}
 	
 }

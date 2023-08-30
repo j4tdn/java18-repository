@@ -11,9 +11,10 @@ import bean.student;
 import connection.DbConnection;
 
 public class JbdcStudentDao implements StudentDao {
-	private static final String GET_ALL_STUDENT = ""
-			+ "SELECT * FROM student = ?";
+	private static final String GET_ALL_STUDENT = "" + "SELECT * FROM student = ?";
 	private static final String AMOUNT_OF_STUDENTS = "Select count(id) from student s where s.class_id = ?";
+	private static final String STUDENTS_SCORES = "SELECT * from student s join  result r  on s.id = r.student_id\r\n"
+			+ "where r. score >= ?";
 	private Connection connection;
 	private PreparedStatement pst;
 	private ResultSet rs;
@@ -25,7 +26,7 @@ public class JbdcStudentDao implements StudentDao {
 	public List<student> getAll(int id) {
 		// TODO Auto-generated method stub
 		List<student> result = new ArrayList<student>();
-		
+
 		try {
 			pst = connection.prepareStatement(GET_ALL_STUDENT);
 			pst.setInt(1, id);
@@ -42,14 +43,14 @@ public class JbdcStudentDao implements StudentDao {
 			try {
 				rs.close();
 				pst.close();
-				
+
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
-		
+
 		return result;
 	}
 
@@ -58,22 +59,52 @@ public class JbdcStudentDao implements StudentDao {
 		try {
 			pst = connection.prepareStatement(AMOUNT_OF_STUDENTS);
 			pst.setInt(1, id);
-			 value = pst.executeUpdate();
-			
+			value = pst.executeUpdate();
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
 				rs.close();
 				pst.close();
-				
+
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
 		return value;
+	}
+
+	public List<student> getStudentByScore(double score) {
+		List<student> result = new ArrayList<student>();
+
+		try {
+			pst = connection.prepareStatement(GET_ALL_STUDENT);
+			pst.setDouble(1, score);
+			while (rs.next()) {
+				int ids = rs.getInt("ID");
+				String name = rs.getString("NAME");
+				String gender = rs.getString("GENDER");
+				int class_id = rs.getInt("CLASS_ID");
+				result.add(new student(null, name, gender, class_id));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pst.close();
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+		return result;
 	}
 
 }
