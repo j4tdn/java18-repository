@@ -1,0 +1,9 @@
+package dao;
+
+import bean.Employee;
+
+public interface EmployeeDao {
+	
+	Employee register(String username, String password);
+	
+}

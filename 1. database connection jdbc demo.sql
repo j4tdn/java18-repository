@@ -47,3 +47,28 @@ SELECT odd.ORDER_ID,
   JOIN order_detail odd ON itd.ID = odd.ITEM_DETAIL_ID
   JOIN `order` od ON odd.ORDER_ID = od.ID
  WHERE CAST(od.CREATE_AT AS DATE) = '2023-08-12';
+ 
+ 
+ SELECT distinct it.ID ITEM_ID, 
+		it.`NAME` ITEM_NAME
+   FROM item it 
+   JOIN item_detail itd ON it.ID = itd.ITEM_ID 
+   JOIN order_detail odd ON itd.ID = odd.ITEM_DETAIL_ID 
+   JOIN `order` od ON odd.ORDER_ID = od.ID 
+  WHERE CAST(od.CREATE_AT AS DATE) = '2023-08-12';
+  
+ SELECT distinct it.ID ITEM_ID, 
+		it.`NAME` ITEM_NAME
+   FROM item it
+  WHERE EXISTS (SELECT *
+				FROM item_detail itd
+                JOIN order_detail odd ON itd.ID = odd.ITEM_DETAIL_ID 
+				JOIN `order` od ON odd.ORDER_ID = od.ID 
+				WHERE it.ID = itd.ITEM_ID 
+				  AND CAST(od.CREATE_AT AS DATE) = '2023-08-12'
+                );
+                
+                
+-- 4. đăng ký tài khoản nhân viên 
+INSERT INTO employee(EMAIL, PASSWORD, DEPARTMENT_ID)
+VALUE('ussa2i8@gmail.com', 'admin781', 1);
