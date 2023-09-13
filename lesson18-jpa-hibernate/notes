@@ -1,0 +1,18 @@
+	Item: id, name, salesPrice
+	Size: id, gender. desc
+	
+	Mapping N-N to JPA/Hibernate
+	
+	Case_1:
+	ItemDetail: itemId, sizeId
+	--> JPA/Hibernate mappingL @JoinTable 
+	    Item: @JoinTable
+	    ItemDetail: mappedBy
+	
+	Case_2: 
+	ItemDetail: itemId, sizeId, #(amount, createdDate)
+	--> create new Entity and mapping with directly ItemDetail
+	--> @Embedeable
+	--> @EmbededId
+	
+	--> DAILY USE --> Case_2

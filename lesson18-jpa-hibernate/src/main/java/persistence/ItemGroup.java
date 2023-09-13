@@ -1,10 +1,13 @@
 package persistence;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -33,6 +36,13 @@ public class ItemGroup {
 
 	@Column(name = "NAME")
 	private String name;
+	
+	// Sử dụng @OneToMany tại bảng 1 (cha)
+	// Yêu cầu: Bảng N (con) có mapping @ManyToOne với bảng 1 (cha)
+	// Sau đó sử dụng thuộc tính mappedBy = "itemGroup" <-- tên thuộc tính bên bảng @ManyToOne
+	// Mặc định là LAZY
+	@OneToMany(mappedBy = "itemGroup")
+	private List<Item> items;
 
 	public ItemGroup() {
 	}
@@ -56,6 +66,14 @@ public class ItemGroup {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public List<Item> getItems() {
+		return items;
+	}
+	
+	public void setItems(List<Item> items) {
+		this.items = items;
 	}
 
 	@Override
