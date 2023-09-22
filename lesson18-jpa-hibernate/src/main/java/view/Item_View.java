@@ -21,9 +21,17 @@ public class Item_View {
 		
 		// System.out.println("items[2] --> " + items.get(2).getItemGroup());
 		
+		var item = itemService.getItem(3);
+		
 		System.out.println(
 				"Câu 3: Liệt kê mặt hàng theo mã mặt hàng\n"
-				+ itemService.getItem(5)
+				+ item);
+		
+		var itemDetails = item.getItemDetails();
+		
+		SqlUtils.generate(
+				"\nCâu 4: Liệt kê toàn bộ các mặt hàng chứa thông tin kích cỡ",
+				itemDetails
 				);
 	}
 

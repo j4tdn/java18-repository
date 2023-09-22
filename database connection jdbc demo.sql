@@ -60,6 +60,7 @@ SELECT *
 	FROM item it 
 	JOIN item_group ig ON it.ITEM_GROUP_ID = ig.ID
 	JOIN item_detail itd ON it.ID = itd.ITEM_ID
+    WHERE ig.ID IN (1, 2, 3, 4)
 	GROUP BY ig.ID, ig.`NAME`;
   
   
@@ -141,4 +142,12 @@ FROM item it
 JOIN item_detail id ON it.ID = id.ITEM_ID
 JOIN ITEM_GROUP_MAX_PRICE igm ON it.ITEM_GROUP_ID = igm.ITEM_GROUP_ID
  AND id.SELL_PRICE = igm.MAX_PRICE_IN_GROUP;
+ 
+ -- DEMO TRÊN LỚP
+ -- 4. Đăng ký, đăng nhập tài khoản nhân viên 
+ INSERT INTO employee(EMAIL, PASSWORD, DEPARTMENT_ID)
+ VALUES('maymay2105@gmail.com', '12345', 1);
+ 
+ select * from item ;
+ 
  

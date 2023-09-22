@@ -5,7 +5,7 @@
 	
 	Case_1:
 	ItemDetail: itemId, sizeId
-	--> JPA/Hibernate mappingL @JoinTable 
+	--> JPA/Hibernate mappingL @ManyToMay @JoinTable 
 	    Item: @JoinTable
 	    ItemDetail: mappedBy
 	
@@ -16,3 +16,17 @@
 	--> @EmbededId
 	
 	--> DAILY USE --> Case_2
+	
+===================================================
+
+SELECT --> Không yêu cầu đặt trong một Transaction
+
+INSERT, UPDATE, DELETE
+--> Yêu cầu: đặt trong một Transaction
+	
+	+ openSession: 
+	  Nếu ko có Transaction --> code sẽ không được thực thi, commit
+	                        --> ko báo lỗi
+	                        
+	+ getCurrentSession:
+	  Nếu ko có Transaction --> báo lỗi

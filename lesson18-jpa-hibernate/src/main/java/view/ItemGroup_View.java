@@ -1,5 +1,8 @@
 package view;
 
+import java.util.Set;
+
+import persistence.ItemGroup;
 import service.ItemGroupService;
 import service.ItemGroupServiceImpl;
 import utils.SqlUtils;
@@ -13,6 +16,10 @@ private static ItemGroupService itemGroupService;
 	
 	public static void main(String[] args) {
 		
+		// Câu 6: Thêm mới loại hàng 
+		System.out.println("Câu 6: Thêm mới loại hàng");
+		itemGroupService.save(new ItemGroup(20, "Item Group 20"));
+		
 		var itemGroups = itemGroupService.getAll();
 		SqlUtils.generate(
 				"Câu 1A: Liệt kê toàn bộ các loại hàng", 
@@ -24,6 +31,9 @@ private static ItemGroupService itemGroupService;
 		System.out.println("Liệt kê các items thuộc item_group");
 		System.out.println("itemGroup[2] --> " + itemGroups.get(2).getItems());
 		
+		SqlUtils.generate("Câu 5: Đếm số lượng mặt hàng theo từng loại hàng",
+				itemGroupService.getItemGroupDetail(Set.of(1, 2, 3, 4)));
+
 	}
 
 }

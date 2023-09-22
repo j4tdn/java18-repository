@@ -1,7 +1,10 @@
 package dao.template;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import connection.DbConnection;
 
@@ -19,6 +22,11 @@ public class AbstractHibernateDao {
 
 	protected Session getCurrentSession() {
 		return sessionFactory.getCurrentSession();
+	}
+	
+	@SuppressWarnings("unchecked")
+	protected <T> List<T> safeList(Query<?> query) {
+		return (List<T>)query.getResultList();
 	}
 
 }
