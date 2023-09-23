@@ -30,3 +30,46 @@ INSERT, UPDATE, DELETE
 	                        
 	+ getCurrentSession:
 	  Nếu ko có Transaction --> báo lỗi
+	  
+===================================================
+@Override
+	public void save(ItemGroup itemGroup) {
+		Session session = openSesstion();
+		Transaction transaction = session.beginTransaction();
+		try {
+			session.saveOrUpdate(itemGroup);
+			transaction.commit();
+		} catch (Exception e) {
+			transaction.rollback();
+			e.printStackTrace();
+		}
+
+	}
+	
+@Override
+	public void addNewItemGroups(int newItemGroup) {
+		Session session = openSesstion();
+		Transaction transaction = session.beginTransaction();
+		try {
+			openSesstion().createNativeQuery(STORED_PROCEDURE_ADD_NEW_ITEM_GROUPS)
+			.setParameter("pAmount", newItemGroup)
+			.executeUpdate();
+			transaction.commit();
+		} catch (Exception e) {
+			transaction.rollback();
+			e.printStackTrace();
+		}
+	}
+
+CÁCH CUSTOM HAI ĐOẠN CODE TRÙNG Ở TRÊN	
+protected void executeWithTransaction(Consumer<Session> consumer) {
+		Session session = openSesstion();
+		Transaction transaction = session.beginTransaction();
+		try {
+			consumer.accept(session);
+			transaction.commit();
+		} catch (Exception e) {
+			transaction.rollback();
+			e.printStackTrace();
+		}
+	}

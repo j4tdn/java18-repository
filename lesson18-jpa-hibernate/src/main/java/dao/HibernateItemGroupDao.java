@@ -40,7 +40,10 @@ public class HibernateItemGroupDao extends AbstractHibernateDao implements ItemG
 			+ "	JOIN item_group ig ON it.ITEM_GROUP_ID = ig.ID \n"
 			+ "	JOIN item_detail itd ON it.ID = itd.ITEM_ID \n"
 			+ "    WHERE ig.ID IN (:pIgIds) \n"
-			+ "	GROUP BY ig.ID, ig.`NAME`;";
+			+ "	GROUP BY ig.ID, ig.`NAME`";
+	
+	private static final String STORED_PROCEDURE_ADD_NEW_ITEM_GROUPS = ""
+			+ "CALL addNewItemGroups(:pAmount)";
 		
 	public List<ItemGroup> getAll() {
 		
@@ -80,16 +83,71 @@ public class HibernateItemGroupDao extends AbstractHibernateDao implements ItemG
 	
 	@Override
 	public void save(ItemGroup itemGroup) {
-		Session session = openSesstion();
-		Transaction transaction = session.beginTransaction();
-		try {
-			session.save(itemGroup);
-			transaction.commit();
-		} catch (Exception e) {
-			transaction.rollback();
-			e.printStackTrace();
-		}
+		executeWithTransaction(session -> {
+			session.saveOrUpdate(itemGroup);
+		});
+	}
+	
+	@Override
+	public void demoFirstLevelCache() {
+		Session session1 = openSesstion();
+		Session session2 = openSesstion();
+		
+		var ig1 = session1.get(ItemGroup.class, 5); // execute database query
+		var ig2 = session1.get(ItemGroup.class, 6); // execute database query
+		
+		System.out.println("\n");
+		
+		System.out.println("session1.contains(ig1) --> " + session1.contains(ig1));
+		System.out.println("session1.contains(ig2) --> " + session1.contains(ig2));
+		
+		System.out.println("\n");
+		
+		// test with #evict, #clear
+		// session1.evict(ig2);
+		session1.clear();
+		
+		var ig3 = session2.get(ItemGroup.class, 5); // execute database query (because of different session)
+		var ig4 = session1.get(ItemGroup.class, 6); // using data from first level cache
+		System.out.println("session2.contains(ig3) --> " + session2.contains(ig3));
+		System.out.println("session1.contains(ig4) --> " + session1.contains(ig4));
+		
+		System.out.println("\n");
+		
+	}
+	
+	@Override
+	public void demoSecondLevelCache() {
+		Session session1 = openSesstion();
+		Session session2 = openSesstion();
 
+		var ig1 = session1.get(ItemGroup.class, 5);
+		var ig2 = session1.get(ItemGroup.class, 6);
+		
+		System.out.println("ig1 --> " + ig1);
+		System.out.println("ig2 --> " + ig2);
+
+		// test with #evict, #clear
+		// session1.evict(ig2);
+		// session1.clear();
+
+		var ig3 = session2.get(ItemGroup.class, 5); // using data from 2nd level cache
+		var ig4 = session1.get(ItemGroup.class, 6); // using data from first level cache
+		
+		System.out.println("ig3 --> " + ig3);
+		System.out.println("ig4 --> " + ig4);
+
+		System.out.println("\n");
+
+	}
+	
+	@Override
+	public void addNewItemGroups(int newItemGroup) {
+		executeWithTransaction(session -> {
+			session.createNativeQuery(STORED_PROCEDURE_ADD_NEW_ITEM_GROUPS)
+			.setParameter("pAmount", newItemGroup)
+			.executeUpdate();
+		});
 	}
 
 }

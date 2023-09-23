@@ -20,6 +20,8 @@ private static ItemGroupService itemGroupService;
 		System.out.println("Câu 6: Thêm mới loại hàng");
 		itemGroupService.save(new ItemGroup(20, "Item Group 20"));
 		
+		itemGroupService.addNewItemGroups(3);
+		
 		var itemGroups = itemGroupService.getAll();
 		SqlUtils.generate(
 				"Câu 1A: Liệt kê toàn bộ các loại hàng", 

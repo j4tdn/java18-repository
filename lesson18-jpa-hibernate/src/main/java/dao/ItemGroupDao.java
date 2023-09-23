@@ -12,5 +12,11 @@ public interface ItemGroupDao {
 	List<ItemGroupDto> getItemGroupDetail(Set<Integer> igIds);
 	
 	void save(ItemGroup itemGroup);
+	
+	void demoFirstLevelCache();
+	
+	void demoSecondLevelCache();
+	
+	void addNewItemGroups (int newItemGroup);
 
 }

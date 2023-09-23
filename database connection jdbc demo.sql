@@ -148,6 +148,7 @@ JOIN ITEM_GROUP_MAX_PRICE igm ON it.ITEM_GROUP_ID = igm.ITEM_GROUP_ID
  INSERT INTO employee(EMAIL, PASSWORD, DEPARTMENT_ID)
  VALUES('maymay2105@gmail.com', '12345', 1);
  
- select * from item ;
+-- Demo first level CACHE
+
  
  

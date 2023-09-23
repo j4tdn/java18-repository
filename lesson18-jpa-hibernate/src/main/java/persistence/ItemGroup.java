@@ -10,8 +10,12 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
 @Table(name = "item_group")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 
 /*
 @NamedQueries(

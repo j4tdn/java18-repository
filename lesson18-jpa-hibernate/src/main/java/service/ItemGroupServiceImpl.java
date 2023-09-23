@@ -39,5 +39,20 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 	public void save(ItemGroup itemGroup) {
 		itemGroupDao.save(itemGroup);
 	}
+	
+	@Override
+	public void demoFirstLevelCache() {
+		itemGroupDao.demoFirstLevelCache();
+	}
+	
+	@Override
+	public void demoSecondLevelCache() {
+		itemGroupDao.demoSecondLevelCache();
+	}
+	
+	@Override
+	public void addNewItemGroups(int newItemGroup) {
+		itemGroupDao.addNewItemGroups(newItemGroup);
+	}
 
 }

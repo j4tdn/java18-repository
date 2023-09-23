@@ -1,9 +1,11 @@
 package dao.template;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import connection.DbConnection;
@@ -22,6 +24,18 @@ public class AbstractHibernateDao {
 
 	protected Session getCurrentSession() {
 		return sessionFactory.getCurrentSession();
+	}
+	
+	protected void executeWithTransaction(Consumer<Session> consumer) {
+		Session session = openSesstion();
+		Transaction transaction = session.beginTransaction();
+		try {
+			consumer.accept(session);
+			transaction.commit();
+		} catch (Exception e) {
+			transaction.rollback();
+			e.printStackTrace();
+		}
 	}
 	
 	@SuppressWarnings("unchecked")
