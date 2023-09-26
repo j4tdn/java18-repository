@@ -1,0 +1,14 @@
+SELECT
++ -->
+
+
+
+INSERT/UPDATE/DELETE
++ Yêu cầu: Transaction(commit, rollback)
+
+	+ openSession:
+	  Nếu ko có transaction --> code sẽ ko được thực thi, commit
+	                        --> ko báo lỗi
+	
+	+ getCurrentSession:
+	  Nếu ko có transaction --> báo lỗi

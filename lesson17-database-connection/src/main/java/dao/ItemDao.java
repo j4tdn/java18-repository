@@ -9,7 +9,7 @@ import bean.Item;
 public interface ItemDao {
 	
 	List<Item> getItems(Set<Integer> itemGroupIds);
-	
+
 	List<Item> getItemsByOrderDate(LocalDate orderDate);
 	
 }

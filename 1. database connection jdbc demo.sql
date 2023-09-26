@@ -77,6 +77,7 @@ SELECT ig.ID GROUP_ID,
     ON it.ID = itd.ITEM_ID
   JOIN ITEM_GROUP ig
     ON it.ITEM_GROUP_ID = ig.ID
+  WHERE ig.ID IN (1,2,3,4)
   GROUP BY ig.ID, ig.NAME;
   
 -- 4. Đăng ký, đăng nhập tài khoản nhân viên
@@ -89,3 +90,10 @@ VALUES('uu82j91kk@gmail.com', 'admin781', 1);
 -- Transaction Management
 
 -- Call Function / Stored Procedure
+
+-- Demo First Level Cache
+
+-- Demo Second Level Cache
+
+SELECT * FROM item_group;
+
