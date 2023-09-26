@@ -1,0 +1,13 @@
+SELECT
++ -->
+
+
+INSET/UPDATE/DELETE
++ Yêu cầu: Transaction
+
+	+ openSession
+	  Nếu không có transaction --> code sẽ không được thực thi, commit
+	   						   --> không báo lỗi
+	   						   
+	+ getCurrentSession
+	  Nếu không có transaction --> báo lỗi

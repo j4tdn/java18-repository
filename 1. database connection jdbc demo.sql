@@ -86,3 +86,13 @@ SELECT * FROM employee;
 
 INSERT INTO employee(EMAIL,PASSWORD,DEPARTMENT_ID)
 VALUE('tay@gmail.com','123',1);
+
+-- Transaction Management
+
+-- Call Function / Stored Procedure
+
+-- Demo First Level Cache
+
+-- Demo Second Level Cache
+
+SELECT * FROM item_group;
