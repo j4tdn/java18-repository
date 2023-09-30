@@ -1,0 +1,11 @@
+Select
+
+
+Insert.update/delete
++ Yêu cầu : Transaction
+
+	+openSesssion:
+	Nếu không có transaction --> code sẽ không được thực thi, comit
+							 --> không báo lỗi
+	+getCurrentSession:
+	Nếu không có transaction --> báo lỗi
