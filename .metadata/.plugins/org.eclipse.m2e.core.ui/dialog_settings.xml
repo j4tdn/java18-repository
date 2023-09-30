@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\java18\4. Database Connection2\java18-repository\lesson17-database-connection\src\main\java\view\Item_View.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -49,6 +50,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="lesson18-jpa-hibernate"/>
 			<item value="lesson17-database-connection"/>
 		</list>
 		<list key="projectNameTemplate">

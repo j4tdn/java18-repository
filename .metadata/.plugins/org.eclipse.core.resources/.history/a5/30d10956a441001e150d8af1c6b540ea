@@ -1,5 +1,0 @@
-eclipse.preferences.version=1
-encoding//src/main/java/connection/DbConnection.java=UTF-8
-encoding//src/main/java/dao/JdbcItemGroupDao.java=UTF-8
-encoding//src/main/java/service/ItemGroupServiceImpl.java=UTF-8
-encoding//src/main/java/view/ItemGroup_View.java=UTF-8
