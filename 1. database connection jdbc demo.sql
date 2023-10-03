@@ -68,10 +68,10 @@ SELECT odd.ORDER_ID,
                );
                
 -- 2. Đếm số lượng các mặt hàng theo từng loại hàng live sql dml demo c16
-SELECT ig.ID GROUP_ID,
-       ig.NAME GROUP_NAME,
-       SUM(itd.AMOUNT) AMOUNT_OF_ITEMS,
-       GROUP_CONCAT(concat(it.NAME, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') ITEM_LIST
+SELECT ig.ID,
+       ig.NAME,
+       SUM(itd.AMOUNT) AMOUNT_OF_ITEMS
+       -- GROUP_CONCAT(concat(it.NAME, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') ITEM_LIST
   FROM item it
   JOIN item_detail itd
     ON it.ID = itd.ITEM_ID
@@ -96,4 +96,32 @@ VALUES('uu82j91kk@gmail.com', 'admin781', 1);
 -- Demo Second Level Cache
 
 SELECT * FROM item_group;
+
+-- jpa/hibernate test
+
+SELECT it.ID,
+       it.NAME,
+       CAST(od.CREATED_AT AS TIME) CREATED_TIME
+  FROM item it
+  JOIN item_detail itd
+    ON it.ID = itd.ITEM_ID
+  JOIN order_detail oddt
+	ON itd.ID = oddt.ITEM_DETAIL_ID
+  JOIN `order` od
+    ON od.ID = oddt.ORDER_ID;
+  
+  
+SELECT * FROM `ORDER`;
+SELECT odd.ORDER_ID,
+	   it.ID ITEM_ID,
+       it.`NAME` ITEM_NAME,
+       -- itd.SIZE_ID ITEM_SIZE_ID,
+       odd.AMOUNT,
+       od.CREATED_AT
+  FROM item it
+  JOIN item_detail itd ON it.ID = itd.ITEM_ID
+  JOIN order_detail odd ON itd.ID = odd.ITEM_DETAIL_ID
+  JOIN `order` od ON odd.ORDER_ID = od.ID;
+ -- WHERE CAST(od.CREATED_AT AS DATE) = '2023-02-15';
+
 
