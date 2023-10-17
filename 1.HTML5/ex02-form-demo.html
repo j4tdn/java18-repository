@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/world.png">
+	<title>Ex02 - Form Demo</title>
+</head>
+<body>
+	
+	<h2>Ex02 - Form Demo</h2>
+
+	<hr>
+
+	<form>
+		<table cellpadding="6">
+			<tr>
+				<td><label>First Name:</label></td>
+				<td><input type="text"></td>
+			</tr>
+
+			<tr>
+				<td><label>Last Name:</label></td>
+				<td><input type="text"></td>
+			</tr>
+
+			<tr>
+				<td><label>Gender:</label></td>
+				<td>
+					<label for="male">Male</label> <input type="radio" id="male" checked name="radio-group-gender">
+					&nbsp; 
+					<label for="female">Female</label> <input type="radio" id="female" name="radio-group-gender">
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Age:</label></td>
+				<td><input type="number" min="10" max="40" value="18" step="1"></td>
+			</tr>
+
+			<tr>
+				<td><label>University:</label></td>
+				<td>
+					<select>
+						<option value="">-- Select --</option>
+						<option value="ta">-- TA --</option>
+						<option value="tb">-- TB --</option>
+						<option value="tc">-- TC --</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Languages:</label></td>
+				<td>
+					<label for="java">JAVA</label> <input type="checkbox" id="java">
+					<label for="php">PHP</label> <input type="checkbox" id="php">
+					<label for="nodejs">NodeJs</label> <input type="checkbox" id="nodejs">
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Date Of Birth:</label></td>
+				<td><input type="date" value="2023-10-18"></td>
+			</tr>
+
+			<tr>
+				<td><label>Email:</label></td>
+				<td><input type="email"></td>
+			</tr>
+
+			<tr>
+				<td><label>Password:</label></td>
+				<td><input type="password"></td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<!-- <input type="submit" value="Sign up"> --> <!-- type='submit' : refresh page -->
+					<!-- <input type="button" value="Sign up"> --> <!-- type='button' : no refresh page  -->
+					<button>Sign up</button> <!-- button : refresh page -->
+					<input type="reset" value="Clear">
+				</td>
+				
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>
