@@ -1,0 +1,58 @@
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    width: 200px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 50px;
+}
+
+.container .style {
+    margin: auto;
+}
+
+.search-input {
+    border: none;
+}
+
+.add {
+    margin-top: 10px;
+    border-radius: 0%;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+td,
+th {
+    border: 1px solid #333;
+    padding: 10px 30px;
+}
+
+th {
+    background-color: #aaa;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+.save-form {
+    width: 100px;
+}
+
+.save-form .select {
+    margin: 16px 0;
+    width: 150px;
+}
+

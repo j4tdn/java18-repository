@@ -1,0 +1,12 @@
+/* ======= Index ======== */
+.container {
+    display: flex;
+}
+
+.image {
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
