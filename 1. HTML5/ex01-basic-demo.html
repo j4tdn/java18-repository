@@ -20,13 +20,24 @@
 		    + n: counter
 		 -->
 		<style>
-			table tbody tr:nth-last-child(-n + 3)  {
+			html{
+				scroll-behavior: smooth;
+			}
+			table tbody tr:nth-last-child(2n+1)  {
 				background: #ddd;
 			}
 		</style>
 
 	</head>
 	<body>
+		<h2>Java 18 - HTML DEMO</h2>
+		<!--Anchor / Link Tag -->
+		<a href="" target="_blank">Java18 Reponsitory Demo</a> <br> <br>
+		<a href="#block-text-one">Text 01</a> <br> <br>
+
+		<a href="sub/ex01-sub-page.html" target="_blank">Switch to Ex01 Sub Page</a> <br> <br>
+		<a href="sub/child/ex01-child-page.html" target="_blank">Switch to Ex01 Sub Page</a>
+		<a href="ex02-form-demo.html" target="_blank">Form Demo</a> <br> <br>
 
 		<!-- [Un] Order List Tag -->
 		<h3>Lemonade Ingredients</h3>
@@ -62,6 +73,10 @@
 		<h4>This is text for H4 tag</h4>
 		<h5>This is text for H5 tag</h5>
 		<h6>This is text for H6 tag</h6>
+
+		<!-- Media Tag -->
+		<video src="video/video.mp4" controls poster="images/cake.jpg" width="400" loop height="200"></video>
+		<audio src="audio/audio.mp3" controls></audio>
 
 		<!-- Table Tag -->
 		<table border="1" cellspacing="0" cellpadding="8">
@@ -152,13 +167,23 @@
 		<img src="images/lemon.png" alt="lemon" width="200" height="200">
 
 		<!-- Paragraph Tag -->
-		<p>Text 01: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus facilis nam hic, tempora odit eaque ad voluptates dolorem mollitia dignissimos nihil dolore, amet debitis delectus consequatur id ipsum doloremque illum, molestiae quod laboriosam illo. Id laboriosam enim sit dignissimos facere quasi quos fuga cumque! <br>
+		<p id="block-text-one">Text 01: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus facilis nam hic, tempora odit eaque ad voluptates dolorem mollitia dignissimos nihil dolore, amet debitis delectus consequatur id ipsum doloremque illum, molestiae quod laboriosam illo. Id laboriosam enim sit dignissimos facere quasi quos fuga cumque! <br>
 		Consectetur esse earum harum ex praesentium iure nobis ullam similique maxime molestiae aspernatur quod omnis provident magni nesciunt, obcaecati rerum sunt fugiat laboriosam necessitatibus veritatis unde ad dolorum! Rem voluptatum voluptate debitis doloribus odio repudiandae facere asperiores consequuntur laborum mollitia ex a recusandae, officia nostrum dicta quae doloremque quasi, magni itaque veniam voluptates accusamus. Voluptatum, rem.</p>
 
 		<!-- inline css, css for owner tag -->
 		<p>Text 02: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur odit ut totam facilis aspernatur quisquam tempora, tempore praesentium nihil saepe fugit <span style="color: blue; font-weight: bold;">mollitia veniam quam temporibus</span> eius hic et nesciunt error aperiam, consequatur voluptatum. Esse, deserunt tempora minima voluptatum labore sunt similique vero reiciendis quod, et sint natus. Id, quo, eum!</p>
 
 		<p>Text 03: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magnam itaque non reiciendis fugiat, adipisci modi culpa rem sed quae suscipit blanditiis possimus similique alias? Maxime ipsa adipisci sed neque iure deleniti ipsum minima esse tempore, aliquid aliquam vitae. <strong>Porro</strong> sed pariatur nobis ab, doloremque temporibus illo nemo autem perferendis beatae perspiciatis tenetur reprehenderit eius sint dolores modi minus cum obcaecati quaerat nulla consectetur molestiae. Voluptatem tenetur nemo, sunt necessitatibus consequatur fuga excepturi reiciendis quod at cumque repudiandae exercitationem id.</p>
+		<img src="images/cake.jpg" alt="cake" width="200" height="200">
 
+		<img src="images/lemon.png" alt="lemon" width="200" height="200">
+		<p>Text 04: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magnam itaque non reiciendis fugiat, adipisci modi culpa rem sed quae suscipit blanditiis possimus similique alias? Maxime ipsa adipisci sed neque iure deleniti ipsum minima esse tempore, aliquid aliquam vitae. <strong>Porro</strong> sed pariatur nobis ab, doloremque temporibus illo nemo autem perferendis beatae perspiciatis tenetur reprehenderit eius sint dolores modi minus cum obcaecati quaerat nulla consectetur molestiae. Voluptatem tenetur nemo, sunt necessitatibus consequatur fuga excepturi reiciendis quod at cumque repudiandae exercitationem id.</p>
+
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/UCD0XFyZYTE?si=asPGOfHkDfI6ngro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+		<div>
+			<h3>Designed By Java 18 &#128538; - &copy; &reg; 2023</h3>
+		</div>
 	</body>
 </html>

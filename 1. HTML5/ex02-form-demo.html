@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/world.png">
+		<title>Ex02 - FORM Demo</title>
+
+</head>
+<body>
+	<h2>EX02 - From Demo</h2>
+	<hr>
+
+	<form>
+		<table cellpadding="6">
+			<tr>
+				<td><label>First Name:</label></td>
+				<td><input type="text" name=""></td>
+			</tr>
+
+			<tr>
+				<td><label>Last Name:</label></td>
+				<td><input type="text" name=""></td>
+			</tr>
+
+			<tr>
+				<td><label>Gender:</label></td>
+				<td>
+					<label for="male">Male </label><input type="radio" id ="male" checked name="radio-group-render"> &nbsp;
+					<label for="female">Female </label><input type="radio" id ="female" checked name="radio-group-render">
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Age</label></td>
+				<td><input type="number" min="10" max="40" value="18" step="1"></td>
+			</tr>
+
+			<tr>
+				<td><label>University:</label></td>
+				<td>
+					<select>
+						<option value="ta">ABC</option>
+						<option value="tb">BCA</option>
+						<option value="tc">CBA</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>University:</label></td>
+				<td>
+					<label for="java">Java</label> <input type="checkbox" id="java">
+					<label for="php">PHP</label> <input type="checkbox" id="php">
+					<label for="react">React</label> <input type="checkbox" id="react">
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Date of birth:</label></td>
+				<td>
+					<input type="date" value="2023-10-14">
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Email:</label></td>
+				<td><input type="email"></td>
+			</tr>
+
+			<tr>
+				<td><label>Password:</label></td>
+				<td><input type="password"></td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<!-- <input type="submit" value="Sign up" > --><!-- tpye = 'submit' : refresh page -->
+					<!-- <input type="button" value="Sign up" > --><!-- tpye = 'button' : no refresh page -->
+					<button>Sign up</button><!-- button: refresh page -->
+					<input type="reset" value="Clear">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
