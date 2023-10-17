@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/world.png">
+    <title>Ex01 - Basic Demo</title>
+
+    <!-- inline css - css for html tag -->
+
+    <!-- internal css - css for single html page -->
+
+    <!-- 
+      nth-child(i) -- index one
+      first-child
+      last-child
+
+      nth-child(an + b)
+      + a: cycle size
+      + b: offset - index 1
+        + n: counter
+     -->
+    <style>
+      table tbody tr:nth-last-child(-n + 3)  {
+        background: #ddd;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <!-- [Un] Order List Tag -->
+    <h3>Lemonade Ingredients</h3>
+    <ul>
+      <li>2 cups water</li>
+      <li><sup>1</sup>/<sub>2</sub> cup sugar</li>
+      <li>
+        3 lemons
+        <ul style="list-style-type:lower-alpha;">
+          <li>2 green lemon</li>
+          <li>1 yellow lemons</li>
+        </ul>
+
+      </li>
+      <li>Crushed ice</li>
+    </ul>
+
+    <!-- 
+      
+      Có 2 loại thẻ
+      + Thẻ đơn: <br>, <meta charset="utf-8">
+      + Thẻ đôi: <p>content</p>, <h?>...</h?>
+
+      + Thẻ inline: nội dung, con trỏ sẽ tiếp tục ngay sau khi kết thúc thẻ
+      + Thẻ block: nội dung, con trỏ sẽ xuống hàng khi kết thúc thẻ
+                 : mặc định có length = 100% view width
+     -->
+    
+    <!-- Heading Tags -->
+    <h1>This is text for H1 tag</h1>
+    <h2>This is text for H2 tag</h2>
+    <h3>This is text for H3 tag</h3>
+    <h4>This is text for H4 tag</h4>
+    <h5>This is text for H5 tag</h5>
+    <h6>This is text for H6 tag</h6>
+
+    <!-- Table Tag -->
+    <table border="1" cellspacing="0" cellpadding="8">
+      <thead>
+        <tr>
+          <th rowspan="2">Name</th>
+          <th rowspan="2">Age</th>
+          <th rowspan="2">Eye Color</th>
+          <th colspan="2">Phone</th>
+        </tr>
+        <tr>
+          <th>Fax 1</th>
+          <th>Fax 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Peter</td>
+          <td>18</td>
+          <td>Blue</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Kate</td>
+          <td>22</td>
+          <td>Green</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Oliver</td>
+          <td>24</td>
+          <td>Gray</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>18</td>
+          <td>Blue</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Kate</td>
+          <td>22</td>
+          <td>Green</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Oliver</td>
+          <td>24</td>
+          <td>Gray</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>18</td>
+          <td>Blue</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Kate</td>
+          <td>22</td>
+          <td>Green</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Oliver</td>
+          <td>24</td>
+          <td>Gray</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <!-- Image Tag -->
+    <img src="images/cake.jpg" alt="cake" width="200" height="200">
+
+    <img src="images/lemon.png" alt="lemon" width="200" height="200">
+
+    <!-- Paragraph Tag -->
+    <p>Text 01: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus facilis nam hic, tempora odit eaque ad voluptates dolorem mollitia dignissimos nihil dolore, amet debitis delectus consequatur id ipsum doloremque illum, molestiae quod laboriosam illo. Id laboriosam enim sit dignissimos facere quasi quos fuga cumque! <br>
+    Consectetur esse earum harum ex praesentium iure nobis ullam similique maxime molestiae aspernatur quod omnis provident magni nesciunt, obcaecati rerum sunt fugiat laboriosam necessitatibus veritatis unde ad dolorum! Rem voluptatum voluptate debitis doloribus odio repudiandae facere asperiores consequuntur laborum mollitia ex a recusandae, officia nostrum dicta quae doloremque quasi, magni itaque veniam voluptates accusamus. Voluptatum, rem.</p>
+
+    <!-- inline css, css for owner tag -->
+    <p>Text 02: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur odit ut totam facilis aspernatur quisquam tempora, tempore praesentium nihil saepe fugit <span style="color: blue; font-weight: bold;">mollitia veniam quam temporibus</span> eius hic et nesciunt error aperiam, consequatur voluptatum. Esse, deserunt tempora minima voluptatum labore sunt similique vero reiciendis quod, et sint natus. Id, quo, eum!</p>
+
+    <p>Text 03: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magnam itaque non reiciendis fugiat, adipisci modi culpa rem sed quae suscipit blanditiis possimus similique alias? Maxime ipsa adipisci sed neque iure deleniti ipsum minima esse tempore, aliquid aliquam vitae. <strong>Porro</strong> sed pariatur nobis ab, doloremque temporibus illo nemo autem perferendis beatae perspiciatis tenetur reprehenderit eius sint dolores modi minus cum obcaecati quaerat nulla consectetur molestiae. Voluptatem tenetur nemo, sunt necessitatibus consequatur fuga excepturi reiciendis quod at cumque repudiandae exercitationem id.</p>
+
+  </body>
+</html>
