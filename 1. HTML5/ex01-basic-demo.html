@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="icon" href="images/world.png">
-		<title>Ex01 - Basic Demo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/world.png" />
+    <title>Ex01 - Basic Demo</title>
 
-		<!-- inline css - css for html tag -->
+    <!-- inline css - css for html tag -->
 
-		<!-- internal css - css for single html page -->
+    <!-- internal css - css for single html page -->
 
-		<!-- 
+    <!--
 			nth-child(i) -- index one
 			first-child
 			last-child
@@ -19,33 +19,39 @@
 			+ b: offset - index 1
 		    + n: counter
 		 -->
-		<style>
-			table tbody tr:nth-last-child(-n + 3)  {
-				background: #ddd;
-			}
-		</style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      table tbody tr:nth-last-child(-n + 3) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Title: JAVA 18 - HTML Demo</h2>
+    <!-- Anchor / Link Tag -->
+    <a href="https://www.google.com" target="_blank">Google</a><br />
+    <a href="#block-test-one">Text 01</a><br />
+    <a href="sub/ex01-sub-page.html">Switch to Ex01 Sub Page</a><br />
+    <a href="sub/child/ex01-child-page.html">Switch to Ex01 Child Page</a><br />
+    <!-- [Un] Order List Tag -->
+    <h3>Lemonade Ingredients</h3>
+    <ul>
+      <li>2 cups water</li>
+      <li><sup>1</sup>/<sub>2</sub> cup sugar</li>
+      <li>
+        3 lemons
+        <ul style="list-style-type: lower-alpha">
+          <li>2 green lemon</li>
+          <li>1 yellow lemons</li>
+        </ul>
+      </li>
+      <li>Crushed ice</li>
+    </ul>
 
-	</head>
-	<body>
+    <!--
 
-		<!-- [Un] Order List Tag -->
-		<h3>Lemonade Ingredients</h3>
-		<ul>
-			<li>2 cups water</li>
-			<li><sup>1</sup>/<sub>2</sub> cup sugar</li>
-			<li>
-				3 lemons
-				<ul style="list-style-type:lower-alpha;">
-					<li>2 green lemon</li>
-					<li>1 yellow lemons</li>
-				</ul>
-
-			</li>
-			<li>Crushed ice</li>
-		</ul>
-
-		<!-- 
-			
 			Có 2 loại thẻ
 			+ Thẻ đơn: <br>, <meta charset="utf-8">
 			+ Thẻ đôi: <p>content</p>, <h?>...</h?>
@@ -54,111 +60,275 @@
 			+ Thẻ block: nội dung, con trỏ sẽ xuống hàng khi kết thúc thẻ
 			           : mặc định có length = 100% view width
 		 -->
-		
-		<!-- Heading Tags -->
-		<h1>This is text for H1 tag</h1>
-		<h2>This is text for H2 tag</h2>
-		<h3>This is text for H3 tag</h3>
-		<h4>This is text for H4 tag</h4>
-		<h5>This is text for H5 tag</h5>
-		<h6>This is text for H6 tag</h6>
 
-		<!-- Table Tag -->
-		<table border="1" cellspacing="0" cellpadding="8">
-			<thead>
-				<tr>
-					<th rowspan="2">Name</th>
-					<th rowspan="2">Age</th>
-					<th rowspan="2">Eye Color</th>
-					<th colspan="2">Phone</th>
-				</tr>
-				<tr>
-					<th>Fax 1</th>
-					<th>Fax 2</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Peter</td>
-					<td>18</td>
-					<td>Blue</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Kate</td>
-					<td>22</td>
-					<td>Green</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Oliver</td>
-					<td>24</td>
-					<td>Gray</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Peter</td>
-					<td>18</td>
-					<td>Blue</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Kate</td>
-					<td>22</td>
-					<td>Green</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Oliver</td>
-					<td>24</td>
-					<td>Gray</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Peter</td>
-					<td>18</td>
-					<td>Blue</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Kate</td>
-					<td>22</td>
-					<td>Green</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-				<tr>
-					<td>Oliver</td>
-					<td>24</td>
-					<td>Gray</td>
-					<td>123</td>
-					<td>456</td>
-				</tr>
-			</tbody>
-		</table>
+    <!-- Heading Tags -->
+    <h1>This is text for H1 tag</h1>
+    <h2>This is text for H2 tag</h2>
+    <h3>This is text for H3 tag</h3>
+    <h4>This is text for H4 tag</h4>
+    <h5>This is text for H5 tag</h5>
+    <h6>This is text for H6 tag</h6>
 
-		<br>
+    <!-- Media Tag -->
+    <video
+      src="video/video.mp4"
+      width="400"
+      height="200"
+      controls
+      loop
+      poster="images/world.png"></video>
+    <audio src="audio/audio.mp3" controls></audio>
 
-		<!-- Image Tag -->
-		<img src="images/cake.jpg" alt="cake" width="200" height="200">
+    <!-- Table Tag -->
+    <table border="1" cellspacing="0" cellpadding="8">
+      <thead>
+        <tr>
+          <th rowspan="2">Name</th>
+          <th rowspan="2">Age</th>
+          <th rowspan="2">Eye Color</th>
+          <th colspan="2">Phone</th>
+        </tr>
+        <tr>
+          <th>Fax 1</th>
+          <th>Fax 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Peter</td>
+          <td>18</td>
+          <td>Blue</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Kate</td>
+          <td>22</td>
+          <td>Green</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Oliver</td>
+          <td>24</td>
+          <td>Gray</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>18</td>
+          <td>Blue</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Kate</td>
+          <td>22</td>
+          <td>Green</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Oliver</td>
+          <td>24</td>
+          <td>Gray</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>18</td>
+          <td>Blue</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Kate</td>
+          <td>22</td>
+          <td>Green</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+        <tr>
+          <td>Oliver</td>
+          <td>24</td>
+          <td>Gray</td>
+          <td>123</td>
+          <td>456</td>
+        </tr>
+      </tbody>
+    </table>
 
-		<img src="images/lemon.png" alt="lemon" width="200" height="200">
+    <br />
 
-		<!-- Paragraph Tag -->
-		<p>Text 01: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus facilis nam hic, tempora odit eaque ad voluptates dolorem mollitia dignissimos nihil dolore, amet debitis delectus consequatur id ipsum doloremque illum, molestiae quod laboriosam illo. Id laboriosam enim sit dignissimos facere quasi quos fuga cumque! <br>
-		Consectetur esse earum harum ex praesentium iure nobis ullam similique maxime molestiae aspernatur quod omnis provident magni nesciunt, obcaecati rerum sunt fugiat laboriosam necessitatibus veritatis unde ad dolorum! Rem voluptatum voluptate debitis doloribus odio repudiandae facere asperiores consequuntur laborum mollitia ex a recusandae, officia nostrum dicta quae doloremque quasi, magni itaque veniam voluptates accusamus. Voluptatum, rem.</p>
+    <!-- Image Tag -->
+    <img src="images/cake.jpg" alt="cake" width="200" height="200" />
 
-		<!-- inline css, css for owner tag -->
-		<p>Text 02: Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur odit ut totam facilis aspernatur quisquam tempora, tempore praesentium nihil saepe fugit <span style="color: blue; font-weight: bold;">mollitia veniam quam temporibus</span> eius hic et nesciunt error aperiam, consequatur voluptatum. Esse, deserunt tempora minima voluptatum labore sunt similique vero reiciendis quod, et sint natus. Id, quo, eum!</p>
+    <img src="images/lemon.png" alt="lemon" width="200" height="200" />
 
-		<p>Text 03: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magnam itaque non reiciendis fugiat, adipisci modi culpa rem sed quae suscipit blanditiis possimus similique alias? Maxime ipsa adipisci sed neque iure deleniti ipsum minima esse tempore, aliquid aliquam vitae. <strong>Porro</strong> sed pariatur nobis ab, doloremque temporibus illo nemo autem perferendis beatae perspiciatis tenetur reprehenderit eius sint dolores modi minus cum obcaecati quaerat nulla consectetur molestiae. Voluptatem tenetur nemo, sunt necessitatibus consequatur fuga excepturi reiciendis quod at cumque repudiandae exercitationem id.</p>
+    <!-- Paragraph Tag -->
+    <p id="block-test-one">
+      Text 01: Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Necessitatibus facilis nam hic, tempora odit eaque ad voluptates dolorem
+      mollitia dignissimos nihil dolore, amet debitis delectus consequatur id
+      ipsum doloremque illum, molestiae quod laboriosam illo. Id laboriosam enim
+      sit dignissimos facere quasi quos fuga cumque! <br />
+      Consectetur esse earum harum ex praesentium iure nobis ullam similique
+      maxime molestiae aspernatur quod omnis provident magni nesciunt, obcaecati
+      rerum sunt fugiat laboriosam necessitatibus veritatis unde ad dolorum! Rem
+      voluptatum voluptate debitis doloribus odio repudiandae facere asperiores
+      consequuntur laborum mollitia ex a recusandae, officia nostrum dicta quae
+      doloremque quasi, magni itaque veniam voluptates accusamus. Voluptatum,
+      rem.
+    </p>
 
-	</body>
+    <!-- inline css, css for owner tag -->
+    <p>
+      Text 02: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Consectetur odit ut totam facilis aspernatur quisquam tempora, tempore
+      praesentium nihil saepe fugit
+      <span style="color: blue; font-weight: bold"
+        >mollitia veniam quam temporibus</span
+      >
+      eius hic et nesciunt error aperiam, consequatur voluptatum. Esse, deserunt
+      tempora minima voluptatum labore sunt similique vero reiciendis quod, et
+      sint natus. Id, quo, eum!
+    </p>
+
+    <p>
+      Text 03: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+      magnam itaque non reiciendis fugiat, adipisci modi culpa rem sed quae
+      suscipit blanditiis possimus similique alias? Maxime ipsa adipisci sed
+      neque iure deleniti ipsum minima esse tempore, aliquid aliquam vitae.
+      <strong>Porro</strong> sed pariatur nobis ab, doloremque temporibus illo
+      nemo autem perferendis beatae perspiciatis tenetur reprehenderit eius sint
+      dolores modi minus cum obcaecati quaerat nulla consectetur molestiae.
+      Voluptatem tenetur nemo, sunt necessitatibus consequatur fuga excepturi
+      reiciendis quod at cumque repudiandae exercitationem id.
+    </p>
+    <img src="images/cake.jpg" alt="cake" width="200" height="200" />
+
+    <img src="images/lemon.png" alt="lemon" width="200" height="200" />
+    <p>
+      Text 04: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Aspernatur fugit esse nobis magnam officia assumenda, ipsam, magni
+      cupiditate odio aut eius consectetur maiores aperiam sed corrupti
+      perferendis dolore ad eveniet, odit vel quam nemo laudantium? Maxime
+      saepe, quidem voluptate, quae porro aut velit similique ipsum qui
+      laboriosam eos est perferendis. Atque earum accusantium vitae ut,
+      praesentium, aperiam quasi quae obcaecati natus expedita sint. Eligendi ea
+      dolorem autem tenetur temporibus! Neque aut sequi doloremque dolore
+      delectus voluptatum, consequuntur eum, molestiae reiciendis quisquam ipsa?
+      Officia quaerat sed recusandae, delectus corrupti distinctio quos ullam a
+      numquam provident, earum cum tempora reiciendis consequatur aut quae
+      maiores sunt dicta ea consectetur architecto quod reprehenderit debitis!
+      Odio facilis voluptates dolorum voluptatibus vel nobis voluptas inventore
+      distinctio architecto dicta. Unde quae aliquam repudiandae, sunt dolorem
+      ad quasi ratione maxime veniam omnis adipisci necessitatibus optio quod
+      ipsam tempore hic sint facere nostrum voluptate quia odit dolorum est
+      consequuntur rem. Sunt, ullam sit ducimus suscipit facilis, quasi hic
+      vitae consectetur eos vero cupiditate inventore tempora tenetur eum dolor
+      dolorum cum quia quis eligendi. Reiciendis nobis illum suscipit,
+      laboriosam ipsam cum voluptas eligendi, veniam at, eveniet enim quae velit
+      sequi magni labore sit? Magnam, molestiae odit cum totam mollitia natus
+      sit voluptatum. Minus natus tempore accusamus, mollitia ratione assumenda
+      voluptate perspiciatis eveniet! Corporis cum, qui placeat voluptatem sequi
+      illo et commodi enim praesentium velit pariatur labore veritatis odit
+      perspiciatis atque earum ipsa ad tempora nam quibusdam dolores! Voluptatem
+      dolorem at facilis suscipit in et quae hic porro maxime eius nostrum
+      eveniet quas, error blanditiis commodi aut est doloremque expedita.
+      Commodi rerum similique velit minus quis dignissimos aliquid magni natus
+      obcaecati provident repudiandae aspernatur architecto enim quasi qui esse
+      maxime, vitae id quam ex. Magnam optio dolor beatae eveniet ab voluptates
+      voluptate natus fugit recusandae, tempore nulla voluptatibus nam
+      asperiores! Ratione, est commodi saepe illo officiis neque pariatur sunt
+      enim eius aliquam, sint in. Adipisci, ab dolores rerum nostrum saepe
+      quidem harum dolor illum, autem odit temporibus nam quam consequatur neque
+      rem, eius quas ullam id sit officia deserunt nemo! Quasi totam pariatur
+      asperiores in vero, illo dolorum, labore voluptate laboriosam, incidunt
+      omnis voluptatum assumenda ipsam aut dignissimos? Cum est magni quam.
+      Expedita illo laudantium a dolor non eum vero. Eos, reiciendis explicabo
+      nobis fugiat exercitationem dolorem voluptate quisquam at labore
+      voluptatem praesentium ab libero id ipsam adipisci dicta aspernatur
+      quibusdam possimus totam blanditiis et odit corporis! Labore nisi illo
+      sequi, est perspiciatis hic distinctio possimus asperiores laborum ratione
+      corrupti fugit maxime libero nam dignissimos repellendus eos explicabo!
+      Non, debitis consectetur! Ex laboriosam laborum beatae illum. Harum esse
+      id cupiditate nam quibusdam aperiam repudiandae. Hic suscipit ipsum
+      ducimus dolores a, tempore nihil enim, perspiciatis eaque quasi, itaque
+      quod fugiat quis unde! Dicta, id animi ipsa suscipit praesentium autem
+      reprehenderit cupiditate aspernatur corporis harum maiores, iusto
+      quibusdam ipsam quidem itaque, porro explicabo similique sit fugiat et.
+      Blanditiis voluptatem minus suscipit consequuntur numquam veniam modi
+      officiis quasi, delectus veritatis deleniti, animi asperiores ex.
+      Excepturi aliquam recusandae facilis, numquam in quam sunt exercitationem
+      nemo perspiciatis non ex ut beatae dolor laboriosam similique voluptatum
+      minus fugit consectetur id quia quod nisi earum sapiente quaerat.
+      Corporis, assumenda beatae culpa quisquam dolorem harum commodi dicta
+      numquam labore sequi blanditiis consequatur nostrum modi, repellendus
+      consectetur maxime ad, eos aperiam rerum ipsum magnam ipsa fugit. Dolorum
+      quis asperiores, dolores unde et assumenda? Rerum harum recusandae
+      cupiditate iste est nulla repellat fuga, consectetur perspiciatis
+      doloremque inventore numquam. Sequi quibusdam minus in corrupti ea
+      reiciendis corporis, praesentium facilis, voluptatibus, voluptatum
+      dolorum. Eligendi qui eius eveniet odit quia, mollitia adipisci
+      repudiandae sint nesciunt beatae ipsa soluta sapiente saepe tenetur
+      exercitationem doloremque velit asperiores assumenda sit similique error.
+      Reprehenderit fugiat illum sequi ducimus corporis magnam rerum placeat
+      laudantium asperiores, rem ex quod quos molestias quae deleniti qui
+      aliquam excepturi quaerat consectetur ratione sint, alias perspiciatis
+      distinctio. Incidunt quae molestias ad harum animi ratione ipsam placeat a
+      accusamus provident consequuntur, perspiciatis autem nulla dignissimos
+      sequi ullam commodi numquam ab fuga voluptatem sit culpa et! Ullam, quo
+      sed beatae illum cupiditate, a minima quos sapiente tempore non aliquid
+      libero accusamus quas, nobis accusantium rerum harum dolorum. Officiis cum
+      inventore doloribus sunt labore cupiditate laborum aliquam corporis
+      distinctio ipsum vero explicabo iure sint nisi, molestias blanditiis rem
+      iste possimus maiores facilis perferendis voluptates voluptatem quasi
+      exercitationem? Tempore doloribus sapiente eum, tenetur ducimus ullam
+      maiores autem dolorem, obcaecati sit suscipit impedit natus repudiandae
+      neque voluptas? Ipsam explicabo saepe, voluptate nulla animi ratione rem
+      doloremque illo, praesentium eum harum aperiam modi quod nobis fugit iste
+      aut architecto. Et, cum est. Magni nulla aspernatur explicabo ipsam
+      eligendi accusamus beatae libero quia aliquid deserunt maiores voluptas
+      cupiditate maxime suscipit corporis tenetur vitae itaque, temporibus eos
+      dolorem sapiente qui consequuntur. Labore veritatis quas harum inventore!
+      Iusto dicta, ad expedita aliquam vitae voluptatibus quasi dolorum
+      dignissimos ullam dolorem reprehenderit laudantium odit explicabo nihil
+      dolore quis culpa id eos. Ratione nobis earum sunt temporibus debitis quia
+      quod inventore nulla. Aliquid recusandae commodi placeat quas ratione
+      cumque porro veniam nulla voluptates neque sed exercitationem beatae
+      aspernatur ea odio architecto veritatis a optio enim, non obcaecati, unde
+      nesciunt dignissimos. Repudiandae repellendus officiis ex tempore sit
+      porro alias quia expedita debitis numquam qui, deleniti maxime labore
+      error quidem dicta et nisi quas eligendi possimus praesentium aperiam.
+      Quidem consequatur beatae alias at nam! Perspiciatis doloremque alias quo
+      quos. Molestias tempora, itaque expedita deleniti quibusdam nostrum libero
+      magnam adipisci assumenda. Quam odit ducimus magnam animi. Ipsam eveniet
+      repudiandae consectetur dolorem deserunt molestiae dolorum, corrupti quod
+      voluptates amet doloremque sint fugit at excepturi quasi tempore labore
+      delectus! Quaerat quod laudantium inventore nulla reprehenderit voluptatem
+      deserunt saepe voluptas ullam laborum sint enim, molestias sit quas iusto
+      veritatis? Saepe vel dolorum, veniam aliquam, nisi asperiores mollitia
+      exercitationem sit quod suscipit rem doloribus corporis, sed corrupti. Hic
+      cupiditate laborum fugit vitae ipsa dolore, quas modi aliquam dolorum esse
+      eaque cumque. Earum sit ratione exercitationem quaerat quae sequi
+      doloremque eius, odit tempore recusandae quibusdam ab, natus error
+      officiis dolorem id, eum necessitatibus totam temporibus. Dolore
+      voluptatum hic deleniti facilis eaque dicta illum accusamus.
+    </p>
+    <!-- Java Interview Question -->
+    <iframe
+      width="1280"
+      height="720"
+      src="https://www.youtube.com/embed/m22vUe0KaQ8"
+      title="Highlight | LLL vs GAM | CKTG 2023 - VÒNG KHỞI ĐỘNG | 13.10.2023"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <div>
+      <h3>Design by Java18 &#129392; - &copy; &reg; 2023</h3>
+    </div>
+  </body>
 </html>
