@@ -1,0 +1,21 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    padding: 20px 40px;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+.description {
+    font-weight: bold;
+}
+a {
+    font-weight: normal;
+}
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
