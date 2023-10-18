@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student web app _ MVC Spring</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<style >
+		hr{
+			position: relative;
+			margin-left: 1px
+
+      
+		}
+		.rounded-input {
+            border-radius: 10px; /* Đặt bán kính bo tròn ở đây (10px là ví dụ) */
+            border: 1px solid #ccc; /* Viền input */
+        }
+        .new{
+        	
+            margin-top: 20px
+        
+        
+        }
+        .list{
+        	display: flex;
+        	text-align: center;
+        }
+        .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+         .list table thead tr:nth-child(1) {
+              background: #ddd;
+     }
+	</style>
+</head>
+<body>
+	<h2>
+		Student web app _ MVC 
+	</h2>
+	<hr  width="259" 
+	 >
+
+	 <div >
+
+	 	 <input type="text" class="rounded-input" placeholder="&#128269; search">
+
+	 </div>
+	
+        
+	 <div class ="new">
+	 	  <table border="1px" cellpadding="6px">
+          	<tr>
+          		<td>
+          		<i class="fa-solid fa-plus"></i>
+          		<a href="student2.html"> add new</a>
+          		</td>
+          	</tr>
+          </table>
+	 </div>
+	 <div class="list">
+	 	<table  border="1px" cellpadding="6px">
+	 		<thead>
+	 			<tr>
+	 				<th><input type="checkbox"></th>
+	 				<th width="100">Name</th>
+	 				<th width="100">           Class            </th>
+	 				<th width = "50">  </th>
+	 			</tr>
+	 		</thead>
+	 		<tbody>
+	 			<tr>
+	 				<td><input type="checkbox"></td>
+	 				<td>John Smith</td>
+	 				<td>12T8</td>
+	 				<td class="icon-container"><a href="student2.html"><span class="icon"><i class="fa-solid fa-pen-to-square"></i></span></a><span class="icon"><i class="fa-solid fa-circle-xmark"></i> </span></td>
+	 			</tr>
+	 			<tr>
+	 				<td><input type="checkbox"></td>
+	 				<td>Mina Tan</td>
+	 				<td>10X3</td>
+	 				<td class="icon-container"><a href="student2.html"><span class="icon"><i class="fa-solid fa-pen-to-square"></i></span></a><span class="icon"><i class="fa-solid fa-circle-xmark"></i> </span></td>
+	 			</tr>
+	 			<tr>
+	 				<td><input type="checkbox"></td>
+	 				<td>Lee Ha</td>
+	 				<td>14T2</td>
+	 				<td class="icon-container"><a href="student2.html"><span class="icon"><i class="fa-solid fa-pen-to-square"></i></span></a><span class="icon"><i class="fa-solid fa-circle-xmark"></i> </span></td>
+	 			</tr>
+	 		</tbody>
+	 	</table>
+	 	
+	 </div>
+	
+</body>
+</html>
