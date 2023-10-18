@@ -1,0 +1,11 @@
+.img, .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img img {
+    height: 200px;
+}
+
