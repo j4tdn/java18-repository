@@ -1,0 +1,44 @@
+.text-green {
+  color: green;
+}
+
+.text-blue {
+  color: blue;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-overline {
+  text-decoration: overline;
+}
+
+.text-deco-none {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-md200 {
+  width: 200px;
+  height: 200px;
+}
+
+.bg-orange {
+  background: orange;
+}
