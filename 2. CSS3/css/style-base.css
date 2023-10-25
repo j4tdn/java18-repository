@@ -1,0 +1,30 @@
+
+* {
+	font-family: corbel, Helvetica, sans-serif;
+}
+
+li {
+	list-style-image: url('../images/world.png');
+}
+
+
+
+#page-footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: pink;
+}
+
+/*ex03 base content basic demo*/
+.parent-text10lh {
+	height: 60px;
+	background: blueviolet;
+}
+
+.parent-text10lh p {
+
+	line-height: 60px;
+	color: #fcb;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel = "icon" href="images/world.png">
+	<title>Ex01 - Basic Demo</title>
+
+	<!-- inline css - css for html tag -->
+	<!-- internal css - css for single html page -->
+
+	<!--
+		nth-child(i) 
+		first-child
+		last-child
+		nth-child(an + b)
+			+ a: cycle size
+			+ b: offset - index 1
+			+ n: counter
+	 -->
+	<style type="text/css">
+		
+		table tbody tr:nth-child(2n + 2){
+			background: #ddd;
+		}
+		html {
+			scroll-behavior: smooth;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	
+	<h2>Title: JAVA18 HTML DEMO</h2>
+
+	<!-- Anchor / Link tag -->
+
+	<a href="https://j4tdn.github.io/java15-repository/" target="_blank"> JAVA 15 Repository Demo</a>
+
+	<br>
+	<a href="#block-tex01">Text 01</a>
+
+	<br>
+	<a href="sub/ex01-sub-page.html" >Switch to ex01 sub page</a>
+	<br>
+	<a href="sub/child/ex01-child-page.html" >Switch to ex01 child page</a>
+
+
+	<!-- [Un] Order List Tag -->
+
+	<h3>Lemonade Ingredients </h3>
+	<ul>
+		<li>2 cups water</li>
+		<li><sup>1</sup>/<sub>2</sub> cup sugar</li>
+		<li>
+			3 lemons
+			<ul>
+				<li>1 small</li>
+				<li>1 medium</li>
+				<li>1 large</li>
+			</ul>
+		</li>
+		<li>Crushed ice</li>ulul
+
+
+	</ul>
+
+	<image src = "images/lemon.png" alt = "lemon">
+
+
+	<!--
+
+		Có 2 loại thẻ 
+			+ Thẻ đơn
+			+ Thẻ đôi 
+			+ Thẻ inline: nội dung, con trẻ sẽ tiếp tục sau khi kết thucs thẻ
+			+ Thẻ block: nội ding, con trỏ sẽ dxuoongs hàng khi kết thuc thẻ.
+						: Mặc định có length = 100% view width 
+
+	-->
+
+
+	<!-- Heading tag -->
+	<h1>This is text for H1 tag</h1>
+	<h2>This is text for H1 tag</h2>
+	<h3>This is text for H1 tag</h3>
+	<h4>This is text for H1 tag</h4>
+	<h5>This is text for H1 tag</h5>
+
+	<!-- Media tag -->
+
+	<video src="video/video.mp4" controls poster="images/cake.jpg" loop width="200" height="200"></video>
+
+	<audio src="audio/audio.mp3" controls></audio>
+
+
+
+	<!-- Paragrapt tag -->
+
+
+	<!-- Table Tag-->
+	<table border="1" cellspacing="0" cellpadding="5">
+		<thead>
+			<tr>
+				<th rowspan="2">Name</th> 
+				<th rowspan="2">Age</th> 
+				<th rowspan="2">Eye Color</th> 
+				<th colspan="2" >Phone</th> 
+			</tr>
+			<tr>
+				<th>Fax 1</th> 
+				<th>Fax 2</th> 
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Peter</td>
+				<td>18</td>
+				<td>Blue </td>
+				<td>123 </td>
+				<td>445 </td>
+			</tr>
+			<tr>
+				<td>Jack</td>
+				<td>18</td>
+				<td>Brown </td>
+				<td>123 </td>
+				<td>445 </td>
+			</tr>
+			
+			<tr>
+				<td>Oliver</td>
+				<td>20</td>
+				<td>Green </td>
+				<td>123 </td>
+				<td>445 </td>
+			</tr>
+			<tr>
+				<td>Oliver</td>
+				<td>20</td>
+				<td>Green </td>
+				<td>123 </td>
+				<td>445 </td>
+			</tr>
+			
+			<tr>
+				<td>Oliver</td>
+				<td>20</td>
+				<td>Green </td>
+				<td>123 </td>
+				<td>445 </td>
+			</tr>
+			
+			
+			
+		</tbody>
+	</table>
+
+	<br>
+
+
+
+	<p id = "block-tex01">Text 01: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae dolorem minus assumenda culpa possimus velit perferendis consectetur excepturi magnam odit, placeat nulla corrupti eum libero cupiditate deserunt perspiciatis nihil accusamus explicabo. Quae aliquid dolor voluptatum ipsum culpa quidem doloremque dolorum repellat nesciunt quibusdam reiciendis suscipit mollitia ad doloribus ratione veritatis veniam itaque, a eaque ut, magni necessitatibus corporis nulla quia placeat. Id corporis possimus mollitia eum?  <br>
+
+	Aliquam, vitae facere autem, culpa dolores delectus nemo! Rerum, ea explicabo consequuntur voluptatibus perferendis debitis, praesentium ipsum quis adipisci placeat quisquam doloremque tenetur tempora architecto veniam ratione sunt officia, repellat accusamus nemo. Velit.</p>
+
+	<!-- Inline css, css for owner tag	-->
+
+	<p>Text 02: Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Asperiores sit voluptate labore voluptatibus vel ratione iusto provident aspernatur repudiandae animi reprehenderit officia doloremque modi deleniti magni, porro dicta nihil deserunt atque quod sed aliquam harum doloribus quae! Repellat voluptatum, eius quae, magni tempore accusamus porro. <span style = "color:blue; font-weight: bold;"> Voluptatibus accusantium repellat sunt esse.</span> </p>
+
+	<!-- Image tags -->
+
+	<image src = "images/cake.jpg" width = "400" heigh = "400" alt = "lemon">
+	<br>
+	<image src = "images/cupcake.png" width = "400" heigh = "400 alt = "cupkace">
+
+	<p>Text 03: Lorem ipsum dolor sit amet consectetur adipisicing, elit. Est, mollitia impedit voluptas ipsa corporis corrupti, nesciunt cumque praesentium exercitationem explicabo, provident fugit, quod? Quasi, odio distinctio vitae, eos consequuntur animi error tempore, cumque culpa quibusdam nemo deleniti minima porro dicta veritatis fugiat perferendis incidunt saepe? Doloribus similique earum facere aspernatur saepe animi neque quis natus autem, eligendi eum perspiciatis cupiditate accusamus asperiores? Saepe hic ducimus quas excepturi sapiente nostrum voluptas numquam vel perspiciatis blanditiis, laborum, illum beatae maxime architecto quam.</p>
+
+	<p>Text 04: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni reprehenderit, rerum accusantium quae facilis neque reiciendis, deserunt at incidunt minima a dolores earum, rem labore, vel? Exercitationem laborum, velit alias dolorum ipsa debitis, ipsum quae, mollitia quaerat sequi, aperiam molestiae. Accusantium ut nobis maiores, recusandae labore qui, molestiae voluptatibus! Amet.</p>
+
+	<!-- iframe tag -->
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/zw0JHV7nrUg?si=QSnmEuZikdmS3yDK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+	<div>
+		
+		<h3>Designed by JAVA18 &#129392; - &copy; 2023</h3>
+
+	</div>
+
+	
+</body>
+</html>

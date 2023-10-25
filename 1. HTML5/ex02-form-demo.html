@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel = "icon" href="images/world.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex02 - Form Demo</title>
+</head>
+<body>
+	<h2>Ex02 - Form Demo</h2>
+
+	<hr>
+
+	<form>
+		<table cellpadding="8px">
+			<tr>
+				<td><label >First Name</label></td>
+				<td><input type="text"></td>	
+			</tr>
+			<tr>
+				<td><label >Last Name</label></td>
+				<td><input type="text"></td>	
+			</tr>
+			<tr>
+				<td>Gender: </td>
+				<td>
+					<label for="male">Male</label> <input type="radio" id="male" checked name="radio-group-gender"> 
+					&nbsp; 
+					<label for="female" >Female</label><input type ="radio" id="female" name="radio-group-gender">
+				</td>
+			</tr>
+			<tr>
+				<td><label for="age">Age</label></td>
+				<td><input type="number" min = "10" max = "40" value="18" step="1"></td>
+			</tr>
+
+			<tr>
+				<td><label for="university">University:</label></td>
+				<td>
+					<select name="" id="">
+						<option value="">-- Select --</option>
+						<option value="">-- TA --</option>
+						<option value="">-- TB --</option>
+						<option value="">-- TC --</option>
+					</select>
+				</td>
+			</tr>
+				<td><label for="university">Language:</label></td>
+				<td>
+					<label for="java">JAVA</label> <input type="checkbox" id="java">
+					<label for="php">PHP</label> <input type="checkbox" id="php">
+					<label for="nodejs">NodeJs</label> <input type="checkbox" id="nodejs">
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<label for="dob">Date of Birth</label>
+				</td>
+				<td><input type="Date" value="2023-10-14"></td>
+			</tr>
+			<tr>
+				<td>
+					<label for="email">Email</label>
+				</td>
+				<td><input type="email"></td>
+			</tr>
+			<tr>
+				<td>
+					<label for="Email">Password</label>
+				</td>
+				<td><input type="Password"></td>
+			</tr>
+			<tr>
+				<td colspan="4px">
+					<!-- <input type="Submit" value = "Sign up"> -> Refresh page -->
+					<!-- <input type="Button" value = "Sign up"> not refrest page -->
+					<button>Sign up</button> <!-- button : refresh page -->
+					<input type="reset" value = "Clear">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	
+</body>
+</html>
