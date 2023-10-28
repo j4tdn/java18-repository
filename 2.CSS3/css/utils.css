@@ -1,3 +1,6 @@
+/*
+=== TEXT COLOR ===
+*/
 .text-green {
   color: green;
 }
@@ -14,6 +17,9 @@
   font-weight: 700;
 }
 
+/*
+=== TEXT DECORATION ===
+*/
 .text-underline {
   text-decoration: underline;
 }
@@ -30,15 +36,42 @@
   text-decoration: none;
 }
 
+.text-deco-underline {
+  text-decoration: underline;
+}
+
+/*
+=== TEXT ALIGNMENT ===
+*/
 .text-center {
   text-align: center;
 }
 
+/*
+=== BLOCK ===
+*/
 .block-md200 {
   width: 200px;
   height: 200px;
 }
 
+.block-w2h1 {
+  width: 200px;
+  height: 100px;
+}
+
+/*
+=== BACKGROUND COLOR ===
+*/
+.bg-green {
+  background: green;
+}
+
 .bg-orange {
   background: orange;
+}
+
+/* float clear */
+.clear-fix {
+  clear: both;
 }
