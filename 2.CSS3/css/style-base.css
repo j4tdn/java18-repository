@@ -1,7 +1,6 @@
-/* ================ reset css ==================*/
-
+/* Bất kỳ thẻ nào cũng ăn css này => dùng * */
 * {
-  font-family: corbel, Helvetica, sans-serif;
+  font-family: corbel, helvetica, sans-serif;
   box-sizing: border-box;
 }
 
@@ -14,12 +13,11 @@ a {
   text-decoration: none;
 }
 
-/*/////////////////////////////////////////////////////*/
-/*ex02 css selector class id*/
+/* ex02 CSS Selector class id */
 #page-footer {
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
   background: pink;
 }
@@ -35,11 +33,23 @@ a {
   color: #fcb;
 }
 
-/*ex05 border padding marging*/
+.demo-background-prop {
+  border: 1px solid #f00;
+  background-color: orange;
+  background-image: url(../images/cupcake.png); /*313:365*/
+  background-size: 100px 100px;
+  /* background-size: cover; block with image must have a rating 1:1 1:2 2:1*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: fixed; /*fix div*/
+}
 
+/*ex05 border padding margin*/
 #page-header {
   height: 66px;
   background: #2b2b2b;
+  position: fixed; /*bị mất width 100% => cần set lại; tách biệt sang layer khác*/
+  width: 100%;
 }
 
 .wrapper {
@@ -73,6 +83,10 @@ a {
   color: red;
 }
 
+#page-main {
+  padding-top: 66px;
+}
+
 .props-section {
   height: 100px;
   margin-bottom: 30px;
@@ -103,4 +117,42 @@ a {
 
 .content {
   line-height: 20px;
+}
+
+/* ex06: css position */
+
+.demo-position-relative {
+  position: relative;
+}
+
+.pos-rel-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.pos-rel-2 {
+  /*position: relative;
+	left: 70px;
+	bottom: 80px;*/
+
+  /*absolute with its parent (pos: relative), if parent is not relative --> absolute with html tag*/
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  z-index: 2;
+}
+
+.search-box {
+  margin-top: 14px;
+}
+
+.search-box label {
+  position: relative;
+  left: 26px;
+  top: 2px;
+}
+
+.search-box input[type="text"] {
+  height: 38px;
+  padding-left: 23px;
 }

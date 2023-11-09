@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ex09: CSS Advanced Selectors</title>
+
+    <style>
+      .title::before {
+        content: "\2764";
+        /* 
+			content: '';
+			↓
+			virtual (ảo) tag with display inline --> do not depend on width and height
+			↓
+			display: inline-block; or block
+
+			Bonus:
+			margin: 4px 6px 4px 0px;
+			 */
+        width: 12px;
+        height: 12px;
+        background: red;
+        margin: 4px 6px 4px 0px;
+      }
+
+      .title::after {
+        content: "";
+        display: block;
+        width: 200px;
+        height: 2px;
+        background: linear-gradient(
+          100deg,
+          #ff00ee 0%,
+          #2233ff 50%,
+          #fffe10 75%,
+          #ff00ee 100%
+        );
+        margin: 30px 0;
+      }
+
+      /*
+		ul > li > a
+		--> tìm lần lượt li trong ul, a trong li
+		≠
+		ul a 
+		--> tìm thẻ a bất kỳ có trong ul 
+		*/
+
+      ul > li > a {
+        text-decoration: none;
+      }
+
+      ol > * {
+        margin: 10px 0;
+      }
+
+      /* 
+		h1 + p (hàng ngang)
+		↓
+		Nếu sau h1 có thẻ p xuất hiện lần đầu (first level) => ăn CSS 
+		≠
+		h1 ~ p 
+		↓
+		Nếu sau h1 có thẻ p xuất hiện ở bất cứ đâu (first, last...) => đều ăn CSS như nhau
+		*/
+      h1 ~ p {
+        color: red;
+      }
+
+      /*Require:
+		Khi ở trạng thái "checked" trong checkbox
+		=> tìm label gần nhất 
+		=> khi check, thì text hiển thị màu đỏ 
+		*/
+      .cbx-group input[type="checkbox"]:checked + label {
+        color: red;
+      }
+
+      /*
+		.child-type p:first-child
+		↓
+		Tìm thằng con đầu tiên
+		Nếu thẻ con đầu tiên của 'child-type' là thẻ p thì sẽ ăn CSS
+
+		.child-type p:first-child
+		↓
+		Tìm thằng con cuối cùng
+
+		.child-type p:first-of-type
+		↓
+		Tìm thẻ p xuất hiện đầu tiên trong child-type (index đầu tiên, ko liên quan gì đến cha/con)
+		*/
+      .child-type p:first-child {
+        color: green;
+      }
+
+      .child-type p:first-of-type {
+        background: green;
+      }
+
+      .child-type p:last-child {
+        color: blue;
+      }
+
+      .child-type p:last-of-type {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Coffee &amp; Cake</h1>
+    <p>We have been banking and brewing</p>
+    <h2>Our menu:</h2>
+    <ul>
+      <li><a href="link1">Chocolate cupcake</a></li>
+      <li><a href="link2">Vanilla cupcake</a></li>
+    </ul>
+    <ol>
+      <li><a href="">Americano</a></li>
+      <li><a href="">Espresso</a></li>
+    </ol>
+    <div>
+      <p>Read what customer say <a href="">about us</a></p>
+    </div>
+    <p>We hope to see you soon</p>
+
+    <hr />
+    <form>
+      <p><input type="text" class="inp-1" placeholder="fullname" /></p>
+      <p class="cbx-group">
+        <input type="checkbox" id="fb" />
+        <label for="fb">football</label><br />
+
+        <input type="checkbox" id="vlb" />
+        <label for="vlb">volleyball</label>
+      </p>
+      <p><input type="email" class="inp-3" placeholder="email" required /></p>
+      <p><input type="submit" class="inp-4" /></p>
+    </form>
+
+    <hr />
+
+    <div class="child-type">
+      <h2>Title - Start</h2>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <p>Paragraph 3</p>
+      <p>Paragraph 4</p>
+      <p>Paragraph 5</p>
+      <p>Paragraph 6</p>
+      <h2>Bottom - End</h2>
+    </div>
+  </body>
+</html>

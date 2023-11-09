@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ex07: CSS Display Demo</title>
+    <link rel="stylesheet" href="./css/style-base.css" />
+    <link rel="stylesheet" href="./css/utils.css" />
+
+    <style>
+      /* 
+		div: default = display: block 
+		
+		inline: 
+		+ không xuống hàng khi kết thúc thẻ
+		+ chiếm width = nội dung thực sự chứa
+		+ không ăn thuộc tính width, height
+
+		inline-block:
+		+ nằm trên một hàng (không xuống hàng khi kết thúc thẻ)
+		+ vẫn ăn thuộc tính width, height như bình thường
+
+		block:
+		+ chính nó tự xuống hàng
+
+		none:
+		+ mất chính nó, mất không gian đã chứa nó
+
+		hidden:
+		+ chính nó bị ẩn đi 
+		+ nhưng vẫn chiếm không gian đã chứa nó
+		*/
+
+      div {
+        display: inline-block;
+      }
+
+      div:nth-child(1) {
+      }
+
+      div:nth-child(2) {
+        /*display: none;*/
+        visibility: hidden;
+      }
+
+      div:nth-child(3) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block-md200 bg-orange">Text A1</div>
+
+    <div class="block-md200 bg-green">Text A1 B1</div>
+
+    <div class="block-md200 bg-blue">Text A1 B2 C3</div>
+  </body>
+</html>
