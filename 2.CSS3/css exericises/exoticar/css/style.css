@@ -1,0 +1,84 @@
+/* =====Utils===== */
+.wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.text-white,
+.text-white a {
+  color: #fff;
+}
+
+.uppercase,
+.uppercase > * {
+  text-transform: uppercase;
+}
+
+/* =============== */
+#page-header {
+  background: #000;
+  height: 66px;
+}
+
+#page-header .page-logo {
+  float: left;
+  line-height: 66px;
+}
+
+#page-header .navigation {
+  float: right;
+}
+
+#page-header .navigation li {
+  float: left;
+  margin-left: 60px;
+  line-height: 66px;
+}
+
+#page-header .navigation li:hover {
+  transform: scale(1.2);
+  transition: all 0.3s linear;
+  color: #b1343a;
+}
+
+
+.banner {
+	background-image: url(../images/banner.png);
+	background-size: cover;
+	height: 860px;
+}
+
+
+#page-main .banner .content{
+	text-align: center;
+	padding-top: 100px;
+}
+
+
+#page-main .banner .content .tittle{
+	font-size: 4rem;
+}
+
+#page-main .banner .content .slogan{
+	opacity: 0.8;
+	font-size: 2rem;
+	margin: 40px 0 60px 0;
+}
+
+#page-main .banner .content .learn-more{
+	font-size: 1.5rem;
+	padding: 8px 12px;
+	background: #C10000;
+	border-radius: 10px;
+	border:1px solid #111;
+}
+
+#page-main .banner .content .learn-more .hover {
+	opacity: 0.8;
+}
+
+#page-main .ariticles .article {
+	float: left;
+	width: 50%;
+}

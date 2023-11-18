@@ -1,0 +1,121 @@
+/*
+Method 1:
+p[class='text20'] {
+	color: blue;
+}
+
+Method2:
+p.text20 {
+	color: blue;
+}
+
+Kết quả giống nhau
+Tuy nhiên, người ta thường dùng như sau:
+.text-green {
+	color: green;
+}
+*/
+
+/* 
+=== TEXT COLOR ===
+*/
+.text-green {
+	color: green;
+}
+
+.text-blue {
+	color: blue;
+}
+
+.text-orange {
+	color: orange;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+/* 
+=== TEXT DECORATION ===
+*/
+.text-line-through {
+	text-decoration: line-through;
+}
+
+.text-overline {
+	text-decoration: overline;
+}
+
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-deco-none {
+	text-decoration: none;
+}
+
+.text-deco-underline {
+	text-decoration: underline;
+}
+
+/* 
+=== TEXT ALIGNMENT ===
+*/
+.text-center {
+	text-align: center;
+}
+
+/* 
+=== BLOCK ===
+*/
+.block-md200 {
+	width: 200px;
+	height: 200px;
+}
+
+.block-w3h2 {
+	width: 626px;
+	height: 730px;
+	/*chỉnh tỷ lệ cho fix với background-image*/
+}
+
+.block-w2h1 {
+	width: 200px;
+	height: 100px;
+}
+
+/* 
+=== BACKGROUND COLOR ===
+*/
+.bg-orange {
+	background: orange;
+}
+
+.bg-green {
+	background: green;
+}
+
+.bg-blue {
+	background: blue;
+}
+
+/* float clear */
+
+.fl-left {
+	float: left;
+}
+
+.fl-right {
+	float: right;
+	
+}
+.clear-fix {
+	clear: both;
+}
+
+/*
+=== BORDER STYLE ===
+*/
+.border-1-blue {
+	border: 1px solid blue;
+}
