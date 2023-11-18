@@ -1,0 +1,163 @@
+/* =================HEADER============ */
+#page-header .wrapper {
+	width: 95%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: #F7C61D;
+	height: 50px;
+
+}
+
+#page-header {
+	
+	padding-top: 20px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#page-header .page-navigation {
+	display: flex;
+}
+
+#page-header .page-navigation li {
+	margin-right: 30px;
+}
+
+/* =================Main============ */
+#page-main {
+	display: flex;
+	justify-content: center;
+}
+
+#page-main .wrapper {
+	width: 90%;
+}
+
+#page-main .title {
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+#page-main .articles {
+	display: flex;
+}
+
+#page-main .articles .article-1 {
+	width: 65%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#page-main .articles .article-1 .content  {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+#page-main .articles .article-1 .content .image {
+	height: 150px;
+}
+
+#page-main .articles .article-1 .content .detail {
+	padding-left: 15px;
+}
+
+#page-main .articles .article-1 .content .title-content {
+	font-size: 25px;
+}
+
+#page-main .articles .article-1 .content .datetime {
+	margin: 15px 0;
+}
+
+#page-main .articles .article-1 .content .view {
+	display: flex;
+	margin-top: 15px;
+}
+
+#page-main .articles .article-1 .content .view .icon {
+	margin-right: 5px;
+}
+
+#page-main .articles .article-1 .content .view .icon-2 {
+	margin-right: 5px;
+	margin-left: 15px;
+}
+
+#page-main .articles .article-1 .content .view .comment {
+	color: #F7C61D;
+}
+
+#page-main .articles .article-1 .more-article {
+	height: 50px;
+	width: 146px;
+	font-size: 0.8rem;
+	padding: 18px 22px;
+	border: 1px solid #F7C61D;
+	border-radius: 10px;
+}
+
+#page-main .articles .article-2 {
+	width: 35%;
+	padding-left: 40px;
+}
+
+#page-main .articles .article-2 .content {
+	display: flex;
+	flex-direction: column;
+}
+
+#page-main .articles .article-2 .calendar {
+	width: 200px;
+	height: 200px;
+	margin: 30px 0;
+}
+
+#page-main .articles .article-2 .search {
+	width: 200px;
+}
+
+#page-main .articles .article-2 .title-new {
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+#page-main .articles .article-2 .detail{
+	margin-bottom: 15px;
+}
+
+#page-main .articles .article-2 .detail .date {
+	font-size: 12px;
+}
+
+/*=============== Footer =============*/
+
+#page-footer {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#page-footer .wrapper {
+	width: 95%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: #F7C61D;
+	height: 50px;
+}
+
+#page-footer .wrapper .navigation {
+	display: flex;
+}
+
+#page-footer .wrapper .navigation li {
+	margin-right: 15px;
+	font-weight: bold;
+}
