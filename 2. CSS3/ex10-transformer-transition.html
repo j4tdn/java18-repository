@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex10 - Transformer Transition</title>
+
+	<style>
+		.image {
+			border: 2px solid blue;
+			display: inline-block;
+		}
+
+		/*
+		.image img {
+			display: block;
+			margin: 0 auto;
+
+			transform: rotate(90deg) 
+					   scale(1)
+					   translateX(200px);
+		}
+		*/
+
+		.wh200px{
+			width: 200px;
+			height: 200px;
+			background: green;
+
+			transition: all 5s linear;
+		}
+
+		.wh200px:hover {
+			transform: translateX(10px);
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<h2>Transformer Demo</h2>
+
+	<hr>
+
+	<div class="image">
+		<img src="images/cupcake.png" alt="cup-cake">
+		<div class="wh200px">
+			
+		</div>
+	</div>
+</body>
+</html>

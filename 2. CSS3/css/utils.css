@@ -1,0 +1,102 @@
+/*
+=== TEXT COLOR ===
+*/
+
+.text-green {
+	color: green;
+}
+
+.text-blue {
+	color: blue;
+}
+
+.text-orange {
+	color: orange;
+}
+
+/*
+=== TEXT DECORATION ===
+*/
+
+.text-bold{
+	font-weight: bold;
+}
+
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-line-through {
+	text-decoration: line-through;
+}
+
+.text-overline {
+	text-decoration: overline;
+}
+
+.text-deco-none {
+	text-decoration: none;
+}
+
+/*
+=== TEXT ALIGNMENT ===
+*/
+
+.text-center {
+	text-align: center;
+}
+
+/*
+=== BLOCK ===
+*/
+.block-md200 {
+	width: 200px;
+	height: 200px;
+}
+
+
+.block-w2h1 {
+	width: 200px;
+	height: 100px;
+}
+
+.block-w3h2 {
+	width: 300px;
+	height: 200px;
+}
+
+
+/*
+=== BACKGROUND COLOR ===
+*/
+.bg-green{
+	background: green;
+}
+
+.bg-orange{
+	background: orange;
+}
+
+.bg-blue{
+	background: blue;
+}
+
+.fl-left {
+	float: left;
+}
+
+.fl-right {
+	float: right;
+}
+
+/* float clear */
+.clear-fix {
+	clear: both;
+}
+
+/*
+=== BORDER STYLE ===
+*/
+.border-1-blue {
+	border: 1px solid blue;
+}

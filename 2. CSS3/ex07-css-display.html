@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style-base.css">
+	<link rel="stylesheet" href="./css/utils.css">
+	<title>Ex07: Css Display Demo</title>
+
+	<style>
+
+	/*		
+		inline:
+		+ko xuống hàng khi kết thúc thẻ
+		+ chiếm width = nội dung thật sự chứa
+		+ ko ăn height width
+	*/
+		div {
+			display: inline-block;
+		}
+
+		div:nth-child(1){
+
+		}
+
+		div:nth-child(2){
+			visibility: hidden;
+		}
+
+		div:nth-child(3){
+			
+		}
+
+	</style>
+</head>
+<body>
+	<div class="block-md200 bg-orange">
+		Text A1
+	</div>
+
+	<div class="block-md200 bg-green">
+		Text A1 B1
+	</div>
+
+	<div class="block-md200 bg-blue">
+		Text A1 B2 C3
+	</div>
+</body>
+</html>
