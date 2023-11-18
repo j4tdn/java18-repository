@@ -1,0 +1,123 @@
+#page-header {
+        height: 50px;
+        background:yellow;
+        display: flex;
+        justify-content: center;
+     
+}
+#page-header .wrapper {
+    height: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#page-header .wrapper .page-navigation{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#page-header .wrapper .page-logo{
+    display: flex;
+    align-items: center;
+}
+#page-main{
+    width: 100%;
+    display: flex;
+   
+    justify-content: center;
+}
+#page-main .content-main{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+#page-main .articles{
+   display: flex;
+   width: 70%;
+   flex-direction: column;
+}
+#page-main .articles .recent-article p{
+    float: left;
+    font-weight: 800;
+    margin-top: 20px;
+}
+#page-main .articles .more-article{
+    margin-left: 40%;
+    border-width: 2px;
+    border-color: yellow;
+    border-style: solid;   
+    border-radius: 5px; 
+    height: 30px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page-main .articles .article{
+    margin: 10px 0 30px 0;
+}
+#page-main .articles .article .image-article{
+    margin-right: 10px;
+    width: 30%;
+    height: 200px;
+    float: left;
+    background: url("../images/article-1.jpg");
+    background-color: red;
+    background-size: cover ;
+}
+#page-main .articles .article h2{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+#page-main .articles .article h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#page-main .articles .article .author-article{
+    margin-bottom: 10px;
+}
+#page-main .articles .article p{
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+#page-main .articles .article .review{
+    display: flex;
+    flex-direction: row;
+}
+#page-main .articles .article .review .icon {
+	margin-right: 5px;
+}
+
+#page-main .articles .article .review .icon-2 {
+	margin-right: 5px;
+	margin-left: 15px;
+}
+#page-main .articles-2{
+    display: flex;
+   width: 30%;
+   flex-direction: column;
+   align-items: center;
+}
+#page-main .articles-2 .search{
+    margin-top: 40px;
+    width: 80%;
+    height: 25px;
+    border-width: 2px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#page-main .articles-2 .search .icon{
+    margin: 0 5px;
+}
+#page-main .articles-2 .search .keyword p{
+    color:darkgrey;
+    font-weight: 300;
+}
