@@ -82,49 +82,24 @@
   padding-left: 20px;
 }
 
-#page-main
-  .wrapper
-  .left-content
-  .articles
-  .article
-  .article-content
-  .article_title {
+#page-main .wrapper .left-content .articles .article .article-content .article_title {
   font-size: 1.8rem;
   font-weight: 200;
   padding-bottom: 18px;
 }
 
-#page-main
-  .wrapper
-  .left-content
-  .articles
-  .article
-  .article-content
-  .sub-desc {
+#page-main .wrapper .left-content .articles .article .article-content .sub-desc {
   font-size: 0.9rem;
   font-weight: 200;
   padding-bottom: 18px;
   color: #b9b9b9;
 }
 
-#page-main
-  .wrapper
-  .left-content
-  .articles
-  .article
-  .article-content
-  .sub-desc
-  span {
+#page-main .wrapper .left-content .articles .article .article-content .sub-desc span {
   color: #f6c61c;
 }
 
-#page-main
-  .wrapper
-  .left-content
-  .articles
-  .article
-  .article-content
-  .article-desc {
+#page-main .wrapper .left-content .articles .article .article-content .article-desc {
   font-size: 1rem;
   font-weight: 100;
   line-height: 1.4rem;
@@ -142,28 +117,14 @@
   align-items: center;
 }
 
-#page-main
-  .wrapper
-  .left-content
-  .articles
-  .article
-  .article-content
-  .article-contact
-  .article-view {
+#page-main .wrapper .left-content .articles .article .article-content .article-contact .article-view {
   color: #b9b9b9;
   padding-right: 20px;
   border-right: 1px solid #b9b9b9;
   cursor: pointer;
 }
 
-#page-main
-  .wrapper
-  .left-content
-  .articles
-  .article
-  .article-content
-  .article-contact
-  .article-comment {
+#page-main .wrapper .left-content .articles .article .article-content .article-contact .article-comment {
   color: #f6c61c;
   padding-left: 20px;
   border-left: 1px solid #b9b9b9;
@@ -241,25 +202,14 @@
 #page-main .wrapper .right-content .popular-news .popular-list .popular-item {
   margin-bottom: 38px;
 }
-#page-main
-  .wrapper
-  .right-content
-  .popular-news
-  .popular-list
-  .popular-item
-  .popular-item-time {
+#page-main .wrapper .right-content .popular-news .popular-list .popular-item .popular-item-time {
   font-size: 0.8rem;
   color: #a8a1a1;
   font-weight: 500;
   margin-bottom: 6px;
 }
 
-#page-main
-  .wrapper
-  .right-content
-  .popular-news
-  .popular-list
-  .popular-item
+#page-main .wrapper .right-content .popular-news .popular-list .popular-item
   h2 {
   font-size: 1rem;
   font-weight: 500;
