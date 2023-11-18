@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style> 
+         header{
+         	background-color: yellow;
+         	display: flex;
+         	justify-content: space-around;   
+            align-items: center; 
+            padding: 10px;
+         	      }
+          .option{
+          	display: flex;
+          	column-gap: 40px;
+          }
+          a{
+          	text-decoration: none;
+          	color: black;
+          }
+          a:hover {
+          	  background-color: grey;
+          }
+          x {
+             color : #d2d228
+          }
+          .tag{
+          	display: flex;
+          	column-gap: 10px;
+          }
+    
+    ul {
+  list-style-type: none;
+}
+body {
+  font-family: Verdana,sans-serif;
+}
+ 
+.calendar{
+	width: 100%
+}
+.month {
+    
+    background: yellow;
+}
+ 
+.month ul {
+	width: 100%;
+    margin: 0;
+    padding: 0;
+}
+ 
+.month ul li {
+    color: black;
+    
+    text-transform: uppercase;
+    
+}
+ 
+.month .prev {
+    float: left;
+
+}
+ 
+.month .next {
+    float: right;
+  
+}
+ 
+.weekdays {
+    margin: auto;
+   
+    background-color: #ddd;
+}
+ 
+.weekdays li {
+    display: inline-block;
+    width: 13%;
+    color: #666;
+    text-align: center;
+}
+ 
+.days {
+    margin: auto;
+   
+    background: #eee;
+    margin: 0;
+}
+ 
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+    margin-bottom: 5px;
+   
+    color: #777;
+}
+ 
+.days li .active {
+                   
+    background: yellow;
+    color: black !important
+}
+ 
+
+    main{
+    	display: flex;
+    	column-gap: 10px;
+    	margin-right: 70px;
+    	margin-left: 70px;
+    }
+    .contaner.left{
+    	flex-grow: 3
+    }
+     .contaner .right{
+     	flex-grow: 1
+     }
+     
+     .ip{
+     	margin-top: 60px;
+     	
+     }
+     input{
+     	width: 100%;
+     	padding: 5px;
+     }
+     .calendar{
+     	margin-top: 40px;
+     }
+     #blur{
+     	opacity: 0.6;
+     	font-size: 12px;
+     }
+
+     .bt{
+     	margin-top: 60px;
+     	position: relative;
+     }
+     button{
+     	position: absolute;
+        left: 50%;
+     	padding:10px;
+     	background-color: white;
+     	color: black;
+     	border-color: yellow;
+     }
+     footer{
+     	margin-top: 80px;
+     	display: flex;
+     	padding:10px;
+     	justify-content: space-around;
+     	background-color: yellow;
+     	align-items: center;
+     }
+     footer .right{
+     	font-size: 30px;
+     	color: white;
+     }
+
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+	<header>
+				<div class="option left">
+           <a href="#">CULTURE</a>
+           <a href="#">EVENTS</a>
+           <a href="#">FOOD</a>
+		</div>
+		<div class="option middle">
+			<img src="images/logo.png">
+		</div>
+		<div class="option right">
+			<a href="#">TRAVELLING</a>
+			<a href="#">FASHION</a>
+			<a href="#">OTHER</a>
+		</div>
+
+	</header>
+	<main>
+		<div class="contaner left">
+			<h2>Recent Ariticles</h2>
+			<div class="tag">
+				<div class="imgs"> <img src="images/article-1.jpg"></div>
+				<div class="content">
+					<h3>5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+					<p id="blur">June 8, 2033 | by Thomas Smith |<x> Culture </x></p>
+					<p>The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz …</p>
+                    <p><i class="fa-solid fa-eye"></i> 266 | <i class="fa-regular fa-comment"></i> 3</p>
+
+
+				</div>
+			</div>
+			<div class="tag">
+				<div class="imgs"> <img src="images/article-2.jpg"></div>
+				<div class="content">
+					<h3>5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+					<p id="blur">June 8, 2033 | by Thomas Smith |<x> Culture </x></p>
+					<p>The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz …</p>
+                    <p><i class="fa-solid fa-eye"></i> 266 | <i class="fa-regular fa-comment"></i> 3</p>
+
+
+				</div>
+			</div>
+			<div class="tag">
+				<div class="imgs"> <img src="images/article-3.jpg"></div>
+				<div class="content">
+					<h3>5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+					<p id="blur">June 8, 2033 | by Thomas Smith |<x> Culture </x></p>
+					<p>The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz …</p>
+                    <p><i class="fa-solid fa-eye"></i> 266 | <i class="fa-regular fa-comment"></i> 3</p>
+
+
+				</div>
+			</div>
+			<div class="tag">
+				<div class="imgs"> <img src="images/article-4.jpg"></div>
+				<div class="content">
+					<h3>5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+					<p id="blur">June 8, 2033 | by Thomas Smith |<x> Culture </x></p>
+					<p>The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz …</p>
+                    <p><i class="fa-solid fa-eye"></i> 266 | <i class="fa-regular fa-comment"></i> 3</p>
+
+
+				</div>
+			</div>
+			<div class="tag">
+				<div class="imgs"> <img src="images/article-5.jpg"></div>
+				<div class="content">
+					<h3>5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+					<p id="blur">June 8, 2033 | by Thomas Smith |<x> Culture </x></p>
+					<p>The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz …</p>
+                    <p><i class="fa-solid fa-eye"></i> 266 | <i class="fa-regular fa-comment"></i> 3</p>
+
+
+				</div>
+			</div>
+			<div class="bt">
+				<button type="button" >MORE ARTICLES</button>
+			</div>
+
+		</div>
+		<div class="contaner right">
+			<div class="ip"><input type="input" placeholder="Keyword"></div>
+            <div class="calendar">
+                 
+  <div class="month">      
+    <ul>
+      <li class="prev">&#10094;</li>
+      <li class="next">&#10095;</li>
+      <li style="text-align:center">
+          JUNE 2033
+      </li>
+    </ul>
+  </div>
+ 
+  <ul class="weekdays">
+    <li>M</li>
+    <li>T</li>
+    <li>W</li>
+    <li>T</li>
+    <li>F</li>
+    <li>S</li>
+  </ul>
+ 
+  <ul class="days">  
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li><span class="active">28</span></li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li>
+  </ul>
+</div>
+<div>
+			<h2>Popular News</h2>
+
+        <div>
+        	<p id="blur">June 5, 2033</p>
+        	<p id="Title">Scene: The Guide</p>
+        </div>
+      <div>
+        	<p id="blur">June 5, 2033</p>
+        	<p id="Title">Scene: The Guide</p>
+        </div>
+       <div>
+        	<p id="blur">June 5, 2033</p>       	
+        	<p id="Title">Scene: The Guide</p>
+        </div>
+       <div>
+        	<p id="blur">June 5, 2033</p>     
+        	<p id="Title">Scene: The Guide</p>
+        </div>
+        <div>
+        	<p id="blur">June 5, 2033</p>       	
+        	<p id="Title">Scene: The Guide</p>
+        </div>
+</div>
+
+	      	</div>
+	     
+	</main>
+</body>
+<footer>
+	<div class="left">
+		<p>© 2033 Gotham. All rights reserved</p>
+	</div>
+	<div class="middle">
+		<a href="#">About Blog</a>
+		<a href="#">Need Help?</a>
+		<a href="#">Content Guide</a>
+	</div>
+	<div class="right">
+		<i class="fa-brands fa-facebook"></i>
+		<i class="fa-brands fa-twitter"></i>
+		<i class="fa-brands fa-google-plus-g"></i>
+
+	</div>
+</footer>
+</html>
