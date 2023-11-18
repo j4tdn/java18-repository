@@ -1,0 +1,54 @@
+/* === UTILS === */
+.wrapper {
+  width: 88%;
+  height: 100%;
+  margin: 0 auto;
+}
+.text-white,
+.text-white * {
+  color: white;
+}
+.upper-case {
+  text-transform: uppercase;
+}
+/* === PAGE HEADER === */
+#page-header {
+  height: 66px;
+  background: black;
+}
+#page-header .page-logo {
+  float: left;
+  line-height: 66px;
+}
+#page-header .page-navigation {
+  float: right;
+}
+#page-header .page-navigation li {
+  float: left;
+  margin-left: 32px;
+  line-height: 66px;
+}
+#page-header .page-navigation a:hover {
+  color: #b1343a;
+}
+/* ===PAGE MAIN=== */
+#page-main .banner {
+  height: 600px;
+  background-image: url(../images/banner.png);
+  background-size: cover;
+}
+#page-main .banner .content > * {
+  margin: 40px 0;
+}
+#page-main .banner .content .title {
+  font-size: 4rem;
+}
+#page-main .banner .content .slogan {
+  font-size: 2rem;
+}
+#page-main .banner .content .learn-more {
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  background: #c10000;
+}
+/* ===PAGE FOOTER=== */

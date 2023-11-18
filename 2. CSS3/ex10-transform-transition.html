@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex10-Transformer Transition</title>
+  </head>
+  <style>
+    .image {
+      border: 1px solid blue;
+    }
+    .image img {
+      /* Giong nhu guong rotateY(180deg) */
+      /* transform: rotate(45deg) scale(0.5) translate(80px, 200px); */
+    }
+    .wh200px {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      transition: all 2s ease-in-out;
+    }
+    .wh200px:hover {
+      transform: translateX(200px) scale(1.5);
+      border-radius: 50%;
+      background-color: red;
+    }
+  </style>
+  <body>
+    <h2>Transformer Demo</h2>
+    <hr />
+    <div class="image">
+      <img src="images/cupcake.png" alt="cup-cake" />
+      <div class="wh200px"></div>
+    </div>
+  </body>
+</html>

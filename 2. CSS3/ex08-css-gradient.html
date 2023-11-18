@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex08 - CSS Gradient</title>
+    <link rel="stylesheet" href="css/style-base.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <style>
+      body {
+        background: #c7c414;
+      }
+      hr {
+        margin: 50px 0;
+      }
+      .gradient-selector-01 {
+        background-image: linear-gradient(225deg, yellow, blue, orange);
+        display: inline-block;
+      }
+      .gradient-selector-02 {
+        background-image: radial-gradient(circle, red, orange, green);
+        display: inline-block;
+        margin-left: 2rem;
+
+        /* Demo css border radius */
+        border-radius: 20px;
+      }
+      .gradient-selector-03 {
+        background-image: linear-gradient(
+          135deg,
+          #28c95e 0%,
+          #28c95e 50%,
+          #bc1eba 50%,
+          #bc1eba 100%
+        );
+        display: inline-block;
+        margin-left: 2rem;
+      }
+      .box-shadow-selector {
+        width: 400px;
+        height: 200px;
+        margin: 0 auto;
+        background-image: linear-gradient(
+          135deg,
+          #ff00ee 0%,
+          #ccaa17 50%,
+          #2233ff 50%,
+          #dd1920 100%
+        );
+        /* box-shadow */
+        /* box-shadow: 20px 50px 20px 50px #2233ff; */
+        box-shadow: inset 0 0 16px 8px #2233ff;
+        /* background: rgba thì các thẻ bên trong sẽ không bị mờ còn opacity bi */
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      CSS Gradient Generator:
+        https://cssgradient.io/
+        https://www.colorzilla.com/gradient-editor/
+     -->
+    <h2 class="text-green">Page for demo CSS Gradient</h2>
+    <hr />
+    <div class="gradient-selector-01 block-md200 border-1-blue"></div>
+    <div class="gradient-selector-02 block-md200 border-1-blue"></div>
+    <div class="gradient-selector-03 block-md200 border-1-blue"></div>
+    <hr />
+    <div class="box-shadow-selector border-1-blue"></div>
+  </body>
+</html>

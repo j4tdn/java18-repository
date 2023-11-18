@@ -1,0 +1,83 @@
+/*
+=== TEXT COLOR ===
+*/
+.text-green {
+  color: green;
+}
+.text-blue {
+  color: blue;
+}
+.text-orange {
+  color: orange;
+}
+.text-bold {
+  font-weight: bold;
+}
+/*
+=== TEXT DECORATION ===
+*/
+.text-decor-underline {
+  text-decoration: underline;
+}
+.text-decor-line-through {
+  text-decoration: line-through;
+}
+.text-decor-overline {
+  text-decoration: overline;
+}
+.text-decor-none {
+  text-decoration: none;
+}
+/*
+=== TEXT ALIGN ===
+*/
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+/*
+=== BLOCK ===
+*/
+.block-md200 {
+  width: 200px;
+  height: 200px;
+}
+.block-w3h2 {
+  width: 300px;
+  height: 200px;
+}
+.block-w2h1 {
+  width: 200px;
+  height: 100px;
+}
+/*
+=== BACKGROUND COLOR ===
+*/
+.bg-orange {
+  background-color: orange;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-blue {
+  background-color: blue;
+}
+/* float clear */
+.fl-left {
+  float: left;
+}
+.fl-right {
+  float: right;
+}
+.clear-fix {
+  clear: both;
+}
+/* === BORDER STYLE === */
+.border-1-blue {
+  border: 1px solid blue;
+}
