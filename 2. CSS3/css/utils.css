@@ -32,3 +32,41 @@
 .bgr-orange {
 	background: orange;
 }
+/*Text alignment*/
+
+
+/*Block*/
+
+.block-w2h1 {
+	width: 200px;
+	height: 100px;
+}
+
+.block-w3h2 {
+	width: 300px;
+	height: 200px;
+}
+.bgr-green {
+	background: green;
+}
+.bgr-blue {
+	background: blue;
+}
+
+.clear-fix{
+	clear: left;
+}
+
+.fl-left {
+	float: left;
+}
+
+.fl-right {
+	float: right;
+}
+
+/* == Border style */
+
+.border-1-blue {
+	border: 1px solid blue;
+}

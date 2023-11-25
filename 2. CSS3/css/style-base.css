@@ -1,10 +1,11 @@
 
 * {
 	font-family: corbel, Helvetica, sans-serif;
+	box-sizing: border-box; 
 }
 
 li {
-	list-style-image: url('../images/world.png');
+	list-style-type: none;
 }
 
 
@@ -27,4 +28,115 @@ li {
 
 	line-height: 60px;
 	color: #fcb;
+}
+.demo-background-prop {
+	border: 1px solid #f00;
+	background-color: orange;
+	background-image: url(../images/cupcake.png); /*313x365*/
+	background-size: 100px 100px;
+	/*background-size: cover; block width image must have a rating*/
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-position: right bottom;
+	position: fixed;
+	/*background-attachment: fixed;*/
+}
+
+/*ex05 border padding margin*/
+
+#page-header {
+	height: 66px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #2b2b2b;
+	position: fixed;
+}
+
+.wrapper {
+	width: 88%;
+	margin: 0 auto;
+}
+
+#page-header .page-logo {
+	float: left;
+	line-height: 66px;
+}
+#page-header .navigation {
+	float: right;
+	margin: 0;
+}
+#page-header .navigation li {
+	float: left;
+	margin-left: 44px; 
+	line-height: 66px;
+}
+#page-header .navigation a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#page-header .navigation a:hover {
+	font-weight: bolder;
+	color: skyblue;
+}
+
+#page-main {
+	padding-top: 66px;
+}
+
+
+.props-title {
+	background: #ABE200;
+	border: 2px solid #ADD0DA;
+	float: left;
+}
+.props-title p {
+	margin: 0;
+	text-align: center;
+	line-height: 100px;	
+}
+
+.props-detail {
+	border: 2px solid #ADD0DA;
+	float: left;
+}
+.props-detail p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.props-section {
+	height: 100px;
+	margin-bottom: 40px;
+}
+.content {
+	line-height: 20px;
+}
+
+/*Ex06 css position*/
+
+.demo-position-relative {
+	position: relative;
+}
+
+.pos-rel-2 {
+	left: 70px;
+	top: 40px;
+	/*absolute with its parent(position:relative), if parent is not positon(relative) --> absolute with html tag*/
+	position: absolute;
+}
+
+.search-box {
+	margin-top: 14px;
+}
+.search-box label {
+	position: relative;
+	left: 26px;
+	top:2px;
+}
+.search-box input[type='text'] {
+	border-radius: 10px;
+	height: 38px;
+	padding-left: 23px;
 }

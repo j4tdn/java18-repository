@@ -1,0 +1,282 @@
+/*==============PAGE HEADER============*/
+@import url(./fonts/Roboto-Black.ttf);
+@import url(./fonts/Roboto-BlackItalic.ttf);
+@import url(./fonts/Roboto-Bold.ttf);
+@import url(./fonts/Roboto-BoldItalic.ttf);
+
+html {
+	height: 100%;
+	font-family: 'Roboto',sans-serif;
+}
+
+
+#page-header {
+
+	background: #f6c61c;
+}
+
+
+.header-container {
+	width: 1200px;
+	height: 44px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+
+}
+
+.header-container a {
+	margin: 0 30px;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	color: #000000;
+}
+.header-container img {
+	margin: 0 50px;
+}
+
+/*================PAGE MAIN ==========*/
+
+#page-main {
+	width: 1200px;
+	height: auto;
+	display: flex;
+	margin: 0 auto;
+}
+
+.recent-articles {
+	font-family: 'Roboto-Bold', sans-serif;
+	font-weight: bolder;
+	font-size: 1.3rem;
+	margin-bottom: 20px;
+}
+
+.articles-container {
+	float: left;
+	margin: 44px 0 0 0;
+}
+
+.article-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.article-container  .content-wrapper{
+	margin-left: 20px;
+}
+.article-container  .content-wrapper .title{
+	font-size: 1.8rem;
+}
+
+.article-container  .content-wrapper .article-infor{
+	margin-top: 10px;
+	margin-bottom: 6px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	opacity: .5;
+	
+}
+
+.article-container  .content-wrapper .article-infor	p:nth-child(1n + 2)::before{
+	content: '';
+	display: inline-block;
+	width: 2px;
+	height: 16px;
+	margin: 0 10px;
+	background: gray;
+}
+
+.article-container  .content-wrapper .article-infor	.category {
+	color: #f6c61c;
+
+}
+
+
+.article-container  .content-wrapper .article-summary {
+
+	opacity: .5;
+
+}
+
+.article-container  .content-wrapper .article-status {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+	opacity: .5;
+}
+
+.article-container  .content-wrapper .article-status li:nth-child(1)::after {
+	content: '';
+	display: inline-block;
+	width: 2px;
+	height: 16px;
+	margin: 0 10px;
+	background: gray;
+}
+
+.articles-container {
+	float: left;
+}
+
+.divisor {
+	margin-left: 40px;
+	width: 2px;
+	background: gray;
+	opacity: .2;
+}
+
+.right-side-container {
+	float: left;
+	margin: 80px 44px;
+}
+
+.right-side-container .calendar {
+	margin: 44px 0px;
+}
+
+
+
+.right-side-container .popular-news {
+	font-family: 'Roboto-Bold', sans-serif;
+	font-weight: bolder;
+	font-size: 1.1rem;
+	margin-bottom: 20px;
+}
+
+.search-tool {
+	display: flex;
+	align-items: center;
+	width: 200px;
+	height: 28px;
+	border: 1px solid gray;
+	border-radius: 14px;
+	padding-left: 10px;
+}
+
+.search-tool button {
+	border: none;
+	background: transparent;
+}
+.search-tool input {
+	width: 150px;
+	border: none;
+	background: transparent;
+}
+
+/*================PAGE FOOTER =============*/
+
+#page-footer {
+	background: #f6c61c ;
+}
+#page-footer .footer-wrapper {
+	width: 1200px;
+	height: 44px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+#page-footer .footer-wrapper ul {
+	float: left;
+}
+#page-footer .footer-wrapper li {
+	margin: 0 20px;
+	float: left;
+}
+
+
+#page-footer .social-link ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#page-footer .social-link i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: white;
+	color: #f6c61c;
+	margin: 0px 20px;
+	scale: 1.2;
+}
+
+
+/*Calendar test*/
+.month {
+  height: 30px;
+  width: 300px;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  width: 300px;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 10%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  width: 300px;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}

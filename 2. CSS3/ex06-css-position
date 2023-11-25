@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/utils.css">
+	<link rel="stylesheet" href="css/style-base.css">
+	<title>Ex06: Position Demo</title>
+</head>
+<body>
+
+	<header id="page-header">
+
+		<div class="wrapper">
+			<div class="page-logo">
+				<a href="#">
+					<img src="images/logo.png" alt="page-exoti-logo">
+				</a>
+			</div>
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Investors</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		
+	</header>
+
+
+	<main id="page-main">
+		<h2 class="text-green">LESSON 20 - CSS3 - Position(Static, Relative, Absolute) Demo</h2>
+		<hr>
+		<h3 class="text-blue">This is the first line of CSS  Properties Page</h3>
+		<div class="props-section">
+			<div class="props-title block-w2h1 ">
+			<p>PROPs</p>
+			</div>
+			<div class="props-detail block-w2h1 bgr-orange">
+			<p>Testing Border, Margin, Padding</p>
+			</div>
+			
+		</div>
+		
+		<p class="clear-fix content">Content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid cum molestiae non maxime ratione voluptatem fuga, nemo corporis nostrum labore recusandae dolorem et, officia earum totam quidem autem facere odio officiis. Velit, magnam totam tenetur quidem provident, tempora quos consequatur vitae rem sed autem laudantium, expedita nostrum. Itaque odit harum placeat ipsum neque cum, quae provident ex rem, sequi molestiae, corrupti vel veritatis ab eos non. Quis, provident laudantium magnam fugiat sequi eligendi animi amet cumque numquam, maxime, nam harum sed quam iure eveniet alias omnis dicta nisi debitis! Reprehenderit, voluptatem cupiditate suscipit cumque, dicta facilis, voluptate libero natus nihil exercitationem repellendus alias ad dolorum praesentium fugiat eligendi. Accusantium eligendi nam quisquam perferendis cumque ipsam earum sit minima vel! Facilis nam dicta, quis fugit rerum dolorum debitis ex repudiandae neque nostrum atque iure itaque sunt dolor tempore perspiciatis, ad ipsa quibusdam, cumque natus saepe consequatur pariatur! Est, animi incidunt nemo consequatur magni dolor alias eum, dicta, ipsam tempore culpa voluptatibus distinctio omnis laboriosam eveniet! Cumque pariatur, laboriosam praesentium exercitationem explicabo necessitatibus! Beatae labore obcaecati eveniet quo pariatur aspernatur maxime quas. Quidem quibusdam expedita ipsam numquam ratione quo rem sint ipsum optio, reprehenderit eos modi reiciendis odio rerum delectus, tenetur dignissimos, obcaecati sed placeat quisquam. Dolorum consequatur adipisci voluptatum consequuntur iure at expedita saepe natus fugiat nesciunt itaque, laudantium repudiandae, vero ipsum deserunt! Expedita accusamus tempora quia? Fugiat, ut sequi voluptate nostrum nisi quibusdam, voluptatum praesentium at dicta quidem iste delectus aliquid, nihil illo impedit! Soluta recusandae saepe possimus deleniti eligendi, laboriosam ad molestias qui consequuntur, est eius. Debitis unde dolore necessitatibus eaque quis excepturi velit molestiae enim magnam obcaecati est vel voluptatum ad molestias voluptates, error sed tempore repellendus ex dicta beatae? Eius temporibus ipsam est repudiandae praesentium dignissimos accusantium natus quasi autem sit laborum, blanditiis et, eum reiciendis?</p>
+		<div class="demo-position-relative">
+			<div class="pos-rel-1 block-md200 bgr-orange"></div>
+			<div class="pos-rel-2 block-md200 bgr-green"></div>
+			<div class="pos-rel-3 block-md200 bgr-blue"></div>
+		</div>
+	</main>
+	<hr>
+</body>
+</html>

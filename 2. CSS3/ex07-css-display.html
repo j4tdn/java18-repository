@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/utils.css">
+	<link rel="stylesheet" href="css/style-base.css">
+	<title>Ex07: Css display Demo</title>
+	<style>
+		/*
+			div: default = display: block;
+
+			inline:
+				+ Không xuống hàng khi kết thúc thẻ
+				+ Chiếm width = nội dung thật sự chứa
+				+ Không ăn những thuộc tính width heigh
+
+
+		*/
+
+		div {
+			display: inline-block;
+		}
+		div:nth-child(1) {
+
+		}
+		div:nth-child(2) {
+
+			/*display:none --> ẩn luôn, slot bị chiếm*/
+
+			visibility: hidden; /* --> ẩn nhưng slot không bị chiếm */
+			
+		}
+		div:nth-child(3) {
+			
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="block-md200 bgr-orange">
+		Text A1
+	</div>
+	<div class="block-md200 bgr-green">
+		Text A1 B1
+	</div>
+	<div class="block-md200 bgr-blue">
+		Text A1 B2 C3
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex09 - Css Selector Demo</title>
+	<style>
+		
+		.title::before {
+			content: ''; /*Virtural tag with display inline*/
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			background: red;
+			margin: 4px 6px 4px 0;
+		}
+		.title::after {
+			content: '';
+			display: block;
+			width: 200px;
+			height: 2px;
+			background: linear-gradient(100deg,#ff00ee 0%, #2233ff 50%,#fffe10 75%,#ff00ee 100%);
+			margin: 30px 0px;
+		}
+
+		ul > li > a {
+			text-decoration: none;
+		}
+
+		ol > * {
+			margin: 10px 0;
+		}
+		/* ~ --> n levels */
+		/* + --> first levels */
+		h1 ~ p {
+			color: red;
+		}
+
+		.cbx-group input[type = 'checkbox']:checked + label {
+			color: red;
+		}
+
+		/*p:first-child --> nếu thẻ con dầu tiên là thẻ p thì sẽ ăn css*/
+		/*p:last-child --> nếu thẻ con cuối cùng là thẻ p thì sẽ ăn css*/
+
+		.child-type p:first-child {
+			color: green;
+		}
+
+		.child-type p:first-of-type {
+			color: red;
+		}
+
+		.child-type p:last-child {
+			color: blue;
+		}
+		.child-type p:last-of-type {
+			color: orange;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1 class="title">Coffee &amp; Cake</h1>
+	<p>We have been banking and brewing</p>
+	<h2>Our menu:</h2>
+	<ul>
+		<li><a href="link1">Chocolate cupcake</a></li>
+		<li><a href="link2">Vanilla cupcake</a></li>
+	</ul>
+	<ol>
+		<li><a href="">Americano</a></li>
+		<li><a href="">Espresso</a></li>
+	</ol>
+	<div>
+		<p>Read what customer say <a href="">about us</a></p>
+	</div>
+	<p>We hope to see you soon</p>
+
+	<hr>
+	<form>
+		<p><input type="text" class="inp-1" placeholder="fullname"></p>
+		<p class="cbx-group">
+			<input type="checkbox" id="fb">
+			<label for="fb">football</label> <br>
+
+			<input type="checkbox" id="vlb">
+			<label for="vlb">volleybal</label>
+		</p>
+		<p><input type="email" class="inp-3" placeholder="email" required></p>
+		<p><input type="submit" class="inp-4"></p>
+	</form>
+
+	<hr>
+	<div class="child-type"> 
+		<h2>Title start</h2>
+		<p>Paragraph 1</p>
+		<p>Paragraph 2</p>
+		<p>Paragraph 3</p>
+		<p>Paragraph 4</p>
+		<p>Paragraph 5</p>
+		<p>Paragraph 6</p>
+		<h2>Botton end</h2>
+	</div>
+
+
+	
+</body>
+</html>
