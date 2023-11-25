@@ -1,0 +1,163 @@
+
+/* COMMON */
+body {
+	font-size: 16px;
+	font-family: "Helvetica Neue", Aria, sans-serif;
+	line-height: 1.2;
+}
+
+.wrapper {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto; /*0 ở cả hai bên và tự căn giữa nó trong phần tử cha*/
+}
+
+.clear-fix {
+	clear: both;
+}
+
+
+
+/*===== PAGE HEADER =====*/
+#page-header {
+	height: 70px;
+	background-color: #f7c61d;
+}
+
+#page-header .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#page-header .wrapper .nav-flex ul {
+	display: flex;
+}
+
+#page-header .wrapper .nav-flex ul li {
+	margin: 0 35px;
+}
+
+#page-header .wrapper a {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #000;
+}
+
+/*===== PAGE MAIN STYLE =====*/
+#page-main,
+#page-main a {
+	color: #555;
+}
+
+#page-main .wrapper .recent-articles {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#page-main .wrapper .main {
+	width: 75%;
+	float: left;
+}
+
+#page-main .wrapper .main .articles article {
+	display: flex;
+	gap: 20px; /*edit distance giữa image và text*/
+	margin-bottom: 80px; 
+}
+
+#page-main .wrapper .main .articles article:last-child {
+	margin-bottom: 60px;
+}
+
+#page-main .wrapper .main .articles article .article-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#page-main .category, 
+.article-end,
+.comments {
+	color: #e3b002;
+}
+
+.article-right .title {
+	font-size: 26px;
+}
+
+.more-articles {
+	text-align: center;
+	margin-bottom: 60px; 
+}
+
+.more-articles a {
+	display: inline-block;
+	padding: 12px 22px;
+	border: 1px solid #e3b002;
+	border-radius: 4px; 
+}
+
+.more-articles a:hover {
+	background-color: #d2a002;
+}
+
+
+/*===== FOOTER STYLE =====*/
+#page-footer  {
+	height: 70px;
+	background-color: #f7c61d;
+}
+
+#page-footer .wrapper {
+	display: flex;
+	align-items: center;
+}
+
+#page-footer .wrapper {
+	justify-content: space-between;
+}
+
+#page-footer>.wrapper>* {
+	width: 33.33%;
+}
+
+#page-footer {
+	margin-top: 80px;
+}
+
+#page-footer .copy-right {
+	width: 100%;
+	color: #a78613;
+	font-size: 13px;
+}
+
+#page-footer .footer-nav {
+	width: 100%;
+}
+
+#page-footer .footer-nav ul {
+	display: flex;
+	justify-content: flex-start;
+	gap: 40px;
+}
+
+#page-footer .socials {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#page-footer .socials a {
+	width: 45px;
+	height: 45px;
+	background: #fff;
+	border-radius: 50%;
+	font-size: 24px;
+	color: #f7c61d;
+	text-align: center;
+	line-height: 45px;
+	margin: 0 10px;
+}
