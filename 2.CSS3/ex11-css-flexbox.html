@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex11 - CSS Flex Demo</title>
+
+	<style>
+		.text-green {
+			color: green;
+		}
+
+		.block-lg {
+			width: 800px;
+			height: 600px;
+			border: 2px solid blue;
+
+			display: flex;
+			align-items: center;
+		}
+
+		.block-sm {
+			width: 180px;
+			height: 100px;
+			background: orange;
+			border:1px solid red;
+
+			display: flex;
+			align-items: center;
+		}
+
+		.block-sm:nth-child(1) {
+			/*width: 200px;*/
+			height: 80px
+		}
+
+		.block-sm:nth-child(2) {
+			width: 200px;
+			height: 120px;
+		}
+
+		.block-sm:nth-child(3) {
+			/*width: 200px;*/
+			height: 100px;
+		}
+
+		/*Demo flex*/
+		.container {
+			display: flex; /*cha flex => điều khiển con được => con mặc định theo chiều ngang*/
+			flex-direction: row;
+
+		/*
+			Justify content: theo trục ngang nếu flex-direction là row
+			               : theo trục dọc nếu flex-direction là column
+			               : flex-start, flex-end, center, space-around, space-between
+		*/
+
+		/*
+			Align-items: theo trục dọc nếu flex-direction là row
+			               : theo trục ngang nếu flex-direction là column
+			               : flex-start, flex-end, center, [baseline, stretch]
+			               : stretch: chiếm hết width/height của row/column dựa vào flex-direction
+			               VD: flex-direction là row
+			               => align-items: column 
+			               => chiếm của column
+			               (**Yêu cầu: item ko set width/height)
+			               : baseline: dưaj trên nội dung bên trong của các item
+		*/
+
+		justify-content: flex-end;
+		/*align-items: stretch;*/
+		align-items: baseline;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h2 class="">CSS Flex Demo</h2>
+
+	<hr>
+
+	<div class="container block-lg"> <!-- lg: large; sm:small -->
+		<div class="block-sm">Block 1: 150x100 -> H80</div>
+		<div class="block-sm">Block 2: 200x100 -> H120</div>
+		<div class="block-sm">Block 3: 150x100 -> H100</div>
+	</div>
+	
+</body>
+</html>
