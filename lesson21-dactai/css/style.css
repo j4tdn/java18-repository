@@ -1,0 +1,61 @@
+/* css reset */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  color: black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.wrapper {
+  margin: 0 24px;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navbar-nav a {
+  color: black;
+}
+
+.carousel-caption p {
+  color: #fff;
+}
+
+.footer {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer a {
+  font-size: 16px;
+}
