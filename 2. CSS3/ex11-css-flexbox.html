@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex11 - CSS Flex Demo </title>
+
+	<style>
+		.text-green {
+			color: green;
+		}
+
+		.block-lg {
+			width: 800px;
+			height: 600px;
+			border: 2px solid blue;
+		}
+
+		/* items */
+
+		.block-sm {
+			width: 180px;
+			height: 100px;
+			background: orange;
+			border: 1px solid red;
+
+			display: flex;
+			/*flex-grow: 1;*/
+			
+		}
+
+		.block-sm:nth-child(1) {
+			/*width: 200px;*/
+			height: 80px;
+			align-items: flex-start;
+		}
+
+		.block-sm:nth-child(2) {
+			max-width: 200px;
+			height: 120px;
+			align-items: center;
+			/*align-self: center;*/
+
+			flex-basis: 280px;
+		}
+
+		.block-sm:nth-child(3) {
+			/*width: 200px;*/
+			height: 100px;
+			align-items: flex-end;
+			/*align-self: flex-end;*/
+		}
+
+
+		/* DEMO FLEX */
+		.container {
+			display: flex;
+
+			flex-direction: row;
+
+
+			/*
+				justify-content: theo trục ngang nếu flex-direction là row
+				               : theo trục dọc nếu flex-direction là column
+				               : flex-start, flex-end, center, space-around, space-between
+
+				align-items    : theo trục dọc nếu flex-direction là row
+				               : theo trục ngang nếu flex-direction là column
+				               : flex-start, flex-end, center, [stretch, baseline] 
+				               : stretch: item chiếm hết width/height của row/column dựa vào flex-direction
+				                        : item không set width/height
+				               : baseline: dựa trên nội dung bên trong của các items
+			*/
+
+			justify-content: flex-start;
+
+			
+			
+		}
+	</style>
+
+</head>
+<body>
+	
+	<h2 class="text-green">CSS Flex Demo</h2>
+
+	<hr>
+
+	<div class="container block-lg">
+		<div class="block-sm">Block 1: 150x100 -> H80</div>
+		<div class="block-sm">Block 2: 200x100 -> H120</div>
+		<div class="block-sm">Block 3: 150x100 -> H100</div>
+
+		<!-- <div class="block-sm">Block 4: 150x100</div>
+		<div class="block-sm">Block 5: 200x100</div>
+		<div class="block-sm">Block 6: 150x100</div> -->
+	</div>
+
+</body>
+</html>

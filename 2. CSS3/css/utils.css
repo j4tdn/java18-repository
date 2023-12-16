@@ -55,6 +55,11 @@
 	height: 200px;
 }
 
+.block-w3h2 {
+	width: 300px;
+	height: 200px;
+}
+
 .block-w2h1 {
 	width: 200px;
 	height: 100px;
@@ -71,7 +76,27 @@
 	background: orange;
 }
 
+.bg-blue {
+	background: blue;
+}
+
 /* float clear */
+
+.fl-left {
+	float: left;
+}
+
+.fl-right {
+	float: right;
+}
+
 .clear-fix {
 	clear: both;
+}
+
+/*
+=== BORDER STYLE ===
+*/
+.border-1-blue {
+	border: 1px solid blue;
 }
