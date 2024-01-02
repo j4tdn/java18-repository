@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex11 - CSS Flex Demo</title>
+	<style>
+		.text-green{
+			color: green;
+		}
+
+		.block-lg {
+			width: 800px;
+			height: 600px;
+			border: 2px solid blue;
+		}
+
+		.block-sm {
+			width: 150px;
+			height: 100px;
+			background: orange;
+			border: 1px solid red;
+		}
+		.block-sm:nth-child(1) {
+			width:200px;
+			align-items: flex-start
+		}
+
+		.block-sm:nth-child(2) {
+			width: 200px;
+			height: 120px;
+			align-items: center;
+		}
+		.block-sm:nth-child(3) {
+			width: 100px;
+			align-items: flex-end;
+		}
+	/* DEMO FLEX */
+	.container {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+	</style>
+</head>
+<body>
+	
+	<h2 class="text-green">CSS Flex Demo</h2>
+
+	<hr>
+
+	<div class="container block-lg">
+		<div class="block-sm">Block 1: 150x100</div>
+		<div class="block-sm">Block 2: 200x100</div>
+		<div class="block-sm">Block 3: 150x100</div>
+
+	</div>
+
+</body>
+</html>

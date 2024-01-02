@@ -1,0 +1,133 @@
+
+/*
+*/
+.wrapper {
+	width: 88%;
+	height: 100%;
+	margin:  0 auto;
+}
+.text-white,.text-white *{
+	color: #fff;
+
+}
+
+.upper-case a{
+	text-transform: uppercase;
+
+}
+#page-header {
+	height: 66px;
+	background: #000;
+}
+
+#page-header .page-logo{
+	float: left;
+	line-height: 66px;
+}
+#page-header .page-navigation{
+	float: right;
+}
+#page-header .page-navigation >li{
+	float: left;
+	margin-left: 32px;
+	line-height: 66px;
+}
+
+#page-header .page-navigation a:hover{
+	color:#B1343A ;
+}
+
+
+/*	================ PAGE MAIN ====================*/
+#page-main .banner{
+	background-image: url("../images/banner.png");
+	background-size: cover ;
+	height: 860px;
+}
+#page-main .banner .content {
+	text-align:  center;
+	padding-top: 100px;
+}
+#page-main .banner .content .title {
+	font-size: 4rem;
+
+}
+#page-main .banner .content .slogan {
+	opacity:  0.8;
+	font-size: 2rem;
+	margin: 40px 0 60px 0;
+
+}
+#page-main .banner .content .learn-more {
+	font-size: 1.5rem;
+	padding: 20px 12px;
+	background-color: #C10000;
+	border-radius: 10px;
+	border: 2px black solid	;
+
+}
+
+#page-main .banner .content .learn-more :hover{
+	opacity: 0.8;
+
+}
+#page-main .articles {
+	padding: 60px 0;
+	background: linear-gradient(
+		95deg, 
+		#4c4c4c 0%,
+		#595959 12%,
+		#666666 25%,
+		#474747 39%,
+		#2c2c2c 50%,
+		#000000 51%,
+		#111111 60%,
+		#2b2b2b 76%,
+		#1c1c1c 91%,
+		#131313 100%);
+}
+#page-main .articles::after {
+	content: "";
+	display: block;
+	clear: both;
+
+}
+#page-main .articles .article {
+	float: left;
+	width: 50%;
+}
+#page-main .articles .article .title{
+	font-size: :1.75rem;
+}
+#page-main .articles .article .title::after{
+	content:"";
+	display: block;
+	height:  2px;
+	width: 36px;
+	background:#C10000;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#page-main .articles .article .sub-desc{
+	font-size: :1.5rem;
+	font-style: italic;
+	line-height: 1.2;
+}
+#page-main .articles .article [class^=content]{
+	font-size: :1.2rem;
+	line-height: 1.4;
+}
+#page-main .articles .article .content-1{
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+#page-main .articles .article:first-child{
+	padding-right: 80px;
+}
+#page-main .articles .article:last-child{
+	padding-left: 80px;
+	color:#4c4c4c;
+}
+/*	================ PAGE FOOTER ====================*/
