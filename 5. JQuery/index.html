@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LESSON 23: JQUERY DEMO - 07012023</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<style>
+		.block-lg {
+			width: 200px;
+			height: 200px;
+		}
+
+		.invisible {
+			visibility: hidden;
+		}
+
+		.d-none {
+			display: none;
+		}
+
+		.avatar-thumbnail {
+			border: 2px solid green;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1 class="text-success">Welcome To JQuery Demo - 07012023</h1>
+
+	<hr>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus reiciendis perspiciatis, repellendus dicta fugit quisquam expedita repudiandae natus, totam quidem quasi praesentium cum ipsum animi quae iusto, impedit eius aliquam consequuntur ut, nisi libero inventore! Ipsa quos repudiandae voluptatibus rerum illum provident aut, consequatur nesciunt quia possimus tenetur distinctio, non sequi, est officiis sint dolor, tempora quibusdam neque voluptas iste eius. Ratione voluptatem maiores, voluptatum suscipit natus veniam distinctio quisquam perferendis nulla, a. Vel, et ipsa. Rerum non alias possimus modi eaque doloribus ipsam. Minima, eligendi reprehenderit? Ipsam saepe minima porro, sunt amet, repellat velit numquam magnam enim reprehenderit ratione inventore quidem cumque magni, accusantium molestias similique dicta dolorum aut! Repellendus, dicta velit alias illo reprehenderit quae praesentium in vel ratione placeat sunt officia explicabo fugit repellat nobis. Dolor vero natus labore doloremque, suscipit eveniet in. Provident corrupti fuga officiis ut error neque quam eum tempore ea, iure a laboriosam illum maxime dolor vero doloremque ipsum aperiam labore architecto accusamus itaque harum cum. Itaque magnam, quaerat quasi? Cumque, fuga, quam sed perferendis nemo reprehenderit corporis molestias. Exercitationem pariatur corrupti optio laborum veritatis dolorum iusto quam cumque dignissimos quia, aliquam est tempora quod sed esse ipsam vel odio ab magni alias.</p>
+
+	<hr>
+
+	<h2 class="text-danger">Toggle Class Demo</h2>
+
+	<button class="btn btn-primary btn-toggle">Toggler Button</button>
+
+	<div class="block-lg bg-warning mt-3 block-toggle">
+	</div>
+
+	<hr>
+
+	<h2 class="text-success">JQuery Demo - Form</h2>
+
+	<form>
+		<table cellpadding="10">
+			<tr>
+				<td>Your name:(*)</td>
+				<td><input type="text"></td>
+			</tr>
+
+			<tr>
+				<td>Your age:(*)</td>
+				<td><input type="number" min="18" max="65"></td>
+			</tr>
+
+			<!-- JQ DEMO -->
+			<tr>
+				<td>Your avatar:(*)</td>
+				<td>
+					<!-- showup file -->
+					<img src="images/defava.png" width="100" height="100" class="avatar-thumbnail">
+
+					<button type="button" class="trigger btn btn-primary">Change</button>
+					<button type="button" class="reset btn btn-light">Reset</button>
+
+					<!-- choose file -->
+					<!-- load dialog - file chooser -->
+					<input type="file" class="avatar-fc d-none"> 
+				</td>
+			</tr>
+		</table>	
+	</form>
+
+
+	<script src="js/jquery-3.7.1.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>
