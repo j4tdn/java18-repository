@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 22 - JavaScript Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <head id="page-header" >
+        <h1 class="text-success">Welcome to Lesson 22 - JavaScript</h1>
+    </head >
+    <hr class="mb-5">
+     <h2> =============== ACCESS DENIED - YOU HAVE NOT AUTHORIZED TO ACCESS THIS RESOURCES =================</h2>
+     <h2>Redirect to Homepage affer <span id="rollback">10</span> seconds</h2>
+    
+     <a href="index.html">Redirect to homepage</a>
+     <script >
+        let counter = 10;
+        let runner = setInterval(function(){
+        counter--;
+        document.querySelector("#rollback").textContent = counter ;
+        if(counter===0){
+            window.location.href = 'index.html' ;
+            clearInterval(runner);
+    } 
+},1000)
+     </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSON 23:JQUERY DEMO - 09.01.2023</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .block-lg {
+            width: 200px;
+            height: 200px;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .d-none{
+            display: none;
+        }
+        
+        .avatar-thumbnail{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-success">Welcome to JQuery Demo</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet aliquam officiis fugiat dolorem, mollitia eum
+        optio placeat ut dolore sunt, iusto inventore? Recusandae nam rem illum provident, inventore quam cumque,
+        laboriosam necessitatibus maiores odit quisquam iste! Sed iste in laboriosam asperiores ad ullam esse
+        perferendis magni nulla eius, officiis quod molestias, laborum at vero, porro omnis eum. Nesciunt non fuga rerum
+        labore quo quibusdam esse voluptatem iusto voluptates sapiente nostrum, sunt itaque quia perferendis unde
+        placeat iure a sed exercitationem perspiciatis enim quasi illo cum dolores. Magnam aspernatur non repudiandae
+        nemo natus minus pariatur nesciunt officia. Recusandae, velit atque. Officiis accusamus illum, quo vel eum
+        inventore est deserunt! Accusantium culpa dolores harum, voluptatibus magnam quo incidunt ullam hic commodi
+        minima enim reiciendis laborum voluptatem numquam qui tenetur. Nesciunt facilis quibusdam doloremque temporibus
+        at aliquid consequatur, nihil voluptatibus delectus. Asperiores consectetur voluptatibus officiis. Ipsa facilis,
+        nisi deleniti ratione, veniam modi enim sint quas eligendi distinctio expedita, rem harum. Minus soluta maxime
+        perferendis facilis veritatis consequuntur harum sit, numquam, ad modi, nostrum unde omnis ipsum! Reprehenderit
+        earum repellendus esse iure nisi, doloremque id vel minus ratione ipsam sed neque dolorem. Reiciendis quos quia
+        ab porro assumenda et dolorum omnis, dolor quibusdam distinctio!</p>
+    <hr>
+    <h2 class="text-danger">Toggle Class Demo</h2>
+    <button class="btn btn-primary btn-toggle">Toggler Button</button>
+    <div class="block-lg bg-warning mt-3 block-toggle">
+    </div>
+
+    <hr>
+    <!-- Jquery Demo - Form -->
+
+    <h2>JQUERY DEMO - FORM</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Your Name:(*)</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Your Age:(*)</td>
+                <td><input type="number" min="18" max="65"></td>
+            </tr>
+            <!-- JQ Demo -->
+            <tr>
+                <td>Your Avatar:(*)</td>
+                <td>
+                    <img class="avatar-thumbnail" src="images/defaultAvatar.png" width="100px" height="100px">
+                    <button type="button" class="trigger btn btn-primary">Change</button>
+                    <button type="button" class="reset btn btn-light">Reset</button>
+                    <input type="file" class="avatar-fc d-none"> <!-- load dialog - file chooser-->
+
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
