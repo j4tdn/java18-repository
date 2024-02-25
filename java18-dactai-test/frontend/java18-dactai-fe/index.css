@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+
+  margin: 0;
+
+  border: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.app-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  padding-top: 19px;
+  padding-bottom: 14px;
+  display: flex;
+}
+
+.logo {
+  width: 18%;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 12px;
+  width: 26%;
+  background: #fff;
+  border-radius: 4px;
+  border: solid 1px #ccc;
+  padding: 12px;
+  position: relative;
+  left: 16%;
+}
+
+.app-navbar {
+  background: #0051ba;
+  color: #fff;
+}
+
+.app-navbar .app-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-navbar .app-wrapper a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar-item {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-right: 1px solid #ffffffd0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navbar-list li:hover {
+  background: #003b87;
+}
+
+.second-slider-list > a > img {
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Left Left Top1 Top2"
+    "Left Left Bottom Bottom";
+}
+
+.Left {
+  grid-area: Left;
+}
+
+.Top1 {
+  grid-area: Top1;
+}
+
+.Top2 {
+  grid-area: Top2;
+}
+
+.Bottom {
+  grid-area: Bottom;
+}
+.image-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.image-item :hover:before {
+  opacity: 0.7;
+  transition: all ease 0.3s;
+  background-color: #fdc41b;
+}
+
+.actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.actions .title {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 5px 10px;
+  opacity: 0.7;
+  margin-top: 50px;
+  font-size: 24px;
+}
