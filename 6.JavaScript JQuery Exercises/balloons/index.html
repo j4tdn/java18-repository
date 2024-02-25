@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS JQ Exercises - Balloons Game</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- Khu vực hiển thị thắng thua -->
+	<div class="balloon-shadow-container">
+		<div class="balloon-block">
+			<div class="loose">
+				<h4>Sorry! You loose the game!</h4>
+				<img src="images/sad.png" alt="sad">
+				<h4 class="popped">You poped <span class="score">0</span> balloon[s]
+				</h4>
+				<p>Play again?</p>
+				<button class="play-again-yes">Yes</button>
+				<button class="play-again-no">No</button>
+			</div>
+		</div>
+	</div>
+	<!-- virtual: create an avaiable balloon 
+	<div class="balloon balloon-red"></div>
+	-->
+
+	<div class="score-block">
+		<p class="popped">You popped <span class="current-score">0</span> balloon[s]</p>
+		<p>Level 1: Total Block = <span class="total-score"></span></p>
+	</div>
+
+	<!-- 
+		A. Game over
+
+			+ clear interval cho animateInterVal(balloon làm thua), hưng balloon khác đang di chuyển thì vânnx cho di chuyển đến hết
+			+ clear interval cho startGameInterval để k tạo ra balloon mới nữa
+			+ hiện popup game over với 2 options
+				. chơi lại
+				. dừng chơi
+
+		B. Win
+
+		C. Play again
+
+	 -->
+
+	<script src="js/script.js"></script>
+</body>
+</html>

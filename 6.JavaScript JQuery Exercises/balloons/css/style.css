@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+body {
+	overflow: hidden;
+}
+
+.balloon {
+	width: 100px;
+	height: 200px;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	position: absolute;
+	top: 100vh;
+}
+
+.balloon-red {
+	background-image: url(../images/balloon-red.png);
+}
+
+.balloon-green {
+	background-image: url(../images/balloon-green.png);
+}
+
+.balloon-violet {
+	background-image: url(../images/balloon-violet.png);
+}
+
+.balloon-blue {
+	background-image: url(../images/balloon-blue.png);
+}
+
+.balloon-yellow {
+	background-image: url(../images/balloon-yellow.png);
+}
+
+/* ============================ */
+.balloon-shadow-container {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(0, 0, 0, 0.6);
+	display: none; /*display: none;*/
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	position: absolute;
+}
+
+.balloon-shadow-container .balloon-block {
+	width: 380px;;
+	background-color: #fff;
+	padding: 10px 0 40px;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 0 20px rgb(0, 0, 0, 0.8);
+}
+
+.balloon-shadow-container .balloon-block .loose > * {
+	margin: 10px 0;
+}
+
+.balloon-shadow-container .balloon-block .loose button {
+	margin: 10px 0;
+	padding: 4px 8px;
+	cursor: pointer;
+}
+
+.score-block {
+	width: 380px;
+	background: #efefef;
+	padding:  18px 30px;
+	white-space: none;
+
+	text-align: center;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+
+	/* move to bottom center */
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 190px);
+
+	z-index: 1000;
+}
+
+.score-block > .popped::after {
+	content: '';
+	display: block;
+	width: 30px;
+	height: 2px;
+	background-color: red;
+	margin: 20px auto;
+}
+
+.total-score {
+	color: green;
+	font-weight: bold;
+}
+
+.current-score {
+	color: orange;
+	font-weight: bold;
+}

@@ -78,7 +78,125 @@
 	opacity: 0.8;
 }
 
-#page-main .ariticles .article {
+#page-main .articles {
+	padding: 60px 0px;
+	background: linear-gradient(
+		95deg, 
+		white 50%,
+		#1a1a1a 50%);
+}
+#page-main .articles::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#page-main .articles .article {
 	float: left;
 	width: 50%;
+}
+#page-main .articles .article .title {
+	font-size: 1.75rem;
+}
+#page-main .articles .article .sub-desc {
+	font-size: 1.4rem;
+	font-style: italic;
+	line-height: 1.2;
+}
+
+#page-main .articles .article .content1 {
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+#page-main .articles .article [class^='content'] {
+	font-size: 1.2rem;
+	line-height: 1.4;
+}
+
+
+
+#page-main .articles .article .title::after {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 36px;
+	background: #C10000 ;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#page-main .articles .article:first-child {
+	padding-right: 80px;
+}
+#page-main .articles .article:last-child {
+	padding-left: 80px;
+	color: white;
+} 
+
+
+
+/*=======PAGE FOOTER============*/
+
+#page-footer {
+	padding-top: 30px;
+	background: #111;
+	padding-bottom: 20px;
+}
+
+#page-footer::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#page-footer .footer-group-col {
+	width: 25%;
+	float: left;
+}
+
+#page-footer .footer-group-col .title {
+	color: #fff;
+	text-transform: uppercase;
+	opacity: .;
+}
+
+#page-footer .footer-group-col .title::after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 86%;
+	margin-top: 22px;
+	margin-bottom: 14px;
+	background: #fff;
+	opacity: .8;
+}
+#page-footer .footer-group-col li a{
+	color: #fff;
+	line-height: 1.6;
+	opacity: .8;
+}
+#page-footer .footer-group-col li a:hover{
+	opacity: 1;
+}
+
+#page-footer .footer-group-col ul.social-items li{
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 44px;
+	background: #000;
+}
+#page-footer .footer-group-col ul.social-items li :hover{
+	background: #fff;
+	opacity: .8;
+}
+#page-footer .footer-group-col ul.social-items li a:hover{
+	color: #b1343a;
+}
+
+#page-footer .footer-group-col .copyright {
+	margin-top: 50px;	
 }
