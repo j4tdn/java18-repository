@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.h6 {
+    height: 80px;
+}
+
+.inp-search {
+    height: 35px;
+    width: 300px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 300px;
+    position: relative;
+    top: -60px;
+    left: 150px;
+}
+.nav-item{
+    border-right: 2px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.option,.cards-item{
+    display: flex;
+}
+.w-img{
+    width: 33.333%;
+    overflow: hidden;
+}
+.products{
+    justify-content: center;
+}
+.collections {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.collection-item{
+    display: flex;
+    justify-content: center;
+}
+
+.left-item {
+    margin-right: 10px;
+}
+
+.right-item {
+    margin-left: 10px;
+}
+
+.upright-item {
+    margin-left: 20px;
+}
+
+.up-item {
+    display: flex;
+}
+
+.down-item {
+    margin-top: 25px;
+}
+
+.cards-item {
+    display: flex;
+}
+
+.products {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.products h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.btn-group{
+    margin-bottom: 10px;
+}
+
+.products .btn-group .btn-div :hover{
+ background-color: yellow;
+}
+
+.products .btn-group .btn-div {
+    border: 1px solid;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.services{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.element-service{
+ width: 33.3%;
+ justify-content: center;
+ align-items:  center;
+ display: flex;
+ flex-direction: row;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+.eservice-item{
+     display: flex;
+     flex-direction: column;
+}
