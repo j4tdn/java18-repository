@@ -1,0 +1,103 @@
+/*============ PAGE HEADER ===========*/
+.header-container {
+	margin: 0 auto;
+	display: flex;
+}
+.header-container input {
+	margin-top: 5rem;
+	height: 2.5rem;
+}
+
+.nav-bar-container {
+	height: 2rem;
+	background-color: #0051ba;
+}
+.nav-bar {
+	line-height: 2rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	list-style: none;
+}
+
+/*=========== PAGE MAIN ===============*/
+
+.page-category {
+	display: flex;
+}
+
+.breaker {
+	text-align: center;
+}
+
+.content-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.galery {
+	margin: 0 auto;
+	display: flex;
+}
+.galery .gl-left {
+	margin-right: 2rem;
+}
+.galery .gl-right-top {
+	display: flex;
+	justify-content: space-between;
+}
+.galery .gl-right-bottom {	
+	margin: 2rem auto;
+}
+
+.list-product {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.list-product img {
+	width: 200px;
+	height: 200px;
+}
+
+
+.list-product .product {
+	width: 25%;
+	height: 300px;
+}
+
+.list-product .product .product-infor .price {
+	font-size: bold;
+}
+
+
+.sub-banner {
+	background-color: black;
+}
+
+/*=========== PAGE FOOTER =============*/
+
+#page-footer .lower-footer {
+   	bottom:0;
+	height: 3rem;
+	width:100%;
+	background-color: #666666;
+}
+
+#page-footer .upper-footer {
+   	bottom:0;
+	height: 8rem;
+	width:100%;
+	background-color: #eeeeee;
+}
+
+
+/*========= UTILS ===============*/
+
+.wraper {
+	width: 60%;
+}
