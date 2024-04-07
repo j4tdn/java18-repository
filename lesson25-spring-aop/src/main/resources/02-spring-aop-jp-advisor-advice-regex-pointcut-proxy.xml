@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        	http://www.springframework.org/schema/beans 
+        	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 1. Khởi tạo Join Point  -->
+	<bean id="movie-service" class="bkit.java18.service.MovieService"></bean>
+	
+	<!-- 2. Khởi tạo Advisor -->
+	<!-- TODO: NOT WORK -->
+	<bean id="movie-advisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice" ref="movie-tracker-around"></property>
+		<property name="patterns">
+			<list>
+				<value>displayCatalog</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 2.1. Khởi tạo Advice -->
+	<bean id="movie-tracker-around" class="bkit.java18.aspects.MovieTrackerAroundMethod"></bean>
+	
+		
+	<!-- 3. Khởi tạo Proxy -->
+	<bean id="movie-proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="movie-service"></property>
+		
+		<property name="interceptorNames">
+			<list>
+				<value>movie-advisor</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
+
+<!-- Từ khóa: spring xml schema based configuration -->
+

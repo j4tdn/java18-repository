@@ -1,6 +1,7 @@
 package bkit.java18.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // B2: Khi Spring IoC container được khởi tạo, scan qua class này, package chứa class này
@@ -14,7 +15,8 @@ import org.springframework.stereotype.Component;
 // B1: Pojo Object
 public class MovieRecommender {
 	
-	@Autowired
+	@Autowired // --> trong IOC chỉ có duy nhất 1 bean cho class MovieCatalog
+	// @Qualifier("movieCatalogAct") // --> chỉ định(qualifying bean cần lấy của MovieCatalog thông qua bean name)
 	private MovieCatalog movieCatalog; // NPE
 	
 	public void recommend() {

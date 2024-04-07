@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        	http://www.springframework.org/schema/beans 
+        	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Tạo bean cho Movie Service  -->
+	<bean id="movie-service" class="bkit.java18.service.MovieService"></bean>
+	
+	<!-- Tạo bean cho Advice -->
+	<bean id="movie-tracker-before" class="bkit.java18.aspects.MovieTrackerBeforeMethod"></bean>
+	<bean id="movie-tracker-after" class="bkit.java18.aspects.MovieTrackerAfterMethod"></bean>
+	<bean id="movie-tracker-around" class="bkit.java18.aspects.MovieTrackerAroundMethod"></bean>
+		
+	<!-- Tạo bean cho Proxy -->
+	<bean id="movie-proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<!-- Join Point chính là những methods bên trong bean movie-service -->
+		<property name="target" ref="movie-service"></property>
+		
+		<!-- Aspects sẽ được thi thi kèm với Join Point thông qua Proxy lúc Runtime -->
+		<property name="interceptorNames">
+			<list>
+				<value>movie-tracker-around</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
+
+<!-- Từ khóa: spring xml schema based configuration -->
+

@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import bkit.java18.configuration.ApplicationConfiguration;
+import bkit.java18.service.MovieCatalog;
 import bkit.java18.service.MovieRecommender;
 
 public class Ex02SpringBeansConfigJavaAnnoDemo {
@@ -13,6 +14,8 @@ public class Ex02SpringBeansConfigJavaAnnoDemo {
 	private static Class<?> APP_CONFIG_METADATA = ApplicationConfiguration.class;
 
 	public static void main(String[] args) {
+		
+		System.out.println(">> Ex02SpringBeansConfigJavaAnnoDemo starts ...");
 
 		// Setup IoC container via Java - Annotation Configuration
 		// B3. Thường, các framework sẽ scan, đọc config từ @Component, @Configuration và bỏ vào IoC của nó
@@ -27,6 +30,11 @@ public class Ex02SpringBeansConfigJavaAnnoDemo {
 
 		MovieRecommender movieRecommender = context.getBean("movieRecommender", MovieRecommender.class);
 		movieRecommender.recommend();
+		
+		System.out.println("\n====== Test Bean Scope =====\n");
+		
+		System.out.println("hash(movieCatalog) --> " + System.identityHashCode(context.getBean("movieCatalogAct", MovieCatalog.class)));
+		System.out.println("hash(movieCatalog) --> " + System.identityHashCode(context.getBean("movieCatalogAct", MovieCatalog.class)));
 		
 		context.close();
 	}
