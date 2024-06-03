@@ -1,7 +1,11 @@
 .title {
-	color: orangered;
+	color: green;
 }
 
 .title::before {
 	content: '\269D';
+}
+
+.text-danger {
+	color: red;
 }

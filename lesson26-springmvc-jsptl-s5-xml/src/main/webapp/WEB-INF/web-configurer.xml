@@ -18,7 +18,7 @@
 	<!-- Thay vì RequestMapping phải trả về view(path đến jsp file tính từ webapp folder) -->
 	<!-- Sử dụng ViewResolver chỉ cần trả về view name, tự động thêm prefix, suffix vào view name trở thành view -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/"></property>
+		<property name="prefix" value="/view/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
